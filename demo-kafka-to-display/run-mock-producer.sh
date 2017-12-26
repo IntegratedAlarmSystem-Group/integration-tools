@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ../ias
+cd ../../ias
 source run.sh
 cd ./WebServerSender/test
 ant build
