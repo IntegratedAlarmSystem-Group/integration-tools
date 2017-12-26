@@ -1,7 +1,7 @@
 #!/bin/bash
-cd ../../ias
-source run.sh
-cd ./WebServerSender/test
+cd ../development-tools
+source set_env.sh
+cd ../../ias/WebServerSender/test
 ant build
 cd ../..
 ant build

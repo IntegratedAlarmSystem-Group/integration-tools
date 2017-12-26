@@ -1,6 +1,7 @@
 #!/bin/bash
+cd ../development-tools
+source set_env.sh
 cd ../../ias
-source run.sh
 ant build
 cd ./WebServerSender/src/java
 iasRun.py -l j org.eso.ias.webserversender.WebServerSender
