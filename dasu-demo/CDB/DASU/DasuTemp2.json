@@ -1,0 +1,9 @@
+{
+  "id": "DasuTemp2",
+  "asceIDs": [
+    "ASCETemp2"
+  ],
+  "outputId": "AlarmTemperature2",
+  "logLevel": "FATAL",
+  "supervisorID": "SupervisorID"
+}

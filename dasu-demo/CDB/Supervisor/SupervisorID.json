@@ -1,0 +1,8 @@
+{
+  "id": "SupervisorID",
+  "dasusIDs": [
+    "DasuTemp2"
+  ],
+  "hostName": "almaias.eso.org",
+  "logLevel": "INFO"
+}
