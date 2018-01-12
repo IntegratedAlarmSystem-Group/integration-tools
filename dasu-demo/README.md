@@ -30,3 +30,9 @@ After this setup, we can build and run the dasu-demo script with
 [dasu-demo]$ gradle build
 [dasu-demo]$ java -jar build/libs/dasu-demo.jar
 ```
+
+Also, we can run the related converter with
+
+```
+[dasu-demo]$ java -cp build/libs/dasu-demo.jar org.dasu.ConverterTest
+```
