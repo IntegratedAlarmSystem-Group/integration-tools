@@ -1,9 +1,9 @@
 {
-  "id": "DasuTemp2",
+  "id": "DasuPressure2",
   "asceIDs": [
-    "ASCETemp2"
+    "AscePressure2"
   ],
-  "outputId": "AlarmTemperature2",
+  "outputId": "AlarmPressure2",
   "logLevel": "FATAL",
   "supervisorID": "SupervisorID"
 }

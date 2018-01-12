@@ -6,15 +6,9 @@
     "refreshRate": 2000
   },
   {
-    "id": "WindSpeed2",
-    "shortDesc": "Wind speed reported by the weather station 2",
-    "iasType": "DOUBLE",
-    "refreshRate": 2000
-  },
-  {
-    "id": "WindDirection2",
-    "shortDesc": "Wind Direction reported by the weather station 2",
-    "iasType": "DOUBLE",
+    "id": "AlarmTemperature2",
+    "shortDesc": "Temperature reported by the weather station 2 out of range",
+    "iasType": "ALARM",
     "refreshRate": 2000
   },
   {
@@ -24,9 +18,33 @@
     "refreshRate": 2000
   },
   {
-    "id": "Dewpoint2",
-    "shortDesc": "Dewpoint reported by the weather station 2",
+    "id": "AlarmPressure2",
+    "shortDesc": "Pressure reported by the weather station 2 out of range",
+    "iasType": "ALARM",
+    "refreshRate": 2000
+  },
+  {
+    "id": "WindDirection2",
+    "shortDesc": "WindDirection reported by the weather station 2",
     "iasType": "DOUBLE",
+    "refreshRate": 2000
+  },
+  {
+    "id": "AlarmWindDirection2",
+    "shortDesc": "WindDirection reported by the weather station 2 out of range",
+    "iasType": "ALARM",
+    "refreshRate": 2000
+  },
+  {
+    "id": "WindSpeed2",
+    "shortDesc": "WindSpeed reported by the weather station 2",
+    "iasType": "DOUBLE",
+    "refreshRate": 2000
+  },
+  {
+    "id": "AlarmWindSpeed2",
+    "shortDesc": "WindSpeed reported by the weather station 2 out of range",
+    "iasType": "ALARM",
     "refreshRate": 2000
   },
   {
@@ -36,38 +54,20 @@
     "refreshRate": 2000
   },
   {
-    "id": "AlarmTemperature2",
-    "shortDesc": "Temperature reported by the weather station 2",
+    "id": "AlarmHumidity2",
+    "shortDesc": "Humidity reported by the weather station 2 out of range",
     "iasType": "ALARM",
     "refreshRate": 2000
   },
   {
-    "id": "AlarmWindSpeed2",
-    "shortDesc": "Wind speed reported by the weather station 2",
-    "iasType": "ALARM",
-    "refreshRate": 2000
-  },
-  {
-    "id": "AlarmWindDirection2",
-    "shortDesc": "Wind Direction reported by the weather station 2",
-    "iasType": "ALARM",
-    "refreshRate": 2000
-  },
-  {
-    "id": "AlarmPressure2",
-    "shortDesc": "Pressure reported by the weather station 2",
-    "iasType": "ALARM",
+    "id": "Dewpoint2",
+    "shortDesc": "Dewpoint reported by the weather station 2",
+    "iasType": "DOUBLE",
     "refreshRate": 2000
   },
   {
     "id": "AlarmDewpoint2",
-    "shortDesc": "Dewpoint reported by the weather station 2",
-    "iasType": "ALARM",
-    "refreshRate": 2000
-  },
-  {
-    "id": "AlarmHumidity2",
-    "shortDesc": "Humidity reported by the weather station 2",
+    "shortDesc": "Dewpoint reported by the weather station 2 out of range",
     "iasType": "ALARM",
     "refreshRate": 2000
   }

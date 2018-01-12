@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Properties;
 
 import org.eso.ias.cdb.json.CdbJsonFiles;
@@ -25,11 +26,24 @@ class DasuTest {
     public static void main(String[] args) throws IOException {
 
         // Build the CDB reader
-        Path cdbParentPath = FileSystems.getDefault().getPath(".");
+        Path cdbParentPath = FileSystems.getDefault().getPath("dasu-demo");
         CdbJsonFiles cdbFiles = new CdbJsonFiles(cdbParentPath);
         CdbReader cdbReader = new JsonReader(cdbFiles);
 
-        String[] dasuIds = {"DasuTemp2"};
+        // define the variables to process in the dasus
+        String[] vars = {"Temperature", "Pressure", "WindDirection",
+                "WindSpeed", "Humidity", "Dewpoint"};
+        int[] ids = {2};
+
+        String[] dasuIds = new String[vars.length * ids.length];
+        for (int i = 0; i < ids.length; i++) {
+            for (int j = 0; j < vars.length; j++) {
+                dasuIds[i * vars.length + j] = "Dasu" + vars[j] + ids[i];
+            }
+        }
+
+        System.out.println(Arrays.toString(dasuIds));
+
         ArrayList<Dasu> dasus = new ArrayList<>();
 
         logger.info("Creating the dasus");
@@ -52,5 +66,4 @@ class DasuTest {
             // run DASUs permanently
         }
     }
-
 }

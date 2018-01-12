@@ -109,3 +109,6 @@ out/
 # Gradle
 .gradle
 build/
+
+# mac
+.DS_Store

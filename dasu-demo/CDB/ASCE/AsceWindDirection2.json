@@ -1,0 +1,27 @@
+{
+  "dasuID": "DasuWindDirection2",
+  "id": "AsceWindDirection2",
+  "inputIDs": [
+    "WindDirection2"
+  ],
+  "outputID": "AlarmWindDirection2",
+  "transferFunctionID": "org.eso.ias.prototype.transfer.impls.MinMaxThresholdTF",
+   "props": [
+    {
+      "name": "org.eso.ias.tf.minmaxthreshold.highOn",
+      "value": "100"
+    },
+    {
+      "name": "org.eso.ias.tf.minmaxthreshold.highOff",
+      "value": "60"
+    },
+    {
+      "name": "org.eso.ias.tf.minmaxthreshold.lowOn",
+      "value": "-100"
+    },
+    {
+      "name": "org.eso.ias.tf.minmaxthreshold.lowOff",
+      "value": "-60"
+    }
+  ]
+}
