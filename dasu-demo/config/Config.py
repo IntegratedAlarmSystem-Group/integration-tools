@@ -2,8 +2,16 @@ from Asce import Asce
 from Dasu import Dasu
 from Supervisor import Supervisor
 from Iasios import Iasios
+from TransferFunction import TransferFunction
 
 import os
+
+
+def main():
+  vars = ["Temperature", "Pressure", "WindDirection",
+          "WindSpeed", "Humidity", "Dewpoint"]
+  ids = [2]
+  config_weather(vars, ids)
 
 
 # writes the configuration file for this object,
@@ -30,6 +38,11 @@ def ensure_dir(dir):
 # creates the json configuration for all the combination var-id
 # for the weather station
 def config_weather(vars, ids):
+
+  # transfer function
+  classname = "org.eso.ias.prototype.transfer.impls.MinMaxThresholdTF"
+  write_conf(TransferFunction(classname, "SCALA"))
+
   iasios = Iasios()
   supervisor = Supervisor()
 
@@ -51,7 +64,4 @@ def config_weather(vars, ids):
 
 
 if __name__ == '__main__':
-  vars = ["Temperature", "Pressure", "WindDirection",
-          "WindSpeed", "Humidity", "Dewpoint"]
-  ids = [2]
-  config_weather(vars, ids)
+  main()
