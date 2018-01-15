@@ -1,0 +1,48 @@
+apply plugin: 'java'
+
+String iasroot = System.getenv("IAS_ROOT")
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+        }
+    }
+    test {
+        java {
+            srcDirs = ['test']
+        }
+    }
+}
+
+configurations {
+    // configuration that holds jars to include in the jar
+    extraLibs
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(dir: iasroot + '/lib', include: '*.jar')
+    extraLibs fileTree(dir: iasroot + '/lib', include: '*.jar')
+    compile fileTree(dir: iasroot + '/lib/ExtTools', include: '*.jar')
+    extraLibs fileTree(dir: iasroot + '/lib/ExtTools', include: '*.jar')
+
+    compile 'org.scala-lang:scala-library:2.12.4'
+    extraLibs 'org.scala-lang:scala-library:2.12.4'
+
+    testCompile 'junit:junit:4.12'
+}
+
+jar {
+   manifest {
+      attributes 'Main-Class': 'org.dasu.DasuTest'
+   }
+
+   from {
+       configurations.extraLibs.collect { it.isDirectory() ? it : zipTree(it) }
+   }
+}
