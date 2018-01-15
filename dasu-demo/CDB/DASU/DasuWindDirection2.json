@@ -1,9 +1,0 @@
-{
-  "id": "DasuWindDirection2",
-  "asceIDs": [
-    "AsceWindDirection2"
-  ],
-  "outputId": "AlarmWindDirection2",
-  "logLevel": "FATAL",
-  "supervisorID": "SupervisorID"
-}

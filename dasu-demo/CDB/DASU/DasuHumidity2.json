@@ -1,9 +1,0 @@
-{
-  "id": "DasuHumidity2",
-  "asceIDs": [
-    "AsceHumidity2"
-  ],
-  "outputId": "AlarmHumidity2",
-  "logLevel": "FATAL",
-  "supervisorID": "SupervisorID"
-}

@@ -1,8 +1,0 @@
-{
-  "id": "SupervisorID",
-  "dasusIDs": [
-    "DasuTemperature2", "DasuPressure2", "DasuWindDirection2", "DasuWindSpeed2", "DasuHumidity2", "DasuDewpoint2"
-  ],
-  "hostName": "almaias.eso.org",
-  "logLevel": "INFO"
-}
