@@ -1,0 +1,14 @@
+[
+  {
+    "id": "Temperature2",
+    "shortDesc": "Temperature reported by the weather station 2",
+    "iasType": "DOUBLE",
+    "refreshRate": 2000
+  },
+  {
+    "id": "AlarmTemperature2",
+    "shortDesc": "Temperature reported by the weather station 2 out of range",
+    "iasType": "ALARM",
+    "refreshRate": 2000
+  }
+]
