@@ -43,3 +43,9 @@ Also, we can run the related converter with
 [dasu-demo]$ java -cp build/libs/dasu-demo.jar org.dasu.ConverterTest
 ```
 To complete the data workflow with a plugin, you should run first the converter and then the DASUs.
+
+To check the messages from the converter (and the DASUs) we can use a consumer for the related topic with
+
+```
+./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic BsdbCoreKTopic
+```
