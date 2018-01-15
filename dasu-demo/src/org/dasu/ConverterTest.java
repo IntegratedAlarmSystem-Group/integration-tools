@@ -19,7 +19,7 @@ public class ConverterTest {
 
         String converterID = "KafkaConverterId";
 
-        Path cdbParentPath = FileSystems.getDefault().getPath("dasu-demo");
+        Path cdbParentPath = FileSystems.getDefault().getPath(".");
         CdbJsonFiles cdbFiles = new CdbJsonFiles(cdbParentPath);
         CdbReader cdbReader = new JsonReader(cdbFiles);
 

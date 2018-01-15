@@ -26,7 +26,7 @@ class DasuTest {
     public static void main(String[] args) throws IOException {
 
         // Build the CDB reader
-        Path cdbParentPath = FileSystems.getDefault().getPath("dasu-demo");
+        Path cdbParentPath = FileSystems.getDefault().getPath(".");
         CdbJsonFiles cdbFiles = new CdbJsonFiles(cdbParentPath);
         CdbReader cdbReader = new JsonReader(cdbFiles);
 
