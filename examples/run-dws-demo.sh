@@ -4,4 +4,4 @@ echo '---------------------------------------------------------'
 cd ..
 cd run
 pwd
-parallel ::: './run-kafka.sh' './run-webserver.sh' './run-display.sh' './run-dws-plugin.sh' './run-dws-dws-converter-sh' './run-dws-dasus.sh' 
+parallel ::: './run-kafka.sh' './run-webserver.sh' './run-display.sh' './run-dws-plugin.sh' './run-dws-converter-sh' './run-dws-dasus.sh' 
