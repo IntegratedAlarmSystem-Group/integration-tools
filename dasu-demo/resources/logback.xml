@@ -1,6 +1,6 @@
 <configuration packagingData="false">
 
-    <timestamp key="tStamp" datePattern="yyyy-MM-dd--HH-mm-ss"/>
+    <timestamp key="tStamp" datePattern="yyyy-MM-dd-HH:mm:ss"/>
 
     <shutdownHook/>
 
@@ -12,9 +12,7 @@
         </encoder>
     </appender>
 
-    <appender
-            name="FILE"
-            class="ch.qos.logback.core.FileAppender">
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
         <append>true</append>
         <prudent>true</prudent> <!--  Can slow down the logging -->
         <file>log/${log_file_name}.${tStamp}.log</file>

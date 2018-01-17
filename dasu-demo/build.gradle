@@ -44,7 +44,7 @@ dependencies {
 
 jar {
    manifest {
-      attributes 'Main-Class': 'org.dasu.DasuTest'
+      attributes 'Main-Class': 'DasuDemo'
    }
 
    from {

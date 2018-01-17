@@ -1,4 +1,3 @@
-package org.dasu;
 
 import org.eso.ias.cdb.CdbReader;
 import org.eso.ias.cdb.IasCdbException;
@@ -13,13 +12,13 @@ import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.util.Properties;
 
-public class ConverterTest {
+public class ConverterDemo {
 
     public static void main(String[] args) throws IasCdbException, IOException, ConfigurationException {
 
         String converterID = "KafkaConverterId";
 
-        System.setProperty("log_file_name", ConverterTest.class.getSimpleName());
+        System.setProperty("log_file_name", ConverterDemo.class.getSimpleName());
 
         // read cdb
         Path cdbParentPath = FileSystems.getDefault().getPath(".");

@@ -1,9 +1,5 @@
-package org.dasu;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
+import ch.qos.logback.classic.LoggerContext;
 import org.eso.ias.plugin.Plugin;
 import org.eso.ias.plugin.PluginException;
 import org.eso.ias.plugin.config.PluginConfig;
@@ -12,9 +8,11 @@ import org.eso.ias.plugin.publisher.MonitorPointSender;
 import org.eso.ias.plugin.publisher.PublisherException;
 import org.eso.ias.plugin.publisher.impl.KafkaPublisher;
 import org.eso.ias.prototype.input.java.OperationalMode;
-
 import org.slf4j.LoggerFactory;
-import ch.qos.logback.classic.LoggerContext;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * publishes data from a weather station to a Kafka Queue

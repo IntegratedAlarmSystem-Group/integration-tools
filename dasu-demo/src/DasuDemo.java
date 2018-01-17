@@ -1,4 +1,12 @@
-package org.dasu;
+
+import org.eso.ias.cdb.CdbReader;
+import org.eso.ias.cdb.json.CdbJsonFiles;
+import org.eso.ias.cdb.json.JsonReader;
+import org.eso.ias.dasu.Dasu;
+import org.eso.ias.dasu.publisher.KafkaPublisher;
+import org.eso.ias.dasu.subscriber.KafkaSubscriber;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.nio.file.FileSystems;
@@ -7,21 +15,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Properties;
 
-import org.eso.ias.cdb.json.CdbJsonFiles;
-import org.eso.ias.cdb.CdbReader;
-import org.eso.ias.cdb.json.JsonReader;
-import org.eso.ias.dasu.subscriber.KafkaSubscriber;
-import org.eso.ias.dasu.Dasu;
-import org.eso.ias.dasu.publisher.KafkaPublisher;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-class DasuTest {
+class DasuDemo {
 
     public static void main(String[] args) throws IOException {
 
-        System.setProperty("log_file_name", DasuTest.class.getSimpleName());
-        Logger logger = LoggerFactory.getLogger(DasuTest.class);
+        System.setProperty("log_file_name", DasuDemo.class.getSimpleName());
+        Logger logger = LoggerFactory.getLogger(DasuDemo.class);
 
         // Build the CDB reader
         Path cdbParentPath = FileSystems.getDefault().getPath(".");
