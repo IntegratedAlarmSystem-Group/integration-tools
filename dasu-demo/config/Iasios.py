@@ -4,14 +4,14 @@
 class Iasios:
   template = '''  {
     "id": "%s",
-    "shortDesc": "%s reported by the weather station %d",
+    "shortDesc": "%s reported by the weather station %s",
     "iasType": "DOUBLE",
     "refreshRate": 2000
   }'''
 
   alarmtemplate = '''  {
     "id": "Alarm%s",
-    "shortDesc": "%s reported by the weather station %d out of range",
+    "shortDesc": "%s reported by the weather station %s out of range",
     "iasType": "ALARM",
     "refreshRate": 2000
   }'''
@@ -23,8 +23,8 @@ class Iasios:
   def add(self, var, id):
     varid = var + str(id)
 
-    iasval = Iasios.template % (varid, var, id)
-    iasalarm = Iasios.alarmtemplate % (varid, var, id)
+    iasval = Iasios.template % (varid, var, str(id))
+    iasalarm = Iasios.alarmtemplate % (varid, var, str(id))
 
     self.iasios.append(iasval)
     self.iasios.append(iasalarm)

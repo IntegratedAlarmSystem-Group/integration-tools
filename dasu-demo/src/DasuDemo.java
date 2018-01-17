@@ -40,6 +40,7 @@ class DasuDemo {
             }
         }
 
+        // dummy dasu, comment to use the weather dasus
         dasuIds = new String[] {"Dasudummy"};
 
         System.out.println(Arrays.toString(dasuIds));
