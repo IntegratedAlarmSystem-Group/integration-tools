@@ -58,6 +58,17 @@ def config_weather(vars, ids):
       write_conf(dasu)
       write_conf(asce)
 
+  # add dummy configuration
+  var = "dummy"
+  id = ""
+
+  dasu = Dasu(var, id)
+  asce = Asce(var, id, min=0, max=50)
+  iasios.add(var, id)
+  supervisor.add(dasu.id())
+  write_conf(dasu)
+  write_conf(asce)
+
   write_conf(iasios)
   write_conf(supervisor)
   return

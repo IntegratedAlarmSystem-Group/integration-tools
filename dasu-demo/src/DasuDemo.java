@@ -40,6 +40,8 @@ class DasuDemo {
             }
         }
 
+        dasuIds = new String[] {"Dasudummy"};
+
         System.out.println(Arrays.toString(dasuIds));
 
         ArrayList<Dasu> dasus = new ArrayList<>();

@@ -13,6 +13,8 @@ import org.slf4j.LoggerFactory;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
 
 /**
  * publishes data from a weather station to a Kafka Queue
@@ -31,7 +33,6 @@ public class DummyPlugin extends Plugin {
         System.err.println("Stopped logging");
 
         // IASIO
-        String valueId = "dummy";
         int refreshTime = 1000;
 
         // configuration
@@ -66,16 +67,16 @@ public class DummyPlugin extends Plugin {
 
         // set mode
         dummy.setPluginOperationalMode(OperationalMode.OPERATIONAL);
+        dummy.startLoop();
         System.err.println("Plugin started, waiting for user input...");
 
         // start reading values from input
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String line;
         while ((line = br.readLine()) != null) {
-
             try {
                 Double value = Double.parseDouble(line);
-                dummy.updateMonitorPointValue(valueId, value);
+                dummy.value = value;
 
                 System.err.println("dummy value updated to " + value);
             } catch (Exception e) {
@@ -85,7 +86,21 @@ public class DummyPlugin extends Plugin {
 
         br.close();
         System.err.println("Closing plugin");
+
+        try {
+            dummy.loopFuture.get();
+        } catch (Exception e) {
+            System.err.println("loop terminated");
+        }
     }
+
+    /**
+     * the loop to keep the plugin running.
+     */
+    private ScheduledFuture<?> loopFuture;
+
+    private double value;
+    private static String valueId = "dummy";
 
     private DummyPlugin(PluginConfig config, MonitorPointSender sender) {
         super(config, sender);
@@ -104,5 +119,16 @@ public class DummyPlugin extends Plugin {
         } catch (PluginException pe) {
             System.err.println("Error sending " + mPointID + " monitor point to the core of the IAS");
         }
+    }
+
+    /**
+     * The loop to update the value every 1 second
+     */
+    private void startLoop() {
+        // send data every second.
+        loopFuture = getScheduledExecutorService().scheduleAtFixedRate(
+                () -> {
+                    updateMonitorPointValue(valueId, value);
+                }, 0, 1, TimeUnit.SECONDS);
     }
 }
