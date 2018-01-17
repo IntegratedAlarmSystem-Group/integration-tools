@@ -19,6 +19,7 @@ class DasuDemo {
 
     public static void main(String[] args) throws IOException {
 
+        // set log file name
         System.setProperty("log_file_name", DasuDemo.class.getSimpleName());
         Logger logger = LoggerFactory.getLogger(DasuDemo.class);
 

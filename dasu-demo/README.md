@@ -40,7 +40,7 @@ After this setup, we can build and run the dasu-demo script with
 Also, we can run the related converter with
 
 ```
-[dasu-demo]$ java -cp build/libs/dasu-demo.jar org.dasu.ConverterTest
+[dasu-demo]$ java -cp build/libs/dasu-demo.jar ConverterDemo
 ```
 To complete the data workflow with a plugin, you should run first the converter and then the DASUs.
 

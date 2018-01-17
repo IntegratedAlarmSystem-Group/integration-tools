@@ -8,7 +8,7 @@
         <!-- encoders are assigned the type
              ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
         <encoder>
-            <pattern>%d{HH:mm:ss.SSS} %-5level - %msg%n</pattern>
+            <pattern>%d{HH:mm:ss.SSS} %level %file - %msg%n</pattern>
         </encoder>
     </appender>
 
@@ -18,12 +18,12 @@
         <file>log/${log_file_name}.${tStamp}.log</file>
 
         <encoder>
-            <pattern>%d{yyyy-MM-dd--HH:mm:ss} %level %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd-HH:mm:ss} %level %file - %msg%n</pattern>
             <outputPatternAsHeader>true</outputPatternAsHeader>
         </encoder>
     </appender>
 
-    <root level="DEBUG">
+    <root level="INFO">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="FILE"/>
     </root>

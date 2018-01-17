@@ -18,6 +18,7 @@ public class ConverterDemo {
 
         String converterID = "KafkaConverterId";
 
+        // set log file name
         System.setProperty("log_file_name", ConverterDemo.class.getSimpleName());
 
         // read cdb

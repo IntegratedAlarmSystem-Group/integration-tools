@@ -18,7 +18,6 @@ def main():
 # the object can be Dasu, Asce, Supervisor or Iasio
 def write_conf(config_obj):
   path = "CDB/" + config_obj.folder() + config_obj.id() + ".json"
-  print(path)
   ensure_dir(os.path.dirname(path))
 
   file = open(path, 'w')
