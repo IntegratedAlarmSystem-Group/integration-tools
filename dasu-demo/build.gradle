@@ -7,6 +7,9 @@ sourceSets {
         java {
             srcDirs = ['src']
         }
+        resources {
+            srcDirs = ['resources']
+        }
     }
     test {
         java {
@@ -26,11 +29,13 @@ repositories {
 }
 
 dependencies {
+    // ias libraries and dependencies
     compile fileTree(dir: iasroot + '/lib', include: '*.jar')
     extraLibs fileTree(dir: iasroot + '/lib', include: '*.jar')
     compile fileTree(dir: iasroot + '/lib/ExtTools', include: '*.jar')
     extraLibs fileTree(dir: iasroot + '/lib/ExtTools', include: '*.jar')
 
+    // scala
     compile 'org.scala-lang:scala-library:2.12.4'
     extraLibs 'org.scala-lang:scala-library:2.12.4'
 

@@ -1,7 +1,8 @@
 package org.dasu;
 
-
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 import org.eso.ias.plugin.Plugin;
 import org.eso.ias.plugin.PluginException;
@@ -11,9 +12,9 @@ import org.eso.ias.plugin.publisher.MonitorPointSender;
 import org.eso.ias.plugin.publisher.PublisherException;
 import org.eso.ias.plugin.publisher.impl.KafkaPublisher;
 import org.eso.ias.prototype.input.java.OperationalMode;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import org.slf4j.LoggerFactory;
+import ch.qos.logback.classic.LoggerContext;
 
 /**
  * publishes data from a weather station to a Kafka Queue
@@ -22,26 +23,30 @@ public class DummyPlugin extends Plugin {
 
     /**
      * runs the plugin.
-     *
-     * @param args .
      */
-    public static void main(String[] args) {
-        logger.info("Starting dummy plugin ...");
+    public static void main(String[] args) throws IOException {
+        System.err.println("Starting dummy plugin...");
 
-        // name of the IASIO
+        // stop logging
+        LoggerContext loggerContext = (LoggerContext) LoggerFactory.getILoggerFactory();
+        loggerContext.stop();
+        System.err.println("Stopped logging");
+
+        // IASIO
         String valueId = "dummy";
+        int refreshTime = 1000;
 
         // configuration
         PluginConfig config = new PluginConfig();
         config.setId("DummyPlugin");
-        config.setMonitoredSystemId("Terminal values");
+        config.setMonitoredSystemId("DummyStation");
         config.setSinkServer("localhost");
         config.setSinkPort(9092);
 
         // values
         Value dummyVal = new Value();
         dummyVal.setId(valueId);
-        dummyVal.setRefreshTime(1000);
+        dummyVal.setRefreshTime(refreshTime);
         config.setValues(new Value[]{dummyVal});
 
         // publisher
@@ -56,30 +61,33 @@ public class DummyPlugin extends Plugin {
         try {
             dummy.start();
         } catch (PublisherException pe) {
-            logger.error("The plugin failed to start", pe);
+            System.err.println("The plugin failed to start");
+            pe.printStackTrace(System.err);
             System.exit(-3);
         }
 
         // set mode
         dummy.setPluginOperationalMode(OperationalMode.OPERATIONAL);
-
-
-        logger.info("Plugin started, waiting user input...");
+        System.err.println("Plugin started, waiting for user input...");
 
         // start reading values from input
-        Scanner in = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String line;
+        while ((line = br.readLine()) != null) {
 
-        while (in.hasNextDouble()) {
-            double value = in.nextDouble();
+            try {
+                Double value = Double.parseDouble(line);
+                dummy.updateMonitorPointValue(valueId, value);
 
-            dummy.updateMonitorPointValue(valueId, value);
-            logger.info("value updated to " + value);
+                System.err.println("dummy value updated to " + value);
+            } catch (Exception e) {
+                System.err.println("Invalid value");
+            }
         }
 
-        in.close();
+        br.close();
+        System.err.println("Closing plugin");
     }
-
-    private static final Logger logger = LoggerFactory.getLogger(DummyPlugin.class);
 
     private DummyPlugin(PluginConfig config, MonitorPointSender sender) {
         super(config, sender);
@@ -96,7 +104,7 @@ public class DummyPlugin extends Plugin {
         try {
             super.updateMonitorPointValue(mPointID, value);
         } catch (PluginException pe) {
-            logger.error("Error sending {} monitor point to the core of the IAS", mPointID);
+            System.err.println("Error sending " + mPointID + " monitor point to the core of the IAS");
         }
     }
 }

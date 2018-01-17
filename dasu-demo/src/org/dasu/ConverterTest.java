@@ -19,17 +19,20 @@ public class ConverterTest {
 
         String converterID = "KafkaConverterId";
 
+        System.setProperty("log_file_name", ConverterTest.class.getSimpleName());
+
+        // read cdb
         Path cdbParentPath = FileSystems.getDefault().getPath(".");
         CdbJsonFiles cdbFiles = new CdbJsonFiles(cdbParentPath);
         CdbReader cdbReader = new JsonReader(cdbFiles);
 
-        // Finally builds the converter
-        Converter converter = new Converter(converterID, cdbReader, new ConverterKafkaStream(converterID, new Properties()));
-
+        // build the converter
+        ConverterKafkaStream stream = new ConverterKafkaStream(converterID, new Properties());
+        Converter converter = new Converter(converterID, cdbReader, stream);
         converter.setUp();
 
         while (true) {
-            // run
+            // run converter
         }
     }
 }

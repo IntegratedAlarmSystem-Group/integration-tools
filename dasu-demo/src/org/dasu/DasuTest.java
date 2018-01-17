@@ -18,12 +18,10 @@ import org.slf4j.LoggerFactory;
 
 class DasuTest {
 
-    /**
-     * The logger
-     */
-    private static final Logger logger = LoggerFactory.getLogger(DasuTest.class);
-
     public static void main(String[] args) throws IOException {
+
+        System.setProperty("log_file_name", DasuTest.class.getSimpleName());
+        Logger logger = LoggerFactory.getLogger(DasuTest.class);
 
         // Build the CDB reader
         Path cdbParentPath = FileSystems.getDefault().getPath(".");
