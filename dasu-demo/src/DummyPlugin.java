@@ -68,7 +68,7 @@ public class DummyPlugin extends Plugin {
         // set mode
         dummy.setPluginOperationalMode(OperationalMode.OPERATIONAL);
         dummy.startLoop();
-        System.err.println("Plugin started, waiting for user input...");
+        System.err.println("Plugin started, sending value 0. waiting for user input...");
 
         // start reading values from input
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
