@@ -1,5 +1,13 @@
 # Integration Tools
 
+## Demo Weather Station
+
+Demo to show the data workflow from a plugin to the ias display
+
+```
+./run-dws-demo.sh
+```
+
 ## Demo Kafka to Display (sample demo)
 
 This demo launches the following:
