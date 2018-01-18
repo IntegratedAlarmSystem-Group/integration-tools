@@ -8,8 +8,8 @@ import os
 
 
 def main():
-  vars = ["Temperature", "Pressure", "WindDirection",
-          "WindSpeed", "Humidity", "Dewpoint"]
+  vars = ["Temperature", "WindSpeed"]
+  # "Pressure", "WindDirection", "Humidity", "Dewpoint"]
   ids = [2]
   config_weather(vars, ids)
 
@@ -49,7 +49,10 @@ def config_weather(vars, ids):
   for id in ids:
     for var in vars:
       dasu = Dasu(var, id)
-      asce = Asce(var, id, min=-100, max=100)
+      if var == "Temperature":
+        asce = Asce(var, id, min=-20, max=1000, delta=5)
+      elif var == "WindSpeed":
+        asce = Asce(var, id, min=-1000, max=17, delta=3)
       # TODO: set the range for the Asce
 
       iasios.add(var, id)

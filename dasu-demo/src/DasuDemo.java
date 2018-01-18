@@ -29,25 +29,23 @@ class DasuDemo {
         CdbReader cdbReader = new JsonReader(cdbFiles);
 
         // define the variables to process in the dasus
-        String[] vars = {"Temperature", "Pressure", "WindDirection",
-                "WindSpeed", "Humidity", "Dewpoint"};
+        String[] vars = {"Temperature", "WindSpeed"};
+        // "Pressure", "WindDirection", "Humidity", "Dewpoint"};
         int[] ids = {2};
 
-        String[] dasuIds = new String[vars.length * ids.length];
+        String[] dasuIds = new String[vars.length * ids.length + 1];
         for (int i = 0; i < ids.length; i++) {
             for (int j = 0; j < vars.length; j++) {
                 dasuIds[i * vars.length + j] = "Dasu" + vars[j] + ids[i];
             }
         }
 
-        // dummy dasu, comment to use the weather dasus
-        dasuIds = new String[] {"Dasudummy"};
-
-        System.out.println(Arrays.toString(dasuIds));
+        // dummy dasu
+        dasuIds[dasuIds.length - 1] = "Dasudummy";
 
         ArrayList<Dasu> dasus = new ArrayList<>();
 
-        logger.info("Creating the dasus");
+        logger.info("Creating the dasus: " + Arrays.toString(dasuIds));
         for (String id : dasuIds) {
             KafkaPublisher outputPublisher = KafkaPublisher.apply(id, new Properties());
             KafkaSubscriber inputsProvider = new KafkaSubscriber(id, new Properties());
