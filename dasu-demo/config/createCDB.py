@@ -10,7 +10,7 @@ import os
 def main():
   vars = ["Temperature", "WindSpeed"]
   # "Pressure", "WindDirection", "Humidity", "Dewpoint"]
-  ids = [2]
+  ids = [2,3,4,5,6,7,8,9,10,11]
   config_weather(vars, ids)
 
 
