@@ -44,7 +44,7 @@ dependencies {
 
 jar {
    manifest {
-      attributes 'Main-Class': 'DasuDemo'
+      attributes 'Main-Class': 'SupervisorDemo'
    }
 
    from {
