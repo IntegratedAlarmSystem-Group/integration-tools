@@ -17,9 +17,13 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
 /**
- * publishes data from a weather station to a Kafka Queue
+ * publishes data to a Kafka Queue
  */
 public class DummyPlugin extends Plugin {
+
+    private double value;
+    private static String valueId = "dummy";
+    private int updateTime = 1000;
 
     /**
      * runs the plugin.
@@ -70,17 +74,87 @@ public class DummyPlugin extends Plugin {
         dummy.startLoop();
         System.err.println("Plugin started, sending value 0. waiting for user input...");
 
+        System.err.println("\nAvailable commands:");
+
+        System.err.println("\t> value [double]");
+        System.err.println("\tchanges the value the plugin is sending\n");
+
+        System.err.println("\t> mode [operational/maintenance/initialization/unknown]");
+        System.err.println("\tchanges the operational mode of the plugin\n");
+
+        System.err.println("\t> update [int]");
+        System.err.println("\tchanges the rate at wich the value in the plugin is updated (milliseconds)\n");
+
         // start reading values from input
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String line;
         while ((line = br.readLine()) != null) {
-            try {
-                Double value = Double.parseDouble(line);
-                dummy.value = value;
+            String[] arg = line.split(" ");
 
-                System.err.println("dummy value updated to " + value);
-            } catch (Exception e) {
-                System.err.println("Invalid value");
+            if (arg.length != 2){
+                System.err.println("Invalid expression: " + line);
+                continue;
+            }
+
+            // modify value
+            if (arg[0].toLowerCase().equals("value")) {
+                try {
+                    Double value = Double.parseDouble(arg[1]);
+                    dummy.value = value;
+                    dummy.updateMonitorPointValue(valueId, value);
+
+                    System.err.println("dummy value updated to " + value);
+                } catch (Exception e) {
+                    System.err.println("Invalid value: " + arg[1]);
+                }
+
+                // operational mode
+            } else if (arg[0].toLowerCase().equals("mode")) {
+                String msg = "operational mode changed to: ";
+
+                switch (arg[1].toLowerCase()) {
+                    case "operational":
+                        dummy.setPluginOperationalMode(OperationalMode.OPERATIONAL);
+                        System.err.println(msg + "operational");
+                        break;
+
+                    case "maintenance":
+                        dummy.setPluginOperationalMode(OperationalMode.MAINTENANCE);
+                        System.err.println(msg + "maintenance");
+                        break;
+
+                    case "initialization":
+                        dummy.setPluginOperationalMode(OperationalMode.INTIALIZATION);
+                        System.err.println(msg + "initialization");
+                        break;
+
+                    case "unknown":
+                        dummy.setPluginOperationalMode(OperationalMode.UNKNOWN);
+                        System.err.println(msg + "unknown");
+                        break;
+
+                    default:
+                        System.err.println("unrecongnized operational mode: " + arg[1]);
+                        break;
+                }
+
+                // update time
+            } else if (arg[0].toLowerCase().equals("update")) {
+                try {
+                    Integer value = Integer.parseInt(arg[1]);
+                    dummy.updateTime = value;
+
+                    // restart loop
+                    dummy.loopFuture.cancel(true);
+                    dummy.startLoop();
+
+                    System.err.println("update time changed to " + value + " ms");
+                } catch (Exception e) {
+                    System.err.println("Invalid update time: " + arg[1]);
+                }
+
+            } else {
+                System.err.println("unrecognized command: " + line);
             }
         }
 
@@ -88,7 +162,7 @@ public class DummyPlugin extends Plugin {
         System.err.println("Closing plugin");
 
         try {
-            dummy.loopFuture.get();
+            dummy.loopFuture.cancel(true);
         } catch (Exception e) {
             System.err.println("loop terminated");
         }
@@ -98,9 +172,6 @@ public class DummyPlugin extends Plugin {
      * the loop to keep the plugin running.
      */
     private ScheduledFuture<?> loopFuture;
-
-    private double value;
-    private static String valueId = "dummy";
 
     private DummyPlugin(PluginConfig config, MonitorPointSender sender) {
         super(config, sender);
@@ -129,6 +200,6 @@ public class DummyPlugin extends Plugin {
         loopFuture = getScheduledExecutorService().scheduleAtFixedRate(
                 () -> {
                     updateMonitorPointValue(valueId, value);
-                }, 0, 1, TimeUnit.SECONDS);
+                }, 0, updateTime, TimeUnit.MILLISECONDS);
     }
 }
