@@ -5,10 +5,9 @@
 # source set_env.sh
 
 cd ../../ias-plugins/AlmaWeatherStationPlugin
-echo "compiling the plugin"
 gradle build
 
-echo "compilation completed, starting the plugin in screen named plugin."
+echo "Compilation completed, starting the plugin in screen named plugin."
 echo "Check you are connected to the ESO VPN otherwise the process will end."
 
 ## run in a detached screen
