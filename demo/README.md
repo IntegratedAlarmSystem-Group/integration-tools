@@ -30,17 +30,17 @@ Before running the converter and DASUs it is necessary to set a CDB (Configurati
 ```
 which will create a set of JSON files in the CDB folder.
 
-After this setup, we can build and run the dasu-demo script with
+After this setup, we can build and run the demo script with
 
 ```
 [dasu-demo]$ gradle build
-[dasu-demo]$ java -jar build/libs/dasu-demo.jar
+[dasu-demo]$ java -jar build/libs/demo.jar
 ```
 
 Also, we can run the related converter with
 
 ```
-[dasu-demo]$ java -cp build/libs/dasu-demo.jar ConverterDemo
+[dasu-demo]$ java -cp build/libs/demo.jar ConverterDemo
 ```
 To complete the data workflow with a plugin, you should run first the converter and then the DASUs.
 
@@ -48,4 +48,9 @@ To check the messages from the converter (and the DASUs) we can use a consumer f
 
 ```
 ./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic BsdbCoreKTopic
+```
+
+Start dummy plugin
+```
+    [dasu-demo]$ java -cp build/libs/demo.jar DummyPlugin
 ```
