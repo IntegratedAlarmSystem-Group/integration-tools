@@ -5,6 +5,8 @@ import org.eso.ias.cdb.json.JsonReader;
 import org.eso.ias.dasu.Dasu;
 import org.eso.ias.dasu.DasuImpl;
 import org.eso.ias.dasu.publisher.KafkaPublisher;
+import org.eso.ias.dasu.publisher.OutputPublisher;
+import org.eso.ias.dasu.subscriber.InputSubscriber;
 import org.eso.ias.dasu.subscriber.KafkaSubscriber;
 import org.eso.ias.prototype.input.Identifier;
 import org.eso.ias.prototype.input.java.IdentifierType;
@@ -51,12 +53,12 @@ class DasuDemo {
 
         logger.info("Creating the dasus: " + Arrays.toString(dasuIds));
         for (String id : dasuIds) {
-            KafkaPublisher outputPublisher = KafkaPublisher.apply(id, new Properties());
-            KafkaSubscriber inputsProvider = new KafkaSubscriber(id, new Properties());
+            OutputPublisher outputPublisher = KafkaPublisher.apply(id, new Properties());
+            InputSubscriber inputsProvider = new KafkaSubscriber(id, new Properties());
 
             // The DASU
             Identifier ident = new Identifier(id, IdentifierType.DASU, supId);
-            Dasu dasu = new DasuImpl(ident, outputPublisher, inputsProvider, cdbReader);
+            Dasu dasu = new DasuImpl(ident, outputPublisher, inputsProvider, cdbReader, 5*1000000);
             dasus.add(dasu);
         }
 

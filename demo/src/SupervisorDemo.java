@@ -1,8 +1,11 @@
 import org.eso.ias.cdb.CdbReader;
 import org.eso.ias.cdb.json.CdbJsonFiles;
 import org.eso.ias.cdb.json.JsonReader;
+import org.eso.ias.cdb.pojos.DasuDao;
 import org.eso.ias.dasu.DasuImpl;
 import org.eso.ias.dasu.publisher.KafkaPublisher;
+import org.eso.ias.dasu.publisher.OutputPublisher;
+import org.eso.ias.dasu.subscriber.InputSubscriber;
 import org.eso.ias.dasu.subscriber.KafkaSubscriber;
 import org.eso.ias.prototype.input.Identifier;
 import org.eso.ias.prototype.input.java.IdentifierType;
@@ -35,7 +38,8 @@ public class SupervisorDemo {
 
         // supervisor
         Identifier supId = new Identifier(id, IdentifierType.SUPERVISOR);
-        Supervisor supervisor = new Supervisor(supId, publisher, subscriber, reader, DasuImpl::apply);
+        Supervisor supervisor = new Supervisor(supId, publisher, subscriber, reader,
+                (DasuDao dd, Identifier di, OutputPublisher op, InputSubscriber is, CdbReader cdb) -> DasuImpl.apply(dd, di, op, is, cdb, 2*1000));
 
         supervisor.start();
 
