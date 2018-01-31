@@ -10,5 +10,3 @@ source supervisor-screen.sh
 source webserver-screen.sh
 source sender-screen.sh
 source display-screen.sh
-
-cd ../examples
