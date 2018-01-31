@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd ../development-tools
-source set_env.sh
+source mac_set_env.sh
 
 cd ../run
 source plugin-screen.sh

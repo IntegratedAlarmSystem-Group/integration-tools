@@ -4,4 +4,4 @@ echo '---------------------------------------------------------'
 cd ..
 cd run
 pwd
-parallel ::: './run-kafka.sh' './run-webserver.sh' './run-display.sh' './run-mock-producer.sh' './run-webserver-sender.sh'
+parallel ::: './run-kafka.sh' './webserver-screen.sh' './display-screen.sh' './mock-producer.sh' './sender-screen.sh'

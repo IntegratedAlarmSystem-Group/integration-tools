@@ -5,7 +5,7 @@
 Demo to show the data workflow from a plugin to the ias display
 
 ```
-./run-dws-demo.sh
+[run] source demo-screen.sh
 ```
 
 ## Demo Kafka to Display (sample demo)
