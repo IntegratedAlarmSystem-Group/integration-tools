@@ -44,36 +44,40 @@ def config_weather(vars, ids):
   write_conf(TransferFunction(classname, "SCALA"))
 
   iasios = Iasios()
-  supervisor = Supervisor()
+  sup = Supervisor("SupervisorID")
 
   for id in ids:
     for var in vars:
-      dasu = Dasu(var, id)
+      dasu = Dasu(var, id, sup.id())
       if var == "Temperature":
         asce = Asce(var, id, min=-20, max=1000, delta=5)
       elif var == "WindSpeed":
         asce = Asce(var, id, min=-1000, max=17, delta=3)
-      # TODO: set the range for the Asce
 
       iasios.add(var, id)
-      supervisor.add(dasu.id())
+      sup.add(dasu.id())
 
       write_conf(dasu)
       write_conf(asce)
+
+  write_conf(sup)
 
   # add dummy configuration
   var = "dummy"
   id = ""
 
-  dasu = Dasu(var, id)
-  asce = Asce(var, id, min=0, max=50, delta=0)
+  sup2 = Supervisor("SupervisorDummy")
+  dasu2 = Dasu(var, id, sup2.id())
+  asce2 = Asce(var, id, min=0, max=50, delta=0)
+
   iasios.add(var, id)
-  supervisor.add(dasu.id())
-  write_conf(dasu)
-  write_conf(asce)
+  sup2.add(dasu2.id())
+
+  write_conf(dasu2)
+  write_conf(asce2)
+  write_conf(sup2)
 
   write_conf(iasios)
-  write_conf(supervisor)
   return
 
 
