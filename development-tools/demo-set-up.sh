@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source mac_set_env.sh
+source set_env.sh
 
 echo "\n-----------------creating CDB-------------------\n"
 cd ../../
