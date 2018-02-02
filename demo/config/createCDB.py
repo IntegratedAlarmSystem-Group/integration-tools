@@ -24,7 +24,7 @@ def write_conf(config_obj):
   file.write(str(config_obj))
 
   file.close()
-  print "%s created" % path
+  print("%s created" % path)
   return
 
 
