@@ -1,35 +1,32 @@
 version: "2"
 
 services:
-
   kafka:
     image: spotify/kafka:latest
 
   cdb:
     image: cdb:latest
-    volumes:
-      - "/tmp/cdb:/usr/src/cdb/CDB"
 
   alma-weather-plugin:
     image: alma-weather-plugin:latest
     links:
-        - "kafka"
+      - ${KAFKA_SERVER}
 
   ias-converter:
     image: ias:latest
     links:
-      - "kafka"
-    volumes:
-      - "/tmp/cdb:/CDB"
-    command: "-l s -Dorg.eso.ias.converter.kafka.servers=kafka:9092 org.eso.ias.converter.Converter ConverterID -jcdb /"
+      - ${KAFKA_SERVER}
+    volumes_from:
+      - cdb
+    command: "-l s -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092 org.eso.ias.converter.Converter ConverterID -jcdb /usr/src/cdb/"
 
   ias-supervisor:
     image: ias:latest
     links:
-      - "kafka"
-    volumes:
-      - "/tmp/cdb:/CDB"
-    command: "-l s -Dorg.eso.ias.kafka.brokers=kafka:9092 org.eso.ias.supervisor.Supervisor SupervisorID -jcdb /"
+      - ${KAFKA_SERVER}
+    volumes_from:
+      - cdb
+    command: "-l s -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092 org.eso.ias.supervisor.Supervisor SupervisorID -jcdb /usr/src/cdb/"
 
   display:
     image: ias-display:latest
