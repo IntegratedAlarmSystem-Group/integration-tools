@@ -40,7 +40,7 @@ def ensure_dir(dir):
 def config_weather(vars, ids):
 
   # transfer function
-  classname = "org.eso.ias.prototype.transfer.impls.MinMaxThresholdTF"
+  classname = "org.eso.ias.asce.transfer.impls.MinMaxThresholdTF"
   write_conf(TransferFunction(classname, "SCALA"))
 
   iasios = Iasios()

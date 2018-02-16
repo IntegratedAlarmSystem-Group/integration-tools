@@ -9,7 +9,7 @@ class Asce:
     "%s"
   ],
   "outputID": "Alarm%s",
-  "transferFunctionID": "org.eso.ias.prototype.transfer.impls.MinMaxThresholdTF",
+  "transferFunctionID": "org.eso.ias.asce.transfer.impls.MinMaxThresholdTF",
    "props": [
     {
       "name": "org.eso.ias.tf.minmaxthreshold.highOn",

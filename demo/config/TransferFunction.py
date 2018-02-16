@@ -22,5 +22,5 @@ class TransferFunction:
 
 
 if __name__ == '__main__':
-  tf = TransferFunction("org.eso.ias.prototype.transfer.impls.MinMaxThresholdTF", "SCALA")
+  tf = TransferFunction("org.eso.ias.asce.transfer.impls.MinMaxThresholdTF", "SCALA")
   print tf
