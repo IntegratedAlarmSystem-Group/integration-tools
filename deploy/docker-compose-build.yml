@@ -1,0 +1,43 @@
+version: "2"
+
+services:
+  kafka:
+    image: spotify/kafka:latest
+
+  cdb:
+    image: cdb:latest
+
+  alma-weather-plugin:
+    image: alma-weather-plugin:latest
+    # build: https://github.com/IntegratedAlarmSystem-Group/ias-plugins/tree/feature/dockerization/AlmaWeatherStationPlugin
+    links:
+      - ${KAFKA_SERVER}
+
+  ias-converter:
+    build: https://github.com/IntegratedAlarmSystem-Group/ias.git#feature/dockerization
+    links:
+      - ${KAFKA_SERVER}
+    volumes_from:
+      - cdb
+    command: "-l s -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092 org.eso.ias.converter.Converter ConverterID -jcdb /usr/src/cdb/"
+
+  ias-supervisor:
+    build: https://github.com/IntegratedAlarmSystem-Group/ias.git#feature/dockerization
+    links:
+      - ${KAFKA_SERVER}
+    volumes_from:
+      - cdb
+    command: "-l s -Dorg.eso.ias.bootstrap.servers=${KAFKA_SERVER}:9092 org.eso.ias.supervisor.Supervisor SupervisorID -jcdb /usr/src/cdb/"
+
+  webserver:
+    build: https://github.com/IntegratedAlarmSystem-Group/ias-webserver.git#feature/dockerization
+
+  display:
+    build: https://github.com/IntegratedAlarmSystem-Group/ias-display.git#feature/dockerization
+
+  nginx:
+    build: ./nginx
+    volumes_from:
+     - display
+    ports:
+      - "80:80"
