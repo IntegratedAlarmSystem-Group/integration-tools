@@ -30,8 +30,6 @@ services:
 
   webserver:
     image: ias-webserver:latest
-    ports:
-      - "8001:8001"
 
   display:
     image: ias-display:latest
