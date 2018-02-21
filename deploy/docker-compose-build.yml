@@ -5,11 +5,12 @@ services:
     image: spotify/kafka:latest
 
   cdb:
-    image: cdb:latest
+    # image: cdb:latest
+    build: https://github.com/IntegratedAlarmSystem-Group/integration-tools.git#feature/dockerization:demo
 
   alma-weather-plugin:
-    image: alma-weather-plugin:latest
-    # build: https://github.com/IntegratedAlarmSystem-Group/ias-plugins/tree/feature/dockerization/AlmaWeatherStationPlugin
+    # image: alma-weather-plugin:latest
+    build: https://github.com/IntegratedAlarmSystem-Group/ias-plugins.git#feature/dockerization:AlmaWeatherStationPlugin
     links:
       - ${KAFKA_SERVER}
 
