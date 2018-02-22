@@ -36,7 +36,7 @@ services:
       - ${KAFKA_SERVER}
     volumes_from:
       - cdb
-    command: "-l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID"
+    command: "-l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8001/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID"
 
   webserver:
     build: https://github.com/IntegratedAlarmSystem-Group/ias-webserver.git#feature/dockerization
