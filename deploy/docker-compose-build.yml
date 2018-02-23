@@ -14,7 +14,14 @@ services:
     links:
       - ${KAFKA_SERVER}
 
-  ias-converter:
+  dummy-plugin:
+    image: dummy-plugin:latest
+    stdin_open: true
+    tty: true
+    links:
+      - ${KAFKA_SERVER}
+
+  converter:
     build: https://github.com/IntegratedAlarmSystem-Group/ias.git#feature/dockerization
     links:
       - ${KAFKA_SERVER}
@@ -22,7 +29,7 @@ services:
       - cdb
     command: "-l s -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092 org.eso.ias.converter.Converter ConverterID -jcdb /usr/src/cdb/"
 
-  ias-supervisor:
+  supervisor:
     build: https://github.com/IntegratedAlarmSystem-Group/ias.git#feature/dockerization
     links:
       - ${KAFKA_SERVER}
@@ -30,7 +37,15 @@ services:
       - cdb
     command: "-l s -Dorg.eso.ias.bootstrap.servers=${KAFKA_SERVER}:9092 org.eso.ias.supervisor.Supervisor SupervisorID -jcdb /usr/src/cdb/"
 
-  ias-sender:
+  dummy-supervisor:
+    build: https://github.com/IntegratedAlarmSystem-Group/ias.git#feature/dockerization
+    links:
+      - ${KAFKA_SERVER}
+    volumes_from:
+      - cdb
+    command: "-l s -Dorg.eso.ias.bootstrap.servers=${KAFKA_SERVER}:9092 org.eso.ias.supervisor.Supervisor SupervisorDummy -jcdb /usr/src/cdb/"
+
+  sender:
     build: https://github.com/IntegratedAlarmSystem-Group/ias.git#feature/dockerization
     links:
       - ${KAFKA_SERVER}
