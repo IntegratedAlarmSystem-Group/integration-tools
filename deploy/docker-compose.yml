@@ -54,5 +54,6 @@ services:
     build: ./nginx
     volumes_from:
      - display
+     - webserver
     ports:
       - "80:80"
