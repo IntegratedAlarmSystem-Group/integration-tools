@@ -33,7 +33,7 @@ services:
       - ${KAFKA_SERVER}
     volumes_from:
       - cdb
-    command: "-l s -Dorg.eso.ias.bootstrap.servers=${KAFKA_SERVER}:9092 org.eso.ias.supervisor.Supervisor SupervisorID -jcdb /usr/src/cdb/"
+    command: "-l s -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092 org.eso.ias.supervisor.Supervisor SupervisorID -jcdb /usr/src/cdb/"
 
   dummy-supervisor:
     image: ias:latest
@@ -41,7 +41,7 @@ services:
       - ${KAFKA_SERVER}
     volumes_from:
       - cdb
-    command: "-l s -Dorg.eso.ias.bootstrap.servers=${KAFKA_SERVER}:9092 org.eso.ias.supervisor.Supervisor SupervisorDummy -jcdb /usr/src/cdb/"
+    command: "-l s -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092 org.eso.ias.supervisor.Supervisor SupervisorDummy -jcdb /usr/src/cdb/"
 
   sender:
     image: ias:latest
