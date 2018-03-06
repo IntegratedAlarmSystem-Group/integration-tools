@@ -9,6 +9,7 @@ from createIasiosFixture import create_iasios_fixture
 
 BASE_PATH = os.path.dirname(os.path.realpath(__file__))
 
+
 class TestIasiosFixture(unittest.TestCase):
 
     def setUp(self):
