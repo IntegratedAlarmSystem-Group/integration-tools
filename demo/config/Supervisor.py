@@ -1,11 +1,14 @@
-# creates the json configuration for a Supervisor,
-# the str method returns the json and must be saved
-# in a corresponding file named id().json
+
+
 class Supervisor:
+    """Creates the json configuration for a Supervisor,
+    the str method returns the json and must be saved
+    in a corresponding file named id().json"""
+
     template = '''{
         "id": "%s",
         "dasusIDs": [
-        %s
+            %s
         ],
         "hostName": "almaias.eso.org",
         "logLevel": "INFO"
@@ -15,22 +18,22 @@ class Supervisor:
         self.sid = id
         self.dasus = []
 
-        # adds the dasu to this Supervisors list
-        def add(self, dasuid):
-            self.dasus.append(dasuid)
+    # adds the dasu to this Supervisors list
+    def add(self, dasuid):
+        self.dasus.append(dasuid)
 
-            def id(self):
-                return self.sid
+    def id(self):
+        return self.sid
 
-                def folder(self):
-                    return "Supervisor/"
+    def folder(self):
+        return "Supervisor/"
 
-                    def __str__(self):
-                        list = '"'
-                        for dasu in self.dasus:
-                            list += dasu + '", "'
+    def __str__(self):
+        list = '"'
+        for dasu in self.dasus:
+            list += dasu + '", "'
 
-                            return self.template % (self.sid, list[: -3])
+        return self.template % (self.sid, list[: -3])
 
 
 if __name__ == '__main__':

@@ -14,9 +14,10 @@ def main():
     write_ias_conf()
 
 
-# writes the configuration file for this object,
-# the object can be Dasu, Asce, Supervisor or Iasio
 def write_conf(config_obj):
+    """Writes the configuration file for this object,
+    the object can be Dasu, Asce, Supervisor or Iasio"""
+
     path = "CDB/" + config_obj.folder() + config_obj.id() + ".json"
     ensure_dir(os.path.dirname(path))
 
@@ -29,6 +30,9 @@ def write_conf(config_obj):
 
 
 def write_ias_conf():
+    """Writes the ias configuration file that include the Log level,
+    the refresh rate and the tolerance in seconds and the properties"""
+
     path = "CDB/ias.json"
     ensure_dir(os.path.dirname(path))
 
@@ -52,19 +56,19 @@ def write_ias_conf():
     return
 
 
-# ensures a directory exists, creating it if it doesn't
 def ensure_dir(dir):
+    """Ensures a directory exists, creating it if it doesn't"""
     if not os.path.exists(dir):
         os.makedirs(dir)
         return
 
 
-# creates the json configuration for all the combination var-id
-# for the weather station
 def config_weather(vars, ids):
+    """Creates the json configuration for all the combination var-id
+    for the weather station"""
 
     # transfer function
-    classname = "org.eso.ias.prototype.transfer.impls.MinMaxThresholdTF"
+    classname = "org.eso.ias.asce.transfer.impls.MinMaxThresholdTF"
     write_conf(TransferFunction(classname, "SCALA"))
 
     iasios = Iasios()
