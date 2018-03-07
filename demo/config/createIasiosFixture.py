@@ -6,6 +6,7 @@ BASE_PATH = os.path.dirname(os.path.realpath(__file__))
 IASIOS_PATH = os.path.join(BASE_PATH, '../CDB/IASIO/iasios.json')
 OUTPUT_FIXTURE__PATH = os.path.join(BASE_PATH, '../CDB/cdb.iasios.json')
 
+
 def create_iasios_fixture(json_input):
 
     fixtures = []
@@ -25,6 +26,7 @@ def create_iasios_fixture(json_input):
 
     return fixtures
 
+
 def main():
 
     if os.path.isfile(IASIOS_PATH):
@@ -42,4 +44,4 @@ def main():
 
 
 if __name__ == '__main__':
-  main()
+    main()

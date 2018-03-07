@@ -7,7 +7,9 @@ sys.path.insert(0, '..')
 
 from createIasiosFixture import create_iasios_fixture
 
+
 BASE_PATH = os.path.dirname(os.path.realpath(__file__))
+
 
 class TestIasiosFixture(unittest.TestCase):
 
@@ -18,24 +20,24 @@ class TestIasiosFixture(unittest.TestCase):
 
         expected_json = """
             [
-            {
-              "model": "cdb.iasio",
-              "pk": "AlarmTemperature2",
-              "fields": {
-                "short_desc": "Temperature reported by the weather station 2 out of range",
-                "refresh_rate": 2000,
-                "ias_type": "ALARM"
-              }
-            },
-            {
-              "model": "cdb.iasio",
-              "pk": "Temperature2",
-              "fields": {
-                "short_desc": "Temperature reported by the weather station 2",
-                "refresh_rate": 2000,
-                "ias_type": "DOUBLE"
-              }
-            }
+                {
+                    "model": "cdb.iasio",
+                    "pk": "AlarmTemperature2",
+                    "fields": {
+                        "short_desc": "Temperature out of range",
+                        "refresh_rate": 2000,
+                        "ias_type": "ALARM"
+                    }
+                },
+                {
+                    "model": "cdb.iasio",
+                    "pk": "Temperature2",
+                    "fields": {
+                        "short_desc": "Temperature of weather station 2",
+                        "refresh_rate": 2000,
+                        "ias_type": "DOUBLE"
+                    }
+                }
             ]
         """
 
