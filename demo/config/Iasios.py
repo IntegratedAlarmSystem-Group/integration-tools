@@ -1,53 +1,54 @@
-# creates the json configuration for the IASIOs,
-# the str method returns the json and must be saved
-# in a corresponding file named id().json
+
+
 class Iasios:
-  template = '''  {
-    "id": "%s",
-    "shortDesc": "%s reported by the weather station %s",
-    "iasType": "DOUBLE",
-    "refreshRate": 2000
-  }'''
+    """Creates the json configuration for the IASIOs,
+    the str method returns the json and must be saved
+    in a corresponding file named id().json"""
 
-  alarmtemplate = '''  {
-    "id": "Alarm%s",
-    "shortDesc": "%s reported by the weather station %s out of range",
-    "iasType": "ALARM",
-    "refreshRate": 2000
-  }'''
+    template = ''' {
+        "id": "%s",
+        "shortDesc": "%s reported by the weather station %s",
+        "iasType": "DOUBLE"
+    }'''
 
-  def __init__(self):
-    self.iasios = []
+    alarmtemplate = ''' {
+        "id": "Alarm%s",
+        "shortDesc": "%s reported by the weather station %s out of range",
+        "iasType": "ALARM"
+    }'''
 
-  # adds the variable to this IASIOs list
-  def add(self, var, id):
-    varid = var + str(id)
+    def __init__(self):
+        self.iasios = []
 
-    iasval = Iasios.template % (varid, var, str(id))
-    iasalarm = Iasios.alarmtemplate % (varid, var, str(id))
+    # adds the variable to this IASIOs list
+    def add(self, var, id):
+        varid = var + str(id)
 
-    self.iasios.append(iasval)
-    self.iasios.append(iasalarm)
+        iasval = Iasios.template % (varid, var, str(id))
+        iasalarm = Iasios.alarmtemplate % (varid, var, str(id))
 
-  def id(self):
-    return "iasios"
+        self.iasios.append(iasval)
+        self.iasios.append(iasalarm)
 
-  def folder(self):
-    return "IASIO/"
+    def id(self):
+        return "iasios"
 
-  def __str__(self):
-    out = "[\n"
+    def folder(self):
+        return "IASIO/"
 
-    for iasio in self.iasios:
-      out += iasio + ",\n"
+    def __str__(self):
+        out = "[\n"
 
-    out = out[:-2] + "\n]"
+        for iasio in self.iasios:
+            out += iasio + ",\n"
 
-    return out
+            out = out[:-2] + "\n]"
+
+            return out
 
 
 if __name__ == '__main__':
-  i = Iasios()
-  i.add("Temperature", 2)
-  i.add("Pressure", 2)
-  print(i)
+    i = Iasios()
+    i.add("Temperature", 2)
+    i.add("Pressure", 2)
+    print(i)

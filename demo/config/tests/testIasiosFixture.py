@@ -7,7 +7,9 @@ sys.path.insert(0, '..')
 
 from createIasiosFixture import create_iasios_fixture
 
+
 BASE_PATH = os.path.dirname(os.path.realpath(__file__))
+
 
 class TestIasiosFixture(unittest.TestCase):
 
@@ -22,7 +24,7 @@ class TestIasiosFixture(unittest.TestCase):
               "model": "cdb.iasio",
               "pk": "AlarmTemperature2",
               "fields": {
-                "short_desc": "Temperature reported by the weather station 2 out of range",
+                "short_desc": "Temperature out of range",
                 "refresh_rate": 2000,
                 "ias_type": "ALARM"
               }
