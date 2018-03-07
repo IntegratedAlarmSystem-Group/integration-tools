@@ -5,8 +5,10 @@ source set_env.sh
 
 cd ../run
 source plugin-screen.sh
+source dummy-plugin-screen.sh
 source converter-screen.sh
 source supervisor-screen.sh
-source webserver-screen.sh
+source dummy-supervisor-screen.sh
 source sender-screen.sh
 source display-screen.sh
+source webserver-screen.sh
