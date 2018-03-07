@@ -1,7 +1,0 @@
-[
- {
-        "id": "WindSpeed2",
-        "shortDesc": "WindSpeed reported by the weather station 2",
-        "iasType": "DOUBLE"
-    }
-]

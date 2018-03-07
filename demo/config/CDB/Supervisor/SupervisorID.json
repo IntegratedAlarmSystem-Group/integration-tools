@@ -1,8 +1,0 @@
-{
-        "id": "SupervisorID",
-        "dasusIDs": [
-            "DasuWindSpeed2"
-        ],
-        "hostName": "almaias.eso.org",
-        "logLevel": "INFO"
-    }
