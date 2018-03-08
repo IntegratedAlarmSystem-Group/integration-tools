@@ -42,9 +42,8 @@ class Iasios:
         for iasio in self.iasios:
             out += iasio + ",\n"
 
-            out = out[:-2] + "\n]"
-
-            return out
+        out = out[:-2] + "\n]"
+        return out
 
 
 if __name__ == '__main__':
