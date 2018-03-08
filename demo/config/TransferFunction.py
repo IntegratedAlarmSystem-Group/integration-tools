@@ -6,8 +6,8 @@ class TransferFunction:
     in a corresponding file named id().json"""
 
     template = '''{
-      "className" : "%s",
-      "implLang" : "%s"
+        "className" : "%s",
+        "implLang" : "%s"
     }'''
 
     def __init__(self, classname, lang):

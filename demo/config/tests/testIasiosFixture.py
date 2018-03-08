@@ -20,24 +20,24 @@ class TestIasiosFixture(unittest.TestCase):
 
         expected_json = """
             [
-            {
-              "model": "cdb.iasio",
-              "pk": "AlarmTemperature2",
-              "fields": {
-                "short_desc": "Temperature out of range",
-                "refresh_rate": 2000,
-                "ias_type": "ALARM"
-              }
-            },
-            {
-              "model": "cdb.iasio",
-              "pk": "Temperature2",
-              "fields": {
-                "short_desc": "Temperature reported by the weather station 2",
-                "refresh_rate": 2000,
-                "ias_type": "DOUBLE"
-              }
-            }
+                {
+                    "model": "cdb.iasio",
+                    "pk": "AlarmTemperature2",
+                    "fields": {
+                        "short_desc": "Temperature out of range",
+                        "refresh_rate": 2000,
+                        "ias_type": "ALARM"
+                    }
+                },
+                {
+                    "model": "cdb.iasio",
+                    "pk": "Temperature2",
+                    "fields": {
+                        "short_desc": "Temperature of weather station 2",
+                        "refresh_rate": 2000,
+                        "ias_type": "DOUBLE"
+                    }
+                }
             ]
         """
 

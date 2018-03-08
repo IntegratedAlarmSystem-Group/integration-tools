@@ -1,0 +1,68 @@
+version: "2"
+
+services:
+  kafka:
+    image: spotify/kafka:latest
+
+  cdb:
+    build: https://github.com/IntegratedAlarmSystem-Group/integration-tools.git#feature/dockerization:demo
+
+  alma-weather-plugin:
+    build: https://github.com/IntegratedAlarmSystem-Group/ias-plugins.git#feature/dockerization:AlmaWeatherStationPlugin
+    links:
+      - ${KAFKA_SERVER}
+    command: "${KAFKA_SERVER} 9092"
+
+  dummy-plugin:
+    build: https://github.com/IntegratedAlarmSystem-Group/ias-plugins.git#feature/dockerization:DummyPlugin
+    stdin_open: true
+    tty: true
+    links:
+      - ${KAFKA_SERVER}
+    command: "${KAFKA_SERVER} 9092"
+
+  converter:
+    build: https://github.com/IntegratedAlarmSystem-Group/ias.git#feature/dockerization
+    links:
+      - ${KAFKA_SERVER}
+    volumes_from:
+      - cdb
+    command: "-l s -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092 org.eso.ias.converter.Converter ConverterID -jcdb /usr/src/cdb/"
+
+  supervisor:
+    build: https://github.com/IntegratedAlarmSystem-Group/ias.git#feature/dockerization
+    links:
+      - ${KAFKA_SERVER}
+    volumes_from:
+      - cdb
+    command: "-l s -Dorg.eso.ias.bootstrap.servers=${KAFKA_SERVER}:9092 org.eso.ias.supervisor.Supervisor SupervisorID -jcdb /usr/src/cdb/"
+
+  dummy-supervisor:
+    build: https://github.com/IntegratedAlarmSystem-Group/ias.git#feature/dockerization
+    links:
+      - ${KAFKA_SERVER}
+    volumes_from:
+      - cdb
+    command: "-l s -Dorg.eso.ias.bootstrap.servers=${KAFKA_SERVER}:9092 org.eso.ias.supervisor.Supervisor SupervisorDummy -jcdb /usr/src/cdb/"
+
+  sender:
+    build: https://github.com/IntegratedAlarmSystem-Group/ias.git#feature/dockerization
+    links:
+      - ${KAFKA_SERVER}
+    volumes_from:
+      - cdb
+    command: "-l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8001/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID"
+
+  webserver:
+    build: https://github.com/IntegratedAlarmSystem-Group/ias-webserver.git#feature/dockerization
+
+  display:
+    build: https://github.com/IntegratedAlarmSystem-Group/ias-display.git#feature/dockerization
+
+  nginx:
+    build: ./nginx
+    volumes_from:
+     - display
+     - webserver
+    ports:
+      - "80:80"

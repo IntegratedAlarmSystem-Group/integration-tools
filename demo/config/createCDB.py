@@ -60,7 +60,7 @@ def ensure_dir(dir):
     """Ensures a directory exists, creating it if it doesn't"""
     if not os.path.exists(dir):
         os.makedirs(dir)
-        return
+    return
 
 
 def config_weather(vars, ids):
@@ -82,31 +82,31 @@ def config_weather(vars, ids):
             elif var == "WindSpeed":
                 asce = Asce(var, id, min=-1000, max=17, delta=3)
 
-                iasios.add(var, id)
-                sup.add(dasu.id())
+            iasios.add(var, id)
+            sup.add(dasu.id())
 
-                write_conf(dasu)
-                write_conf(asce)
+            write_conf(dasu)
+            write_conf(asce)
 
-                write_conf(sup)
+    write_conf(sup)
 
-                # add dummy configuration
-                var = "dummy"
-                id = ""
+    # add dummy configuration
+    var = "dummy"
+    id = ""
 
-                sup2 = Supervisor("SupervisorDummy")
-                dasu2 = Dasu(var, id, sup2.id())
-                asce2 = Asce(var, id, min=0, max=50, delta=0)
+    sup2 = Supervisor("SupervisorDummy")
+    dasu2 = Dasu(var, id, sup2.id())
+    asce2 = Asce(var, id, min=0, max=50, delta=0)
 
-                iasios.add(var, id)
-                sup2.add(dasu2.id())
+    iasios.add(var, id)
+    sup2.add(dasu2.id())
 
-                write_conf(dasu2)
-                write_conf(asce2)
-                write_conf(sup2)
+    write_conf(dasu2)
+    write_conf(asce2)
+    write_conf(sup2)
 
-                write_conf(iasios)
-                return
+    write_conf(iasios)
+    return
 
 
 if __name__ == '__main__':
