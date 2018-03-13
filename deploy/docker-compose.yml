@@ -29,7 +29,7 @@ services:
       - ${KAFKA_SERVER}
     volumes_from:
       - cdb
-    command: "-l s -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092 org.eso.ias.converter.Converter ConverterID -jcdb /usr/src/cdb/"
+    command: "iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
 
   supervisor:
     build: ${DOCKERFILE_PATH_CORE}
@@ -37,7 +37,7 @@ services:
       - ${KAFKA_SERVER}
     volumes_from:
       - cdb
-    command: "-l s -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092 org.eso.ias.supervisor.Supervisor SupervisorID -jcdb /usr/src/cdb/"
+    command: "iasSupervisor SupervisorID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   dummy-supervisor:
     build: ${DOCKERFILE_PATH_CORE}
@@ -45,7 +45,7 @@ services:
       - ${KAFKA_SERVER}
     volumes_from:
       - cdb
-    command: "-l s -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092 org.eso.ias.supervisor.Supervisor SupervisorDummy -jcdb /usr/src/cdb/"
+    command: "iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   sender:
     build: ${DOCKERFILE_PATH_CORE}
@@ -53,7 +53,7 @@ services:
       - ${KAFKA_SERVER}
     volumes_from:
       - cdb
-    command: "-l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8001/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID"
+    command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8001/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID"
 
   webserver:
     build: ${DOCKERFILE_PATH_WEBSERVER}
