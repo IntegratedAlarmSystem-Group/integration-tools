@@ -5,16 +5,18 @@ services:
     image: spotify/kafka:latest
 
   cdb:
-    image: registry.inria.cl:5000/ias-cdb:dev
+    build: ${DOCKERFILE_PATH_CDB}
 
   alma-weather-plugin:
-    image: registry.inria.cl:5000/alma-weather-plugin:dev
+    build:
+      context: ${DOCKERFILE_PATH_ALMA_WEATHER}
+      dockerfile: Dockerfile.dev
     links:
       - ${KAFKA_SERVER}
     command: "${KAFKA_SERVER} 9092"
 
   dummy-plugin:
-    image: registry.inria.cl:5000/ias-dummy-plugin:dev
+    build: ${DOCKERFILE_PATH_DUMMY_PLUGIN}
     stdin_open: true
     tty: true
     links:
@@ -22,7 +24,7 @@ services:
     command: "${KAFKA_SERVER} 9092"
 
   converter:
-    image: registry.inria.cl:5000/ias-core:dev
+    build: ${DOCKERFILE_PATH_CORE}
     links:
       - ${KAFKA_SERVER}
     volumes_from:
@@ -30,7 +32,7 @@ services:
     command: "iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
 
   supervisor:
-    image: registry.inria.cl:5000/ias-core:dev
+    build: ${DOCKERFILE_PATH_CORE}
     links:
       - ${KAFKA_SERVER}
     volumes_from:
@@ -38,7 +40,7 @@ services:
     command: "iasSupervisor SupervisorID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   dummy-supervisor:
-    image: registry.inria.cl:5000/ias-core:dev
+    build: ${DOCKERFILE_PATH_CORE}
     links:
       - ${KAFKA_SERVER}
     volumes_from:
@@ -46,7 +48,7 @@ services:
     command: "iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   sender:
-    image: registry.inria.cl:5000/ias-core:dev
+    build: ${DOCKERFILE_PATH_CORE}
     links:
       - ${KAFKA_SERVER}
     volumes_from:
@@ -54,10 +56,10 @@ services:
     command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8001/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID"
 
   webserver:
-    image: registry.inria.cl:5000/ias-webserver:dev
+    build: ${DOCKERFILE_PATH_WEBSERVER}
 
   display:
-    image: registry.inria.cl:5000/ias-display:dev
+    build: ${DOCKERFILE_PATH_DISPLAY}
 
   nginx:
     build: ./nginx
