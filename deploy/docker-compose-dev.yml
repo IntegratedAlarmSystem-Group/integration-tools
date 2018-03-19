@@ -16,7 +16,9 @@ services:
     command: "${KAFKA_SERVER} 9092"
 
   dummy-plugin:
-    build: ${DOCKERFILE_PATH_DUMMY_PLUGIN}
+    build:
+      context: ${DOCKERFILE_PATH_DUMMY_PLUGIN}
+      dockerfile: Dockerfile.dev
     stdin_open: true
     tty: true
     links:
