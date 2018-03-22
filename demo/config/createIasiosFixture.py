@@ -18,7 +18,6 @@ def create_iasios_fixture(json_input):
         aux_dict['pk'] = c['id']
         aux_dict['fields'] = {
             'short_desc': c['shortDesc'],
-            'refresh_rate': c['refreshRate'],
             'ias_type': c['iasType'],
         }
 
