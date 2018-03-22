@@ -25,7 +25,6 @@ class TestIasiosFixture(unittest.TestCase):
                     "pk": "AlarmTemperature2",
                     "fields": {
                         "short_desc": "Temperature out of range",
-                        "refresh_rate": 2000,
                         "ias_type": "ALARM"
                     }
                 },
@@ -34,7 +33,6 @@ class TestIasiosFixture(unittest.TestCase):
                     "pk": "Temperature2",
                     "fields": {
                         "short_desc": "Temperature of weather station 2",
-                        "refresh_rate": 2000,
                         "ias_type": "DOUBLE"
                     }
                 }
