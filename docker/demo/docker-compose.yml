@@ -1,0 +1,68 @@
+version: "2"
+
+services:
+  kafka:
+    image: spotify/kafka:latest
+
+  cdb:
+    image: registry.inria.cl:5000/ias-cdb:dev
+
+  alma-weather-plugin:
+    image: registry.inria.cl:5000/alma-weather-plugin:dev
+    links:
+      - ${KAFKA_SERVER}
+    command: "${KAFKA_SERVER} 9092"
+
+  dummy-plugin:
+    image: registry.inria.cl:5000/ias-dummy-plugin:dev
+    stdin_open: true
+    tty: true
+    links:
+      - ${KAFKA_SERVER}
+    command: "${KAFKA_SERVER} 9092"
+
+  converter:
+    image: registry.inria.cl:5000/ias-core:dev
+    links:
+      - ${KAFKA_SERVER}
+    volumes_from:
+      - cdb
+    command: "iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
+
+  supervisor:
+    image: registry.inria.cl:5000/ias-core:dev
+    links:
+      - ${KAFKA_SERVER}
+    volumes_from:
+      - cdb
+    command: "iasSupervisor SupervisorID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+
+  dummy-supervisor:
+    image: registry.inria.cl:5000/ias-core:dev
+    links:
+      - ${KAFKA_SERVER}
+    volumes_from:
+      - cdb
+    command: "iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+
+  sender:
+    image: registry.inria.cl:5000/ias-core:dev
+    links:
+      - ${KAFKA_SERVER}
+    volumes_from:
+      - cdb
+    command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8001/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID"
+
+  webserver:
+    image: registry.inria.cl:5000/ias-webserver:dev
+
+  display:
+    image: registry.inria.cl:5000/ias-display:dev
+
+  nginx:
+    build: ${DOCKERFILE_PATH_NGINX}
+    volumes_from:
+     - display
+     - webserver
+    ports:
+      - "80:80"
