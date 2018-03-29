@@ -6,12 +6,12 @@ class Asce:
     in a corresponding file named id().json"""
 
     template = '''{
-      "dasuID": "Dasu%s",
-      "id": "Asce%s",
+      "dasuID": "Dasu-%s",
+      "id": "Asce-%s",
       "inputIDs": [
         "%s"
       ],
-      "outputID": "Alarm%s",
+      "outputID": "%s",
       "transferFunctionID":"org.eso.ias.asce.transfer.impls.MinMaxThresholdTF",
        "props": [
         {
@@ -34,7 +34,8 @@ class Asce:
     }'''
 
     def __init__(self, variable, id, min, max, delta=-1):
-        self.varid = variable + str(id)
+        self.outid = "WS-" + str(id) + "-" + variable
+        self.varid = self.outid + "-Value"
 
         self.min = min
         self.max = max
@@ -44,14 +45,14 @@ class Asce:
             self.delta = 0.2 * (max - min)
 
     def id(self):
-        return "Asce" + self.varid
+        return "Asce-" + self.outid
 
     def folder(self):
         return "ASCE/"
 
     def __str__(self):
         return self.template % \
-            (self.varid, self.varid, self.varid, self.varid,
+            (self.outid, self.outid, self.varid, self.outid,
              self.max, self.max - self.delta,
              self.min, self.min + self.delta)
 
