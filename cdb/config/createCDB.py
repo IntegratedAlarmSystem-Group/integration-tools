@@ -7,9 +7,11 @@ import os
 
 
 def main():
-    vars = ["Temperature", "WindSpeed"]
-    # "Pressure", "WindDirection", "Humidity", "Dewpoint"]
-    ids = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    vars = ["Temperature", "WindSpeed", "Humidity"]
+    # "Pressure", "WindDirection", "Dewpoint"]
+    ids = ['MeteoTB1', 'MeteoTB2', 'MeteoOSF', 'MeteoItinerant', 'Meteo201',
+           'MeteoCentral', 'Meteo309', 'Meteo410', 'Meteo131', 'Meteo129',
+           'Meteo130']
     config_weather(vars, ids)
     write_ias_conf()
 
@@ -81,6 +83,8 @@ def config_weather(vars, ids):
                 asce = Asce(var, id, min=-20, max=1000, delta=5)
             elif var == "WindSpeed":
                 asce = Asce(var, id, min=-1000, max=17, delta=3)
+            elif var == "Humidity":
+                asce = Asce(var, id, min=20, max=80, delta=5)
 
             iasios.add(var, id)
             sup.add(dasu.id())

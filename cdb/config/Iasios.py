@@ -6,13 +6,13 @@ class Iasios:
     in a corresponding file named id().json"""
 
     template = ''' {
-        "id": "%s",
+        "id": "%s-Value",
         "shortDesc": "%s reported by the weather station %s",
         "iasType": "DOUBLE"
     }'''
 
     alarmtemplate = ''' {
-        "id": "Alarm%s",
+        "id": "%s",
         "shortDesc": "%s reported by the weather station %s out of range",
         "iasType": "ALARM"
     }'''
@@ -22,7 +22,7 @@ class Iasios:
 
     # adds the variable to this IASIOs list
     def add(self, var, id):
-        varid = var + str(id)
+        varid = 'WS-' + str(id) + '-' + var
 
         iasval = Iasios.template % (varid, var, str(id))
         iasalarm = Iasios.alarmtemplate % (varid, var, str(id))
