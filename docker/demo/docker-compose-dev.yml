@@ -4,9 +4,6 @@ services:
   kafka:
     image: spotify/kafka:latest
 
-  cdb:
-    build: ${DOCKERFILE_PATH_CDB}
-
   alma-weather-plugin:
     build:
       context: ${DOCKERFILE_PATH_ALMA_WEATHER}
@@ -29,32 +26,30 @@ services:
     build: ${DOCKERFILE_PATH_CORE}
     links:
       - ${KAFKA_SERVER}
-    volumes_from:
-      - cdb
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
     command: "iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
 
   supervisor:
     build: ${DOCKERFILE_PATH_CORE}
     links:
       - ${KAFKA_SERVER}
-    volumes_from:
-      - cdb
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
     command: "iasSupervisor SupervisorID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   dummy-supervisor:
     build: ${DOCKERFILE_PATH_CORE}
     links:
       - ${KAFKA_SERVER}
-    volumes_from:
-      - cdb
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
     command: "iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   sender:
     build: ${DOCKERFILE_PATH_CORE}
     links:
       - ${KAFKA_SERVER}
-    volumes_from:
-      - cdb
     command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8001/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID"
 
   webserver:
