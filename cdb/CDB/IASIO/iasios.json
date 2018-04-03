@@ -330,12 +330,12 @@
         "iasType": "ALARM"
     },
  {
-        "id": "WS--dummy-Value",
+        "id": "dummy",
         "shortDesc": "dummy reported by the weather station ",
         "iasType": "DOUBLE"
     },
  {
-        "id": "WS--dummy",
+        "id": "Alarmdummy",
         "shortDesc": "dummy reported by the weather station  out of range",
         "iasType": "ALARM"
     }

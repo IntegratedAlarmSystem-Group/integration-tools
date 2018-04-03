@@ -2,9 +2,9 @@
       "dasuID": "Dasu-WS--dummy",
       "id": "Asce-WS--dummy",
       "inputIDs": [
-        "WS--dummy-Value"
+        "dummy"
       ],
-      "outputID": "WS--dummy",
+      "outputID": "Alarmdummy",
       "transferFunctionID":"org.eso.ias.asce.transfer.impls.MinMaxThresholdTF",
        "props": [
         {

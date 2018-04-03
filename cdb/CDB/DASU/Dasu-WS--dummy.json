@@ -3,7 +3,7 @@
         "asceIDs": [
             "Asce-WS--dummy"
         ],
-        "outputId": "WS--dummy",
+        "outputId": "Alarmdummy",
         "logLevel": "FATAL",
         "supervisorID": "SupervisorDummy"
     }
