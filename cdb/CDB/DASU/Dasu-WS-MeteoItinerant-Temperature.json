@@ -1,0 +1,9 @@
+{
+        "id": "Dasu-WS-MeteoItinerant-Temperature",
+        "asceIDs": [
+            "Asce-WS-MeteoItinerant-Temperature"
+        ],
+        "outputId": "WS-MeteoItinerant-Temperature",
+        "logLevel": "FATAL",
+        "supervisorID": "SupervisorID"
+    }

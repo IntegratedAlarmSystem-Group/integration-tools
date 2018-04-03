@@ -1,0 +1,27 @@
+{
+      "dasuID": "Dasu-WS-MeteoTB2-Temperature",
+      "id": "Asce-WS-MeteoTB2-Temperature",
+      "inputIDs": [
+        "WS-MeteoTB2-Temperature-Value"
+      ],
+      "outputID": "WS-MeteoTB2-Temperature",
+      "transferFunctionID":"org.eso.ias.asce.transfer.impls.MinMaxThresholdTF",
+       "props": [
+        {
+          "name": "org.eso.ias.tf.minmaxthreshold.highOn",
+          "value": "1000"
+        },
+        {
+          "name": "org.eso.ias.tf.minmaxthreshold.highOff",
+          "value": "995"
+        },
+        {
+          "name": "org.eso.ias.tf.minmaxthreshold.lowOn",
+          "value": "-20"
+        },
+        {
+          "name": "org.eso.ias.tf.minmaxthreshold.lowOff",
+          "value": "-15"
+        }
+      ]
+    }

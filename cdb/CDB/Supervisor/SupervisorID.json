@@ -1,0 +1,8 @@
+{
+        "id": "SupervisorID",
+        "dasusIDs": [
+            "Dasu-WS-MeteoTB1-Temperature", "Dasu-WS-MeteoTB1-WindSpeed", "Dasu-WS-MeteoTB1-Humidity", "Dasu-WS-MeteoTB2-Temperature", "Dasu-WS-MeteoTB2-WindSpeed", "Dasu-WS-MeteoTB2-Humidity", "Dasu-WS-MeteoOSF-Temperature", "Dasu-WS-MeteoOSF-WindSpeed", "Dasu-WS-MeteoOSF-Humidity", "Dasu-WS-MeteoItinerant-Temperature", "Dasu-WS-MeteoItinerant-WindSpeed", "Dasu-WS-MeteoItinerant-Humidity", "Dasu-WS-Meteo201-Temperature", "Dasu-WS-Meteo201-WindSpeed", "Dasu-WS-Meteo201-Humidity", "Dasu-WS-MeteoCentral-Temperature", "Dasu-WS-MeteoCentral-WindSpeed", "Dasu-WS-MeteoCentral-Humidity", "Dasu-WS-Meteo309-Temperature", "Dasu-WS-Meteo309-WindSpeed", "Dasu-WS-Meteo309-Humidity", "Dasu-WS-Meteo410-Temperature", "Dasu-WS-Meteo410-WindSpeed", "Dasu-WS-Meteo410-Humidity", "Dasu-WS-Meteo131-Temperature", "Dasu-WS-Meteo131-WindSpeed", "Dasu-WS-Meteo131-Humidity", "Dasu-WS-Meteo129-Temperature", "Dasu-WS-Meteo129-WindSpeed", "Dasu-WS-Meteo129-Humidity", "Dasu-WS-Meteo130-Temperature", "Dasu-WS-Meteo130-WindSpeed", "Dasu-WS-Meteo130-Humidity"
+        ],
+        "hostName": "almaias.eso.org",
+        "logLevel": "INFO"
+    }

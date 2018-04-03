@@ -1,0 +1,342 @@
+[
+ {
+        "id": "WS-MeteoTB1-Temperature-Value",
+        "shortDesc": "Temperature reported by the weather station MeteoTB1",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-MeteoTB1-Temperature",
+        "shortDesc": "Temperature reported by the weather station MeteoTB1 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-MeteoTB1-WindSpeed-Value",
+        "shortDesc": "WindSpeed reported by the weather station MeteoTB1",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-MeteoTB1-WindSpeed",
+        "shortDesc": "WindSpeed reported by the weather station MeteoTB1 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-MeteoTB1-Humidity-Value",
+        "shortDesc": "Humidity reported by the weather station MeteoTB1",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-MeteoTB1-Humidity",
+        "shortDesc": "Humidity reported by the weather station MeteoTB1 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-MeteoTB2-Temperature-Value",
+        "shortDesc": "Temperature reported by the weather station MeteoTB2",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-MeteoTB2-Temperature",
+        "shortDesc": "Temperature reported by the weather station MeteoTB2 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-MeteoTB2-WindSpeed-Value",
+        "shortDesc": "WindSpeed reported by the weather station MeteoTB2",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-MeteoTB2-WindSpeed",
+        "shortDesc": "WindSpeed reported by the weather station MeteoTB2 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-MeteoTB2-Humidity-Value",
+        "shortDesc": "Humidity reported by the weather station MeteoTB2",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-MeteoTB2-Humidity",
+        "shortDesc": "Humidity reported by the weather station MeteoTB2 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-MeteoOSF-Temperature-Value",
+        "shortDesc": "Temperature reported by the weather station MeteoOSF",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-MeteoOSF-Temperature",
+        "shortDesc": "Temperature reported by the weather station MeteoOSF out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-MeteoOSF-WindSpeed-Value",
+        "shortDesc": "WindSpeed reported by the weather station MeteoOSF",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-MeteoOSF-WindSpeed",
+        "shortDesc": "WindSpeed reported by the weather station MeteoOSF out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-MeteoOSF-Humidity-Value",
+        "shortDesc": "Humidity reported by the weather station MeteoOSF",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-MeteoOSF-Humidity",
+        "shortDesc": "Humidity reported by the weather station MeteoOSF out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-MeteoItinerant-Temperature-Value",
+        "shortDesc": "Temperature reported by the weather station MeteoItinerant",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-MeteoItinerant-Temperature",
+        "shortDesc": "Temperature reported by the weather station MeteoItinerant out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-MeteoItinerant-WindSpeed-Value",
+        "shortDesc": "WindSpeed reported by the weather station MeteoItinerant",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-MeteoItinerant-WindSpeed",
+        "shortDesc": "WindSpeed reported by the weather station MeteoItinerant out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-MeteoItinerant-Humidity-Value",
+        "shortDesc": "Humidity reported by the weather station MeteoItinerant",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-MeteoItinerant-Humidity",
+        "shortDesc": "Humidity reported by the weather station MeteoItinerant out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-Meteo201-Temperature-Value",
+        "shortDesc": "Temperature reported by the weather station Meteo201",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-Meteo201-Temperature",
+        "shortDesc": "Temperature reported by the weather station Meteo201 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-Meteo201-WindSpeed-Value",
+        "shortDesc": "WindSpeed reported by the weather station Meteo201",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-Meteo201-WindSpeed",
+        "shortDesc": "WindSpeed reported by the weather station Meteo201 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-Meteo201-Humidity-Value",
+        "shortDesc": "Humidity reported by the weather station Meteo201",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-Meteo201-Humidity",
+        "shortDesc": "Humidity reported by the weather station Meteo201 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-MeteoCentral-Temperature-Value",
+        "shortDesc": "Temperature reported by the weather station MeteoCentral",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-MeteoCentral-Temperature",
+        "shortDesc": "Temperature reported by the weather station MeteoCentral out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-MeteoCentral-WindSpeed-Value",
+        "shortDesc": "WindSpeed reported by the weather station MeteoCentral",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-MeteoCentral-WindSpeed",
+        "shortDesc": "WindSpeed reported by the weather station MeteoCentral out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-MeteoCentral-Humidity-Value",
+        "shortDesc": "Humidity reported by the weather station MeteoCentral",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-MeteoCentral-Humidity",
+        "shortDesc": "Humidity reported by the weather station MeteoCentral out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-Meteo309-Temperature-Value",
+        "shortDesc": "Temperature reported by the weather station Meteo309",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-Meteo309-Temperature",
+        "shortDesc": "Temperature reported by the weather station Meteo309 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-Meteo309-WindSpeed-Value",
+        "shortDesc": "WindSpeed reported by the weather station Meteo309",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-Meteo309-WindSpeed",
+        "shortDesc": "WindSpeed reported by the weather station Meteo309 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-Meteo309-Humidity-Value",
+        "shortDesc": "Humidity reported by the weather station Meteo309",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-Meteo309-Humidity",
+        "shortDesc": "Humidity reported by the weather station Meteo309 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-Meteo410-Temperature-Value",
+        "shortDesc": "Temperature reported by the weather station Meteo410",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-Meteo410-Temperature",
+        "shortDesc": "Temperature reported by the weather station Meteo410 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-Meteo410-WindSpeed-Value",
+        "shortDesc": "WindSpeed reported by the weather station Meteo410",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-Meteo410-WindSpeed",
+        "shortDesc": "WindSpeed reported by the weather station Meteo410 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-Meteo410-Humidity-Value",
+        "shortDesc": "Humidity reported by the weather station Meteo410",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-Meteo410-Humidity",
+        "shortDesc": "Humidity reported by the weather station Meteo410 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-Meteo131-Temperature-Value",
+        "shortDesc": "Temperature reported by the weather station Meteo131",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-Meteo131-Temperature",
+        "shortDesc": "Temperature reported by the weather station Meteo131 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-Meteo131-WindSpeed-Value",
+        "shortDesc": "WindSpeed reported by the weather station Meteo131",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-Meteo131-WindSpeed",
+        "shortDesc": "WindSpeed reported by the weather station Meteo131 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-Meteo131-Humidity-Value",
+        "shortDesc": "Humidity reported by the weather station Meteo131",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-Meteo131-Humidity",
+        "shortDesc": "Humidity reported by the weather station Meteo131 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-Meteo129-Temperature-Value",
+        "shortDesc": "Temperature reported by the weather station Meteo129",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-Meteo129-Temperature",
+        "shortDesc": "Temperature reported by the weather station Meteo129 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-Meteo129-WindSpeed-Value",
+        "shortDesc": "WindSpeed reported by the weather station Meteo129",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-Meteo129-WindSpeed",
+        "shortDesc": "WindSpeed reported by the weather station Meteo129 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-Meteo129-Humidity-Value",
+        "shortDesc": "Humidity reported by the weather station Meteo129",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-Meteo129-Humidity",
+        "shortDesc": "Humidity reported by the weather station Meteo129 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-Meteo130-Temperature-Value",
+        "shortDesc": "Temperature reported by the weather station Meteo130",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-Meteo130-Temperature",
+        "shortDesc": "Temperature reported by the weather station Meteo130 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-Meteo130-WindSpeed-Value",
+        "shortDesc": "WindSpeed reported by the weather station Meteo130",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-Meteo130-WindSpeed",
+        "shortDesc": "WindSpeed reported by the weather station Meteo130 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS-Meteo130-Humidity-Value",
+        "shortDesc": "Humidity reported by the weather station Meteo130",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS-Meteo130-Humidity",
+        "shortDesc": "Humidity reported by the weather station Meteo130 out of range",
+        "iasType": "ALARM"
+    },
+ {
+        "id": "WS--dummy-Value",
+        "shortDesc": "dummy reported by the weather station ",
+        "iasType": "DOUBLE"
+    },
+ {
+        "id": "WS--dummy",
+        "shortDesc": "dummy reported by the weather station  out of range",
+        "iasType": "ALARM"
+    }
+]

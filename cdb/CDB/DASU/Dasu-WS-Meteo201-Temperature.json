@@ -1,0 +1,9 @@
+{
+        "id": "Dasu-WS-Meteo201-Temperature",
+        "asceIDs": [
+            "Asce-WS-Meteo201-Temperature"
+        ],
+        "outputId": "WS-Meteo201-Temperature",
+        "logLevel": "FATAL",
+        "supervisorID": "SupervisorID"
+    }

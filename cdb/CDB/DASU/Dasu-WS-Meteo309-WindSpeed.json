@@ -1,0 +1,9 @@
+{
+        "id": "Dasu-WS-Meteo309-WindSpeed",
+        "asceIDs": [
+            "Asce-WS-Meteo309-WindSpeed"
+        ],
+        "outputId": "WS-Meteo309-WindSpeed",
+        "logLevel": "FATAL",
+        "supervisorID": "SupervisorID"
+    }

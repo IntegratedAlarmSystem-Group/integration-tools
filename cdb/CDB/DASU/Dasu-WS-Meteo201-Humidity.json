@@ -1,0 +1,9 @@
+{
+        "id": "Dasu-WS-Meteo201-Humidity",
+        "asceIDs": [
+            "Asce-WS-Meteo201-Humidity"
+        ],
+        "outputId": "WS-Meteo201-Humidity",
+        "logLevel": "FATAL",
+        "supervisorID": "SupervisorID"
+    }

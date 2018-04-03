@@ -1,0 +1,9 @@
+{
+        "id": "Dasu-WS--dummy",
+        "asceIDs": [
+            "Asce-WS--dummy"
+        ],
+        "outputId": "WS--dummy",
+        "logLevel": "FATAL",
+        "supervisorID": "SupervisorDummy"
+    }
