@@ -1,0 +1,67 @@
+version: "2"
+
+services:
+  kafka:
+    image: spotify/kafka:latest
+
+  alma-weather-plugin:
+    build:
+      context: ${DOCKERFILE_PATH_ALMA_WEATHER}
+      dockerfile: Dockerfile.dev
+    links:
+      - ${KAFKA_SERVER}
+    command: "${KAFKA_SERVER} 9092"
+
+  dummy-plugin:
+    build:
+      context: ${DOCKERFILE_PATH_DUMMY_PLUGIN}
+      dockerfile: Dockerfile.dev
+    stdin_open: true
+    tty: true
+    links:
+      - ${KAFKA_SERVER}
+    command: "${KAFKA_SERVER} 9092"
+
+  converter:
+    build: ${DOCKERFILE_PATH_CORE}
+    links:
+      - ${KAFKA_SERVER}
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+    command: "iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
+
+  supervisor:
+    build: ${DOCKERFILE_PATH_CORE}
+    links:
+      - ${KAFKA_SERVER}
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+    command: "iasSupervisor SupervisorID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+
+  dummy-supervisor:
+    build: ${DOCKERFILE_PATH_CORE}
+    links:
+      - ${KAFKA_SERVER}
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+    command: "iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+
+  sender:
+    build: ${DOCKERFILE_PATH_CORE}
+    links:
+      - ${KAFKA_SERVER}
+    command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8001/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID"
+
+  webserver:
+    build: ${DOCKERFILE_PATH_WEBSERVER}
+
+  display:
+    build: ${DOCKERFILE_PATH_DISPLAY}
+
+  nginx:
+    build: ${DOCKERFILE_PATH_NGINX}
+    volumes_from:
+     - display
+     - webserver
+    ports:
+      - "80:80"

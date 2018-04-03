@@ -1,0 +1,27 @@
+{
+      "dasuID": "Dasu-WS-MeteoTB1-WindSpeed",
+      "id": "Asce-WS-MeteoTB1-WindSpeed",
+      "inputIDs": [
+        "WS-MeteoTB1-WindSpeed-Value"
+      ],
+      "outputID": "WS-MeteoTB1-WindSpeed",
+      "transferFunctionID":"org.eso.ias.asce.transfer.impls.MinMaxThresholdTF",
+       "props": [
+        {
+          "name": "org.eso.ias.tf.minmaxthreshold.highOn",
+          "value": "17"
+        },
+        {
+          "name": "org.eso.ias.tf.minmaxthreshold.highOff",
+          "value": "14"
+        },
+        {
+          "name": "org.eso.ias.tf.minmaxthreshold.lowOn",
+          "value": "-1000"
+        },
+        {
+          "name": "org.eso.ias.tf.minmaxthreshold.lowOff",
+          "value": "-997"
+        }
+      ]
+    }

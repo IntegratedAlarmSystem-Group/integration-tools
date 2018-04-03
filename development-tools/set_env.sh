@@ -7,6 +7,7 @@ JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-amd64"
 JRE_HOME="/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre"
 SCALA_HOME="/usr/share/scala"
 IAS_DIR="IntegratedAlarmSystemRoot"
+source ../venv/bin/activate
 
 if [ ! -d $JAVA_HOME ]; then
   echo "${RED}ERROR: JAVA home directory does not exist: $JAVA_HOME${NC}"

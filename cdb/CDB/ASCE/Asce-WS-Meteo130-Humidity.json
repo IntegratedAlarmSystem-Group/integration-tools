@@ -1,0 +1,27 @@
+{
+      "dasuID": "Dasu-WS-Meteo130-Humidity",
+      "id": "Asce-WS-Meteo130-Humidity",
+      "inputIDs": [
+        "WS-Meteo130-Humidity-Value"
+      ],
+      "outputID": "WS-Meteo130-Humidity",
+      "transferFunctionID":"org.eso.ias.asce.transfer.impls.MinMaxThresholdTF",
+       "props": [
+        {
+          "name": "org.eso.ias.tf.minmaxthreshold.highOn",
+          "value": "80"
+        },
+        {
+          "name": "org.eso.ias.tf.minmaxthreshold.highOff",
+          "value": "75"
+        },
+        {
+          "name": "org.eso.ias.tf.minmaxthreshold.lowOn",
+          "value": "20"
+        },
+        {
+          "name": "org.eso.ias.tf.minmaxthreshold.lowOff",
+          "value": "25"
+        }
+      ]
+    }
