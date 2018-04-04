@@ -111,7 +111,7 @@ In order to install in production the following steps must be followed:
   ```
 
 ### 3. Install IAS:
-  1. Clone integration tools repository in the dseired repository:
+  1. Clone integration tools repository in the desired repository:
   ```
   git clone https://github.com/IntegratedAlarmSystem-Group/integration-tools.git
   ```
