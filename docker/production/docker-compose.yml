@@ -34,6 +34,7 @@ services:
 
   webserver:
     image: registry.inria.cl:5000/ias-webserver:prod
+    command: ./runserver.sh
 
   display:
     image: registry.inria.cl:5000/ias-display:prod

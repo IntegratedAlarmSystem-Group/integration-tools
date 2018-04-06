@@ -54,6 +54,7 @@ services:
 
   webserver:
     build: ${DOCKERFILE_PATH_WEBSERVER}
+    command: ./runserver.sh
 
   display:
     build: ${DOCKERFILE_PATH_DISPLAY}
