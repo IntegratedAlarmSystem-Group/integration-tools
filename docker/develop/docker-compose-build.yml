@@ -2,12 +2,12 @@ version: "2"
 
 services:
   kafka:
-    image: spotify/kafka:latest
+    build: ${DOCKERFILE_PATH_KAFKA}
 
   alma-weather-plugin:
     build:
       context: ${DOCKERFILE_PATH_ALMA_WEATHER}
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile-build
     links:
       - ${KAFKA_SERVER}
     command: "${KAFKA_SERVER} 9092"
@@ -15,7 +15,7 @@ services:
   dummy-plugin:
     build:
       context: ${DOCKERFILE_PATH_DUMMY_PLUGIN}
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile-build
     stdin_open: true
     tty: true
     links:

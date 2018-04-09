@@ -2,7 +2,7 @@ version: "2"
 
 services:
   kafka:
-    image: spotify/kafka:latest
+    build: ${DOCKERFILE_PATH_KAFKA}
 
   alma-weather-plugin:
     image: registry.inria.cl:5000/alma-weather-plugin:dev
