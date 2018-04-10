@@ -2,9 +2,11 @@ version: "2"
 
 services:
   kafka:
+    container_name: ias-kafka
     build: ${DOCKERFILE_PATH_KAFKA}
 
   alma-weather-plugin:
+    container_name: ias-build-alma-weather-plugin
     build:
       context: ${DOCKERFILE_PATH_ALMA_WEATHER}
       dockerfile: Dockerfile-build
@@ -13,6 +15,7 @@ services:
     command: "${KAFKA_SERVER} 9092"
 
   dummy-plugin:
+    container_name: ias-build-dummy-plugin
     build:
       context: ${DOCKERFILE_PATH_DUMMY_PLUGIN}
       dockerfile: Dockerfile-build
@@ -23,6 +26,7 @@ services:
     command: "${KAFKA_SERVER} 9092"
 
   converter:
+    container_name: ias-build-converter
     build: ${DOCKERFILE_PATH_CORE}
     links:
       - ${KAFKA_SERVER}
@@ -31,6 +35,7 @@ services:
     command: "iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
 
   supervisor:
+    container_name: ias-build-supervisor
     build: ${DOCKERFILE_PATH_CORE}
     links:
       - ${KAFKA_SERVER}
@@ -39,6 +44,7 @@ services:
     command: "iasSupervisor SupervisorID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   dummy-supervisor:
+    container_name: ias-build-dummy-supervisor
     build: ${DOCKERFILE_PATH_CORE}
     links:
       - ${KAFKA_SERVER}
@@ -47,19 +53,23 @@ services:
     command: "iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   sender:
+    container_name: ias-build-sender
     build: ${DOCKERFILE_PATH_CORE}
     links:
       - ${KAFKA_SERVER}
     command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8001/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID"
 
   webserver:
+    container_name: ias-build-webserver
     build: ${DOCKERFILE_PATH_WEBSERVER}
     command: ./runserver.sh
 
   display:
+    container_name: ias-build-display
     build: ${DOCKERFILE_PATH_DISPLAY}
 
   nginx:
+    container_name: ias-nginx
     build: ${DOCKERFILE_PATH_NGINX}
     volumes_from:
      - display
