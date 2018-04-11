@@ -67,13 +67,18 @@ services:
     container_name: ias-mount-display
     build:
       context: ${DOCKERFILE_PATH_DISPLAY}
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-dev
     image: ias-mount-display-image
+    volumes:
+      - ${DOCKERFILE_PATH_DISPLAY}:/usr/src/ias-display
+    command: "./runserver-dev.sh"
 
   nginx:
-    container_name: ias-nginx
-    build: ${DOCKERFILE_PATH_NGINX}
-    image: ias-nginx-image
+    container_name: ias-nginx-dev-server
+    build:
+      context: ${DOCKERFILE_PATH_NGINX}
+      dockerfile: Dockerfile-dev
+    image: ias-nginx-dev-server-image
     volumes_from:
      - display
      - webserver
