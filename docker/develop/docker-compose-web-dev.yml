@@ -2,19 +2,19 @@ version: "2"
 
 services:
   kafka:
-    container_name: ias-dev
+    container_name: ias-kafka
     build: ${DOCKERFILE_PATH_KAFKA}
     image: ias-kafka-image
 
   alma-weather-plugin:
-    container_name: ias-dev-alma-weather-plugin
+    container_name: ias-build-alma-weather-plugin
     image: registry.inria.cl:5000/alma-weather-plugin:dev
     links:
       - ${KAFKA_SERVER}
     command: "${KAFKA_SERVER} 9092"
 
   dummy-plugin:
-    container_name: ias-dev-dummy-plugin
+    container_name: ias-build-dummy-plugin
     image: registry.inria.cl:5000/ias-dummy-plugin:dev
     stdin_open: true
     tty: true
@@ -23,7 +23,7 @@ services:
     command: "${KAFKA_SERVER} 9092"
 
   converter:
-    container_name: ias-dev-converter
+    container_name: ias-build-converter
     image: registry.inria.cl:5000/ias-core:dev
     links:
       - ${KAFKA_SERVER}
@@ -32,7 +32,7 @@ services:
     command: "iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
 
   supervisor:
-    container_name: ias-dev-supervisor
+    container_name: ias-build-supervisor
     image: registry.inria.cl:5000/ias-core:dev
     links:
       - ${KAFKA_SERVER}
@@ -41,7 +41,7 @@ services:
     command: "iasSupervisor SupervisorID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   dummy-supervisor:
-    container_name: ias-dev-dummy-supervisor
+    container_name: ias-build-dummy-supervisor
     image: registry.inria.cl:5000/ias-core:dev
     links:
       - ${KAFKA_SERVER}
@@ -50,23 +50,28 @@ services:
     command: "iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   sender:
-    container_name: ias-dev-sender
+    container_name: ias-build-sender
     image: registry.inria.cl:5000/ias-core:dev
     links:
       - ${KAFKA_SERVER}
     command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8001/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID"
 
   webserver:
-    container_name: ias-dev-webserver
-    image: registry.inria.cl:5000/ias-webserver:dev
-    command: ./runserver.sh
+    container_name: ias-mount-webserver
+  image: registry.inria.cl:5000/ias-webserver:dev
+    volumes:
+      - ${DOCKERFILE_PATH_WEBSERVER}:/usr/src/ias-webserver
+    command: "./runserver-dev.sh"
 
   display:
-    container_name: ias-dev-display
-    image: registry.inria.cl:5000/ias-display:dev
+    container_name: ias-mount-display
+    build:
+      context: ${DOCKERFILE_PATH_DISPLAY}
+      dockerfile: Dockerfile-dev
+    image: ias-mount-display-image
 
   nginx:
-    container_name: ias-dev
+    container_name: ias-nginx
     build: ${DOCKERFILE_PATH_NGINX}
     image: ias-nginx-image
     volumes_from:

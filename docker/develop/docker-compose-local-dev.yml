@@ -2,20 +2,26 @@ version: "2"
 
 services:
   kafka:
-    container_name: ias-dev
+    container_name: ias-kafka
     build: ${DOCKERFILE_PATH_KAFKA}
     image: ias-kafka-image
 
   alma-weather-plugin:
-    container_name: ias-dev-alma-weather-plugin
-    image: registry.inria.cl:5000/alma-weather-plugin:dev
+    container_name: ias-build-alma-weather-plugin
+    build:
+      context: ${DOCKERFILE_PATH_ALMA_WEATHER}
+      dockerfile: Dockerfile-build
+    image: ias-build-alma-weather-plugin-image
     links:
       - ${KAFKA_SERVER}
     command: "${KAFKA_SERVER} 9092"
 
   dummy-plugin:
-    container_name: ias-dev-dummy-plugin
-    image: registry.inria.cl:5000/ias-dummy-plugin:dev
+    container_name: ias-build-dummy-plugin
+    build:
+      context: ${DOCKERFILE_PATH_DUMMY_PLUGIN}
+      dockerfile: Dockerfile-build
+    image: ias-build-dummy-plugin-image
     stdin_open: true
     tty: true
     links:
@@ -23,8 +29,9 @@ services:
     command: "${KAFKA_SERVER} 9092"
 
   converter:
-    container_name: ias-dev-converter
-    image: registry.inria.cl:5000/ias-core:dev
+    container_name: ias-build-converter
+    build: ${DOCKERFILE_PATH_CORE}
+    image: ias-build-core-image
     links:
       - ${KAFKA_SERVER}
     volumes:
@@ -32,8 +39,9 @@ services:
     command: "iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
 
   supervisor:
-    container_name: ias-dev-supervisor
-    image: registry.inria.cl:5000/ias-core:dev
+    container_name: ias-build-supervisor
+    build: ${DOCKERFILE_PATH_CORE}
+    image: ias-build-core-image
     links:
       - ${KAFKA_SERVER}
     volumes:
@@ -41,8 +49,9 @@ services:
     command: "iasSupervisor SupervisorID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   dummy-supervisor:
-    container_name: ias-dev-dummy-supervisor
-    image: registry.inria.cl:5000/ias-core:dev
+    container_name: ias-build-dummy-supervisor
+    build: ${DOCKERFILE_PATH_CORE}
+    image: ias-build-core-image
     links:
       - ${KAFKA_SERVER}
     volumes:
@@ -50,23 +59,32 @@ services:
     command: "iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   sender:
-    container_name: ias-dev-sender
-    image: registry.inria.cl:5000/ias-core:dev
+    container_name: ias-build-sender
+    build: ${DOCKERFILE_PATH_CORE}
+    image: ias-build-core-image
     links:
       - ${KAFKA_SERVER}
     command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8001/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID"
 
   webserver:
-    container_name: ias-dev-webserver
-    image: registry.inria.cl:5000/ias-webserver:dev
-    command: ./runserver.sh
+    container_name: ias-mount-webserver
+    build:
+      context: ${DOCKERFILE_PATH_WEBSERVER}
+      dockerfile: Dockerfile-dev
+    image: ias-mount-webserver-image
+    volumes:
+      - ${DOCKERFILE_PATH_WEBSERVER}:/usr/src/ias-webserver
+    command: "./runserver-dev.sh"
 
   display:
-    container_name: ias-dev-display
-    image: registry.inria.cl:5000/ias-display:dev
+    container_name: ias-mount-display
+    build:
+      context: ${DOCKERFILE_PATH_DISPLAY}
+      dockerfile: Dockerfile-dev
+    image: ias-mount-display-image
 
   nginx:
-    container_name: ias-dev
+    container_name: ias-nginx
     build: ${DOCKERFILE_PATH_NGINX}
     image: ias-nginx-image
     volumes_from:
