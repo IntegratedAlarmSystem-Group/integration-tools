@@ -80,7 +80,7 @@ services:
     container_name: ias-mount-display
     build:
       context: ${DOCKERFILE_PATH_DISPLAY}
-      dockerfile: Dockerfile-dev
+      dockerfile: Dockerfile
     image: ias-mount-display-image
 
   nginx:
