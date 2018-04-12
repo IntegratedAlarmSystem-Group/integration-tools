@@ -110,3 +110,4 @@ build/
 # mac
 .DS_Store
 
+docker/develop/node_modules/

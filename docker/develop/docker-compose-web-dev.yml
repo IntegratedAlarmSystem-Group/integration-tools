@@ -71,6 +71,7 @@ services:
     image: ias-mount-display-image
     volumes:
       - ${DOCKERFILE_PATH_DISPLAY}:/usr/src/ias-display
+      - ./node_modules:/usr/src/ias-display/node_modules
     command: "./runserver-dev.sh"
 
   nginx:
