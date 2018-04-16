@@ -7,14 +7,14 @@ services:
     image: ias-kafka-image
 
   alma-weather-plugin:
-    container_name: ias-build-alma-weather-plugin
+    container_name: ias-dev-alma-weather-plugin
     image: registry.inria.cl:5000/alma-weather-plugin:dev
     links:
       - ${KAFKA_SERVER}
     command: "${KAFKA_SERVER} 9092"
 
   dummy-plugin:
-    container_name: ias-build-dummy-plugin
+    container_name: ias-dev-dummy-plugin
     image: registry.inria.cl:5000/ias-dummy-plugin:dev
     stdin_open: true
     tty: true
@@ -23,7 +23,7 @@ services:
     command: "${KAFKA_SERVER} 9092"
 
   converter:
-    container_name: ias-build-converter
+    container_name: ias-dev-converter
     image: registry.inria.cl:5000/ias-core:dev
     links:
       - ${KAFKA_SERVER}
@@ -32,7 +32,7 @@ services:
     command: "iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
 
   supervisor:
-    container_name: ias-build-supervisor
+    container_name: ias-dev-supervisor
     image: registry.inria.cl:5000/ias-core:dev
     links:
       - ${KAFKA_SERVER}
@@ -41,7 +41,7 @@ services:
     command: "iasSupervisor SupervisorID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   dummy-supervisor:
-    container_name: ias-build-dummy-supervisor
+    container_name: ias-dev-dummy-supervisor
     image: registry.inria.cl:5000/ias-core:dev
     links:
       - ${KAFKA_SERVER}
@@ -50,7 +50,7 @@ services:
     command: "iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   sender:
-    container_name: ias-build-sender
+    container_name: ias-dev-sender
     image: registry.inria.cl:5000/ias-core:dev
     links:
       - ${KAFKA_SERVER}
