@@ -58,7 +58,10 @@ services:
 
   webserver:
     container_name: ias-mount-webserver
-    image: registry.inria.cl:5000/ias-webserver:dev
+    build:
+      context: ${DOCKERFILE_PATH_WEBSERVER}
+      dockerfile: Dockerfile-dev
+    image: ias-mount-webserver-image
     volumes:
       - ${DOCKERFILE_PATH_WEBSERVER}:/usr/src/ias-webserver
     command: "./runserver-dev.sh"
