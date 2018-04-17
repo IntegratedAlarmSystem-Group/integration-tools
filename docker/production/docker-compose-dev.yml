@@ -4,7 +4,6 @@ services:
   kafka:
     container_name: ias-dev-kafka
     build: ${DOCKERFILE_PATH_KAFKA}
-    image: ias-kafka-image
 
   alma-weather-plugin:
     container_name: ias-dev-alma-weather-plugin
@@ -68,7 +67,6 @@ services:
   nginx:
     container_name: ias-dev-nginx
     build: ${DOCKERFILE_PATH_NGINX}
-    image: ias-nginx-image
     volumes_from:
      - display
      - webserver
