@@ -2,7 +2,7 @@ version: "2"
 
 services:
   kafka:
-    container_name: ias-prod
+    container_name: ias-prod-kafka
     build: ${DOCKERFILE_PATH_KAFKA}
     image: ias-kafka-image
 
@@ -48,7 +48,7 @@ services:
     image: registry.inria.cl:5000/ias-display:prod
 
   nginx:
-    container_name: ias-prod
+    container_name: ias-prod-nginx
     build: ${DOCKERFILE_PATH_NGINX}
     image: ias-nginx-image
     volumes_from:
