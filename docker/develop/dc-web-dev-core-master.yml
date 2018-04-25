@@ -2,20 +2,19 @@ version: "2"
 
 services:
   kafka:
-    container_name: ias-kafka
+    container_name: ias-dev-kafka
     build: ${DOCKERFILE_PATH_KAFKA}
-    image: ias-kafka-image
 
   alma-weather-plugin:
     container_name: ias-dev-alma-weather-plugin
-    image: registry.inria.cl:5000/alma-weather-plugin:dev
+    image: registry.inria.cl:5000/alma-weather-plugin:prod
     links:
       - ${KAFKA_SERVER}
     command: "${KAFKA_SERVER} 9092"
 
   dummy-plugin:
     container_name: ias-dev-dummy-plugin
-    image: registry.inria.cl:5000/ias-dummy-plugin:dev
+    image: registry.inria.cl:5000/ias-dummy-plugin:prod
     stdin_open: true
     tty: true
     links:
@@ -24,7 +23,7 @@ services:
 
   converter:
     container_name: ias-dev-converter
-    image: registry.inria.cl:5000/ias-core:dev
+    image: registry.inria.cl:5000/ias-core:prod
     links:
       - ${KAFKA_SERVER}
     volumes:
@@ -33,7 +32,7 @@ services:
 
   supervisor:
     container_name: ias-dev-supervisor
-    image: registry.inria.cl:5000/ias-core:dev
+    image: registry.inria.cl:5000/ias-core:prod
     links:
       - ${KAFKA_SERVER}
     volumes:
@@ -42,7 +41,7 @@ services:
 
   dummy-supervisor:
     container_name: ias-dev-dummy-supervisor
-    image: registry.inria.cl:5000/ias-core:dev
+    image: registry.inria.cl:5000/ias-core:prod
     links:
       - ${KAFKA_SERVER}
     volumes:
@@ -51,38 +50,23 @@ services:
 
   sender:
     container_name: ias-dev-sender
-    image: registry.inria.cl:5000/ias-core:dev
+    image: registry.inria.cl:5000/ias-core:prod
     links:
       - ${KAFKA_SERVER}
     command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8001/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID"
 
   webserver:
-    container_name: ias-mount-webserver
-    build:
-      context: ${DOCKERFILE_PATH_WEBSERVER}
-      dockerfile: Dockerfile-dev
-    image: ias-mount-webserver-image
-    volumes:
-      - ${DOCKERFILE_PATH_WEBSERVER}:/usr/src/ias-webserver
-    command: "./runserver-dev.sh"
+    container_name: ias-dev-webserver
+    image: registry.inria.cl:5000/ias-webserver:dev
+    command: ./runserver.sh
 
   display:
-    container_name: ias-mount-display
-    build:
-      context: ${DOCKERFILE_PATH_DISPLAY}
-      dockerfile: Dockerfile-dev
-    image: ias-mount-display-image
-    volumes:
-      - ${DOCKERFILE_PATH_DISPLAY}:/usr/src/ias-display
-      - ./node_modules:/usr/src/ias-display/node_modules
-    command: "./runserver-dev.sh"
+    container_name: ias-dev-display
+    image: registry.inria.cl:5000/ias-display:dev
 
   nginx:
-    container_name: ias-nginx-dev-server
-    build:
-      context: ${DOCKERFILE_PATH_NGINX}
-      dockerfile: Dockerfile-dev
-    image: ias-nginx-dev-server-image
+    container_name: ias-dev-nginx
+    build: ${DOCKERFILE_PATH_NGINX}
     volumes_from:
      - display
      - webserver
