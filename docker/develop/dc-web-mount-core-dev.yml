@@ -28,6 +28,7 @@ services:
       - ${KAFKA_SERVER}
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
+      - logs-volume:/usr/src/IntegratedAlarmSystemRoot/logs
     command: "iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
 
   supervisor:
@@ -37,6 +38,7 @@ services:
       - ${KAFKA_SERVER}
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
+      - logs-volume:/usr/src/IntegratedAlarmSystemRoot/logs
     command: "iasSupervisor SupervisorID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   dummy-supervisor:
@@ -46,6 +48,7 @@ services:
       - ${KAFKA_SERVER}
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
+      - logs-volume:/usr/src/IntegratedAlarmSystemRoot/logs
     command: "iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   sender:
@@ -53,6 +56,8 @@ services:
     image: registry.inria.cl:5000/ias-core:dev
     links:
       - ${KAFKA_SERVER}
+    volumes:
+      - logs-volume:/usr/src/IntegratedAlarmSystemRoot/logs
     command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8001/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID"
 
   webserver:
@@ -84,3 +89,6 @@ services:
      - webserver
     ports:
       - "80:80"
+
+volumes:
+  logs-volume:
