@@ -8,20 +8,12 @@
       "transferFunctionID":"org.eso.ias.asce.transfer.impls.MinMaxThresholdTF",
        "props": [
         {
-          "name": "org.eso.ias.tf.minmaxthreshold.highOn",
-          "value": "1000"
-        },
-        {
-          "name": "org.eso.ias.tf.minmaxthreshold.highOff",
-          "value": "995"
-        },
-        {
           "name": "org.eso.ias.tf.minmaxthreshold.lowOn",
           "value": "-20"
         },
         {
           "name": "org.eso.ias.tf.minmaxthreshold.lowOff",
-          "value": "-15"
+          "value": "-20"
         }
       ]
     }
