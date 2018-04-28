@@ -9,19 +9,11 @@
        "props": [
         {
           "name": "org.eso.ias.tf.minmaxthreshold.highOn",
-          "value": "17"
+          "value": "20"
         },
         {
           "name": "org.eso.ias.tf.minmaxthreshold.highOff",
-          "value": "14"
-        },
-        {
-          "name": "org.eso.ias.tf.minmaxthreshold.lowOn",
-          "value": "-1000"
-        },
-        {
-          "name": "org.eso.ias.tf.minmaxthreshold.lowOff",
-          "value": "-997"
+          "value": "20"
         }
       ]
     }
