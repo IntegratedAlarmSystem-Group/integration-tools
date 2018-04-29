@@ -1,4 +1,6 @@
 FROM spotify/kafka:latest
 
-WORKDIR ${KAFKA_HOME}
-COPY server.properties ./config/
+RUN wget "https://github.com/IntegratedAlarmSystem-Group/ias/archive/master.zip"
+RUN unzip master.zip
+RUN cp ias-master/Tools/config/kafka-server.properties ${KAFKA_HOME}/config/server.properties
+
