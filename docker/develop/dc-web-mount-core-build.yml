@@ -72,6 +72,7 @@ services:
     command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8001/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID"
 
   webserver:
+    tty: true
     container_name: ias-mount-webserver
     build:
       context: ${DOCKERFILE_PATH_WEBSERVER}
