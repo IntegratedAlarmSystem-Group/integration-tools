@@ -2,7 +2,7 @@ FROM centos:7
 
 # Install Java
 RUN yum update -y && \
-  yum install java-1.8.0-openjdk \
+  yum install java-1.8.0-openjdk-devel \
   wget \
   -y
 
