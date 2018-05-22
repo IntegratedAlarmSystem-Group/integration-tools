@@ -85,6 +85,9 @@ services:
     container_name: ias-nginx
     build: ${DOCKERFILE_PATH_NGINX}
     image: ias-nginx-image
+    depends_on:
+     - display
+     - webserver
     volumes_from:
      - display
      - webserver

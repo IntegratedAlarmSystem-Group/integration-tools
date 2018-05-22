@@ -98,6 +98,9 @@ services:
       context: ${DOCKERFILE_PATH_NGINX}
       dockerfile: Dockerfile-dev
     image: ias-nginx-dev-server-image
+    depends_on:
+     - display
+     - webserver
     volumes_from:
      - display
      - webserver

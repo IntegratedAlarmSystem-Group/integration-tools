@@ -85,6 +85,9 @@ services:
     build:
       context: ${DOCKERFILE_PATH_NGINX}
       dockerfile: Dockerfile-dev
+    depends_on:
+     - display
+     - webserver
     volumes_from:
      - display
      - webserver
