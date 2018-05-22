@@ -3,7 +3,7 @@ version: "2"
 services:
   kafka:
     container_name: ias-kafka
-    build: ${DOCKERFILE_PATH_KAFKA}
+    image: alarmsystem/ias-kafka:latest
 
   alma-weather-plugin:
     container_name: ias-prod-alma-weather-plugin
