@@ -1,6 +1,6 @@
 {
         "id": "SupervisorDummy",
-        "dasusIDs": [
+        "dasusToDeploy": [
             "Dasu-WS--dummy"
         ],
         "hostName": "almaias.eso.org",
