@@ -53,7 +53,7 @@ services:
     image: registry.inria.cl:5000/ias-core:dev
     links:
       - ${KAFKA_SERVER}
-    command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8001/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID"
+    command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8001/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID -jcdb /usr/src/cdb/"
 
   webserver:
     container_name: ias-dev-webserver
