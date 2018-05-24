@@ -57,6 +57,7 @@ services:
     links:
       - ${KAFKA_SERVER}
     volumes:
+      - ${CDB_PATH}:/usr/src/cdb
       - logs-volume:/usr/src/IntegratedAlarmSystemRoot/logs
     command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8001/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID"
 
