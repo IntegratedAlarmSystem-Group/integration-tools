@@ -4,6 +4,5 @@
             "Asce-WS--dummy"
         ],
         "outputId": "Alarmdummy",
-        "logLevel": "FATAL",
-        "supervisorID": "SupervisorDummy"
+        "logLevel": "FATAL"
     }

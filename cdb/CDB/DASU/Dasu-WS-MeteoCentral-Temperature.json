@@ -4,6 +4,5 @@
             "Asce-WS-MeteoCentral-Temperature"
         ],
         "outputId": "WS-MeteoCentral-Temperature",
-        "logLevel": "FATAL",
-        "supervisorID": "SupervisorID"
+        "logLevel": "FATAL"
     }
