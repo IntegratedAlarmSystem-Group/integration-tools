@@ -4,6 +4,5 @@
             "Asce-WS-MeteoTB2-WindSpeed"
         ],
         "outputId": "WS-MeteoTB2-WindSpeed",
-        "logLevel": "FATAL",
-        "supervisorID": "SupervisorID"
+        "logLevel": "FATAL"
     }
