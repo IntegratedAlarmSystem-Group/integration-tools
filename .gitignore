@@ -110,3 +110,6 @@ build/
 # mac
 .DS_Store
 
+docker/develop/node_modules/
+docker/production/logs/**
+!docker/production/logs/.include_me

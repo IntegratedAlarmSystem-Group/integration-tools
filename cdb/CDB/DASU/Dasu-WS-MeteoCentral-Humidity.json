@@ -4,6 +4,5 @@
             "Asce-WS-MeteoCentral-Humidity"
         ],
         "outputId": "WS-MeteoCentral-Humidity",
-        "logLevel": "FATAL",
-        "supervisorID": "SupervisorID"
+        "logLevel": "FATAL"
     }

@@ -1,7 +1,36 @@
 {
         "id": "SupervisorID",
-        "dasusIDs": [
-            "Dasu-WS-MeteoTB1-Temperature", "Dasu-WS-MeteoTB1-WindSpeed", "Dasu-WS-MeteoTB1-Humidity", "Dasu-WS-MeteoTB2-Temperature", "Dasu-WS-MeteoTB2-WindSpeed", "Dasu-WS-MeteoTB2-Humidity", "Dasu-WS-MeteoOSF-Temperature", "Dasu-WS-MeteoOSF-WindSpeed", "Dasu-WS-MeteoOSF-Humidity", "Dasu-WS-MeteoItinerant-Temperature", "Dasu-WS-MeteoItinerant-WindSpeed", "Dasu-WS-MeteoItinerant-Humidity", "Dasu-WS-Meteo201-Temperature", "Dasu-WS-Meteo201-WindSpeed", "Dasu-WS-Meteo201-Humidity", "Dasu-WS-MeteoCentral-Temperature", "Dasu-WS-MeteoCentral-WindSpeed", "Dasu-WS-MeteoCentral-Humidity", "Dasu-WS-Meteo309-Temperature", "Dasu-WS-Meteo309-WindSpeed", "Dasu-WS-Meteo309-Humidity", "Dasu-WS-Meteo410-Temperature", "Dasu-WS-Meteo410-WindSpeed", "Dasu-WS-Meteo410-Humidity", "Dasu-WS-Meteo131-Temperature", "Dasu-WS-Meteo131-WindSpeed", "Dasu-WS-Meteo131-Humidity", "Dasu-WS-Meteo129-Temperature", "Dasu-WS-Meteo129-WindSpeed", "Dasu-WS-Meteo129-Humidity", "Dasu-WS-Meteo130-Temperature", "Dasu-WS-Meteo130-WindSpeed", "Dasu-WS-Meteo130-Humidity"
+        "dasusToDeploy": [
+            {"dasuId":"Dasu-WS-MeteoTB1-Temperature","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-MeteoTB1-WindSpeed","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-MeteoTB1-Humidity","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-MeteoTB2-Temperature","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-MeteoTB2-WindSpeed","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-MeteoTB2-Humidity","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-MeteoOSF-Temperature","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-MeteoOSF-WindSpeed","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-MeteoOSF-Humidity","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-MeteoItinerant-WindSpeed","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Meteo201-Temperature","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Meteo201-WindSpeed","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Meteo201-Humidity","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-MeteoCentral-Temperature","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-MeteoCentral-WindSpeed","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-MeteoCentral-Humidity","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Meteo309-Temperature","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Meteo309-WindSpeed","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Meteo309-Humidity","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Meteo410-Temperature","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Meteo410-WindSpeed","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Meteo410-Humidity","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Meteo131-Temperature","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Meteo131-WindSpeed","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Meteo131-Humidity","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Meteo129-Temperature","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Meteo129-WindSpeed","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Meteo129-Humidity","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Meteo130-Temperature","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Meteo130-Humidity","templateId":null,"instance":null}
         ],
         "hostName": "almaias.eso.org",
         "logLevel": "INFO"

@@ -1,7 +1,7 @@
 {
         "id": "SupervisorDummy",
-        "dasusIDs": [
-            "Dasu-WS--dummy"
+        "dasusToDeploy": [
+            { "dasuId":"Dasu-WS--dummy","templateId":null,"instance":null}
         ],
         "hostName": "almaias.eso.org",
         "logLevel": "INFO"
