@@ -1,8 +1,0 @@
-{
-        "id": "Dasu-WS-MeteoItinerant-Humidity",
-        "asceIDs": [
-            "Asce-WS-MeteoItinerant-Humidity"
-        ],
-        "outputId": "WS-MeteoItinerant-Humidity",
-        "logLevel": "FATAL"
-    }
