@@ -13,6 +13,8 @@ services:
     image: ias-build-alma-weather-plugin-image
     links:
       - ${KAFKA_SERVER}
+    volumes:
+      - logs-volume:/usr/src/alma_weather_plugin/logs/
     command: "${KAFKA_SERVER} 9092"
 
   dummy-plugin:
