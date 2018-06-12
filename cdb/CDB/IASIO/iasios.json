@@ -90,16 +90,6 @@
         "iasType": "ALARM"
     },
  {
-        "id": "WS-MeteoItinerant-Temperature-Value",
-        "shortDesc": "Temperature reported by the weather station MeteoItinerant",
-        "iasType": "DOUBLE"
-    },
- {
-        "id": "WS-MeteoItinerant-Temperature",
-        "shortDesc": "Temperature reported by the weather station MeteoItinerant out of range",
-        "iasType": "ALARM"
-    },
- {
         "id": "WS-MeteoItinerant-WindSpeed-Value",
         "shortDesc": "WindSpeed reported by the weather station MeteoItinerant",
         "iasType": "DOUBLE"
@@ -107,16 +97,6 @@
  {
         "id": "WS-MeteoItinerant-WindSpeed",
         "shortDesc": "WindSpeed reported by the weather station MeteoItinerant out of range",
-        "iasType": "ALARM"
-    },
- {
-        "id": "WS-MeteoItinerant-Humidity-Value",
-        "shortDesc": "Humidity reported by the weather station MeteoItinerant",
-        "iasType": "DOUBLE"
-    },
- {
-        "id": "WS-MeteoItinerant-Humidity",
-        "shortDesc": "Humidity reported by the weather station MeteoItinerant out of range",
         "iasType": "ALARM"
     },
  {
@@ -307,16 +287,6 @@
  {
         "id": "WS-Meteo130-Temperature",
         "shortDesc": "Temperature reported by the weather station Meteo130 out of range",
-        "iasType": "ALARM"
-    },
- {
-        "id": "WS-Meteo130-WindSpeed-Value",
-        "shortDesc": "WindSpeed reported by the weather station Meteo130",
-        "iasType": "DOUBLE"
-    },
- {
-        "id": "WS-Meteo130-WindSpeed",
-        "shortDesc": "WindSpeed reported by the weather station Meteo130 out of range",
         "iasType": "ALARM"
     },
  {

@@ -12,6 +12,8 @@ services:
       - kafka
     depends_on:
       - kafka
+    volumes:
+      - ${LOGS_PATH}:/usr/src/alma_weather_plugin/logs/
     command: "${KAFKA_SERVER} 9092"
 
   converter:
