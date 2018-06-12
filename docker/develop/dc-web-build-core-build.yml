@@ -12,7 +12,9 @@ services:
       dockerfile: Dockerfile-build
     image: ias-build-alma-weather-plugin-image
     links:
-      - ${KAFKA_SERVER}
+      - kafka
+    depends_on:
+      - kafka
     command: "${KAFKA_SERVER} 9092"
 
   dummy-plugin:
@@ -24,7 +26,9 @@ services:
     stdin_open: true
     tty: true
     links:
-      - ${KAFKA_SERVER}
+      - kafka
+    depends_on:
+      - kafka
     command: "${KAFKA_SERVER} 9092"
 
   converter:
@@ -32,7 +36,9 @@ services:
     build: ${DOCKERFILE_PATH_CORE}
     image: ias-build-core-image
     links:
-      - ${KAFKA_SERVER}
+      - kafka
+    depends_on:
+      - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - logs-volume:/usr/src/IntegratedAlarmSystemRoot/logs
@@ -43,7 +49,9 @@ services:
     build: ${DOCKERFILE_PATH_CORE}
     image: ias-build-core-image
     links:
-      - ${KAFKA_SERVER}
+      - kafka
+    depends_on:
+      - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - logs-volume:/usr/src/IntegratedAlarmSystemRoot/logs
@@ -54,7 +62,9 @@ services:
     build: ${DOCKERFILE_PATH_CORE}
     image: ias-build-core-image
     links:
-      - ${KAFKA_SERVER}
+      - kafka
+    depends_on:
+      - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - logs-volume:/usr/src/IntegratedAlarmSystemRoot/logs
@@ -65,7 +75,9 @@ services:
     build: ${DOCKERFILE_PATH_CORE}
     image: ias-build-core-image
     links:
-      - ${KAFKA_SERVER}
+      - kafka
+    depends_on:
+      - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - logs-volume:/usr/src/IntegratedAlarmSystemRoot/logs
@@ -86,12 +98,15 @@ services:
     container_name: ias-nginx
     build: ${DOCKERFILE_PATH_NGINX}
     image: ias-nginx-image
-    depends_on:
-     - display
-     - webserver
     volumes_from:
-     - display
-     - webserver
+      - display
+      - webserver
+    links:
+      - display
+      - webserver
+    depends_on:
+      - display
+      - webserver
     ports:
       - "80:80"
 
