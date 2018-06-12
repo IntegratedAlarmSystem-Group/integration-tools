@@ -12,9 +12,23 @@ Additionally, this directory contains the following:
 
 * **.env** file containing environment variables used by the docker-compose files.
 
-
 ## Develop
 Contains docker-compose files meant to be used for development. There are different combinations of images, some of them are pulled from the registry while others are built from local clones of the repositories.
+
+Additionally, this directory contains the following:
+
+* **.env** file containing environment variables used by the docker-compose files.
+
+## Allow interaction with external processes and the kafka container.
+In order to allow external processes to consume from and/or produce from the Kafka container the following changes must be made:
+
+* Config kafka to use the host IP address:
+  - Get the IP Address: `ifconfig`, depending on the net configuration the IP should be something like this: `192.168.1.1`
+  - Edit the `KAFKA_SERVER` property in the corresponding `.env` file, replacing the value `kafka` by the IP. (please DO NOT commit this change!)
+* Stop zookeeper and kafka in the host system (if they are running): For example: `sudo service zookeeper stop`
+* External processes can connect to kafka by using the `<IP>:9092`, where `<IP>`, is the IP obtained in the previous step
+* If this does not work, there may be an issue regarding the firewall configuration in the host system.
+
 
 ### Expected folder structure
 The repositories are expected to be at the same level under the same parent folder. For example:
@@ -44,6 +58,8 @@ This way, `web-<image-type>` describes the type of image used for the "web" repo
 Summarizing we have the following combinations:
 
 * **dc-web-build-core-build.yml** builds the images of all the components from local clones of the repositories.
+
+* **dc-web-build-core-dev.yml** pulls the images of the ___ias___ (core) and ___ias-plugins___ (plugins) components from the registry corresponding to the ***develop*** branch. Builds the images of the ___ias-webserver___ and ___ias-display___ from local clones of their repositories
 
 * **dc-web-dev-core-master.yml** pulls the images of the ___ias___ (core) and ___ias-plugins___ (plugins) components from the registry corresponding to the ***master*** branch. Pulls the images of the ___ias-webserver___ and ___ias-display___ from the registry corresponding to the ***develop*** branch
 

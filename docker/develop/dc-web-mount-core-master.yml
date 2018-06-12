@@ -4,6 +4,12 @@ services:
   kafka:
     container_name: ias-kafka
     image: alarmsystem/ias-kafka:latest
+    ports:
+      - "9092:9092"
+      - "2181:2181"
+    environment:
+      - ADVERTISED_HOST=${KAFKA_SERVER}
+      - ADVERTISED_PORT=9092
 
   alma-weather-plugin:
     container_name: ias-prod-alma-weather-plugin
