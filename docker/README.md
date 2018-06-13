@@ -24,7 +24,7 @@ In order to allow external processes to consume from and/or produce from the Kaf
 
 * Config kafka to use the host IP address:
   - Get the IP Address: `ifconfig`, depending on the net configuration the IP should be something like this: `192.168.1.1`
-  - Edit the `KAFKA_SERVER` property in the corresponding `.env` file, replacing the value `kafka` by the IP. (please DO NOT commit this change!)
+  - Edit the `EXPOSED_KAFKA_SERVER` property in the corresponding `.env` file, replacing the value `kafka` by the IP. (please DO NOT commit this change!)
 * Stop zookeeper and kafka in the host system (if they are running): For example: `sudo service zookeeper stop`
 * External processes can connect to kafka by using the `<IP>:9092`, where `<IP>`, is the IP obtained in the previous step
 * If this does not work, there may be an issue regarding the firewall configuration in the host system.
