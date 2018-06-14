@@ -20,7 +20,7 @@ services:
       - kafka
     volumes:
       - logs-volume:/usr/src/alma_weather_plugin/logs/
-    command: "-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092"
+    command: "${KAFKA_SERVER} 9092"
 
   dummy-plugin:
     container_name: ias-prod-dummy-plugin
