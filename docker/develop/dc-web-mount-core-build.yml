@@ -4,6 +4,12 @@ services:
   kafka:
     container_name: ias-kafka
     image: alarmsystem/ias-kafka:latest
+    ports:
+      - "9092:9092"
+      - "2181:2181"
+    environment:
+      - ADVERTISED_HOST=${EXPOSED_KAFKA_SERVER}
+      - ADVERTISED_PORT=9092
 
   alma-weather-plugin:
     container_name: ias-build-alma-weather-plugin
@@ -12,10 +18,12 @@ services:
       dockerfile: Dockerfile-build
     image: ias-build-alma-weather-plugin-image
     links:
-      - ${KAFKA_SERVER}
+      - kafka
+    depends_on:
+      - kafka
     volumes:
       - logs-volume:/usr/src/alma_weather_plugin/logs/
-    command: "${KAFKA_SERVER} 9092"
+    command: "-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092"
 
   dummy-plugin:
     container_name: ias-build-dummy-plugin
@@ -26,7 +34,9 @@ services:
     stdin_open: true
     tty: true
     links:
-      - ${KAFKA_SERVER}
+      - kafka
+    depends_on:
+      - kafka
     command: "${KAFKA_SERVER} 9092"
 
   converter:
@@ -34,7 +44,9 @@ services:
     build: ${DOCKERFILE_PATH_CORE}
     image: ias-build-core-image
     links:
-      - ${KAFKA_SERVER}
+      - kafka
+    depends_on:
+      - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - logs-volume:/usr/src/IntegratedAlarmSystemRoot/logs
@@ -45,7 +57,9 @@ services:
     build: ${DOCKERFILE_PATH_CORE}
     image: ias-build-core-image
     links:
-      - ${KAFKA_SERVER}
+      - kafka
+    depends_on:
+      - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - logs-volume:/usr/src/IntegratedAlarmSystemRoot/logs
@@ -56,7 +70,9 @@ services:
     build: ${DOCKERFILE_PATH_CORE}
     image: ias-build-core-image
     links:
-      - ${KAFKA_SERVER}
+      - kafka
+    depends_on:
+      - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - logs-volume:/usr/src/IntegratedAlarmSystemRoot/logs
@@ -67,7 +83,9 @@ services:
     build: ${DOCKERFILE_PATH_CORE}
     image: ias-build-core-image
     links:
-      - ${KAFKA_SERVER}
+      - kafka
+    depends_on:
+      - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - logs-volume:/usr/src/IntegratedAlarmSystemRoot/logs
@@ -101,12 +119,15 @@ services:
       context: ${DOCKERFILE_PATH_NGINX}
       dockerfile: Dockerfile-dev
     image: ias-nginx-dev-server-image
-    depends_on:
-     - display
-     - webserver
     volumes_from:
-     - display
-     - webserver
+      - display
+      - webserver
+    links:
+      - display
+      - webserver
+    depends_on:
+      - display
+      - webserver
     ports:
       - "80:80"
 
