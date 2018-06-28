@@ -81,6 +81,18 @@ services:
       - logs-volume:/usr/src/IntegratedAlarmSystemRoot/logs
     command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8001/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID -jcdb /usr/src/cdb/"
 
+  heartbeat-sender:
+    container_name: ias-dev-heartbeat-sender
+    image: registry.inria.cl:5000/ias-core:dev
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - logs-volume:/usr/src/IntegratedAlarmSystemRoot/logs
+    command: "iasRun -l s -Dorg.eso.ias.senders.kafka.inputstream=HeartbeatTopic -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8001/core/ org.eso.ias.webserversender.WebServerSender WebServerHeartbeatSenderID -jcdb /usr/src/cdb/"
+
   webserver:
     tty: true
     container_name: ias-mount-webserver
