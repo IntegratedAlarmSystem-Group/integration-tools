@@ -1,0 +1,19 @@
+{
+      "id": "Asce-WS-P-Delay-WindSpeed",
+      "dasuID": "Dasu-WS-P-WindSpeed",
+      "inputIDs": [
+        "WS-P-WindSpeed-Threshold20"
+      ],
+      "outputID": "WS-P-Delaied20-WindSpeed",
+      "transferFunctionID":"org.eso.ias.tranfer.DelayedAlarm",
+      "props": [
+        {
+          "name": "org.eso.ias.tf.delaiedthreshold.settime",
+          "value": "12"
+        },
+        {
+          "name": "org.eso.ias.tf.delaiedthreshold.cleartime",
+          "value": "1800"
+        }
+      ]
+}

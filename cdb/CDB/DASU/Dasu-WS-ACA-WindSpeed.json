@@ -1,0 +1,13 @@
+{
+        "id": "Dasu-WS-ACA-WindSpeed",
+        "asceIDs": [
+            "Asce-WS-ACA-Selector-WindSpeed",
+            "Asce-WS-ACA-Threshold20-WindSpeed",
+            "Asce-WS-ACA-Threshold15-WindSpeed",
+            "Asce-WS-ACA-Delay20-WindSpeed",
+            "Asce-WS-ACA-Delay15-WindSpeed",
+            "Asce-WS-ACA-Multi-WindSpeed"
+        ],
+        "outputId": "WS-ACA-WindSpeed",
+        "logLevel": "FATAL"
+    }

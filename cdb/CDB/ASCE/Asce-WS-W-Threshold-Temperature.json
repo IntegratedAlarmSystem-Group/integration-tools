@@ -1,0 +1,19 @@
+{
+      "dasuID": "Dasu-WS-W-Temperature",
+      "id": "Asce-WS-W-Threshold-Temperature",
+      "inputIDs": [
+        "WS-W-Selected-Temperature"
+      ],
+      "outputID": "WS-W-Temperature-Threshold",
+      "transferFunctionID":"org.eso.ias.asce.transfer.impls.MinMaxThresholdTF",
+       "props": [
+        {
+          "name": "org.eso.ias.tf.minmaxthreshold.lowOn",
+          "value": "-20"
+        },
+        {
+          "name": "org.eso.ias.tf.minmaxthreshold.lowOff",
+          "value": "-19.9"
+        }
+      ]
+    }

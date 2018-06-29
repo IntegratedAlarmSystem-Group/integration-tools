@@ -1,0 +1,19 @@
+{
+      "dasuID": "Dasu-WS-P-WindSpeed",
+      "id": "Asce-WS-P-Threshold20-WindSpeed",
+      "inputIDs": [
+        "WS-P-Selected-WindSpeed"
+      ],
+      "outputID": "WS-P-WindSpeed-Threshold20",
+      "transferFunctionID":"org.eso.ias.asce.transfer.impls.MinMaxThresholdTF",
+       "props": [
+        {
+          "name": "org.eso.ias.tf.minmaxthreshold.highOn",
+          "value": "20"
+        },
+        {
+          "name": "org.eso.ias.tf.minmaxthreshold.highOff",
+          "value": "19.9"
+        }
+      ]
+    }

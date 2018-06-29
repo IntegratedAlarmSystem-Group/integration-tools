@@ -1,0 +1,19 @@
+{
+      "dasuID": "Dasu-WS-P-Humidity",
+      "id": "Asce-WS-P-Threshold-Humidity",
+      "inputIDs": [
+        "WS-P-Selected-Humidity"
+      ],
+      "outputID": "WS-P-Humidity",
+      "transferFunctionID":"org.eso.ias.asce.transfer.impls.MinMaxThresholdTF",
+       "props": [
+        {
+          "name": "org.eso.ias.tf.minmaxthreshold.highOn",
+          "value": "95"
+        },
+        {
+          "name": "org.eso.ias.tf.minmaxthreshold.highOff",
+          "value": "94"
+        }
+      ]
+    }
