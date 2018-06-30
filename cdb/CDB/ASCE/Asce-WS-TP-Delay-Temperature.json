@@ -1,0 +1,19 @@
+{
+      "id": "Asce-WS-TP-Delay-Temperature",
+      "dasuID": "Dasu-WS-TP-Temperature",
+      "inputIDs": [
+        "WS-TP-Temperature-Threshold"
+      ],
+      "outputID": "WS-TP-Temperature",
+      "transferFunctionID":"org.eso.ias.tranfer.DelayedAlarm",
+      "props": [
+        {
+          "name": "org.eso.ias.tf.delaiedthreshold.settime",
+          "value": "60"
+        },
+        {
+          "name": "org.eso.ias.tf.delaiedthreshold.cleartime",
+          "value": "1800"
+        }
+      ]
+}

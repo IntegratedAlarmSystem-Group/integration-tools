@@ -1,0 +1,10 @@
+{
+        "id": "Dasu-WS-TP-Temperature",
+        "asceIDs": [
+            "Asce-WS-TP-Selector-Temperature",
+            "Asce-WS-TP-Threshold-Temperature",
+            "Asce-WS-TP-Delay-Temperature"
+        ],
+        "outputId": "WS-TP-Temperature",
+        "logLevel": "FATAL"
+    }

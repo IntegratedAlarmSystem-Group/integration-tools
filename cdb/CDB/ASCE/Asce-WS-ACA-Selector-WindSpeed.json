@@ -1,0 +1,18 @@
+{
+      "id": "Asce-WS-ACA-Selector-WindSpeed",
+      "dasuID": "Dasu-WS-ACA-WindSpeed",
+      "inputIDs": [
+        "WS-MeteoCentral-WindSpeed-Value",
+        "WS-Meteo129-WindSpeed-Value",
+        "WS-Meteo130-WindSpeed-Value",
+        "WS-Meteo131-WindSpeed-Value"
+      ],
+      "outputID": "WS-ACA-Selected-WindSpeed",
+      "transferFunctionID":"org.eso.ias.tranfer.BackupSelector",
+      "props": [
+        {
+          "name": "org.eso.ias.tf.selector.prioritizedids",
+          "value": "WS-MeteoCentral-WindSpeed-Value, WS-Meteo129-WindSpeed-Value,WS-Meteo130-WindSpeed-Value,WS-Meteo131-WindSpeed-Value"
+        }
+      ]
+}

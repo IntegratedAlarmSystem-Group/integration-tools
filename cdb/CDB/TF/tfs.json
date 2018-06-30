@@ -1,3 +1,6 @@
 [
-	{"className" : "org.eso.ias.asce.transfer.impls.MinMaxThresholdTF","implLang" : "SCALA"}
+	{"className" : "org.eso.ias.asce.transfer.impls.MinMaxThresholdTF","implLang" : "SCALA"},
+	{"className" : "org.eso.ias.asce.transfer.impls.MultiplicityTF","implLang" : "SCALA"},
+	{"className" : "org.eso.ias.tranfer.BackupSelector","implLang" : "SCALA"},
+	{"className" : "org.eso.ias.tranfer.DelayedAlarm","implLang" : "SCALA"}
 ]

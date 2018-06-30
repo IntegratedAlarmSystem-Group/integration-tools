@@ -1,0 +1,34 @@
+{
+        "id": "Supervisor-Weather",
+        "dasusToDeploy": [
+            {"dasuId":"Dasu-WS-ACA-Temperature","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-ACA-Humidity","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-ACA-WindSpeed","templateId":null,"instance":null},
+
+	    {"dasuId":"Dasu-WS-TP-Temperature","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-TP-Humidity","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-TP-WindSpeed","templateId":null,"instance":null}, 
+
+            {"dasuId":"Dasu-WS-Inner-Temperature","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Inner-Humidity","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Inner-WindSpeed","templateId":null,"instance":null},
+
+            {"dasuId":"Dasu-WS-W-Temperature","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-W-Humidity","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-W-WindSpeed","templateId":null,"instance":null},
+
+            {"dasuId":"Dasu-WS-P-Temperature","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-P-Humidity","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-P-WindSpeed","templateId":null,"instance":null},
+
+            {"dasuId":"Dasu-WS-S-Temperature","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-S-Humidity","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-S-WindSpeed","templateId":null,"instance":null},
+
+            {"dasuId":"Dasu-WS-Global-Humidity","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Global-Temperature","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Global-WindSpeed","templateId":null,"instance":null}
+        ],
+        "hostName": "almaias.eso.org",
+        "logLevel": "INFO"
+    }

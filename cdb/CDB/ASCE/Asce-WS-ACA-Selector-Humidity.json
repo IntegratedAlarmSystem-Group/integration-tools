@@ -1,0 +1,18 @@
+{
+      "id": "Asce-WS-ACA-Selector-Humidity",
+      "dasuID": "Dasu-WS-ACA-Humidity",
+      "inputIDs": [
+        "WS-MeteoCentral-Humidity-Value",
+        "WS-Meteo129-Humidity-Value",
+        "WS-Meteo130-Humidity-Value",
+        "WS-Meteo131-Humidity-Value"
+      ],
+      "outputID": "WS-ACA-Selected-Humidity",
+      "transferFunctionID":"org.eso.ias.tranfer.BackupSelector",
+      "props": [
+        {
+          "name": "org.eso.ias.tf.selector.prioritizedids",
+          "value": "WS-MeteoCentral-Humidity-Value, WS-Meteo129-Humidity-Value,WS-Meteo130-Humidity-Value,WS-Meteo131-Humidity-Value"
+        }
+      ]
+}

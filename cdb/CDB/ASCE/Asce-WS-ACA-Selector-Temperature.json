@@ -1,0 +1,18 @@
+{
+      "id": "Asce-WS-ACA-Selector-Temperature",
+      "dasuID": "Dasu-WS-ACA-Temperature",
+      "inputIDs": [
+        "WS-MeteoCentral-Temperature-Value",
+        "WS-Meteo129-Temperature-Value",
+        "WS-Meteo130-Temperature-Value",
+        "WS-Meteo131-Temperature-Value"
+      ],
+      "outputID": "WS-ACA-Selected-Temperature",
+      "transferFunctionID":"org.eso.ias.tranfer.BackupSelector",
+      "props": [
+        {
+          "name": "org.eso.ias.tf.selector.prioritizedids",
+          "value": "WS-MeteoCentral-Temperature-Value, WS-Meteo129-Temperature-Value,WS-Meteo130-Temperature-Value,WS-Meteo131-Temperature-Value"
+        }
+      ]
+}
