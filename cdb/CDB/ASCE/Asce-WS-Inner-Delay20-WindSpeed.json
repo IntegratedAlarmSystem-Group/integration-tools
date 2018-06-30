@@ -1,5 +1,5 @@
 {
-      "id": "Asce-WS-Inner-Delay-WindSpeed",
+      "id": "Asce-WS-Inner-Delay20-WindSpeed",
       "dasuID": "Dasu-WS-Inner-WindSpeed",
       "inputIDs": [
         "WS-Inner-WindSpeed-Threshold20"

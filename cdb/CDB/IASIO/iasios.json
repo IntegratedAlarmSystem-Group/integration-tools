@@ -718,5 +718,50 @@
         "id": "WS-S-Temperature",
         "shortDesc": "Temperature alarm of the S WS",
         "iasType": "ALARM"
+   },
+ {
+        "id": "WS-ACA-WindSpeed",
+        "shortDesc": "Wind speed over 20m/s of the ACA WS",
+        "iasType": "ALARM"
+   },
+ {
+        "id": "WS-TP-WindSpeed",
+        "shortDesc": "Wind speed over 20m/s of the ACA WS",
+        "iasType": "ALARM"
+   },
+ {
+        "id": "WS-Inner-WindSpeed",
+        "shortDesc": "Wind speed over 20m/s of the ACA WS",
+        "iasType": "ALARM"
+   },
+ {
+        "id": "WS-W-WindSpeed",
+        "shortDesc": "Wind speed over 20m/s of the ACA WS",
+        "iasType": "ALARM"
+   },
+ {
+        "id": "WS-P-WindSpeed",
+        "shortDesc": "Wind speed over 20m/s of the ACA WS",
+        "iasType": "ALARM"
+   },
+ {
+        "id": "WS-S-WindSpeed",
+        "shortDesc": "Wind speed over 20m/s of the ACA WS",
+        "iasType": "ALARM"
+   },
+ {
+        "id": "WS-Temperature",
+        "shortDesc": "Temperature at the AOS too low",
+        "iasType": "ALARM"
+   },
+ {
+        "id": "WS-Humidity",
+        "shortDesc": "Humidity too at the AOS high",
+        "iasType": "ALARM"
+   },
+ {
+        "id": "WS-WindSpeed",
+        "shortDesc": "Wind spped too at the AOS high",
+        "iasType": "ALARM"
    }
 ]

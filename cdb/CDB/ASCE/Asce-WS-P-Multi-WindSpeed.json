@@ -5,7 +5,7 @@
         "WS-P-Delaied20-WindSpeed",
         "WS-P-Delaied15-WindSpeed"
       ],
-      "outputID": "WS-P-Temperature-WindSpeed",
+      "outputID": "WS-P-WindSpeed",
       "transferFunctionID":"org.eso.ias.asce.transfer.impls.MultiplicityTF",
        "props": [
         {
