@@ -23,7 +23,7 @@ services:
       - kafka
     volumes:
       - ${LOGS_PATH}:/usr/src/alma_weather_plugin/logs/
-    command: "${KAFKA_SERVER} 9092"
+    command: "-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092"
 
   converter:
     container_name: ias-build-converter
