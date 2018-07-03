@@ -763,5 +763,341 @@
         "id": "WS-WindSpeed",
         "shortDesc": "Wind spped too at the AOS high",
         "iasType": "ALARM"
-   }
+   },
+ {
+        "id": "Array-AntennasToPads",
+        "shortDesc": "Association of antennas to pads",
+        "iasType": "STRING"
+   },
+  {
+    "id": "Array-UMStatus-DV01",
+    "shortDesc": "Status of DV01 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV02",
+    "shortDesc": "Status of DV02 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV03",
+    "shortDesc": "Status of DV03 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV04",
+    "shortDesc": "Status of DV04 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV05",
+    "shortDesc": "Status of DV05 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV06",
+    "shortDesc": "Status of DV06 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV07",
+    "shortDesc": "Status of DV07 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV08",
+    "shortDesc": "Status of DV08 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV09",
+    "shortDesc": "Status of DV09 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV10",
+    "shortDesc": "Status of DV10 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV11",
+    "shortDesc": "Status of DV11 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV12",
+    "shortDesc": "Status of DV12 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV13",
+    "shortDesc": "Status of DV13 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV14",
+    "shortDesc": "Status of DV14 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV15",
+    "shortDesc": "Status of DV15 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV16",
+    "shortDesc": "Status of DV16 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV17",
+    "shortDesc": "Status of DV17 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV18",
+    "shortDesc": "Status of DV18 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV19",
+    "shortDesc": "Status of DV19 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV20",
+    "shortDesc": "Status of DV20 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV21",
+    "shortDesc": "Status of DV21 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV22",
+    "shortDesc": "Status of DV22 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV23",
+    "shortDesc": "Status of DV23 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV24",
+    "shortDesc": "Status of DV24 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DV25",
+    "shortDesc": "Status of DV25 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA41",
+    "shortDesc": "Status of DA41 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA42",
+    "shortDesc": "Status of DA42 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA43",
+    "shortDesc": "Status of DA43 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA44",
+    "shortDesc": "Status of DA44 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA45",
+    "shortDesc": "Status of DA45 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA46",
+    "shortDesc": "Status of DA46 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA47",
+    "shortDesc": "Status of DA47 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA48",
+    "shortDesc": "Status of DA48 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA49",
+    "shortDesc": "Status of DA49 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA50",
+    "shortDesc": "Status of DA50 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA51",
+    "shortDesc": "Status of DA51 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA52",
+    "shortDesc": "Status of DA52 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA53",
+    "shortDesc": "Status of DA53 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA54",
+    "shortDesc": "Status of DA54 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA55",
+    "shortDesc": "Status of DA55 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA56",
+    "shortDesc": "Status of DA56 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA57",
+    "shortDesc": "Status of DA57 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA58",
+    "shortDesc": "Status of DA58 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA59",
+    "shortDesc": "Status of DA59 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA60",
+    "shortDesc": "Status of DA60 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA61",
+    "shortDesc": "Status of DA61 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA62",
+    "shortDesc": "Status of DA62 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA63",
+    "shortDesc": "Status of DA63 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA64",
+    "shortDesc": "Status of DA64 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-DA65",
+    "shortDesc": "Status of DA65 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-CM01",
+    "shortDesc": "Status of CM01 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-CM02",
+    "shortDesc": "Status of CM02 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-CM03",
+    "shortDesc": "Status of CM03 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-CM04",
+    "shortDesc": "Status of CM04 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-CM05",
+    "shortDesc": "Status of CM05 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-CM06",
+    "shortDesc": "Status of CM06 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-CM07",
+    "shortDesc": "Status of CM07 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-CM08",
+    "shortDesc": "Status of CM08 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-CM09",
+    "shortDesc": "Status of CM09 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-CM10",
+    "shortDesc": "Status of CM10 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-CM11",
+    "shortDesc": "Status of CM11 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-CM12",
+    "shortDesc": "Status of CM12 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-PM01",
+    "shortDesc": "Status of PM01 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-PM02",
+    "shortDesc": "Status of PM02 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-PM03",
+    "shortDesc": "Status of PM03 from utility module",
+    "iasType": "STRING"
+  },
+  {
+    "id": "Array-UMStatus-PM04",
+    "shortDesc": "Status of PM04 from utility module",
+    "iasType": "STRING"
+  }
 ]
+
