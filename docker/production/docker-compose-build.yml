@@ -51,6 +51,19 @@ services:
       - ${LOGS_PATH}:/usr/src/alma_weather_plugin/logs/
     command: "iasSupervisor SupervisorID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
+  weather-supervisor:
+    container_name: ias-build-weather-supervisor
+    build: ${DOCKERFILE_PATH_CORE}
+    image: ias-build-core-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
+    command: "iasSupervisor Supervisor-Weather -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+
   sender:
     container_name: ias-build-sender
     build: ${DOCKERFILE_PATH_CORE}
