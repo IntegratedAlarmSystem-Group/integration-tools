@@ -115,5 +115,5 @@ docker/production/logs/**
 !docker/production/logs/.gitinclude
 
 # Private files
-private_files/
+private_files/**
 !private_files/.gitinclude
