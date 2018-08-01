@@ -112,4 +112,8 @@ build/
 
 docker/develop/node_modules/
 docker/production/logs/**
-!docker/production/logs/.include_me
+!docker/production/logs/.gitinclude
+
+# Private files
+private_files/
+!private_files/.gitinclude
