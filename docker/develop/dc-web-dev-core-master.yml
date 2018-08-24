@@ -101,6 +101,8 @@ services:
   display:
     container_name: ias-dev-display
     image: registry.inria.cl:5000/ias-display:dev
+    volumes:
+      - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
 
   nginx:
     container_name: ias-nginx

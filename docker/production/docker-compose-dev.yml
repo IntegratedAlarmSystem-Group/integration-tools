@@ -97,6 +97,8 @@ services:
     container_name: ias-dev-webserver
     image: registry.inria.cl:5000/ias-webserver:dev
     command: ./runserver.sh
+    volumes:
+      - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
 
   display:
     container_name: ias-dev-display
