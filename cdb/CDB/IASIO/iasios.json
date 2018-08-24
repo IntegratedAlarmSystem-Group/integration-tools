@@ -383,6 +383,12 @@
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl"
     },
+{
+         "id": "Alarmdummy-2",
+         "shortDesc": "dummy reported by the weather station  out of range",
+         "iasType": "ALARM",
+         "docUrl": "http://www.alma.cl"
+    },
  {
         "id": "WS-ACA-Selected-Humidity",
         "shortDesc": "Selected humidity of the ACA WS",
@@ -1100,4 +1106,3 @@
     "iasType": "STRING"
   }
 ]
-
