@@ -1,10 +1,11 @@
 {
-      "dasuID": "Dasu-WS--Alarmdummy",
-      "id": "Asce-WS--Alarmdummy",
+      "dasuID": "Dasu-WS--Alarmdummy-Global",
+      "id": "Asce-WS--Alarmdummy-Global",
       "inputIDs": [
-        "Alarmdummy"
+        "Alarmdummy",
+        "Alarmdummy-2"
       ],
-      "outputID": "Alarmdummy-2",
+      "outputID": "Alarmdummy-Global",
       "transferFunctionID":"org.eso.ias.asce.transfer.impls.MultiplicityTF",
        "props": [
          {

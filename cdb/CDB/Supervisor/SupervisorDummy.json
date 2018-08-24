@@ -2,6 +2,7 @@
         "id": "SupervisorDummy",
         "dasusToDeploy": [
             { "dasuId":"Dasu-WS--dummy","templateId":null,"instance":null},
+            { "dasuId":"Dasu-WS--dummy-2","templateId":null,"instance":null},
             { "dasuId":"Dasu-WS--Alarmdummy","templateId":null,"instance":null}
         ],
         "hostName": "almaias.eso.org",

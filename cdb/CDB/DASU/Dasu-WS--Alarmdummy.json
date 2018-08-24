@@ -1,8 +1,8 @@
 {
-        "id": "Dasu-WS--Alarmdummy",
+        "id": "Dasu-WS--Alarmdummy-Global",
         "asceIDs": [
-            "Asce-WS--Alarmdummy"
+            "Asce-WS--Alarmdummy-Global"
         ],
-        "outputId": "Alarmdummy-2",
+        "outputId": "Alarmdummy-Global",
         "logLevel": "FATAL"
     }
