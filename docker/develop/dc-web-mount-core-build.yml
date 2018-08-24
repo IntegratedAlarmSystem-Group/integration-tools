@@ -113,6 +113,7 @@ services:
     image: ias-mount-webserver-image
     volumes:
       - ${DOCKERFILE_PATH_WEBSERVER}:/usr/src/ias-webserver
+      - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
     command: "./runserver-dev.sh"
 
   display:

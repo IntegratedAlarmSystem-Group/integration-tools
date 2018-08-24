@@ -82,6 +82,8 @@ services:
     build: ${DOCKERFILE_PATH_WEBSERVER}
     image: ias-build-webserver-image
     command: ./runserver.sh
+    volumes:
+      - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
 
   display:
     container_name: ias-build-display
