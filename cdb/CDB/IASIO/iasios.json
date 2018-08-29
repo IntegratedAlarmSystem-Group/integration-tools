@@ -378,13 +378,31 @@
         "docUrl": "http://www.alma.cl"
     },
  {
-       "id": "dummy-2",
+       "id": "dummy-21",
+       "shortDesc": "dummy reported by the weather station ",
+       "iasType": "DOUBLE",
+       "docUrl": "http://www.alma.cl"
+    },
+ {
+       "id": "dummy-22",
        "shortDesc": "dummy reported by the weather station ",
        "iasType": "DOUBLE",
        "docUrl": "http://www.alma.cl"
     },
  {
         "id": "Alarmdummy",
+        "shortDesc": "dummy reported by the weather station  out of range",
+        "iasType": "ALARM",
+        "docUrl": "http://www.alma.cl"
+    },
+ {
+        "id": "Alarmdummy-21",
+        "shortDesc": "dummy reported by the weather station  out of range",
+        "iasType": "ALARM",
+        "docUrl": "http://www.alma.cl"
+    },
+ {
+        "id": "Alarmdummy-22",
         "shortDesc": "dummy reported by the weather station  out of range",
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl"
