@@ -11,6 +11,12 @@ The repositories are expected to be at the same level under the same parent fold
   - ias-webserver
   - ias-plugins
   - integration-tools
+  - ias-private-files
+
+Where ias-private-files is a private repository used to store private information associated to a particular instance of the IAS, for example, the private data of the Alma observatory.
+
+If you want to use the IAS for another application and do not want to have a private repository you can just create folder named `ias-private-files` (at the same level as the `integration-tools` repository) and your private files there. Another option is to edit the corresponding `.env` file in order to point to another location.
+
 ---
 
 ## How to use docker and docker-compose
