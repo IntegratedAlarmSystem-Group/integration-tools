@@ -45,18 +45,6 @@ services:
       - logs-volume:/usr/src/IntegratedAlarmSystemRoot/logs
     command: "iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
 
-  supervisor:
-    container_name: ias-dev-supervisor
-    image: registry.inria.cl:5000/ias-core:dev
-    links:
-      - kafka
-    depends_on:
-      - kafka
-    volumes:
-      - ${CDB_PATH}:/usr/src/cdb
-      - logs-volume:/usr/src/IntegratedAlarmSystemRoot/logs
-    command: "iasSupervisor SupervisorID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
-
   weather-supervisor:
     container_name: ias-dev-weather-supervisor
     image: registry.inria.cl:5000/ias-core:dev

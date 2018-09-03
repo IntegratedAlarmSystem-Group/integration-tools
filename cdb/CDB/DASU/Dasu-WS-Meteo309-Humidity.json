@@ -1,8 +1,0 @@
-{
-        "id": "Dasu-WS-Meteo309-Humidity",
-        "asceIDs": [
-            "Asce-WS-Meteo309-Humidity"
-        ],
-        "outputId": "WS-Meteo309-Humidity",
-        "logLevel": "FATAL"
-    }

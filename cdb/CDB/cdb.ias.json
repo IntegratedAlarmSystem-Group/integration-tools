@@ -1,0 +1,23 @@
+[
+  {
+    "model": "cdb.property",
+    "pk": 1,
+    "fields": {
+      "value": "The value of P2",
+      "name": "Prop2-Name"
+    }
+  },
+  {
+    "model": "cdb.ias",
+    "pk": 0,
+    "fields": {
+      "log_level": "DEBUG",
+      "refresh_rate": "3",
+      "tolerance": "1",
+      "properties": [
+        0,
+        1
+      ]
+    }
+  }
+]

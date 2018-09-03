@@ -36,7 +36,7 @@ def main():
         fixture = create_iasios_fixture(iasios_input)
 
         with open(OUTPUT_FIXTURE__PATH, 'w') as f:
-            json.dump(fixture, f)
+            json.dump(fixture, f, indent=2)
 
     else:
         print("File 'iasios.json' does not exist.")
