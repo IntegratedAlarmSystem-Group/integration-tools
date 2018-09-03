@@ -1,8 +1,0 @@
-{
-        "id": "Dasu-WS-Meteo410-WindSpeed",
-        "asceIDs": [
-            "Asce-WS-Meteo410-WindSpeed"
-        ],
-        "outputId": "WS-Meteo410-WindSpeed",
-        "logLevel": "FATAL"
-    }

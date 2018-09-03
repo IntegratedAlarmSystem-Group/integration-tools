@@ -1,8 +1,0 @@
-{
-        "id": "Dasu-WS-MeteoTB2-Temperature",
-        "asceIDs": [
-            "Asce-WS-MeteoTB2-Temperature"
-        ],
-        "outputId": "WS-MeteoTB2-Temperature",
-        "logLevel": "FATAL"
-    }
