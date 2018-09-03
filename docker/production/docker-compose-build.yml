@@ -38,19 +38,6 @@ services:
       - ${LOGS_PATH}:/usr/src/alma_weather_plugin/logs/
     command: "iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
 
-  supervisor:
-    container_name: ias-build-supervisor
-    build: ${DOCKERFILE_PATH_CORE}
-    image: ias-build-core-image
-    links:
-      - kafka
-    depends_on:
-      - kafka
-    volumes:
-      - ${CDB_PATH}:/usr/src/cdb
-      - ${LOGS_PATH}:/usr/src/alma_weather_plugin/logs/
-    command: "iasSupervisor SupervisorID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
-
   weather-supervisor:
     container_name: ias-build-weather-supervisor
     build: ${DOCKERFILE_PATH_CORE}
