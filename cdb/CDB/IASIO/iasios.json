@@ -786,6 +786,36 @@
         "iasType": "ALARM"
    },
  {
+         "id": "WS-ACA",
+         "shortDesc": "Global alarm of the ACA WS",
+         "iasType": "ALARM"
+    },
+ {
+         "id": "WS-TP",
+         "shortDesc": "Global alarm of the TP WS",
+         "iasType": "ALARM"
+    },
+ {
+         "id": "WS-Inner",
+         "shortDesc": "Global alarm of the Inner WS",
+         "iasType": "ALARM"
+    },
+ {
+         "id": "WS-W",
+         "shortDesc": "Global alarm of the W WS",
+         "iasType": "ALARM"
+    },
+ {
+         "id": "WS-P",
+         "shortDesc": "Global alarm of the P WS",
+         "iasType": "ALARM"
+    },
+   {
+           "id": "WS-S",
+           "shortDesc": "Global alarm of the S WS",
+           "iasType": "ALARM"
+      },
+ {
         "id": "WS-Temperature",
         "shortDesc": "Temperature at the AOS too low",
         "iasType": "ALARM"
