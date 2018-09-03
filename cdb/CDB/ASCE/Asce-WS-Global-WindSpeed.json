@@ -3,7 +3,6 @@
       "id": "Asce-WS-Global-WindSpeed",
       "inputIDs": [
         "WS-ACA-WindSpeed",
-        "WS-TP-WindSpeed",
         "WS-Inner-WindSpeed",
         "WS-W-WindSpeed",
         "WS-P-WindSpeed",

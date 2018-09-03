@@ -3,7 +3,6 @@
       "id": "Asce-WS-Global-Humidity",
       "inputIDs": [
 	"WS-ACA-Humidity",
-	"WS-TP-Humidity",
 	"WS-Inner-Humidity",
 	"WS-W-Humidity",
 	"WS-P-Humidity",

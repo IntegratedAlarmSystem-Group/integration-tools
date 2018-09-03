@@ -6,11 +6,6 @@
             {"dasuId":"Dasu-WS-ACA-Humidity","templateId":null,"instance":null},
             {"dasuId":"Dasu-WS-ACA-WindSpeed","templateId":null,"instance":null},
 
-	          {"dasuId":"Dasu-WS-TP","templateId":null,"instance":null},
-	          {"dasuId":"Dasu-WS-TP-Temperature","templateId":null,"instance":null},
-            {"dasuId":"Dasu-WS-TP-Humidity","templateId":null,"instance":null},
-            {"dasuId":"Dasu-WS-TP-WindSpeed","templateId":null,"instance":null},
-
             {"dasuId":"Dasu-WS-Inner","templateId":null,"instance":null},
             {"dasuId":"Dasu-WS-Inner-Temperature","templateId":null,"instance":null},
             {"dasuId":"Dasu-WS-Inner-Humidity","templateId":null,"instance":null},
