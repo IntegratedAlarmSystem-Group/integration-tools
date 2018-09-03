@@ -1,6 +1,14 @@
 [
   {
     "model": "cdb.property",
+    "pk": 0,
+    "fields": {
+      "value": "The value of P1",
+      "name": "Prop1-Name"
+    }
+  },
+  {
+    "model": "cdb.property",
     "pk": 1,
     "fields": {
       "value": "The value of P2",

@@ -32,7 +32,7 @@ def create_ias_fixture(json_input):
         ias_dict['fields']['properties'].append(prop_id)
         prop_id += 1
 
-    fixtures.append(prop_dict)
+        fixtures.append(prop_dict)
     fixtures.append(ias_dict)
     ias_id += 1
 
