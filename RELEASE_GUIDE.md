@@ -19,7 +19,15 @@ docker-compose -f docker-compose-dev.yml up -d
 
 2. Navigate and check the application works: navigate in your browser to "localhost". Explore all the views and verify that the alarms arrive.
 
-If everything is ok proceed to the next point, if not, correct the issues
+3. If everything is ok proceed to the next point, if not, correct the issues.
+
+Note: If you are releasing only Webserver and Display, or if the Core has already been released, you can do this:
+```
+cd integration-tools/docker/develop
+docker-compose -f dc-web-dev-core-master.yml pull
+docker-compose -f dc-web-dev-core-master.yml build nginx
+docker-compose -f dc-web-dev-core-master.yml up -d
+```
 
 ### iii. Update automatic documentation
 The Webserver and Display provide a documentation written automatically based on comments in the code. This documentation should be update for each Release.
@@ -39,6 +47,7 @@ cd ias-webserver
 cd ias-display
 npm run compodoc
 ```
+3. __Check documentation coverage:__ the coverage of the documentation can be checked opening the index.html file created in the docs folder, and then going to "Documentation coverage" in the left panel. It should be 100% for all the modules. Update until necessary
 
 Note: the updated files will be located in the "docs" folder, they MUST be commited.
 

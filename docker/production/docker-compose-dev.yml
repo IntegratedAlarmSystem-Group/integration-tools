@@ -33,6 +33,28 @@ services:
       - kafka
     command: "${KAFKA_SERVER} 9092"
 
+  dummy-plugin-21:
+    container_name: ias-dev-dummy-plugin-21
+    image: registry.inria.cl:5000/ias-dummy-plugin:dev
+    stdin_open: true
+    tty: true
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    command: "${KAFKA_SERVER} 9092 dummy-21"
+
+  dummy-plugin-22:
+    container_name: ias-dev-dummy-plugin-22
+    image: registry.inria.cl:5000/ias-dummy-plugin:dev
+    stdin_open: true
+    tty: true
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    command: "${KAFKA_SERVER} 9092 dummy-22"
+
   converter:
     container_name: ias-dev-converter
     image: registry.inria.cl:5000/ias-core:dev
