@@ -29,6 +29,6 @@
         {
           "name": "org.eso.ias.thresholdbackup.selector.mainInputId",
           "value": "WS-MeteoCentral-Humidity-Value"
-        },
+        }
       ]
     }
