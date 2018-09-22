@@ -328,6 +328,16 @@
         "shortDesc": "Temperature alarm of the S WS",
         "iasType": "ALARM"
    },
+ {
+         "id": " WS-S-Temperature-Threshold",
+         "shortDesc": "S Temperature Threshold",
+         "iasType": "ALARM"
+    },
+ {
+         "id": " WS-S-Temperature-Inhibitor",
+         "shortDesc": "S Temperature inhibitor",
+         "iasType": "ALARM"
+    },
 {
       "id": "WS-S-WindSpeed",
       "shortDesc": "Wind speed over 20m/s of the ACA WS",
