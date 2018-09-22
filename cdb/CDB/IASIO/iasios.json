@@ -253,16 +253,26 @@
         "shortDesc": "Temperature alarm of the Inner WS",
         "iasType": "ALARM"
   },
-  {
-         "id": "WS-Inner-WindSpeed",
-         "shortDesc": "Wind speed over 20m/s of the ACA WS",
-         "iasType": "ALARM"
-    },
+{
+       "id": "WS-Inner-WindSpeed",
+       "shortDesc": "Wind speed over 20m/s of the ACA WS",
+       "iasType": "ALARM"
+  },
 {
         "id": "WS-W-Humidity",
         "shortDesc": "Humidity alarm of the W WS",
         "iasType": "ALARM"
-   },
+ },
+ {
+         "id": " WS-W-Humidity-Threshold",
+         "shortDesc": "W Humidity Threshold",
+         "iasType": "ALARM"
+    },
+ {
+         "id": " WS-W-Humidity-Inhibitor",
+         "shortDesc": "W Humidity inhibitor",
+         "iasType": "ALARM"
+    },
  {
          "id": "WS-W-Temperature",
          "shortDesc": "Temperature alarm of the W WS",

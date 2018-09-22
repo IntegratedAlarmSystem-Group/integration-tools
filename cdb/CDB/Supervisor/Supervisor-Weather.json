@@ -2,7 +2,10 @@
         "id": "Supervisor-Weather",
         "dasusToDeploy": [
             {"dasuId":"Dasu-WS-Inner","templateId":null,"instance":null},
-            {"dasuId":"Dasu-WS-Inner-Humidity","templateId":null,"instance":null}
+            {"dasuId":"Dasu-WS-Inner-Humidity","templateId":null,"instance":null},
+
+            {"dasuId":"Dasu-WS-W","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-W-Humidity","templateId":null,"instance":null}
         ],
         "hostName": "almaias.eso.org",
         "logLevel": "INFO"
