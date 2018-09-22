@@ -19,6 +19,10 @@
             {"dasuId":"Dasu-WS-P","templateId":null,"instance":null},
             {"dasuId":"Dasu-WS-P-Temperature","templateId":null,"instance":null},
             {"dasuId":"Dasu-WS-P-Humidity","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-P-WindSpeed15","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-P-WindSpeed20","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-P-WindSpeed30","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-P-WindSpeed","templateId":null,"instance":null},
 
             {"dasuId":"Dasu-WS-S","templateId":null,"instance":null},
             {"dasuId":"Dasu-WS-S-Temperature","templateId":null,"instance":null},
