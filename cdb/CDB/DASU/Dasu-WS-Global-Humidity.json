@@ -1,0 +1,8 @@
+{
+        "id": "Dasu-WS-Global-Humidity",
+        "asceIDs": [
+            "Asce-WS-Global-Humidity"
+        ],
+        "outputId": "WS-Humidity",
+        "logLevel": "FATAL"
+    }

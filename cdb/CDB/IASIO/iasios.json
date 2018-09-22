@@ -288,6 +288,16 @@
         "shortDesc": "Humidity alarm of the P WS",
         "iasType": "ALARM"
    },
+ {
+         "id": " WS-P-Humidity-Threshold",
+         "shortDesc": "P Humidity Threshold",
+         "iasType": "ALARM"
+    },
+ {
+         "id": " WS-P-Humidity-Inhibitor",
+         "shortDesc": "P Humidity inhibitor",
+         "iasType": "ALARM"
+    },
 {
        "id": "WS-P-Temperature",
        "shortDesc": "Temperature alarm of the P WS",

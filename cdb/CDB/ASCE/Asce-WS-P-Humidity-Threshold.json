@@ -1,0 +1,32 @@
+{
+      "dasuID": "Dasu-WS-P-Humidity",
+      "id": "Asce-WS-P-Humidity-Threshold",
+      "inputIDs": [
+        "WS-Meteo410-Humidity-Value",
+        "WS-Meteo129-Humidity-Value"
+      ],
+      "outputID": "WS-P-Humidity-Threshold",
+      "transferFunctionID":"org.eso.ias.tranfer.ThresholdWithBackupsAndDelay",
+       "props": [
+        {
+          "name": "org.eso.ias.thresholdbackup.minmaxthreshold.highOn",
+          "value": "95"
+        },
+        {
+          "name": "org.eso.ias.thresholdbackup.minmaxthreshold.highOff",
+          "value": "94"
+        },
+        {
+          "name": "org.eso.ias.thresholdbackup.minmaxthreshold.lowOn",
+          "value": "0"
+        },
+        {
+          "name": "org.eso.ias.thresholdbackup.minmaxthreshold.lowOff",
+          "value": "0"
+        },
+        {
+          "name": "org.eso.ias.thresholdbackup.selector.mainInputId",
+          "value": "WS-Meteo410-Humidity-Value"
+        }
+      ]
+    }
