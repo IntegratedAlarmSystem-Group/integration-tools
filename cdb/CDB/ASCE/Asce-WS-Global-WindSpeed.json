@@ -1,12 +1,13 @@
 {
-      "dasuID": "Dasu-WS-S",
-      "id": "Asce-WS-S",
+      "dasuID": "Dasu-WS-Global-WindSpeed",
+      "id": "Asce-WS-Global-WindSpeed",
       "inputIDs": [
-      	"WS-S-Humidity",
-      	"WS-S-Temperature",
-      	"WS-S-WindSpeed"
+	       "WS-Inner-WindSpeed",
+         "WS-W-WindSpeed",
+         "WS-P-WindSpeed",
+         "WS-S-WindSpeed"
       ],
-      "outputID": "WS-S",
+      "outputID": "WS-WindSpeed",
       "transferFunctionID":"org.eso.ias.asce.transfer.impls.MultiplicityTF",
        "props": [
         {
