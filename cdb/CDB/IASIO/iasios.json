@@ -314,6 +314,16 @@
         "iasType": "ALARM"
    },
 {
+         "id": " WS-S-Humidity-Threshold",
+         "shortDesc": "S Humidity Threshold",
+         "iasType": "ALARM"
+    },
+ {
+         "id": " WS-S-Humidity-Inhibitor",
+         "shortDesc": "S Humidity inhibitor",
+         "iasType": "ALARM"
+    },
+{
         "id": "WS-S-Temperature",
         "shortDesc": "Temperature alarm of the S WS",
         "iasType": "ALARM"
