@@ -4,7 +4,8 @@
             {"dasuId":"Dasu-WS-Inner","templateId":null,"instance":null},
             {"dasuId":"Dasu-WS-Inner-Temperature","templateId":null,"instance":null},
             {"dasuId":"Dasu-WS-Inner-Humidity","templateId":null,"instance":null},
-            {"dasuId":"Dasu-WS-W-Temperature","templateId":null,"instance":null}
+            {"dasuId":"Dasu-WS-W-Temperature","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-P-Temperature","templateId":null,"instance":null}
         ],
         "hostName": "almaias.eso.org",
         "logLevel": "INFO"
