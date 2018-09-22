@@ -5,7 +5,7 @@
         "WS-Inner-Humidity-Threshold",
         "Array-AntennasToPads"
       ],
-      "outputID": "WS-Inner-Humidity-Inhibitor",
+      "outputID": "WS-Inner-Humidity",
       "transferFunctionID":"org.eso.ias.tranfer.AntPadInhibitor",
       "props": [
         {
