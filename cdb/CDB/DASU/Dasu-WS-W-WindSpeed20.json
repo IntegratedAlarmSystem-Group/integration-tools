@@ -1,0 +1,9 @@
+{
+        "id": "Dasu-WS-W-WindSpeed20",
+        "asceIDs": [
+            "Asce-WS-W-WindSpeed20-Inhibitor",
+            "Asce-WS-W-WindSpeed20-Threshold"
+        ],
+        "outputId": "WS-W-WindSpeed20",
+        "logLevel": "FATAL"
+    }

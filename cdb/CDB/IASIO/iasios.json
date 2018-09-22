@@ -318,6 +318,38 @@
        "shortDesc": "Wind speed over 20m/s of the ACA WS",
        "iasType": "ALARM"
   },
+  {
+     "id": "WS-W-WindSpeed15",
+     "shortDesc": "Wind speed over 15m/s of the W WS",
+     "iasType": "ALARM"
+  },
+  {
+     "id": "WS-W-WindSpeed20",
+     "shortDesc": "Wind speed over 20m/s of the W WS",
+     "iasType": "ALARM"
+  },
+  {
+     "id": "WS-W-WindSpeed30",
+     "shortDesc": "Wind speed over 30m/s of the W WS",
+     "iasType": "ALARM"
+  },
+  {
+        "id": " WS-W-WindSpeed15-Threshold",
+        "shortDesc": "W WindSpeed15 Threshold",
+        "iasType": "ALARM"
+   },
+
+  {
+       "id": " WS-W-WindSpeed20-Threshold",
+       "shortDesc": "W WindSpeed20 Threshold",
+       "iasType": "ALARM"
+  },
+
+  {
+       "id": " WS-W-WindSpeed30-Threshold",
+       "shortDesc": "W WindSpeed30 Threshold",
+       "iasType": "ALARM"
+  },
 {
         "id": "WS-P-Humidity",
         "shortDesc": "Humidity alarm of the P WS",
