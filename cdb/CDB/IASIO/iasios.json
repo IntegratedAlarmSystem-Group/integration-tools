@@ -274,6 +274,16 @@
         "iasType": "ALARM"
    },
  {
+         "id": " WS-W-Humidity-Threshold",
+         "shortDesc": "W Humidity Threshold",
+         "iasType": "ALARM"
+    },
+ {
+         "id": " WS-W-Humidity-Inhibitor",
+         "shortDesc": "W Humidity inhibitor",
+         "iasType": "ALARM"
+    },
+ {
          "id": "WS-W-Temperature",
          "shortDesc": "Temperature alarm of the W WS",
          "iasType": "ALARM"
@@ -299,6 +309,16 @@
         "iasType": "ALARM"
    },
 {
+       "id": " WS-P-Humidity-Threshold",
+       "shortDesc": "P Humidity Threshold",
+       "iasType": "ALARM"
+  },
+{
+       "id": " WS-P-Humidity-Inhibitor",
+       "shortDesc": "P Humidity inhibitor",
+       "iasType": "ALARM"
+  },
+{
        "id": "WS-P-Temperature",
        "shortDesc": "Temperature alarm of the P WS",
        "iasType": "ALARM"
@@ -323,6 +343,16 @@
         "shortDesc": "Humidity alarm of the S WS",
         "iasType": "ALARM"
    },
+{
+       "id": " WS-S-Humidity-Threshold",
+       "shortDesc": "S Humidity Threshold",
+       "iasType": "ALARM"
+  },
+{
+       "id": " WS-S-Humidity-Inhibitor",
+       "shortDesc": "S Humidity inhibitor",
+       "iasType": "ALARM"
+  },
 {
         "id": "WS-S-Temperature",
         "shortDesc": "Temperature alarm of the S WS",
