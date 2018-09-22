@@ -1,11 +1,6 @@
 {
         "id": "Supervisor-Weather",
         "dasusToDeploy": [
-            {"dasuId":"Dasu-WS-ACA","templateId":null,"instance":null},
-            {"dasuId":"Dasu-WS-ACA-Temperature","templateId":null,"instance":null},
-            {"dasuId":"Dasu-WS-ACA-Humidity","templateId":null,"instance":null},
-            {"dasuId":"Dasu-WS-ACA-WindSpeed","templateId":null,"instance":null},
-
             {"dasuId":"Dasu-WS-Inner","templateId":null,"instance":null},
             {"dasuId":"Dasu-WS-Inner-Temperature","templateId":null,"instance":null},
             {"dasuId":"Dasu-WS-Inner-Humidity","templateId":null,"instance":null},

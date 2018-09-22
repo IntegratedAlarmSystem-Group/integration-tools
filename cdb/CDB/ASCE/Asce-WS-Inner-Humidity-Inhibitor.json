@@ -1,0 +1,16 @@
+{
+      "dasuID": "Dasu-WS-Inner-Humidity",
+      "id": "Asce-WS-Inner-Humidity-Inhibitor",
+      "inputIDs": [
+        "WS-Inner-Humidity-Threshold",
+        "Array-AntennasToPads"
+      ],
+      "outputID": "WS-Inner-Humidity-Inhibitor",
+      "transferFunctionID":"org.eso.ias.tranfer.AntPadInhibitor",
+      "props": [
+        {
+          "name": "org.eso.ias.antpadinhibitor.padnameregexp",
+          "value": "(A|T|N|J).*"
+        }
+      ]
+}
