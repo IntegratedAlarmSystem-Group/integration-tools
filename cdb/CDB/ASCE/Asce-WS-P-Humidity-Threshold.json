@@ -17,14 +17,6 @@
           "value": "94"
         },
         {
-          "name": "org.eso.ias.thresholdbackup.minmaxthreshold.lowOn",
-          "value": "0"
-        },
-        {
-          "name": "org.eso.ias.thresholdbackup.minmaxthreshold.lowOff",
-          "value": "0"
-        },
-        {
           "name": "org.eso.ias.thresholdbackup.selector.mainInputId",
           "value": "WS-Meteo410-Humidity-Value"
         }
