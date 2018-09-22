@@ -10,7 +10,7 @@
       "props": [
         {
           "name": "org.eso.ias.antpadinhibitor.padnameregexp",
-          "value": "(A|T|N|J).*"
+          "value": "P.*"
         }
       ]
 }
