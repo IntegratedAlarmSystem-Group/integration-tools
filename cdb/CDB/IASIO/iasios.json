@@ -837,5 +837,35 @@
     "id": "Array-UMStatus-PM04",
     "shortDesc": "Status of PM04 from utility module",
     "iasType": "STRING"
+  },
+  {
+    "id": "Templated-Antennas-In",
+    "shortDesc": "Templated antennas input",
+    "iasType": "STRING",
+    "templateId": "template-antennas"
+  },
+  {
+    "id": "Templated-Antennas-Fire",
+    "shortDesc": "Templated antennas Fire",
+    "iasType": "ALARM",
+    "templateId": "template-antennas"
+  },
+  {
+    "id": "Templated-Antennas-UPS",
+    "shortDesc": "Templated antennas UPS",
+    "iasType": "ALARM",
+    "templateId": "template-antennas"
+  },
+  {
+    "id": "Templated-Antennas-HVAC",
+    "shortDesc": "Templated antennas HVAC",
+    "iasType": "ALARM",
+    "templateId": "template-antennas"
+  },
+  {
+    "id": "Templated-Antennas-FireSystem",
+    "shortDesc": "Templated antennas FireSystem",
+    "iasType": "ALARM",
+    "templateId": "template-antennas"
   }
 ]
