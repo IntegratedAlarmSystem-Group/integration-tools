@@ -6,6 +6,11 @@
             {"dasuId":"Dasu-WS-Inner","templateId":null,"instance":null},
             {"dasuId":"Dasu-WS-Inner-Temperature","templateId":null,"instance":null},
             {"dasuId":"Dasu-WS-Inner-Humidity","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Inner-WindSpeed15","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Inner-WindSpeed20","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Inner-WindSpeed30","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-Inner-WindSpeed","templateId":null,"instance":null},
+
 
             {"dasuId":"Dasu-WS-W","templateId":null,"instance":null},
             {"dasuId":"Dasu-WS-W-Temperature","templateId":null,"instance":null},
