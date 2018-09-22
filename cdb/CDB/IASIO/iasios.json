@@ -253,6 +253,16 @@
         "shortDesc": "Temperature alarm of the Inner WS",
         "iasType": "ALARM"
   },
+{
+        "id": " WS-Inner-Temperature-Threshold",
+        "shortDesc": "Inner Temperature Threshold",
+        "iasType": "ALARM"
+   },
+{
+        "id": " WS-Inner-Temperature-Inhibitor",
+        "shortDesc": "Inner Temperature inhibitor",
+        "iasType": "ALARM"
+   },
   {
          "id": "WS-Inner-WindSpeed",
          "shortDesc": "Wind speed over 20m/s of the ACA WS",
