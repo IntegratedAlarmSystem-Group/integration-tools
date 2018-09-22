@@ -1,0 +1,8 @@
+{
+        "id": "Dasu-WS-P-WindSpeed",
+        "asceIDs": [
+            "Asce-WS-P-WindSpeed"
+        ],
+        "outputId": "WS-P-WindSpeed",
+        "logLevel": "FATAL"
+    }
