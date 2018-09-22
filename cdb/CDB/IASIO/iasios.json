@@ -271,7 +271,7 @@
   },
   {
      "id": "WS-Inner-WindSpeed30",
-     "shortDesc": "Wind speed over 30m/s of the ACA WS",
+     "shortDesc": "Wind speed over 30m/s of the Inner WS",
      "iasType": "ALARM"
   },
 {
@@ -315,7 +315,7 @@
 
 {
        "id": "WS-W-WindSpeed",
-       "shortDesc": "Wind speed over 20m/s of the ACA WS",
+       "shortDesc": "Wind speed over 20m/s of the W WS",
        "iasType": "ALARM"
   },
   {
@@ -398,11 +398,43 @@
          "shortDesc": "S Temperature Threshold",
          "iasType": "ALARM"
     },
- {
-      "id": "WS-S-WindSpeed",
-      "shortDesc": "Wind speed over 20m/s of the ACA WS",
-      "iasType": "ALARM"
- },
+{
+    "id": "WS-S-WindSpeed",
+    "shortDesc": "Wind speed over 20m/s of the ACA WS",
+    "iasType": "ALARM"
+},
+{
+  "id": "WS-S-WindSpeed15",
+  "shortDesc": "Wind speed over 15m/s of the S WS",
+  "iasType": "ALARM"
+},
+{
+  "id": "WS-S-WindSpeed20",
+  "shortDesc": "Wind speed over 20m/s of the S WS",
+  "iasType": "ALARM"
+},
+{
+  "id": "WS-S-WindSpeed30",
+  "shortDesc": "Wind speed over 30m/s of the S WS",
+  "iasType": "ALARM"
+},
+{
+     "id": " WS-S-WindSpeed15-Threshold",
+     "shortDesc": "S WindSpeed15 Threshold",
+     "iasType": "ALARM"
+},
+
+{
+    "id": " WS-S-WindSpeed20-Threshold",
+    "shortDesc": "S WindSpeed20 Threshold",
+    "iasType": "ALARM"
+},
+
+{
+    "id": " WS-S-WindSpeed30-Threshold",
+    "shortDesc": "S WindSpeed30 Threshold",
+    "iasType": "ALARM"
+},
 {
        "id": "WS-Inner",
        "shortDesc": "Global alarm of the Inner WS",

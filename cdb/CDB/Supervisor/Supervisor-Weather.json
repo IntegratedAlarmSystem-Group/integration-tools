@@ -26,7 +26,12 @@
 
             {"dasuId":"Dasu-WS-S","templateId":null,"instance":null},
             {"dasuId":"Dasu-WS-S-Temperature","templateId":null,"instance":null},
-            {"dasuId":"Dasu-WS-S-Humidity","templateId":null,"instance":null}
+            {"dasuId":"Dasu-WS-S-Humidity","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-S-WindSpeed15","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-S-WindSpeed20","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-S-WindSpeed30","templateId":null,"instance":null},
+            {"dasuId":"Dasu-WS-S-WindSpeed","templateId":null,"instance":null}
+
         ],
         "hostName": "almaias.eso.org",
         "logLevel": "INFO"
