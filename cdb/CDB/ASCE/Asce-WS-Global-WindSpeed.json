@@ -2,11 +2,10 @@
       "dasuID": "Dasu-WS-Global-WindSpeed",
       "id": "Asce-WS-Global-WindSpeed",
       "inputIDs": [
-        "WS-ACA-WindSpeed",
-        "WS-Inner-WindSpeed",
-        "WS-W-WindSpeed",
-        "WS-P-WindSpeed",
-        "WS-S-WindSpeed"
+	       "WS-Inner-WindSpeed",
+         "WS-W-WindSpeed",
+         "WS-P-WindSpeed",
+         "WS-S-WindSpeed"
       ],
       "outputID": "WS-WindSpeed",
       "transferFunctionID":"org.eso.ias.asce.transfer.impls.MultiplicityTF",

@@ -1,12 +1,7 @@
 {
         "id": "Dasu-WS-Inner-WindSpeed",
         "asceIDs": [
-            "Asce-WS-Inner-Selector-WindSpeed",
-            "Asce-WS-Inner-Threshold20-WindSpeed",
-            "Asce-WS-Inner-Threshold15-WindSpeed",
-            "Asce-WS-Inner-Delay20-WindSpeed",
-            "Asce-WS-Inner-Delay15-WindSpeed",
-            "Asce-WS-Inner-Multi-WindSpeed"
+            "Asce-WS-Inner-WindSpeed"
         ],
         "outputId": "WS-Inner-WindSpeed",
         "logLevel": "FATAL"

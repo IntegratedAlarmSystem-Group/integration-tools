@@ -233,321 +233,246 @@
          "iasType": "ALARM",
          "docUrl": "http://www.alma.cl"
     },
- {
-        "id": "WS-ACA-Selected-Humidity",
-        "shortDesc": "Selected humidity of the ACA WS",
-        "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
-    },
- {
-        "id": "WS-Inner-Selected-Humidity",
-        "shortDesc": "Selected humidity of the Inner WS",
-        "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
-    },
- {
-        "id": "WS-W-Selected-Humidity",
-        "shortDesc": "Selected humidity of the W WS",
-        "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
-    },
- {
-        "id": "WS-P-Selected-Humidity",
-        "shortDesc": "Selected humidity of the P WS",
-        "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
-    },
- {
-        "id": "WS-S-Selected-Humidity",
-        "shortDesc": "Selected humidity of the S WS",
-        "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
-    },
- {
-        "id": "WS-ACA-Delay-Humidity",
-        "shortDesc": "Delayed humidity alarm of the ACA WS",
-        "iasType": "ALARM"
-    },
- {
-        "id": "WS-Inner-Delay-Humidity",
-        "shortDesc": "Delayed humidity alarm of the Inner WS",
-        "iasType": "ALARM"
-    },
- {
-        "id": "WS-W-Delay-Humidity",
-        "shortDesc": "Delayed humidity alarm of the W WS",
-        "iasType": "ALARM"
-    },
- {
-        "id": "WS-P-Delay-Humidity",
-        "shortDesc": "Delayed humidity alarm of the P WS",
-        "iasType": "ALARM"
-    },
- {
-        "id": "WS-S-Delay-Humidity",
-        "shortDesc": "Delayed humidity alarm of the S WS",
-        "iasType": "ALARM"
-    },
- {
-        "id": "WS-ACA-WindSpeed-Threshold20",
-        "shortDesc": "Wind spped over 20m/s of the ACA WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-Inner-WindSpeed-Threshold20",
-        "shortDesc": "Wind spped over 20m/s of the Inner WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-W-WindSpeed-Threshold20",
-        "shortDesc": "Wind spped over 20m/s of the W WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-P-WindSpeed-Threshold20",
-        "shortDesc": "Wind spped over 20m/s of the P WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-S-WindSpeed-Threshold20",
-        "shortDesc": "Wind spped over 20m/s of the S WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-ACA-WindSpeed-Threshold15",
-        "shortDesc": "Wind spped over 15m/s of the ACA WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-Inner-WindSpeed-Threshold15",
-        "shortDesc": "Wind spped over 15m/s of the Inner WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-W-WindSpeed-Threshold15",
-        "shortDesc": "Wind spped over 15m/s of the W WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-P-WindSpeed-Threshold15",
-        "shortDesc": "Wind spped over 15m/s of the P WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-S-WindSpeed-Threshold15",
-        "shortDesc": "Wind spped over 15m/s of the S WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-ACA-Selected-WindSpeed",
-        "shortDesc": "Selected wind speed of the ACA WS",
-        "iasType": "DOUBLE"
-    },
- {
-        "id": "WS-Inner-Selected-WindSpeed",
-        "shortDesc": "Selected wind speed of the Inner WS",
-        "iasType": "DOUBLE"
-    },
- {
-        "id": "WS-W-Selected-WindSpeed",
-        "shortDesc": "Selected wind speed of the W WS",
-        "iasType": "DOUBLE"
-    },
- {
-        "id": "WS-P-Selected-WindSpeed",
-        "shortDesc": "Selected wind speed of the P WS",
-        "iasType": "DOUBLE"
-    },
- {
-        "id": "WS-S-Selected-WindSpeed",
-        "shortDesc": "Selected wind speed of the S WS",
-        "iasType": "DOUBLE"
-    },
-{
-        "id": "WS-ACA-Delaied15-WindSpeed",
-        "shortDesc": "Delayed wind spped alarm ACA WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-Inner-Delaied15-WindSpeed",
-        "shortDesc": "Delayed wind spped alarm Inner WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-P-Delaied15-WindSpeed",
-        "shortDesc": "Delayed wind spped alarm P WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-W-Delaied15-WindSpeed",
-        "shortDesc": "Delayed wind spped alarm W WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-S-Delaied15-WindSpeed",
-        "shortDesc": "Delayed wind spped alarm S WS",
-        "iasType": "ALARM"
-   },
-{
-        "id": "WS-ACA-Delaied20-WindSpeed",
-        "shortDesc": "Delayed wind spped alarm ACA WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-Inner-Delaied20-WindSpeed",
-        "shortDesc": "Delayed wind spped alarm Inner WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-P-Delaied20-WindSpeed",
-        "shortDesc": "Delayed wind spped alarm P WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-W-Delaied20-WindSpeed",
-        "shortDesc": "Delayed wind spped alarm W WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-S-Delaied20-WindSpeed",
-        "shortDesc": "Delayed wind spped alarm S WS",
-        "iasType": "ALARM"
-   },
-{
-        "id": "WS-ACA-Temperature-Threshold",
-        "shortDesc": "Temperature threshold alarm of the ACA WS",
-        "iasType": "ALARM"
-   },
-{
-        "id": "WS-Inner-Temperature-Threshold",
-        "shortDesc": "Temperature threshold alarm of the Inner WS",
-        "iasType": "ALARM"
-   },
-{
-        "id": "WS-W-Temperature-Threshold",
-        "shortDesc": "Temperature threshold alarm of the W WS",
-        "iasType": "ALARM"
-   },
-{
-        "id": "WS-P-Temperature-Threshold",
-        "shortDesc": "Temperature threshold alarm of the P WS",
-        "iasType": "ALARM"
-   },
-{
-        "id": "WS-S-Temperature-Threshold",
-        "shortDesc": "Temperature threshold alarm of the S WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-ACA-Selected-Temperature",
-        "shortDesc": "Selected Temperature of the ACA WS",
-        "iasType": "DOUBLE"
-    },
- {
-        "id": "WS-Inner-Selected-Temperature",
-        "shortDesc": "Selected Temperature of the Inner WS",
-        "iasType": "DOUBLE"
-    },
- {
-        "id": "WS-W-Selected-Temperature",
-        "shortDesc": "Selected Temperature of the W WS",
-        "iasType": "DOUBLE"
-    },
- {
-        "id": "WS-P-Selected-Temperature",
-        "shortDesc": "Selected Temperature of the P WS",
-        "iasType": "DOUBLE"
-    },
- {
-        "id": "WS-S-Selected-Temperature",
-        "shortDesc": "Selected Temperature of the S WS",
-        "iasType": "DOUBLE"
-    },
-{
-        "id": "WS-ACA-Humidity",
-        "shortDesc": "Humidity alarm of the ACA WS",
-        "iasType": "ALARM"
-   },
 {
         "id": "WS-Inner-Humidity",
         "shortDesc": "Humidity alarm of the Inner WS",
         "iasType": "ALARM"
    },
 {
-        "id": "WS-W-Humidity",
-        "shortDesc": "Humidity alarm of the W WS",
-        "iasType": "ALARM"
-   },
-{
-        "id": "WS-P-Humidity",
-        "shortDesc": "Humidity alarm of the P WS",
-        "iasType": "ALARM"
-   },
-{
-        "id": "WS-S-Humidity",
-        "shortDesc": "Humidity alarm of the S WS",
-        "iasType": "ALARM"
-   },
-{
-        "id": "WS-ACA-Temperature",
-        "shortDesc": "Temperature alarm of the ACA WS",
+        "id": " WS-Inner-Humidity-Threshold",
+        "shortDesc": "Inner Humidity Threshold",
         "iasType": "ALARM"
    },
 {
         "id": "WS-Inner-Temperature",
         "shortDesc": "Temperature alarm of the Inner WS",
         "iasType": "ALARM"
-   },
+  },
 {
-        "id": "WS-W-Temperature",
-        "shortDesc": "Temperature alarm of the W WS",
+        "id": " WS-Inner-Temperature-Threshold",
+        "shortDesc": "Inner Temperature Threshold",
+        "iasType": "ALARM"
+   },
+
+  {
+         "id": "WS-Inner-WindSpeed",
+         "shortDesc": "Inner Wind speed Alarm",
+         "iasType": "ALARM"
+    },
+  {
+     "id": "WS-Inner-WindSpeed15",
+     "shortDesc": "Wind speed over 15m/s of the Inner WS",
+     "iasType": "ALARM"
+  },
+  {
+     "id": "WS-Inner-WindSpeed20",
+     "shortDesc": "Wind speed over 20m/s of the Inner WS",
+     "iasType": "ALARM"
+  },
+  {
+     "id": "WS-Inner-WindSpeed30",
+     "shortDesc": "Wind speed over 30m/s of the Inner WS",
+     "iasType": "ALARM"
+  },
+{
+        "id": " WS-Inner-WindSpeed15-Threshold",
+        "shortDesc": "Inner WindSpeed15 Threshold",
+        "iasType": "ALARM"
+   },
+
+{
+       "id": " WS-Inner-WindSpeed20-Threshold",
+       "shortDesc": "Inner WindSpeed20 Threshold",
+       "iasType": "ALARM"
+  },
+
+{
+       "id": " WS-Inner-WindSpeed30-Threshold",
+       "shortDesc": "Inner WindSpeed30 Threshold",
+       "iasType": "ALARM"
+  },
+
+{
+        "id": "WS-W-Humidity",
+        "shortDesc": "Humidity alarm of the W WS",
+        "iasType": "ALARM"
+   },
+ {
+         "id": " WS-W-Humidity-Threshold",
+         "shortDesc": "W Humidity Threshold",
+         "iasType": "ALARM"
+    },
+  {
+         "id": "WS-W-Temperature",
+         "shortDesc": "Temperature alarm of the W WS",
+         "iasType": "ALARM"
+    },
+{
+        "id": " WS-W-Temperature-Threshold",
+        "shortDesc": "W Temperature Threshold",
+        "iasType": "ALARM"
+   },
+
+{
+       "id": "WS-W-WindSpeed",
+       "shortDesc": "Wind speed over 20m/s of the W WS",
+       "iasType": "ALARM"
+  },
+  {
+     "id": "WS-W-WindSpeed15",
+     "shortDesc": "Wind speed over 15m/s of the W WS",
+     "iasType": "ALARM"
+  },
+  {
+     "id": "WS-W-WindSpeed20",
+     "shortDesc": "Wind speed over 20m/s of the W WS",
+     "iasType": "ALARM"
+  },
+  {
+     "id": "WS-W-WindSpeed30",
+     "shortDesc": "Wind speed over 30m/s of the W WS",
+     "iasType": "ALARM"
+  },
+  {
+        "id": " WS-W-WindSpeed15-Threshold",
+        "shortDesc": "W WindSpeed15 Threshold",
+        "iasType": "ALARM"
+   },
+
+  {
+       "id": " WS-W-WindSpeed20-Threshold",
+       "shortDesc": "W WindSpeed20 Threshold",
+       "iasType": "ALARM"
+  },
+
+  {
+       "id": " WS-W-WindSpeed30-Threshold",
+       "shortDesc": "W WindSpeed30 Threshold",
+       "iasType": "ALARM"
+  },
+{
+        "id": "WS-P-Humidity",
+        "shortDesc": "Humidity alarm of the P WS",
         "iasType": "ALARM"
    },
 {
-        "id": "WS-P-Temperature",
-        "shortDesc": "Temperature alarm of the P WS",
+       "id": " WS-P-Humidity-Threshold",
+       "shortDesc": "P Humidity Threshold",
+       "iasType": "ALARM"
+  },
+
+{
+       "id": "WS-P-Temperature",
+       "shortDesc": "Temperature alarm of the P WS",
+       "iasType": "ALARM"
+  },
+{
+        "id": " WS-P-Temperature-Threshold",
+        "shortDesc": "P Temperature Threshold",
         "iasType": "ALARM"
    },
+
+   {
+          "id": "WS-P-WindSpeed",
+          "shortDesc": "P Wind speed Alarm",
+          "iasType": "ALARM"
+     },
+   {
+      "id": "WS-P-WindSpeed15",
+      "shortDesc": "Wind speed over 15m/s of the P WS",
+      "iasType": "ALARM"
+   },
+   {
+      "id": "WS-P-WindSpeed20",
+      "shortDesc": "Wind speed over 20m/s of the P WS",
+      "iasType": "ALARM"
+   },
+   {
+      "id": "WS-P-WindSpeed30",
+      "shortDesc": "Wind speed over 30m/s of the ACA WS",
+      "iasType": "ALARM"
+   },
+ {
+         "id": " WS-P-WindSpeed15-Threshold",
+         "shortDesc": "P WindSpeed15 Threshold",
+         "iasType": "ALARM"
+    },
+
+ {
+        "id": " WS-P-WindSpeed20-Threshold",
+        "shortDesc": "P WindSpeed20 Threshold",
+        "iasType": "ALARM"
+   },
+
+ {
+        "id": " WS-P-WindSpeed30-Threshold",
+        "shortDesc": "P WindSpeed30 Threshold",
+        "iasType": "ALARM"
+   },
+
+{
+        "id": "WS-S-Humidity",
+        "shortDesc": "Humidity alarm of the S WS",
+        "iasType": "ALARM"
+   },
+{
+       "id": " WS-S-Humidity-Threshold",
+       "shortDesc": "S Humidity Threshold",
+       "iasType": "ALARM"
+  },
+
 {
         "id": "WS-S-Temperature",
         "shortDesc": "Temperature alarm of the S WS",
         "iasType": "ALARM"
    },
  {
-        "id": "WS-ACA-WindSpeed",
-        "shortDesc": "Wind speed over 20m/s of the ACA WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-Inner-WindSpeed",
-        "shortDesc": "Wind speed over 20m/s of the ACA WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-W-WindSpeed",
-        "shortDesc": "Wind speed over 20m/s of the ACA WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-P-WindSpeed",
-        "shortDesc": "Wind speed over 20m/s of the ACA WS",
-        "iasType": "ALARM"
-   },
- {
-        "id": "WS-S-WindSpeed",
-        "shortDesc": "Wind speed over 20m/s of the ACA WS",
-        "iasType": "ALARM"
-   },
- {
-         "id": "WS-ACA",
-         "shortDesc": "Global alarm of the ACA WS",
+         "id": " WS-S-Temperature-Threshold",
+         "shortDesc": "S Temperature Threshold",
          "iasType": "ALARM"
     },
- {
-         "id": "WS-Inner",
-         "shortDesc": "Global alarm of the Inner WS",
-         "iasType": "ALARM"
-    },
+{
+    "id": "WS-S-WindSpeed",
+    "shortDesc": "Wind speed over 20m/s of the ACA WS",
+    "iasType": "ALARM"
+},
+{
+  "id": "WS-S-WindSpeed15",
+  "shortDesc": "Wind speed over 15m/s of the S WS",
+  "iasType": "ALARM"
+},
+{
+  "id": "WS-S-WindSpeed20",
+  "shortDesc": "Wind speed over 20m/s of the S WS",
+  "iasType": "ALARM"
+},
+{
+  "id": "WS-S-WindSpeed30",
+  "shortDesc": "Wind speed over 30m/s of the S WS",
+  "iasType": "ALARM"
+},
+{
+     "id": " WS-S-WindSpeed15-Threshold",
+     "shortDesc": "S WindSpeed15 Threshold",
+     "iasType": "ALARM"
+},
+
+{
+    "id": " WS-S-WindSpeed20-Threshold",
+    "shortDesc": "S WindSpeed20 Threshold",
+    "iasType": "ALARM"
+},
+
+{
+    "id": " WS-S-WindSpeed30-Threshold",
+    "shortDesc": "S WindSpeed30 Threshold",
+    "iasType": "ALARM"
+},
+{
+       "id": "WS-Inner",
+       "shortDesc": "Global alarm of the Inner WS",
+       "iasType": "ALARM"
+  },
  {
          "id": "WS-W",
          "shortDesc": "Global alarm of the W WS",
@@ -558,11 +483,11 @@
          "shortDesc": "Global alarm of the P WS",
          "iasType": "ALARM"
     },
-   {
-           "id": "WS-S",
-           "shortDesc": "Global alarm of the S WS",
-           "iasType": "ALARM"
-      },
+ {
+         "id": "WS-S",
+         "shortDesc": "Global alarm of the S WS",
+         "iasType": "ALARM"
+    },
  {
         "id": "WS-Temperature",
         "shortDesc": "Temperature at the AOS too low",
