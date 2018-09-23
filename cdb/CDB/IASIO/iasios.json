@@ -857,7 +857,13 @@
     "templateId": "template-antennas"
   },
   {
-    "id": "Array-Ups-Ant",
+    "id": "Array-FireMalfunction-Ant",
+    "shortDesc": "Templated alarm for antennas FireMalfunction",
+    "iasType": "ALARM",
+    "templateId": "template-antennas"
+  },
+  {
+    "id": "Array-UpsFail-Ant",
     "shortDesc": "Templated alarm for antennas UPS",
     "iasType": "ALARM",
     "templateId": "template-antennas"
@@ -865,12 +871,6 @@
   {
     "id": "Array-Hvac-Ant",
     "shortDesc": "Templated alarm for antennas HVAC",
-    "iasType": "ALARM",
-    "templateId": "template-antennas"
-  },
-  {
-    "id": "Array-FireMalfunction-Ant",
-    "shortDesc": "Templated alarm for antennas FireMalfunction",
     "iasType": "ALARM",
     "templateId": "template-antennas"
   },

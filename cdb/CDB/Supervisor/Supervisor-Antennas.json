@@ -5,6 +5,7 @@
 	"dasusToDeploy":[
 		{"dasuId":"Dasu-Array-Fire-Ant","templateId":"template-antennas","instance":"1"},
 		{"dasuId":"Dasu-Array-FireMalfunction-Ant","templateId":"template-antennas","instance":"1"},
+		{"dasuId":"Dasu-Array-UpsFail-Ant","templateId":"template-antennas","instance":"1"},
 		{"dasuId":"Dasu-Array-Fire-Ant","templateId":"template-antennas","instance":"2"}
 	]
 }
