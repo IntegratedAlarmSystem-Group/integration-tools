@@ -26,7 +26,7 @@
          },
         {
           "name": "org.eso.ias.thresholdbackup.selector.mainInputId",
-          "value": "WS-201-Temperature-Value"
+          "value": "WS-Meteo201-Temperature-Value"
         }
       ]
     }
