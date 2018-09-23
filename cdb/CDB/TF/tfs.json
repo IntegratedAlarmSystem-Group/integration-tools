@@ -4,5 +4,6 @@
 	{"className" : "org.eso.ias.tranfer.BackupSelector","implLang" : "SCALA"},
 	{"className" : "org.eso.ias.tranfer.DelayedAlarm","implLang" : "SCALA"},
 	{"className" : "org.eso.ias.tranfer.ThresholdWithBackupsAndDelay","implLang" : "SCALA"},
-	{"className" : "org.eso.ias.tranfer.AntPadInhibitor","implLang" : "SCALA"}
+	{"className" : "org.eso.ias.tranfer.AntPadInhibitor","implLang" : "SCALA"},
+	{"className" : "org.eso.ias.tranfer.utlitymodule.UMFireTF","implLang" : "SCALA"}
 ]

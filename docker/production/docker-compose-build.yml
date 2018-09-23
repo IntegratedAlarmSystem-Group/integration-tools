@@ -65,6 +65,19 @@ services:
       - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
     command: "iasSupervisor Supervisor-Weather -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
+  antennas-supervisor:
+    container_name: ias-build-antennas-supervisor
+    build: ${DOCKERFILE_PATH_CORE}
+    image: ias-build-core-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
+    command: "iasSupervisor Supervisor-Antennas -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+
   dummy-supervisor:
     container_name: ias-build-dummy-supervisor
     build: ${DOCKERFILE_PATH_CORE}

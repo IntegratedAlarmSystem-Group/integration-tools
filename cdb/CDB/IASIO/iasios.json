@@ -839,32 +839,44 @@
     "iasType": "STRING"
   },
   {
-    "id": "Templated-Antennas-In",
-    "shortDesc": "Templated antennas input",
+    "id": "Array-Value-Ant",
+    "shortDesc": "Templated antennas input value",
     "iasType": "STRING",
     "templateId": "template-antennas"
   },
   {
-    "id": "Templated-Antennas-Fire",
-    "shortDesc": "Templated antennas Fire",
+    "id": "Array-Ant",
+    "shortDesc": "Templated antennas output alarm",
     "iasType": "ALARM",
     "templateId": "template-antennas"
   },
   {
-    "id": "Templated-Antennas-UPS",
-    "shortDesc": "Templated antennas UPS",
+    "id": "Array-Fire-Ant",
+    "shortDesc": "Templated alarm for antennas Fire",
     "iasType": "ALARM",
     "templateId": "template-antennas"
   },
   {
-    "id": "Templated-Antennas-HVAC",
-    "shortDesc": "Templated antennas HVAC",
+    "id": "Array-Ups-Ant",
+    "shortDesc": "Templated alarm for antennas UPS",
     "iasType": "ALARM",
     "templateId": "template-antennas"
   },
   {
-    "id": "Templated-Antennas-FireSystem",
-    "shortDesc": "Templated antennas FireSystem",
+    "id": "Array-Hvac-Ant",
+    "shortDesc": "Templated alarm for antennas HVAC",
+    "iasType": "ALARM",
+    "templateId": "template-antennas"
+  },
+  {
+    "id": "Array-FireMalfunction-Ant",
+    "shortDesc": "Templated alarm for antennas FireMalfunction",
+    "iasType": "ALARM",
+    "templateId": "template-antennas"
+  },
+  {
+    "id": "Array-PowerCut-Ant",
+    "shortDesc": "Templated alarm for antennas PowerCut",
     "iasType": "ALARM",
     "templateId": "template-antennas"
   }

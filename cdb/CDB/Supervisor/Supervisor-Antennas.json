@@ -1,0 +1,9 @@
+{
+	"logLevel":"INFO",
+	"id":"Supervisor-Antennas",
+	"hostName":"almaias.eso.org",
+	"dasusToDeploy":[
+		{"dasuId":"Dasu-Array-Fire-Ant","templateId":"template-antennas","instance":"1"},
+		{"dasuId":"Dasu-Array-Fire-Ant","templateId":"template-antennas","instance":"2"}
+	]
+}
