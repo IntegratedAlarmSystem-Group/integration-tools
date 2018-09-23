@@ -869,7 +869,7 @@
     "templateId": "template-antennas"
   },
   {
-    "id": "Array-Hvac-Ant",
+    "id": "Array-HvacFail-Ant",
     "shortDesc": "Templated alarm for antennas HVAC",
     "iasType": "ALARM",
     "templateId": "template-antennas"
