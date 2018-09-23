@@ -3,6 +3,6 @@
 	"outputID":"Array-Fire-Ant",
 	"id":"Asce-Array-Fire-Ant",
 	"transferFunctionID":"org.eso.ias.tranfer.utlitymodule.UMFireTF",
-	"inputIDs":["Array-Value-Ant"],
+	"inputIDs":["Array-UMStatus-Ant"],
 	"templateId":"template-antennas"
 }

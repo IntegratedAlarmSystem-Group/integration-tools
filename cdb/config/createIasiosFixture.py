@@ -40,7 +40,7 @@ def create_iasios_fixture(json_input, templates):
                 aux_dict['model'] = "cdb.iasio"
                 aux_dict['pk'] = c['id'] + index_str
                 aux_dict['fields'] = {
-                    'short_desc': c['shortDesc'] + ' ' + index_str,
+                    'short_desc': c['shortDesc'],
                     'ias_type': c['iasType'],
                 }
                 fixtures.append(aux_dict)

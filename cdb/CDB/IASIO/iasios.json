@@ -509,44 +509,44 @@
         "iasType": "STRING"
    },
   {
-    "id": "Array-Value-Ant",
-    "shortDesc": "Templated antennas input value",
+    "id": "Array-UMStatus-Ant",
+    "shortDesc": "UMStatus used as input value for alarms of the antenna",
     "iasType": "STRING",
     "templateId": "template-antennas"
   },
   {
     "id": "Array-Ant",
-    "shortDesc": "Templated antennas output alarm",
+    "shortDesc": "General alarm of the antenna",
     "iasType": "ALARM",
     "templateId": "template-antennas"
   },
   {
     "id": "Array-Fire-Ant",
-    "shortDesc": "Templated alarm for antennas Fire",
+    "shortDesc": "Fire alarm of the antenna",
     "iasType": "ALARM",
     "templateId": "template-antennas"
   },
   {
     "id": "Array-FireMalfunction-Ant",
-    "shortDesc": "Templated alarm for antennas FireMalfunction",
+    "shortDesc": "Fire malfunctioning alarm of the antenna",
     "iasType": "ALARM",
     "templateId": "template-antennas"
   },
   {
     "id": "Array-UpsFail-Ant",
-    "shortDesc": "Templated alarm for antennas UPS",
+    "shortDesc": "UPS failure alarm of the antenna",
     "iasType": "ALARM",
     "templateId": "template-antennas"
   },
   {
     "id": "Array-HvacFail-Ant",
-    "shortDesc": "Templated alarm for antennas HVAC",
+    "shortDesc": "HVAC failure alarm of the antenna",
     "iasType": "ALARM",
     "templateId": "template-antennas"
   },
   {
     "id": "Array-PowerCut-Ant",
-    "shortDesc": "Templated alarm for antennas PowerCut",
+    "shortDesc": "Power cut alarm of the antenna",
     "iasType": "ALARM",
     "templateId": "template-antennas"
   }
