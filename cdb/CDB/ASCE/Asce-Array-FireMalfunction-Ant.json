@@ -1,0 +1,14 @@
+{
+	"dasuID":"Dasu-Array-FireMalfunction-Ant",
+	"outputID":"Array-FireMalfunction-Ant",
+	"id":"Asce-Array-FireMalfunction-Ant",
+	"transferFunctionID":"org.eso.ias.tranfer.utlitymodule.UMAlarmByBit",
+	"props": [
+		{
+			"name": "org.eso.ias.transfer.utilitymodule.bitnumber",
+			"value": "0"
+		}
+	],
+	"inputIDs":["Array-Value-Ant"],
+	"templateId":"template-antennas"
+}
