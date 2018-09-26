@@ -1,7 +1,7 @@
 
         {
             "logLevel": "DEBUG",
-            "refreshRate": "3",
+            "refreshRate": "4",
             "tolerance": "1",
             "hbFrequency":"5",
             "props":[
