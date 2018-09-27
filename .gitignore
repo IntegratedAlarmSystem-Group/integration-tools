@@ -117,3 +117,7 @@ docker/production/logs/**
 # Private files
 private_files/**
 !private_files/.gitinclude
+
+# Shared files
+**/shared/*.json
+!**/shared/.gitinclude

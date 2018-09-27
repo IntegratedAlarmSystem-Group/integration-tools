@@ -139,6 +139,14 @@ services:
     volumes:
       - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
 
+  visual-inspection-webserver:
+    container_name: ias-build-visual-inspection-webserver
+    build: ${DOCKERFILE_PATH_VISUAL_INSPECTION_WEBSERVER}
+    image: ias-build-visual-inspection-webserver-image
+    command: ./runserver.sh
+    volumes:
+      - ${VISUAL_INSPECTION_FILE_PATH}:/usr/src/visual-inspection/output
+
   display:
     container_name: ias-build-display
     image: ias-build-display-image
@@ -151,11 +159,14 @@ services:
     volumes_from:
       - display
       - webserver
+      - visual-inspection-webserver
     links:
       - display
       - webserver
+      - visual-inspection-webserver
     depends_on:
       - display
       - webserver
+      - visual-inspection-webserver
     ports:
       - "80:80"

@@ -9,7 +9,7 @@ message = "\"sampleTime\":\"{}\",\"filteredTime\":\"{}\",\"value\":\"DV01:A045,D
 
 while True:
     time_now = datetime.utcnow()
-    time_now_formatted = time_now.strftime('%Y-%m-%dT%H:%M:%S.') + str(int(time_now.microsecond/1000))
+    time_now_formatted = time_now.strftime('%Y-%m-%dT%H:%M:%S.') + str(int(time_now.microsecond/1000)).zfill(3)
     data = "{" + message.format(time_now_formatted, time_now_formatted, time_now_formatted, time_now_formatted) + "}"
     producer.send('PluginsKTopic', data.encode())
     time.sleep(1)
