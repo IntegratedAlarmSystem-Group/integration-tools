@@ -25,6 +25,21 @@ services:
       - ${LOGS_PATH}:/usr/src/alma_weather_plugin/logs/
     command: "-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092"
 
+  visual-inspection-plugin:
+    container_name: ias-build-visual-inspection
+    build:
+      context: ${DOCKERFILE_PATH_VISUAL_INSPECTION}
+      dockerfile: Dockerfile-build
+    image: ias-build-visual-inspection-plugin-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${LOGS_PATH}:/usr/src/weather_visual_inspection_plugin/logs/
+      - ${VISUAL_INSPECTION_FILE_PATH}:/usr/src/weather_visual_inspection_plugin/input
+    command: ["-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092", "-f input/inspections.json"]
+
   dummy-plugin:
     container_name: ias-build-dummy-plugin
     build:
