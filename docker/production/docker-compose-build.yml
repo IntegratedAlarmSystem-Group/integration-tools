@@ -35,10 +35,10 @@ services:
       - kafka
     depends_on:
       - kafka
-    # volumes:
-    #   - ${LOGS_PATH}:/usr/src/weather_visual_inspection_plugin/logs/
-    #   - ${VISUAL_INSPECTION_FILE_PATH}:/usr/src/weather_visual_inspection_plugin/
-    command: "-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092"
+    volumes:
+      - ${LOGS_PATH}:/usr/src/weather_visual_inspection_plugin/logs/
+      - ${VISUAL_INSPECTION_FILE_PATH}:/usr/src/weather_visual_inspection_plugin/input
+    command: ["-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092", "-f input/inspections.json"]
 
   dummy-plugin:
     container_name: ias-build-dummy-plugin
