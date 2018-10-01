@@ -54,17 +54,17 @@ services:
       - kafka
     command: "${KAFKA_SERVER} 9092"
 
-  dummy-antennas-pad:
-    container_name: ias-build-dummy-antennas-pad
-    build:
-      context: ${DOCKERFILE_PATH_DUMMY_ANTENNAS_PAD}
-      dockerfile: Dockerfile
-    image: ias-build-dummy-antennas-pad-image
-    links:
-      - kafka
-    depends_on:
-      - kafka
-    command: "${KAFKA_SERVER}:9092"
+  # dummy-antennas-pad:
+  #   container_name: ias-build-dummy-antennas-pad
+  #   build:
+  #     context: ${DOCKERFILE_PATH_DUMMY_ANTENNAS_PAD}
+  #     dockerfile: Dockerfile
+  #   image: ias-build-dummy-antennas-pad-image
+  #   links:
+  #     - kafka
+  #   depends_on:
+  #     - kafka
+  #   command: "${KAFKA_SERVER}:9092"
 
 
   converter:
