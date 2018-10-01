@@ -503,11 +503,66 @@
         "shortDesc": "Wind spped too at the AOS high",
         "iasType": "ALARM"
    },
- {
-        "id": "Array-AntennasToPads",
-        "shortDesc": "Association of antennas to pads",
-        "iasType": "STRING"
-   },
+  {
+    "id": "WS-Meteo129-LastInspection",
+    "shortDesc": "Timestamp of the ñast inspection of the Meteo129",
+    "iasType": "ALARM"
+  },
+  {
+    "id": "WS-Meteo131-LastInspection",
+    "shortDesc": "Timestamp of the ñast inspection of the Meteo131",
+    "iasType": "ALARM"
+  },
+  {
+    "id": "WS-Meteo130-LastInspection",
+    "shortDesc": "Timestamp of the ñast inspection of the Meteo130",
+    "iasType": "ALARM"
+  },
+  {
+    "id": "WS-Meteo201-LastInspection",
+    "shortDesc": "Timestamp of the ñast inspection of the Meteo201",
+    "iasType": "ALARM"
+  },
+  {
+    "id": "WS-Meteo309-LastInspection",
+    "shortDesc": "Timestamp of the ñast inspection of the Meteo309",
+    "iasType": "ALARM"
+  },
+  {
+    "id": "WS-Meteo410-LastInspection",
+    "shortDesc": "Timestamp of the ñast inspection of the Meteo410",
+    "iasType": "ALARM"
+  },
+  {
+    "id": "WS-MeteoCentral-LastInspection",
+    "shortDesc": "Timestamp of the ñast inspection of the MeteoCentral",
+    "iasType": "ALARM"
+  },
+  {
+    "id": "WS-MeteoItinerant-LastInspection",
+    "shortDesc": "Timestamp of the ñast inspection of the MeteoItinerant",
+    "iasType": "ALARM"
+  },
+  {
+    "id": "WS-MeteoOSF-LastInspection",
+    "shortDesc": "Timestamp of the ñast inspection of the MeteoOSF",
+    "iasType": "ALARM"
+  },
+  {
+    "id": "WS-MeteoTB1-LastInspection",
+    "shortDesc": "Timestamp of the ñast inspection of the MeteoTB1",
+    "iasType": "ALARM"
+  },
+  {
+    "id": "WS-MeteoTB2-LastInspection",
+    "shortDesc": "Timestamp of the ñast inspection of the MeteoTB2",
+    "iasType": "ALARM"
+  },
+  {
+    "id": "Array-AntennasToPads",
+    "shortDesc": "Association of antennas to pads",
+    "iasType": "STRING"
+  },
   {
     "id": "Array-UMStatus-Ant",
     "shortDesc": "UMStatus used as input value for alarms of the antenna",
