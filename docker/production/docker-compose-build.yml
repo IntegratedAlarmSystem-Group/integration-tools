@@ -77,7 +77,7 @@ services:
       - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
-      - ${LOGS_PATH}:/usr/src/alma_weather_plugin/logs/
+      - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
     command: "iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
 
   weather-supervisor:
@@ -116,6 +116,7 @@ services:
       - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
+      - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
     command: "iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   sender:
@@ -128,7 +129,7 @@ services:
       - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
-      - ${LOGS_PATH}:/usr/src/alma_weather_plugin/logs/
+      - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
     command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8001/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID -jcdb /usr/src/cdb/"
 
   webserver:
