@@ -151,11 +151,14 @@ services:
     volumes_from:
       - display
       - webserver
+      - visual-inspection-webserver
     links:
       - display
       - webserver
+      - visual-inspection-webserver
     depends_on:
       - display
       - webserver
+      - visual-inspection-webserver
     ports:
       - "80:80"
