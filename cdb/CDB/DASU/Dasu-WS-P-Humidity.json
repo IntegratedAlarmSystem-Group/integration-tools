@@ -4,6 +4,5 @@
             "Asce-WS-P-Humidity-Inhibitor",
             "Asce-WS-P-Humidity-Threshold"
         ],
-        "outputId": "WS-P-Humidity",
-        "logLevel": "FATAL"
+        "outputId": "WS-P-Humidity"
     }

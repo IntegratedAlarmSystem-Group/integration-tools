@@ -3,7 +3,7 @@
 		"Asce-Array-HvacFail-Ant"
 	],
 	"outputId":"Array-HvacFail-Ant",
-	"logLevel":"FATAL",
+	"logLevel":"WARN",
 	"id":"Dasu-Array-HvacFail-Ant",
 	"templateId":"template-antennas"
 }

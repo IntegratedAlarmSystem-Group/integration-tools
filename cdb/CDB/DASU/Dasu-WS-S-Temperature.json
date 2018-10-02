@@ -5,5 +5,5 @@
             "Asce-WS-S-Temperature-Threshold"
         ],
         "outputId": "WS-S-Temperature",
-        "logLevel": "FATAL"
+        "logLevel": "WARN"
     }

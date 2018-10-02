@@ -1,6 +1,6 @@
 
         {
-            "logLevel": "DEBUG",
+            "logLevel": "INFO",
             "refreshRate": "4",
             "tolerance": "1",
             "hbFrequency":"5",

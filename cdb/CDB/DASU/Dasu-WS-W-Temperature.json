@@ -4,6 +4,5 @@
             "Asce-WS-W-Temperature-Inhibitor",
             "Asce-WS-W-Temperature-Threshold"
         ],
-        "outputId": "WS-W-Temperature",
-        "logLevel": "FATAL"
+        "outputId": "WS-W-Temperature"
     }
