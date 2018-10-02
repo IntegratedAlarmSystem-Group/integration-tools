@@ -5,5 +5,5 @@
             "Asce-WS-S-WindSpeed20-Threshold"
         ],
         "outputId": "WS-S-WindSpeed20",
-        "logLevel": "FATAL"
+        "logLevel": "WARN"
     }

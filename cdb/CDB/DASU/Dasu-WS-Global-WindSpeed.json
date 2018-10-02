@@ -3,6 +3,5 @@
         "asceIDs": [
             "Asce-WS-Global-WindSpeed"
         ],
-        "outputId": "WS-WindSpeed",
-        "logLevel": "FATAL"
+        "outputId": "WS-WindSpeed"
     }

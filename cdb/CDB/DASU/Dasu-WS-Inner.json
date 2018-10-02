@@ -3,6 +3,5 @@
         "asceIDs": [
             "Asce-WS-Inner"
         ],
-        "outputId": "WS-Inner",
-        "logLevel": "FATAL"
+        "outputId": "WS-Inner"
     }

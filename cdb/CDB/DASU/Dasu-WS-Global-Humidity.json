@@ -3,6 +3,5 @@
         "asceIDs": [
             "Asce-WS-Global-Humidity"
         ],
-        "outputId": "WS-Humidity",
-        "logLevel": "FATAL"
+        "outputId": "WS-Humidity"
     }

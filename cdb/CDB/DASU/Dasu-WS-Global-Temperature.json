@@ -3,6 +3,5 @@
         "asceIDs": [
             "Asce-WS-Global-Temperature"
         ],
-        "outputId": "WS-Temperature",
-        "logLevel": "FATAL"
+        "outputId": "WS-Temperature"
     }

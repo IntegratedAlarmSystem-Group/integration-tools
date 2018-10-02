@@ -4,6 +4,5 @@
             "Asce-WS-W-WindSpeed15-Inhibitor",
             "Asce-WS-W-WindSpeed15-Threshold"
         ],
-        "outputId": "WS-W-WindSpeed15",
-        "logLevel": "FATAL"
+        "outputId": "WS-W-WindSpeed15"
     }
