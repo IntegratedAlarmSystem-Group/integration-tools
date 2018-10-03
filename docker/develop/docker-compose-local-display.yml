@@ -12,8 +12,11 @@ services:
       - ADVERTISED_PORT=9092
 
   alma-weather-plugin:
-    container_name: ias-dev-alma-weather-plugin
-    image: registry.inria.cl:5000/alma-weather-plugin:dev
+    container_name: ias-build-alma-weather-plugin
+    build:
+      context: ${DOCKERFILE_PATH_ALMA_WEATHER}
+      dockerfile: Dockerfile-build
+    image: ias-build-alma-weather-plugin-image
     links:
       - kafka
     depends_on:
@@ -23,20 +26,26 @@ services:
     command: "-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092"
 
   visual-inspection-plugin:
-    container_name: ias-dev-visual-inspection
-    image: registry.inria.cl:5000/visual-inspection-plugin:dev
+    container_name: ias-build-visual-inspection
+    build:
+      context: ${DOCKERFILE_PATH_VISUAL_INSPECTION}
+      dockerfile: Dockerfile-build
+    image: ias-build-visual-inspection-plugin-image
     links:
       - kafka
     depends_on:
       - kafka
     volumes:
-    - ${LOGS_PATH}:/usr/src/weather_visual_inspection_plugin/logs/
-    - ${VISUAL_INSPECTION_FILE_PATH}:/usr/src/weather_visual_inspection_plugin/input
+      - ${LOGS_PATH}:/usr/src/weather_visual_inspection_plugin/logs/
+      - ${VISUAL_INSPECTION_FILE_PATH}:/usr/src/weather_visual_inspection_plugin/input
     command: ["-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092", "-f input/inspections.json"]
 
   dummy-plugin:
-    container_name: ias-dev-dummy-plugin
-    image: registry.inria.cl:5000/ias-dummy-plugin:dev
+    container_name: ias-build-dummy-plugin
+    build:
+      context: ${DOCKERFILE_PATH_DUMMY_PLUGIN}
+      dockerfile: Dockerfile-build
+    image: ias-build-dummy-plugin-image
     stdin_open: true
     tty: true
     links:
@@ -45,31 +54,22 @@ services:
       - kafka
     command: "${KAFKA_SERVER} 9092"
 
-  dummy-plugin-21:
-    container_name: ias-dev-dummy-plugin-21
-    image: registry.inria.cl:5000/ias-dummy-plugin:dev
-    stdin_open: true
-    tty: true
+  dummy-antennas-pad:
+    container_name: ias-build-dummy-antennas-pad
+    build:
+      context: ${DOCKERFILE_PATH_DUMMY_ANTENNAS_PAD}
+      dockerfile: Dockerfile
+    image: ias-build-dummy-antennas-pad-image
     links:
       - kafka
     depends_on:
       - kafka
-    command: "${KAFKA_SERVER} 9092 dummy-21"
-
-  dummy-plugin-22:
-    container_name: ias-dev-dummy-plugin-22
-    image: registry.inria.cl:5000/ias-dummy-plugin:dev
-    stdin_open: true
-    tty: true
-    links:
-      - kafka
-    depends_on:
-      - kafka
-    command: "${KAFKA_SERVER} 9092 dummy-22"
+    command: "${KAFKA_SERVER}:9092"
 
   converter:
-    container_name: ias-dev-converter
-    image: registry.inria.cl:5000/ias-core:dev
+    container_name: ias-build-converter
+    build: ${DOCKERFILE_PATH_CORE}
+    image: ias-build-core-image
     links:
       - kafka
     depends_on:
@@ -80,8 +80,9 @@ services:
     command: "iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
 
   weather-supervisor:
-    container_name: ias-dev-weather-supervisor
-    image: registry.inria.cl:5000/ias-core:dev
+    container_name: ias-build-weather-supervisor
+    build: ${DOCKERFILE_PATH_CORE}
+    image: ias-build-core-image
     links:
       - kafka
     depends_on:
@@ -92,8 +93,9 @@ services:
     command: "iasSupervisor Supervisor-Weather -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   antennas-supervisor:
-    container_name: ias-dev-antennas-supervisor
-    image: registry.inria.cl:5000/ias-core:dev
+    container_name: ias-build-antennas-supervisor
+    build: ${DOCKERFILE_PATH_CORE}
+    image: ias-build-core-image
     links:
       - kafka
     depends_on:
@@ -104,8 +106,9 @@ services:
     command: "iasSupervisor Supervisor-Antennas -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   dummy-supervisor:
-    container_name: ias-dev-dummy-supervisor
-    image: registry.inria.cl:5000/ias-core:dev
+    container_name: ias-build-dummy-supervisor
+    build: ${DOCKERFILE_PATH_CORE}
+    image: ias-build-core-image
     links:
       - kafka
     depends_on:
@@ -116,8 +119,9 @@ services:
     command: "iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   sender:
-    container_name: ias-dev-sender
-    image: registry.inria.cl:5000/ias-core:dev
+    container_name: ias-build-sender
+    build: ${DOCKERFILE_PATH_CORE}
+    image: ias-build-core-image
     links:
       - kafka
     depends_on:
@@ -128,37 +132,39 @@ services:
     command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8000/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID -jcdb /usr/src/cdb/"
 
   webserver:
-    container_name: ias-dev-webserver
-    image: registry.inria.cl:5000/ias-webserver:dev
-    command: ./runserver.sh
+    tty: true
+    container_name: ias-mount-webserver
+    build:
+      context: ${DOCKERFILE_PATH_WEBSERVER}
+      dockerfile: Dockerfile-dev
     volumes:
+      - ${DOCKERFILE_PATH_WEBSERVER}:/usr/src/ias-webserver
       - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
+    command: "./runserver-dev.sh"
 
   visual-inspection-webserver:
-    container_name: ias-dev-visual-inspection-webserver
-    image: registry.inria.cl:5000/visual-inspection:dev
-    command: ./runserver.sh
+    tty: true
+    container_name: ias-mount-visual-inspection-webserver
+    build:
+      context: ${DOCKERFILE_PATH_VISUAL_INSPECTION_WEBSERVER}
+      dockerfile: Dockerfile-dev
+    image: ias-mount-visual-inspection-webserver-image
+    command: "./runserver-dev.sh"
     volumes:
+      - ${DOCKERFILE_PATH_VISUAL_INSPECTION_WEBSERVER}:/usr/src/visual-inspection
       - ${VISUAL_INSPECTION_FILE_PATH}:/usr/src/visual-inspection/output
 
-  display:
-    container_name: ias-dev-display
-    image: registry.inria.cl:5000/ias-display:dev
-
   nginx:
-    container_name: ias-dev-nginx
-    build: ${DOCKERFILE_PATH_NGINX}
+    container_name: ias-nginx-local-disp
+    build:
+      context: ${DOCKERFILE_PATH_NGINX}
+      dockerfile: Dockerfile-local-display
     volumes_from:
-      - display
       - webserver
-      - visual-inspection-webserver
     links:
-      - display
       - webserver
-      - visual-inspection-webserver
     depends_on:
-      - display
       - webserver
-      - visual-inspection-webserver
     ports:
       - "80:80"
+      - "8000:8000"
