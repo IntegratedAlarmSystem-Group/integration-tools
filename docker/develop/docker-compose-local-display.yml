@@ -22,7 +22,7 @@ services:
     depends_on:
       - kafka
     volumes:
-      - ${LOGS_PATH}:/usr/src/alma_weather_plugin/logs/
+      - ${HOST_IAS_LOGS_FOLDER}:/usr/src/alma_weather_plugin/logs/
     command: "-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092"
 
   visual-inspection-plugin:
@@ -36,7 +36,7 @@ services:
     depends_on:
       - kafka
     volumes:
-      - ${LOGS_PATH}:/usr/src/weather_visual_inspection_plugin/logs/
+      - ${HOST_IAS_LOGS_FOLDER}:/usr/src/weather_visual_inspection_plugin/logs/
       - ${VISUAL_INSPECTION_FILE_PATH}:/usr/src/weather_visual_inspection_plugin/input
     command: ["-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092", "-f input/inspections.json"]
 
@@ -68,7 +68,9 @@ services:
 
   converter:
     container_name: ias-build-converter
-    build: ${DOCKERFILE_PATH_CORE}
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile
     image: ias-build-core-image
     links:
       - kafka
@@ -76,12 +78,15 @@ services:
       - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
-      - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
+      - ${HOST_IAS_ROOT}:/usr/src/IntegratedAlarmSystemRoot
+      - ${HOST_IAS_LOGS_FOLDER}:/usr/src/IntegratedAlarmSystemRoot/logs
     command: "iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
 
   weather-supervisor:
     container_name: ias-build-weather-supervisor
-    build: ${DOCKERFILE_PATH_CORE}
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile
     image: ias-build-core-image
     links:
       - kafka
@@ -89,12 +94,15 @@ services:
       - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
-      - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
+      - ${HOST_IAS_ROOT}:/usr/src/IntegratedAlarmSystemRoot
+      - ${HOST_IAS_LOGS_FOLDER}:/usr/src/IntegratedAlarmSystemRoot/logs
     command: "iasSupervisor Supervisor-Weather -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   antennas-supervisor:
     container_name: ias-build-antennas-supervisor
-    build: ${DOCKERFILE_PATH_CORE}
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile
     image: ias-build-core-image
     links:
       - kafka
@@ -102,12 +110,15 @@ services:
       - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
-      - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
+      - ${HOST_IAS_ROOT}:/usr/src/IntegratedAlarmSystemRoot
+      - ${HOST_IAS_LOGS_FOLDER}:/usr/src/IntegratedAlarmSystemRoot/logs
     command: "iasSupervisor Supervisor-Antennas -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   dummy-supervisor:
     container_name: ias-build-dummy-supervisor
-    build: ${DOCKERFILE_PATH_CORE}
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile
     image: ias-build-core-image
     links:
       - kafka
@@ -115,12 +126,15 @@ services:
       - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
-      - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
+      - ${HOST_IAS_ROOT}:/usr/src/IntegratedAlarmSystemRoot
+      - ${HOST_IAS_LOGS_FOLDER}:/usr/src/IntegratedAlarmSystemRoot/logs
     command: "iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   sender:
     container_name: ias-build-sender
-    build: ${DOCKERFILE_PATH_CORE}
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile
     image: ias-build-core-image
     links:
       - kafka
@@ -128,7 +142,8 @@ services:
       - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
-      - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
+      - ${HOST_IAS_ROOT}:/usr/src/IntegratedAlarmSystemRoot
+      - ${HOST_IAS_LOGS_FOLDER}:/usr/src/IntegratedAlarmSystemRoot/logs
     command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8000/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID -jcdb /usr/src/cdb/"
 
   webserver:
