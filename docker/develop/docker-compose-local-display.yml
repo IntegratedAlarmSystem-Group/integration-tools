@@ -161,10 +161,13 @@ services:
       dockerfile: Dockerfile-local-display
     volumes_from:
       - webserver
+      - visual-inspection-webserver
     links:
       - webserver
+      - visual-inspection-webserver
     depends_on:
       - webserver
+      - visual-inspection-webserver
     ports:
       - "80:80"
       - "8000:8000"
