@@ -5,4 +5,4 @@
 #     echo 'Waiting for queue...'
 #     sleep 1
 # done
-python antenna-pad-publisher.py "${1}"
+python dummy-antennas-plugin.py "${1}"
