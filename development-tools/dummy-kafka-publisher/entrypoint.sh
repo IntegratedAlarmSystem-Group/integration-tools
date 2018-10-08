@@ -5,4 +5,4 @@
 #     echo 'Waiting for queue...'
 #     sleep 1
 # done
-python dummy-antennas-plugin.py "${1}"
+python dummy-kafka-publisher.py "${1}"
