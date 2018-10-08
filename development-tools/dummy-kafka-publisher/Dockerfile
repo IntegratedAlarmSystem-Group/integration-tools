@@ -16,5 +16,5 @@ RUN pip install -r requirements.txt
 EXPOSE 8001
 
 COPY entrypoint.sh .
-COPY antenna-pad-publisher.py .
+COPY . .
 ENTRYPOINT ["./entrypoint.sh"]
