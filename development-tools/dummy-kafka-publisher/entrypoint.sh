@@ -5,4 +5,4 @@
 #     echo 'Waiting for queue...'
 #     sleep 1
 # done
-python dummy-kafka-publisher.py "${1}"
+python mock-kafka-publisher.py "${1}"

@@ -54,12 +54,12 @@ services:
       - kafka
     command: "${KAFKA_SERVER} 9092"
 
-  dummy-antennas-pad:
-    container_name: ias-build-dummy-antennas-pad
+  mock-kafka-publisher:
+    container_name: ias-build-mock-kafka-publisher
     build:
       context: ${DOCKERFILE_PATH_DUMMY_ANTENNAS_PAD}
       dockerfile: Dockerfile
-    image: ias-build-dummy-antennas-pad-image
+    image: ias-build-mock-kafka-publisher-image
     links:
       - kafka
     depends_on:
