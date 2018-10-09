@@ -115,8 +115,8 @@ services:
       - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
     command: "iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
-  sender:
-    container_name: ias-dev-sender
+  alarms-sender:
+    container_name: ias-dev-alarms-sender
     image: registry.inria.cl:5000/ias-core:dev
     links:
       - kafka
@@ -125,7 +125,7 @@ services:
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
-    command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8000/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID -jcdb /usr/src/cdb/"
+    command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8000/core/ org.eso.ias.webserversender.WebServerSender WebServerAlarmsSenderID -jcdb /usr/src/cdb/ -t ALARM"
 
   webserver:
     container_name: ias-dev-webserver
