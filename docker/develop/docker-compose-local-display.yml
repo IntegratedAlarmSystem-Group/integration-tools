@@ -52,7 +52,35 @@ services:
       - kafka
     depends_on:
       - kafka
-    command: "${KAFKA_SERVER} 9092"
+    command: "${KAFKA_SERVER} 9092 dummy"
+
+  dummy-plugin-21:
+    container_name: ias-build-dummy-plugin-21
+    build:
+      context: ${DOCKERFILE_PATH_DUMMY_PLUGIN}
+      dockerfile: Dockerfile-build
+    image: ias-build-dummy-plugin-image
+    stdin_open: true
+    tty: true
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    command: "${KAFKA_SERVER} 9092 dummy-21"
+
+  dummy-plugin-22:
+    container_name: ias-build-dummy-plugin-22
+    build:
+      context: ${DOCKERFILE_PATH_DUMMY_PLUGIN}
+      dockerfile: Dockerfile-build
+    image: ias-build-dummy-plugin-image
+    stdin_open: true
+    tty: true
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    command: "${KAFKA_SERVER} 9092 dummy-22"
 
   mock-kafka-publisher:
     container_name: ias-build-mock-kafka-publisher
