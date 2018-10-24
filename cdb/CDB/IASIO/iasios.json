@@ -215,28 +215,28 @@
         "shortDesc": "dummy reported by the weather station  out of range",
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
-        "sound": "TYPE1"
+        "sound": "TYPE2"
     },
  {
         "id": "Alarmdummy-22",
         "shortDesc": "dummy reported by the weather station  out of range",
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
-        "sound": "TYPE1"
+        "sound": "TYPE3"
     },
  {
         "id": "Alarmdummy-2",
         "shortDesc": "dummy reported by the weather station  out of range",
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
-        "sound": "TYPE1"
+        "sound": "TYPE4"
     },
 {
          "id": "Alarmdummy-Global",
          "shortDesc": "dummy reported by the weather station  out of range",
          "iasType": "ALARM",
          "docUrl": "http://www.alma.cl",
-         "sound": "TYPE1"
+         "sound": "TYPE4"
     },
 {
         "id": "WS-Inner-Humidity",
