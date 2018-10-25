@@ -208,406 +208,481 @@
         "shortDesc": "dummy reported by the weather station  out of range",
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
-        "sound": "TYPE1"
+        "sound": "TYPE1",
+        "canShelve": "true"
     },
  {
         "id": "Alarmdummy-21",
         "shortDesc": "dummy reported by the weather station  out of range",
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
-        "sound": "TYPE2"
+        "sound": "TYPE2",
+        "canShelve": "true"
     },
  {
         "id": "Alarmdummy-22",
         "shortDesc": "dummy reported by the weather station  out of range",
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
-        "sound": "TYPE3"
+        "sound": "TYPE3",
+        "canShelve": "true"
     },
  {
         "id": "Alarmdummy-2",
         "shortDesc": "dummy reported by the weather station  out of range",
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
-        "sound": "TYPE4"
+        "sound": "TYPE4",
+        "canShelve": "true"
     },
 {
          "id": "Alarmdummy-Global",
          "shortDesc": "dummy reported by the weather station  out of range",
          "iasType": "ALARM",
          "docUrl": "http://www.alma.cl",
-         "sound": "TYPE4"
+         "sound": "TYPE4",
+         "canShelve": "true"
     },
 {
         "id": "WS-Inner-Humidity",
         "shortDesc": "Humidity alarm of the Inner WS",
-        "iasType": "ALARM"
+        "iasType": "ALARM",
+        "docUrl": "http://www.alma.cl"
    },
 {
         "id": " WS-Inner-Humidity-Threshold",
         "shortDesc": "Inner Humidity Threshold",
-        "iasType": "ALARM"
+        "iasType": "ALARM",
+        "docUrl": "http://www.alma.cl"
    },
 {
         "id": "WS-Inner-Temperature",
         "shortDesc": "Temperature alarm of the Inner WS",
-        "iasType": "ALARM"
+        "iasType": "ALARM",
+        "docUrl": "http://www.alma.cl"
   },
 {
         "id": " WS-Inner-Temperature-Threshold",
         "shortDesc": "Inner Temperature Threshold",
-        "iasType": "ALARM"
+        "iasType": "ALARM",
+        "docUrl": "http://www.alma.cl"
    },
 
   {
          "id": "WS-Inner-WindSpeed",
          "shortDesc": "Inner Wind speed Alarm",
-         "iasType": "ALARM"
+         "iasType": "ALARM",
+         "docUrl": "http://www.alma.cl"
     },
   {
      "id": "WS-Inner-WindSpeed15",
      "shortDesc": "Wind speed over 15m/s of the Inner WS",
-     "iasType": "ALARM"
+     "iasType": "ALARM",
+     "docUrl": "http://www.alma.cl"
   },
   {
      "id": "WS-Inner-WindSpeed20",
      "shortDesc": "Wind speed over 20m/s of the Inner WS",
-     "iasType": "ALARM"
+     "iasType": "ALARM",
+     "docUrl": "http://www.alma.cl"
   },
   {
      "id": "WS-Inner-WindSpeed30",
      "shortDesc": "Wind speed over 30m/s of the Inner WS",
-     "iasType": "ALARM"
+     "iasType": "ALARM",
+     "docUrl": "http://www.alma.cl"
   },
 {
         "id": " WS-Inner-WindSpeed15-Threshold",
         "shortDesc": "Inner WindSpeed15 Threshold",
-        "iasType": "ALARM"
+        "iasType": "ALARM",
+        "docUrl": "http://www.alma.cl"
    },
 
 {
        "id": " WS-Inner-WindSpeed20-Threshold",
        "shortDesc": "Inner WindSpeed20 Threshold",
-       "iasType": "ALARM"
+       "iasType": "ALARM",
+       "docUrl": "http://www.alma.cl"
   },
 
 {
        "id": " WS-Inner-WindSpeed30-Threshold",
        "shortDesc": "Inner WindSpeed30 Threshold",
-       "iasType": "ALARM"
+       "iasType": "ALARM",
+       "docUrl": "http://www.alma.cl"
   },
 
 {
         "id": "WS-W-Humidity",
         "shortDesc": "Humidity alarm of the W WS",
-        "iasType": "ALARM"
+        "iasType": "ALARM",
+        "docUrl": "http://www.alma.cl"
    },
  {
          "id": " WS-W-Humidity-Threshold",
          "shortDesc": "W Humidity Threshold",
-         "iasType": "ALARM"
+         "iasType": "ALARM",
+         "docUrl": "http://www.alma.cl"
     },
   {
          "id": "WS-W-Temperature",
          "shortDesc": "Temperature alarm of the W WS",
-         "iasType": "ALARM"
+         "iasType": "ALARM",
+         "docUrl": "http://www.alma.cl"
     },
 {
         "id": " WS-W-Temperature-Threshold",
         "shortDesc": "W Temperature Threshold",
-        "iasType": "ALARM"
+        "iasType": "ALARM",
+        "docUrl": "http://www.alma.cl"
    },
 
 {
        "id": "WS-W-WindSpeed",
        "shortDesc": "Wind speed over 20m/s of the W WS",
-       "iasType": "ALARM"
+       "iasType": "ALARM",
+       "docUrl": "http://www.alma.cl"
   },
   {
      "id": "WS-W-WindSpeed15",
      "shortDesc": "Wind speed over 15m/s of the W WS",
-     "iasType": "ALARM"
+     "iasType": "ALARM",
+     "docUrl": "http://www.alma.cl"
   },
   {
      "id": "WS-W-WindSpeed20",
      "shortDesc": "Wind speed over 20m/s of the W WS",
-     "iasType": "ALARM"
+     "iasType": "ALARM",
+     "docUrl": "http://www.alma.cl"
   },
   {
      "id": "WS-W-WindSpeed30",
      "shortDesc": "Wind speed over 30m/s of the W WS",
-     "iasType": "ALARM"
+     "iasType": "ALARM",
+     "docUrl": "http://www.alma.cl"
   },
   {
         "id": " WS-W-WindSpeed15-Threshold",
         "shortDesc": "W WindSpeed15 Threshold",
-        "iasType": "ALARM"
+        "iasType": "ALARM",
+        "docUrl": "http://www.alma.cl"
    },
 
   {
        "id": " WS-W-WindSpeed20-Threshold",
        "shortDesc": "W WindSpeed20 Threshold",
-       "iasType": "ALARM"
+       "iasType": "ALARM",
+       "docUrl": "http://www.alma.cl"
   },
 
   {
        "id": " WS-W-WindSpeed30-Threshold",
        "shortDesc": "W WindSpeed30 Threshold",
-       "iasType": "ALARM"
+       "iasType": "ALARM",
+       "docUrl": "http://www.alma.cl"
   },
 {
         "id": "WS-P-Humidity",
         "shortDesc": "Humidity alarm of the P WS",
-        "iasType": "ALARM"
+        "iasType": "ALARM",
+        "docUrl": "http://www.alma.cl"
    },
 {
        "id": " WS-P-Humidity-Threshold",
        "shortDesc": "P Humidity Threshold",
-       "iasType": "ALARM"
+       "iasType": "ALARM",
+       "docUrl": "http://www.alma.cl"
   },
 
 {
        "id": "WS-P-Temperature",
        "shortDesc": "Temperature alarm of the P WS",
-       "iasType": "ALARM"
+       "iasType": "ALARM",
+       "docUrl": "http://www.alma.cl"
   },
 {
         "id": " WS-P-Temperature-Threshold",
         "shortDesc": "P Temperature Threshold",
-        "iasType": "ALARM"
+        "iasType": "ALARM",
+        "docUrl": "http://www.alma.cl"
    },
 
    {
           "id": "WS-P-WindSpeed",
           "shortDesc": "P Wind speed Alarm",
-          "iasType": "ALARM"
+          "iasType": "ALARM",
+          "docUrl": "http://www.alma.cl"
      },
    {
       "id": "WS-P-WindSpeed15",
       "shortDesc": "Wind speed over 15m/s of the P WS",
-      "iasType": "ALARM"
+      "iasType": "ALARM",
+      "docUrl": "http://www.alma.cl"
    },
    {
       "id": "WS-P-WindSpeed20",
       "shortDesc": "Wind speed over 20m/s of the P WS",
-      "iasType": "ALARM"
+      "iasType": "ALARM",
+      "docUrl": "http://www.alma.cl"
    },
    {
       "id": "WS-P-WindSpeed30",
       "shortDesc": "Wind speed over 30m/s of the ACA WS",
-      "iasType": "ALARM"
+      "iasType": "ALARM",
+      "docUrl": "http://www.alma.cl"
    },
  {
          "id": " WS-P-WindSpeed15-Threshold",
          "shortDesc": "P WindSpeed15 Threshold",
-         "iasType": "ALARM"
+         "iasType": "ALARM",
+         "docUrl": "http://www.alma.cl"
     },
 
  {
         "id": " WS-P-WindSpeed20-Threshold",
         "shortDesc": "P WindSpeed20 Threshold",
-        "iasType": "ALARM"
+        "iasType": "ALARM",
+        "docUrl": "http://www.alma.cl"
    },
 
  {
         "id": " WS-P-WindSpeed30-Threshold",
         "shortDesc": "P WindSpeed30 Threshold",
-        "iasType": "ALARM"
+        "iasType": "ALARM",
+        "docUrl": "http://www.alma.cl"
    },
 
 {
         "id": "WS-S-Humidity",
         "shortDesc": "Humidity alarm of the S WS",
-        "iasType": "ALARM"
+        "iasType": "ALARM",
+        "docUrl": "http://www.alma.cl"
    },
 {
        "id": " WS-S-Humidity-Threshold",
        "shortDesc": "S Humidity Threshold",
-       "iasType": "ALARM"
+       "iasType": "ALARM",
+       "docUrl": "http://www.alma.cl"
   },
 
 {
         "id": "WS-S-Temperature",
         "shortDesc": "Temperature alarm of the S WS",
-        "iasType": "ALARM"
+        "iasType": "ALARM",
+        "docUrl": "http://www.alma.cl"
    },
  {
          "id": " WS-S-Temperature-Threshold",
          "shortDesc": "S Temperature Threshold",
-         "iasType": "ALARM"
+         "iasType": "ALARM",
+         "docUrl": "http://www.alma.cl"
     },
 {
     "id": "WS-S-WindSpeed",
     "shortDesc": "Wind speed over 20m/s of the ACA WS",
-    "iasType": "ALARM"
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
 },
 {
   "id": "WS-S-WindSpeed15",
   "shortDesc": "Wind speed over 15m/s of the S WS",
-  "iasType": "ALARM"
+  "iasType": "ALARM",
+  "docUrl": "http://www.alma.cl"
 },
 {
   "id": "WS-S-WindSpeed20",
   "shortDesc": "Wind speed over 20m/s of the S WS",
-  "iasType": "ALARM"
+  "iasType": "ALARM",
+  "docUrl": "http://www.alma.cl"
 },
 {
   "id": "WS-S-WindSpeed30",
   "shortDesc": "Wind speed over 30m/s of the S WS",
-  "iasType": "ALARM"
+  "iasType": "ALARM",
+  "docUrl": "http://www.alma.cl"
 },
 {
      "id": " WS-S-WindSpeed15-Threshold",
      "shortDesc": "S WindSpeed15 Threshold",
-     "iasType": "ALARM"
+     "iasType": "ALARM",
+     "docUrl": "http://www.alma.cl"
 },
 
 {
     "id": " WS-S-WindSpeed20-Threshold",
     "shortDesc": "S WindSpeed20 Threshold",
-    "iasType": "ALARM"
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
 },
 
 {
     "id": " WS-S-WindSpeed30-Threshold",
     "shortDesc": "S WindSpeed30 Threshold",
-    "iasType": "ALARM"
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
 },
 {
        "id": "WS-Inner",
        "shortDesc": "Global alarm of the Inner WS",
-       "iasType": "ALARM"
+       "iasType": "ALARM",
+       "docUrl": "http://www.alma.cl"
   },
  {
          "id": "WS-W",
          "shortDesc": "Global alarm of the W WS",
-         "iasType": "ALARM"
+         "iasType": "ALARM",
+         "docUrl": "http://www.alma.cl"
     },
  {
          "id": "WS-P",
          "shortDesc": "Global alarm of the P WS",
-         "iasType": "ALARM"
+         "iasType": "ALARM",
+         "docUrl": "http://www.alma.cl"
     },
  {
          "id": "WS-S",
          "shortDesc": "Global alarm of the S WS",
-         "iasType": "ALARM"
+         "iasType": "ALARM",
+         "docUrl": "http://www.alma.cl"
     },
  {
         "id": "WS-Temperature",
         "shortDesc": "Temperature at the AOS too low",
-        "iasType": "ALARM"
+        "iasType": "ALARM",
+        "docUrl": "http://www.alma.cl"
    },
  {
         "id": "WS-Humidity",
         "shortDesc": "Humidity too at the AOS high",
-        "iasType": "ALARM"
+        "iasType": "ALARM",
+        "docUrl": "http://www.alma.cl"
    },
  {
         "id": "WS-WindSpeed",
         "shortDesc": "Wind spped too at the AOS high",
-        "iasType": "ALARM"
+        "iasType": "ALARM",
+        "docUrl": "http://www.alma.cl"
    },
   {
     "id": "WS-Meteo129-LastInspection",
     "shortDesc": "Timestamp of the last inspection of the Meteo129",
-    "iasType": "STRING"
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl"
   },
   {
     "id": "WS-Meteo131-LastInspection",
     "shortDesc": "Timestamp of the last inspection of the Meteo131",
-    "iasType": "STRING"
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl"
   },
   {
     "id": "WS-Meteo130-LastInspection",
     "shortDesc": "Timestamp of the last inspection of the Meteo130",
-    "iasType": "STRING"
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl"
   },
   {
     "id": "WS-Meteo201-LastInspection",
     "shortDesc": "Timestamp of the last inspection of the Meteo201",
-    "iasType": "STRING"
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl"
   },
   {
     "id": "WS-Meteo309-LastInspection",
     "shortDesc": "Timestamp of the last inspection of the Meteo309",
-    "iasType": "STRING"
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl"
   },
   {
     "id": "WS-Meteo410-LastInspection",
     "shortDesc": "Timestamp of the last inspection of the Meteo410",
-    "iasType": "STRING"
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl"
   },
   {
     "id": "WS-MeteoCentral-LastInspection",
     "shortDesc": "Timestamp of the last inspection of the MeteoCentral",
-    "iasType": "STRING"
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl"
   },
   {
     "id": "WS-MeteoItinerant-LastInspection",
     "shortDesc": "Timestamp of the last inspection of the MeteoItinerant",
-    "iasType": "STRING"
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl"
   },
   {
     "id": "WS-MeteoOSF-LastInspection",
     "shortDesc": "Timestamp of the last inspection of the MeteoOSF",
-    "iasType": "STRING"
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl"
   },
   {
     "id": "WS-MeteoTB1-LastInspection",
     "shortDesc": "Timestamp of the last inspection of the MeteoTB1",
-    "iasType": "STRING"
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl"
   },
   {
     "id": "WS-MeteoTB2-LastInspection",
     "shortDesc": "Timestamp of the last inspection of the MeteoTB2",
-    "iasType": "STRING"
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl"
   },
   {
     "id": "Array-AntennasToPads",
     "shortDesc": "Association of antennas to pads",
-    "iasType": "STRING"
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl"
   },
   {
     "id": "Array-UMStatus-Ant",
     "shortDesc": "UMStatus used as input value for alarms of the antenna",
     "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
     "templateId": "template-antennas"
   },
   {
     "id": "Array-Ant",
     "shortDesc": "General alarm of the antenna",
     "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
     "templateId": "template-antennas"
   },
   {
     "id": "Array-Fire-Ant",
     "shortDesc": "Fire alarm of the antenna",
     "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
     "templateId": "template-antennas"
   },
   {
     "id": "Array-FireMalfunction-Ant",
     "shortDesc": "Fire malfunctioning alarm of the antenna",
     "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
     "templateId": "template-antennas"
   },
   {
     "id": "Array-UpsFail-Ant",
     "shortDesc": "UPS failure alarm of the antenna",
     "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
     "templateId": "template-antennas"
   },
   {
     "id": "Array-HvacFail-Ant",
     "shortDesc": "HVAC failure alarm of the antenna",
     "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
     "templateId": "template-antennas"
   },
   {
     "id": "Array-PowerCut-Ant",
     "shortDesc": "Power cut alarm of the antenna",
     "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
     "templateId": "template-antennas"
   }
 ]
