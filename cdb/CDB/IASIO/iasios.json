@@ -209,7 +209,7 @@
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
         "sound": "TYPE1",
-        "canShelve": "true"
+        "canShelve": true
     },
  {
         "id": "Alarmdummy-21",
@@ -217,7 +217,7 @@
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
         "sound": "TYPE2",
-        "canShelve": "true"
+        "canShelve": true
     },
  {
         "id": "Alarmdummy-22",
@@ -225,7 +225,7 @@
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
         "sound": "TYPE3",
-        "canShelve": "true"
+        "canShelve": true
     },
  {
         "id": "Alarmdummy-2",
@@ -233,7 +233,7 @@
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
         "sound": "TYPE4",
-        "canShelve": "true"
+        "canShelve": true
     },
 {
          "id": "Alarmdummy-Global",
@@ -241,7 +241,7 @@
          "iasType": "ALARM",
          "docUrl": "http://www.alma.cl",
          "sound": "TYPE4",
-         "canShelve": "true"
+         "canShelve": true
     },
 {
         "id": "WS-Inner-Humidity",
