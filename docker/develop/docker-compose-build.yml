@@ -167,6 +167,7 @@ services:
     volumes:
       - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
       - ${CDB_PATH}/CDB:/usr/src/ias-webserver/CDB
+      - ${LOGS_PATH}:/usr/src/ias-webserver/logs
 
   visual-inspection-webserver:
     container_name: ias-build-visual-inspection-webserver

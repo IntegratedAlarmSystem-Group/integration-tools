@@ -169,6 +169,7 @@ services:
       - ${DOCKERFILE_PATH_WEBSERVER}:/usr/src/ias-webserver
       - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
       - ${CDB_PATH}/CDB:/usr/src/ias-webserver/CDB
+      - ${LOGS_PATH}:/usr/src/ias-webserver/logs
     command: "./runserver-dev.sh"
 
   visual-inspection-webserver:

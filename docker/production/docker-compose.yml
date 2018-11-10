@@ -70,8 +70,8 @@ services:
       - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
     command: "iasSupervisor Supervisor-Antennas -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
-  alarms-sender:
-    container_name: ias-prod-alarms-sender
+  sender:
+    container_name: ias-prod-sender
     image: registry.inria.cl:5000/ias-core:prod
     links:
       - kafka
@@ -80,7 +80,7 @@ services:
     volumes:
       - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
       - ${CDB_PATH}:/usr/src/cdb
-    command: "iasRun -l j -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8000/core/ org.eso.ias.webserversender.WebServerSender WebServerAlarmsSenderID -jcdb /usr/src/cdb/ -t ALARM"
+    command: "iasRun -l j -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8000/core/ org.eso.ias.webserversender.WebServerSender WebServerAlarmsSenderID -jcdb /usr/src/cdb/ -t ALARM -i Array-AntennasToPads"
 
   webserver:
     container_name: ias-prod-webserver
@@ -88,6 +88,8 @@ services:
     command: ./runserver.sh
     volumes:
       - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
+      - ${CDB_PATH}/CDB:/usr/src/ias-webserver/CDB
+      - ${LOGS_PATH}:/usr/src/ias-webserver/logs
 
   visual-inspection-webserver:
     container_name: ias-prod-visual-inspection-webserver
