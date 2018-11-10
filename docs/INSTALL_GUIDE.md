@@ -3,7 +3,7 @@
 ## Preparation of the system
 In order to install in production the following steps must be followed before:
 
-### 0. Remove old versions of docker and doker-compose:
+### 1. Remove old versions of docker and doker-compose:
   ```
   sudo yum remove docker \
                     docker-client \
@@ -19,7 +19,7 @@ In order to install in production the following steps must be followed before:
   sudo rm /usr/local/bin/docker-compose
   ```
 
-### 1. Install docker and docker-compose:
+### 2. Install docker and docker-compose:
   1. Install docker:
   ```
   curl -fsSL get.docker.com -o get-docker.sh
@@ -49,7 +49,7 @@ In order to install in production the following steps must be followed before:
   docker-compose --version
   ```
 
-### 2. Install logrotate:
+### 3. Install logrotate:
   1. Install logrotate:
   ```
   sudo yum update && yum install logrotate
@@ -94,6 +94,18 @@ In order to install in production the following steps must be followed before:
   ```
   */1 * * * * /root/runlogrotate.sh
   ```
+
+### 4. Allow interaction between external processes and the kafka container
+In order to allow external processes to consume from and/or produce from the kafka container the following changes must be made:
+
+  * Config kafka to use the host IP address:
+    - Get the IP Address: `ifconfig`, depending on the net configuration the IP should be something like this: `192.168.1.1`
+    - Edit the `EXPOSED_KAFKA_SERVER` property in the `integration-tools/docker/production/.env` file, replacing the value `kafka` by the IP. (please DO NOT commit this change!)
+  * Stop zookeeper and kafka in the host system (if they are running): For example: `sudo service zookeeper stop`
+  * External processes can connect to kafka by using the `<IP>:9092`, where `<IP>`, is the IP obtained in the previous step
+  * If this does not work, there may be an issue regarding the firewall configuration in the host system.
+
+---
 
 ## Installation of the IAS
 There are 3 different options to install and run the system:
