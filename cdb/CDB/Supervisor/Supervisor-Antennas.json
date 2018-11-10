@@ -3,6 +3,8 @@
 	"id":"Supervisor-Antennas",
 	"hostName":"almaias.eso.org",
 	"dasusToDeploy":[
+		{"dasuId":"Dasu-Array-Global","templateId":null,"instance":null},
+
 		{"dasuId":"Dasu-Array-Ant","templateId":"template-antennas","instance":"1"},
 		{"dasuId":"Dasu-Array-Fire-Ant","templateId":"template-antennas","instance":"1"},
 		{"dasuId":"Dasu-Array-FireMalfunction-Ant","templateId":"template-antennas","instance":"1"},

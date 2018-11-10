@@ -637,6 +637,12 @@
     "docUrl": "http://www.alma.cl"
   },
   {
+    "id": "Array-Global-Alarm",
+    "shortDesc": "Global Alarm for antennas",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
     "id": "Array-UMStatus-Ant",
     "shortDesc": "UMStatus used as input value for alarms of the antenna",
     "iasType": "STRING",
