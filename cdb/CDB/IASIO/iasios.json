@@ -565,68 +565,26 @@
         "docUrl": "http://www.alma.cl"
    },
   {
-    "id": "WS-Meteo129-LastInspection",
-    "shortDesc": "Timestamp of the last inspection of the Meteo129",
+    "id": "WS-Inner-LastInspection",
+    "shortDesc": "Timestamp of the last inspection of the Inner WS",
     "iasType": "STRING",
     "docUrl": "http://www.alma.cl"
   },
   {
-    "id": "WS-Meteo131-LastInspection",
-    "shortDesc": "Timestamp of the last inspection of the Meteo131",
+    "id": "WS-W-LastInspection",
+    "shortDesc": "Timestamp of the last inspection of the W WS",
     "iasType": "STRING",
     "docUrl": "http://www.alma.cl"
   },
   {
-    "id": "WS-Meteo130-LastInspection",
-    "shortDesc": "Timestamp of the last inspection of the Meteo130",
+    "id": "WS-P-LastInspection",
+    "shortDesc": "Timestamp of the last inspection of the P WS",
     "iasType": "STRING",
     "docUrl": "http://www.alma.cl"
   },
   {
-    "id": "WS-Meteo201-LastInspection",
-    "shortDesc": "Timestamp of the last inspection of the Meteo201",
-    "iasType": "STRING",
-    "docUrl": "http://www.alma.cl"
-  },
-  {
-    "id": "WS-Meteo309-LastInspection",
-    "shortDesc": "Timestamp of the last inspection of the Meteo309",
-    "iasType": "STRING",
-    "docUrl": "http://www.alma.cl"
-  },
-  {
-    "id": "WS-Meteo410-LastInspection",
-    "shortDesc": "Timestamp of the last inspection of the Meteo410",
-    "iasType": "STRING",
-    "docUrl": "http://www.alma.cl"
-  },
-  {
-    "id": "WS-MeteoCentral-LastInspection",
-    "shortDesc": "Timestamp of the last inspection of the MeteoCentral",
-    "iasType": "STRING",
-    "docUrl": "http://www.alma.cl"
-  },
-  {
-    "id": "WS-MeteoItinerant-LastInspection",
-    "shortDesc": "Timestamp of the last inspection of the MeteoItinerant",
-    "iasType": "STRING",
-    "docUrl": "http://www.alma.cl"
-  },
-  {
-    "id": "WS-MeteoOSF-LastInspection",
-    "shortDesc": "Timestamp of the last inspection of the MeteoOSF",
-    "iasType": "STRING",
-    "docUrl": "http://www.alma.cl"
-  },
-  {
-    "id": "WS-MeteoTB1-LastInspection",
-    "shortDesc": "Timestamp of the last inspection of the MeteoTB1",
-    "iasType": "STRING",
-    "docUrl": "http://www.alma.cl"
-  },
-  {
-    "id": "WS-MeteoTB2-LastInspection",
-    "shortDesc": "Timestamp of the last inspection of the MeteoTB2",
+    "id": "WS-S-LastInspection",
+    "shortDesc": "Timestamp of the last inspection of the S WS",
     "iasType": "STRING",
     "docUrl": "http://www.alma.cl"
   },
