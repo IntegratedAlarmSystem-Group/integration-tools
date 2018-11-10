@@ -101,39 +101,20 @@ Additionally, this directory contains the following:
 * **.env** file containing environment variables used by the docker-compose files.
 
 ### Docker Compose options
-There are different docker-compose options tailored for different needs. In order to distinguish them, there is a pattern in the filename:
+There are different docker-compose options tailored for different needs:
 
-`dc-web-<image-type>-core-<image-type>`
+* **docker-compose-build.yml** builds the images of all the components from local clones of the repositories.
 
-Where `<image-type>` describes the origin of the image and can be any of the following:
-* **dev** pulls the image from the registry corresponding to the ___develop___ branch
-* **master** pulls the image from the registry corresponding to the ___master___ branch
-* **build** builds the image from a local clone of the repository
-* **mount** builds an image from a local clone of the repository but instead of copying the repository, it mounts it as a volume from the host system, and uses development servers (`runserver` for the webserver and `ng serve` for the display)
+* **docker-compose-mount.yml** builds the images of the ___ias___ (core) and ___ias-plugins___ (plugins) components from local clones of the repositories. For the ___ias-webserver___ and ___ias-display___ the containers mount the local repositories and run the development servers (`runserver` and `ng serve`, respectively)
 
-This way, `web-<image-type>` describes the type of image used for the "web" repositories (`ias-webserver` and `ias-display`)
-, and `core-<image-type>` describes the type of image used for the core and plugins repositories (`ias` and `ias-plugins`)
-
-### Summary:
-Summarizing we have the following combinations:
-
-* **dc-web-build-core-build.yml** builds the images of all the components from local clones of the repositories.
-
-* **dc-web-build-core-dev.yml** pulls the images of the ___ias___ (core) and ___ias-plugins___ (plugins) components from the registry corresponding to the ***develop*** branch. Builds the images of the ___ias-webserver___ and ___ias-display___ from local clones of their repositories
-
-* **dc-web-dev-core-master.yml** pulls the images of the ___ias___ (core) and ___ias-plugins___ (plugins) components from the registry corresponding to the ***master*** branch. Pulls the images of the ___ias-webserver___ and ___ias-display___ from the registry corresponding to the ***develop*** branch
-
-* **dc-web-mount-core-build.yml** builds the images of the ___ias___ (core) and ___ias-plugins___ (plugins) components from local clones of the repositories. For the ___ias-webserver___ and ___ias-display___ the containers mount the local repositories and run the development servers (`runserver` and `ng serve`, respectively)
-
-* **dc-web-mount-core-dev.yml** pulls the images of the ___ias___ (core) and ___ias-plugins___ (plugins) components from the registry corresponding to the ***develop*** branch. Builds the ___ias-webserver___ and ___ias-display___ by mounting the local repositories and run the development servers (`runserver` and `ng serve`, respectively)
-
-* **dc-web-mount-core-master.yml** pulls the images of the ___ias___ (core) and ___ias-plugins___ (plugins) components from the registry corresponding to the ***master*** branch. Builds the ___ias-webserver___ and ___ias-display___ by mounting the local repositories and run the development servers (`runserver` and `ng serve`, respectively)
+* **docker-compose-local-display.yml** builds the images of the ___ias___ (core) and ___ias-plugins___ (plugins) components from local clones of the repositories. For the ___ias-webserver___ the container mount the local repository and run the development server (`runserver`). The display must be run locally, without docker, executing 'ng serve'
 
 Additionally, this directory contains the following:
 
 * **.env** file containing environment variables used by the docker-compose files.
 * **node_modules** (ignored by git, see `.gitignore`) directory where the requirements of the display are installed when using the development containers defined in ___docker-compose-local-dev.yml___ or ___docker-compose-web-dev.yml___
-
+* **logs** directory to store the logs of the processes
+* **shared** directory used to exchange files between the processes. This is where the visual-inspection-webserver writes the last visual inspection, which is read by the visual-inspection-plugin
 ---
 
 ## Interaction between external processes and the kafka container
