@@ -3,13 +3,16 @@ version: "2"
 services:
   kafka:
     container_name: ias-kafka
-    image: alarmsystem/ias-kafka:latest
+    image: registry.inria.cl:5000/ias-core:dev
     ports:
       - "9092:9092"
       - "2181:2181"
     environment:
       - ADVERTISED_HOST=${EXPOSED_KAFKA_SERVER}
       - ADVERTISED_PORT=9092
+    volumes:
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./run_kafka.sh"
 
   alma-weather-plugin:
     container_name: ias-dev-alma-weather-plugin
@@ -76,8 +79,8 @@ services:
       - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
-      - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
-    command: "iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./run_ias.sh iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
 
   weather-supervisor:
     container_name: ias-dev-weather-supervisor
@@ -88,8 +91,8 @@ services:
       - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
-      - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
-    command: "iasSupervisor Supervisor-Weather -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./run_ias.sh iasSupervisor Supervisor-Weather -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   antennas-supervisor:
     container_name: ias-dev-antennas-supervisor
@@ -100,8 +103,8 @@ services:
       - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
-      - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
-    command: "iasSupervisor Supervisor-Antennas -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./run_ias.sh iasSupervisor Supervisor-Antennas -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   dummy-supervisor:
     container_name: ias-dev-dummy-supervisor
@@ -112,8 +115,8 @@ services:
       - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
-      - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
-    command: "iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./run_ias.sh iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   sender:
     container_name: ias-dev-sender
@@ -124,8 +127,8 @@ services:
       - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
-      - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
-    command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8000/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID -jcdb /usr/src/cdb/ -t ALARM -i Array-AntennasToPads"
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./run_ias.sh iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8000/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID -jcdb /usr/src/cdb/ -t ALARM -i Array-AntennasToPads"
 
   webserver:
     container_name: ias-dev-webserver
