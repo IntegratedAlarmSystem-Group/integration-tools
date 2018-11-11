@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+
+  ias:
+    container_name: ias-build
+    build: ${DOCKERFILE_PATH_CORE}
+    image: ias-build-core-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "ant build"
