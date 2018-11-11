@@ -7,7 +7,7 @@ services:
     build:
       context: ${DOCKERFILE_PATH_CORE}
       dockerfile: Dockerfile-no-build
-    image: ias-compile-core-image
+    image: ias-build-core-image
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
@@ -18,7 +18,7 @@ services:
     build:
       context: ${DOCKERFILE_PATH_CORE}
       dockerfile: Dockerfile-no-build
-    image: ias-compile-core-image
+    image: ias-build-core-image
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
@@ -29,7 +29,7 @@ services:
     build:
       context: ${DOCKERFILE_PATH_CORE}
       dockerfile: Dockerfile-no-build
-    image: ias-compile-core-image
+    image: ias-build-core-image
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
@@ -40,7 +40,7 @@ services:
     build:
       context: ${DOCKERFILE_PATH_CORE}
       dockerfile: Dockerfile-no-build
-    image: ias-compile-core-image
+    image: ias-build-core-image
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
@@ -51,7 +51,7 @@ services:
     build:
       context: ${DOCKERFILE_PATH_CORE}
       dockerfile: Dockerfile-no-build
-    image: ias-compile-core-image
+    image: ias-build-core-image
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
@@ -62,7 +62,7 @@ services:
     build:
       context: ${DOCKERFILE_PATH_CORE}
       dockerfile: Dockerfile-no-build
-    image: ias-compile-core-image
+    image: ias-build-core-image
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
@@ -73,7 +73,7 @@ services:
     build:
       context: ${DOCKERFILE_PATH_CORE}
       dockerfile: Dockerfile-no-build
-    image: ias-compile-core-image
+    image: ias-build-core-image
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
