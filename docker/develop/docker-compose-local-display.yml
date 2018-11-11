@@ -3,13 +3,19 @@ version: "2"
 services:
   kafka:
     container_name: ias-kafka
-    image: alarmsystem/ias-kafka:latest
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
     ports:
       - "9092:9092"
       - "2181:2181"
     environment:
       - ADVERTISED_HOST=${EXPOSED_KAFKA_SERVER}
       - ADVERTISED_PORT=9092
+    volumes:
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./run_kafka.sh"
 
   alma-weather-plugin:
     container_name: ias-build-alma-weather-plugin
@@ -96,7 +102,9 @@ services:
 
   converter:
     container_name: ias-build-converter
-    build: ${DOCKERFILE_PATH_CORE}
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
     image: ias-build-core-image
     links:
       - kafka
@@ -104,12 +112,14 @@ services:
       - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
-      - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
-    command: "iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./run_ias.sh iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
 
   weather-supervisor:
     container_name: ias-build-weather-supervisor
-    build: ${DOCKERFILE_PATH_CORE}
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
     image: ias-build-core-image
     links:
       - kafka
@@ -117,12 +127,14 @@ services:
       - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
-      - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
-    command: "iasSupervisor Supervisor-Weather -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./run_ias.sh iasSupervisor Supervisor-Weather -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   antennas-supervisor:
     container_name: ias-build-antennas-supervisor
-    build: ${DOCKERFILE_PATH_CORE}
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
     image: ias-build-core-image
     links:
       - kafka
@@ -130,12 +142,14 @@ services:
       - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
-      - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
-    command: "iasSupervisor Supervisor-Antennas -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./run_ias.sh iasSupervisor Supervisor-Antennas -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   dummy-supervisor:
     container_name: ias-build-dummy-supervisor
-    build: ${DOCKERFILE_PATH_CORE}
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
     image: ias-build-core-image
     links:
       - kafka
@@ -143,12 +157,14 @@ services:
       - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
-      - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
-    command: "iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./run_ias.sh iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   sender:
     container_name: ias-build-sender
-    build: ${DOCKERFILE_PATH_CORE}
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
     image: ias-build-core-image
     links:
       - kafka
@@ -156,8 +172,23 @@ services:
       - kafka
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
-      - ${LOGS_PATH}:/usr/src/IntegratedAlarmSystemRoot/logs
-    command: "iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8000/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID -jcdb /usr/src/cdb/ -t ALARM -i Array-AntennasToPads"
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./run_ias.sh iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8000/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID -jcdb /usr/src/cdb/ -t ALARM -i Array-AntennasToPads"
+
+  ltdb-connector:
+    container_name: ias-build-ltdb-connector
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./run_ias.sh iasLTDBConnector"
 
   webserver:
     tty: true

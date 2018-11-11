@@ -6,7 +6,7 @@ services:
     build:
       context: ${DOCKERFILE_PATH_CORE}
       dockerfile: Dockerfile-no-build
-    image: ias-compile-core-image
+    image: ias-build-core-image
     ports:
       - "9092:9092"
       - "2181:2181"
@@ -105,7 +105,7 @@ services:
     build:
       context: ${DOCKERFILE_PATH_CORE}
       dockerfile: Dockerfile-no-build
-    image: ias-compile-core-image
+    image: ias-build-core-image
     links:
       - kafka
     depends_on:
@@ -120,7 +120,7 @@ services:
     build:
       context: ${DOCKERFILE_PATH_CORE}
       dockerfile: Dockerfile-no-build
-    image: ias-compile-core-image
+    image: ias-build-core-image
     links:
       - kafka
     depends_on:
@@ -135,7 +135,7 @@ services:
     build:
       context: ${DOCKERFILE_PATH_CORE}
       dockerfile: Dockerfile-no-build
-    image: ias-compile-core-image
+    image: ias-build-core-image
     links:
       - kafka
     depends_on:
@@ -150,7 +150,7 @@ services:
     build:
       context: ${DOCKERFILE_PATH_CORE}
       dockerfile: Dockerfile-no-build
-    image: ias-compile-core-image
+    image: ias-build-core-image
     links:
       - kafka
     depends_on:
@@ -165,7 +165,7 @@ services:
     build:
       context: ${DOCKERFILE_PATH_CORE}
       dockerfile: Dockerfile-no-build
-    image: ias-compile-core-image
+    image: ias-build-core-image
     links:
       - kafka
     depends_on:
@@ -180,7 +180,7 @@ services:
     build:
       context: ${DOCKERFILE_PATH_CORE}
       dockerfile: Dockerfile-no-build
-    image: ias-compile-core-image
+    image: ias-build-core-image
     links:
       - kafka
     depends_on:
