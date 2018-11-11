@@ -122,3 +122,8 @@ private_files/**
 # Shared files
 **/shared/*.json
 !**/shared/.gitinclude
+
+# IAS_ROOT
+**/IAS_ROOT/**
+!**/IAS_ROOT/.gitinclude
+!**/IAS_ROOT/logs/.gitinclude
