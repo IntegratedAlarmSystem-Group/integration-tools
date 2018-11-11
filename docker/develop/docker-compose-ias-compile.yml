@@ -4,12 +4,10 @@ services:
 
   ias:
     container_name: ias-build
-    build: ${DOCKERFILE_PATH_CORE}
-    image: ias-build-core-image
-    links:
-      - kafka
-    depends_on:
-      - kafka
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-compile-core-image
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
