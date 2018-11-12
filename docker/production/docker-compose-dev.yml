@@ -140,6 +140,7 @@ services:
     environment:
       - ADVERTISED_HOST=${KAFKA_SERVER}
       - ADVERTISED_PORT=9092
+      - CASSANDRA_SERVER=${CASSANDRA_SERVER}
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
