@@ -145,10 +145,28 @@ services:
       - kafka
     depends_on:
       - kafka
+    environment:
+      - ADVERTISED_HOST=${KAFKA_SERVER}
+      - ADVERTISED_PORT=9092
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
-    command: "./run_ias.sh iasLTDBConnector"
+    command: "./run_ltdb_connector.sh"
+
+  mail-sender:
+    container_name: ias-build-mail-sender
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./run_ias.sh iasMailSender MailSenderID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   webserver:
     container_name: ias-build-webserver
