@@ -58,7 +58,7 @@ services:
       - kafka
     depends_on:
       - kafka
-    command: "${KAFKA_SERVER} 9092 dummy"
+    command: "dummy ${KAFKA_SERVER} 9092"
 
   dummy-plugin-21:
     container_name: ias-build-dummy-plugin-21
@@ -72,7 +72,7 @@ services:
       - kafka
     depends_on:
       - kafka
-    command: "${KAFKA_SERVER} 9092 dummy-21"
+    command: "dummy-21 ${KAFKA_SERVER} 9092"
 
   dummy-plugin-22:
     container_name: ias-build-dummy-plugin-22
@@ -86,7 +86,7 @@ services:
       - kafka
     depends_on:
       - kafka
-    command: "${KAFKA_SERVER} 9092 dummy-22"
+    command: "dummy-22 ${KAFKA_SERVER} 9092"
 
   mock-kafka-publisher:
     container_name: ias-build-mock-kafka-publisher
