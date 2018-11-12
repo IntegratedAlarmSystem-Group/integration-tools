@@ -6,15 +6,15 @@ In order to install in production the following steps must be followed before:
 ### 1. Remove old versions of docker and doker-compose:
   ```
   sudo yum remove docker \
-                    docker-client \
-                    docker-client-latest \
-                    docker-common \
-                    docker-latest \
-                    docker-latest-logrotate \
-                    docker-logrotate \
-                    docker-selinux \
-                    docker-engine-selinux \
-                    docker-engine
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-selinux \
+                  docker-engine-selinux \
+                  docker-engine
 
   sudo rm /usr/local/bin/docker-compose
   ```
@@ -152,18 +152,23 @@ This will pull the "develop" docker-images for the components of the IAS from a 
   ```
   cd integration-tools/docker/production
 
-  docker-compose -f docker-compose-develop up -d
+  docker-compose -f docker-compose-develop.yml up -d
   ```
 
   If it fails do the following until it works :)
   ```
-  docker-compose -f docker-compose-develop down
+  docker-compose -f docker-compose-develop.yml down
 
-  docker-compose -f docker-compose-develop up -d
+  docker-compose -f docker-compose-develop.yml up -d
   ```
 
 ### Build from local repositories:
-This will build the docker-images from local clones of the repositories. It requires that all the repositories are cloned in the same parent directory than integration tools:
+This will build the docker-images from local clones of the repositories. It requires that all the repositories are cloned in the same parent directory than integration tools. In order to facilitate compilation of separate components of the IAS-Core, there are 2 docker-compose files that need to be used for this:
+
+  * `docker-compose-ias-compile.yml`: contains services used to compile the IAS-Core and create a local IAS_ROOT in the `IAS_ROOT` directory.
+  * `docker-compose-ias-run.yml`: contains services used to run the different components of the IAS. For the components of the IAS-Core, the `IAS_ROOT` folder is mounted in the docker container.
+
+In order to proceed with this follow these steps:
 
   1. Clone repositories in the desired directory:
   ```
@@ -184,16 +189,35 @@ This will build the docker-images from local clones of the repositories. It requ
 
   Credentials will be needed for ias-private-files
 
-  2. Run docker-compose:
+  3. Compile the IAS-Core with `docker-compose-ias-compile.yml`:
   ```
   cd integration-tools/docker/production
 
-  docker-compose -f docker-compose-develop up -d
+  docker-compose -f docker-compose-ias-compile.yml build ias
+
+  docker-compose -f docker-compose-ias-compile.yml up ias
+
+  docker-compose -f docker-compose-ias-compile.yml down
   ```
 
-  If it fails do the following until it works :)
+  4. Build docker images of other IAS-Components with `docker-compose-ias-run.yml`:
   ```
-  docker-compose -f docker-compose-develop down
+  docker-compose -f docker-compose-ias-run.yml build
+  ```
 
-  docker-compose -f docker-compose-develop up -d
+  5. Run the IAS with `docker-compose-ias-run.yml`:
   ```
+  docker-compose -f docker-compose-ias-run.yml up -d
+  ```
+
+In order to stop the system run:
+```
+docker-compose -f docker-compose-ias-run.yml down
+```
+
+If it fails do the following until it works :)
+```
+docker-compose -f docker-compose-ias-run down
+
+docker-compose -f docker-compose-ias-run up -d
+```
