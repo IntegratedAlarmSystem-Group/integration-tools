@@ -2,7 +2,7 @@
       "dasuID": "Dasu-WS-S-WindSpeed30",
       "id": "Asce-WS-S-WindSpeed30-Inhibitor",
       "inputIDs": [
-        "WS-S-WindSpeed30-Threshold",
+        "WS-S-WindSpeed30-VisualInspection",
         "Array-AntennasToPads"
       ],
       "outputID": "WS-S-WindSpeed30",

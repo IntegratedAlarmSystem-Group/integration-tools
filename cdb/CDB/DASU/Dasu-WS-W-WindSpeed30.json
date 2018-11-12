@@ -2,7 +2,8 @@
         "id": "Dasu-WS-W-WindSpeed30",
         "asceIDs": [
             "Asce-WS-W-WindSpeed30-Inhibitor",
-            "Asce-WS-W-WindSpeed30-Threshold"
+            "Asce-WS-W-WindSpeed30-Threshold",
+            "Asce-WS-W-WindSpeed30-VisualInspection"
         ],
         "outputId": "WS-W-WindSpeed30",
         "logLevel": "WARN"
