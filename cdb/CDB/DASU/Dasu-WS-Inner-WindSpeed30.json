@@ -2,7 +2,8 @@
         "id": "Dasu-WS-Inner-WindSpeed30",
         "asceIDs": [
             "Asce-WS-Inner-WindSpeed30-Inhibitor",
-            "Asce-WS-Inner-WindSpeed30-Threshold"
+            "Asce-WS-Inner-WindSpeed30-Threshold",
+            "Asce-WS-Inner-WindSpeed30-VisualInspection"
         ],
         "outputId": "WS-Inner-WindSpeed30"
     }

@@ -6,5 +6,6 @@
 	{"className" : "org.eso.ias.tranfer.ThresholdWithBackupsAndDelay","implLang" : "SCALA"},
 	{"className" : "org.eso.ias.tranfer.AntPadInhibitor","implLang" : "SCALA"},
 	{"className" : "org.eso.ias.tranfer.utlitymodule.UMFireTF","implLang" : "SCALA"},
-	{"className" : "org.eso.ias.tranfer.utlitymodule.UMAlarmByBit","implLang" : "SCALA"}
+	{"className" : "org.eso.ias.tranfer.utlitymodule.UMAlarmByBit","implLang" : "SCALA"},
+	{"className" : "org.eso.ias.tranfer.VisualInspectionAlarm","implLang" : "SCALA"}
 ]

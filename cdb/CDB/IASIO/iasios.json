@@ -312,7 +312,12 @@
        "iasType": "ALARM",
        "docUrl": "http://www.alma.cl"
   },
-
+{
+       "id": "WS-Inner-WindSpeed30-VisualInspection",
+       "shortDesc": "Visual inspection pending",
+       "iasType": "ALARM",
+       "docUrl": "http://www.alma.cl"
+  },
 {
         "id": "WS-W-Humidity",
         "shortDesc": "Humidity alarm of the W WS",
@@ -379,6 +384,12 @@
   {
        "id": " WS-W-WindSpeed30-Threshold",
        "shortDesc": "W WindSpeed30 Threshold",
+       "iasType": "ALARM",
+       "docUrl": "http://www.alma.cl"
+  },
+{
+       "id": "WS-W-WindSpeed30-VisualInspection",
+       "shortDesc": "Visual inspection pending",
        "iasType": "ALARM",
        "docUrl": "http://www.alma.cl"
   },
@@ -452,7 +463,12 @@
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl"
    },
-
+{
+       "id": "WS-P-WindSpeed30-VisualInspection",
+       "shortDesc": "Visual inspection pending",
+       "iasType": "ALARM",
+       "docUrl": "http://www.alma.cl"
+  },
 {
         "id": "WS-S-Humidity",
         "shortDesc": "Humidity alarm of the S WS",
@@ -522,6 +538,12 @@
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl"
 },
+{
+       "id": "WS-S-WindSpeed30-VisualInspection",
+       "shortDesc": "Visual inspection pending",
+       "iasType": "ALARM",
+       "docUrl": "http://www.alma.cl"
+  },
 {
        "id": "WS-Inner",
        "shortDesc": "Global alarm of the Inner WS",
