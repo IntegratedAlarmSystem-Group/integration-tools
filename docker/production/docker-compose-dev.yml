@@ -12,7 +12,7 @@ services:
       - ADVERTISED_PORT=9092
     volumes:
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
-    command: "./run_kafka.sh"
+    command: "./docker_run_kafka.sh"
 
   alma-weather-plugin:
     container_name: ias-dev-alma-weather-plugin
@@ -80,7 +80,7 @@ services:
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
-    command: "./run_ias.sh iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
+    command: "./docker_run_ias.sh iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
 
   weather-supervisor:
     container_name: ias-dev-weather-supervisor
@@ -92,7 +92,7 @@ services:
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
-    command: "./run_ias.sh iasSupervisor Supervisor-Weather -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+    command: "./docker_run_ias.sh iasSupervisor Supervisor-Weather -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   antennas-supervisor:
     container_name: ias-dev-antennas-supervisor
@@ -104,7 +104,7 @@ services:
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
-    command: "./run_ias.sh iasSupervisor Supervisor-Antennas -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+    command: "./docker_run_ias.sh iasSupervisor Supervisor-Antennas -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   dummy-supervisor:
     container_name: ias-dev-dummy-supervisor
@@ -116,7 +116,7 @@ services:
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
-    command: "./run_ias.sh iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+    command: "./docker_run_ias.sh iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   sender:
     container_name: ias-dev-sender
@@ -128,7 +128,7 @@ services:
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
-    command: "./run_ias.sh iasWebServerSender WebServerSenderID -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8000/core/ -jcdb /usr/src/cdb/ -t ALARM -i Array-AntennasToPads"
+    command: "./docker_run_ias.sh iasWebServerSender WebServerSenderID -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8000/core/ -jcdb /usr/src/cdb/ -t ALARM -i Array-AntennasToPads"
 
   ltdb-connector:
     container_name: ias-dev-ltdb-connector
@@ -144,7 +144,7 @@ services:
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
-    command: "./run_ltdb_connector.sh"
+    command: "./docker_run_ltdb_connector.sh"
 
   mail-sender:
     container_name: ias-dev-mail-sender
@@ -156,7 +156,7 @@ services:
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
-    command: "./run_ias.sh iasMailSender MailSenderID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+    command: "./docker_run_ias.sh iasMailSender MailSenderID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   webserver:
     container_name: ias-dev-webserver
