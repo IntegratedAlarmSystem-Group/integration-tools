@@ -185,10 +185,13 @@ services:
       - kafka
     depends_on:
       - kafka
+    environment:
+      - ADVERTISED_HOST=${KAFKA_SERVER}
+      - ADVERTISED_PORT=9092
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
-    command: "./run_ias.sh iasLTDBConnector"
+    command: "./run_ltdb_connector.sh"
 
   webserver:
     container_name: ias-build-webserver
