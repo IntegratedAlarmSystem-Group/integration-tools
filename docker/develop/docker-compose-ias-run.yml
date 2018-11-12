@@ -173,7 +173,7 @@ services:
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
-    command: "./run_ias.sh iasRun -l s -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8000/core/ org.eso.ias.webserversender.WebServerSender WebServerSenderID -jcdb /usr/src/cdb/ -t ALARM -i Array-AntennasToPads"
+    command: "./run_ias.sh iasWebServerSender WebServerSenderID -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8000/core/ -jcdb /usr/src/cdb/ -t ALARM -i Array-AntennasToPads"
 
   # ltdb-connector:
   #   container_name: ias-build-ltdb-connector
