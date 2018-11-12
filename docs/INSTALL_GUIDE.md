@@ -189,23 +189,26 @@ In order to proceed with this follow these steps:
 
   Credentials will be needed for ias-private-files
 
-  3. Compile the IAS-Core with `docker-compose-ias-compile.yml`:
+  3. Build the IAS-Core docker image using `docker-compose-ias-compile.yml`:
   ```
   cd integration-tools/docker/production
 
   docker-compose -f docker-compose-ias-compile.yml build ias
+  ```
 
+  4. Compile the IAS-Core into the IAS_ROOT directory with `docker-compose-ias-compile.yml`:
+  ```
   docker-compose -f docker-compose-ias-compile.yml up ias
 
   docker-compose -f docker-compose-ias-compile.yml down
   ```
 
-  4. Build docker images of other IAS-Components with `docker-compose-ias-run.yml`:
+  5. Build docker images of other IAS-Components with `docker-compose-ias-run.yml`:
   ```
   docker-compose -f docker-compose-ias-run.yml build
   ```
 
-  5. Run the IAS with `docker-compose-ias-run.yml`:
+  6. Run the IAS with `docker-compose-ias-run.yml`:
   ```
   docker-compose -f docker-compose-ias-run.yml up -d
   ```
@@ -215,7 +218,7 @@ In order to stop the system run:
 docker-compose -f docker-compose-ias-run.yml down
 ```
 
-If it fails do the following until it works :)
+If the deployment fails do the following until it works :)
 ```
 docker-compose -f docker-compose-ias-run down
 
