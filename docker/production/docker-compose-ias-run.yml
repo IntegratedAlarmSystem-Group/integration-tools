@@ -58,7 +58,7 @@ services:
       - kafka
     depends_on:
       - kafka
-    command: "${KAFKA_SERVER} 9092 dummy"
+    command: "dummy ${KAFKA_SERVER} 9092"
 
   converter:
     container_name: ias-build-converter
