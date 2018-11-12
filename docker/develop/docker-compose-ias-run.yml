@@ -58,7 +58,7 @@ services:
       - kafka
     depends_on:
       - kafka
-    command: "${KAFKA_SERVER} 9092 dummy"
+    command: "dummy ${KAFKA_SERVER} 9092"
 
   dummy-plugin-21:
     container_name: ias-build-dummy-plugin-21
@@ -72,7 +72,7 @@ services:
       - kafka
     depends_on:
       - kafka
-    command: "${KAFKA_SERVER} 9092 dummy-21"
+    command: "dummy-21 ${KAFKA_SERVER} 9092"
 
   dummy-plugin-22:
     container_name: ias-build-dummy-plugin-22
@@ -86,7 +86,7 @@ services:
       - kafka
     depends_on:
       - kafka
-    command: "${KAFKA_SERVER} 9092 dummy-22"
+    command: "dummy-22 ${KAFKA_SERVER} 9092"
 
   mock-kafka-publisher:
     container_name: ias-build-mock-kafka-publisher
@@ -185,10 +185,13 @@ services:
       - kafka
     depends_on:
       - kafka
+    environment:
+      - ADVERTISED_HOST=${KAFKA_SERVER}
+      - ADVERTISED_PORT=9092
     volumes:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
-    command: "./run_ias.sh iasLTDBConnector"
+    command: "./run_ltdb_connector.sh"
 
   webserver:
     container_name: ias-build-webserver
