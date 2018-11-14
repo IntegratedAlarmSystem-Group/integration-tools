@@ -1,3 +1,7 @@
 [
-	{"id":"template-antennas", "min":"1", "max":"66"}
+	{"id":"template-antennas", "min":"1", "max":"66"},
+	{"id":"DV", "min":"1", "max":"25"},
+	{"id":"DA", "min":"41", "max":"65"},
+	{"id":"PM", "min":"1", "max":"4"},
+	{"id":"CM", "min":"1", "max":"12"}
 ]
