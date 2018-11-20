@@ -52,12 +52,12 @@ In order to proceed with this follow these steps:
   ```
   cd integration-tools/docker/production
 
-  docker-compose -f docker-compose-ias-compile.yml build ias
+  docker-compose -f docker-compose-ias-compile.yml build ias-compile
   ```
 
   3. Compile the IAS-Core into the IAS_ROOT directory with `docker-compose-ias-compile.yml`:
   ```
-  docker-compose -f docker-compose-ias-compile.yml up ias
+  docker-compose -f docker-compose-ias-compile.yml up ias-compile
 
   docker-compose -f docker-compose-ias-compile.yml down
   ```
@@ -89,12 +89,12 @@ Let's say we want to recompile a Supervisor. For this, it is not necessary to re
 
   1. Re-build the IAS-Core docker image: this will copy the updated source code into the docker-image for compilation.
   ```
-  docker-compose -f docker-compose-ias-compile.yml build ias
+  docker-compose -f docker-compose-ias-compile.yml build ias-compile
   ```
 
   2. Re-compile the Converter:
   ```
-  docker-compose -f docker-compose-ias-compile.yml up converter
+  docker-compose -f docker-compose-ias-compile.yml up converter-compile
   docker-compose -f docker-compose-ias-compile.yml down
   ```
 
