@@ -1,0 +1,20 @@
+{
+      "dasuID": "Dasu-WS-P-WindSpeed15",
+      "id": "Asce-WS-P-WindSpeed15-Inhibitor",
+      "inputIDs": [
+        "WS-P-WindSpeed15-Threshold",
+        "Array-AntennasToPads"
+      ],
+      "outputID": "WS-P-WindSpeed15",
+      "transferFunctionID":"org.eso.ias.tranfer.AntPadInhibitor",
+      "props": [
+        {
+          "name": "org.eso.ias.antpadinhibitor.padnameregexp",
+          "value": "P.*"
+        },
+        {
+          "name": "org.eso.ias.antpadinhibitor.anttype",
+          "value": "PM"
+        }
+      ]
+}

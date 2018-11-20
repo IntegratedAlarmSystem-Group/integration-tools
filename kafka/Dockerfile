@@ -7,10 +7,10 @@ RUN yum update -y && \
   -y
 
 # Install Kafka
-RUN wget http://www-us.apache.org/dist/kafka/1.1.0/kafka_2.12-1.1.0.tgz && \
-  tar -zxvf kafka_2.12-1.1.0.tgz && \
-  mv kafka_2.12-1.1.0 /opt/
-WORKDIR /opt/kafka_2.12-1.1.0
+RUN wget http://www-us.apache.org/dist/kafka/2.0.0/kafka_2.12-2.0.0.tgz && \
+  tar -zxvf kafka_2.12-2.0.0.tgz && \
+  mv kafka_2.12-2.0.0 /opt/
+WORKDIR /opt/kafka_2.12-2.0.0
 
 # Set IAS Kafka configuration
 RUN wget -O config/server.properties https://raw.githubusercontent.com/IntegratedAlarmSystem-Group/ias/develop/Tools/config/kafka-server.properties && \

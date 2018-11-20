@@ -1,0 +1,16 @@
+{
+      "dasuID": "Dasu-WS-P-Temperature",
+      "id": "Asce-WS-P-Temperature-Inhibitor",
+      "inputIDs": [
+        "WS-P-Temperature-Threshold",
+        "Array-AntennasToPads"
+      ],
+      "outputID": "WS-P-Temperature",
+      "transferFunctionID":"org.eso.ias.tranfer.AntPadInhibitor",
+      "props": [
+        {
+          "name": "org.eso.ias.antpadinhibitor.padnameregexp",
+          "value": "P.*"
+        }
+      ]
+}

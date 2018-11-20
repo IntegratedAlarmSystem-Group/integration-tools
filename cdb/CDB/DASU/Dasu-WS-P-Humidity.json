@@ -1,9 +1,8 @@
 {
         "id": "Dasu-WS-P-Humidity",
         "asceIDs": [
-            "Asce-WS-P-Selector-Humidity",
-            "Asce-WS-P-Threshold-Humidity"
+            "Asce-WS-P-Humidity-Inhibitor",
+            "Asce-WS-P-Humidity-Threshold"
         ],
-        "outputId": "WS-P-Humidity",
-        "logLevel": "FATAL"
+        "outputId": "WS-P-Humidity"
     }

@@ -2,12 +2,10 @@
       "dasuID": "Dasu-WS-Global-Humidity",
       "id": "Asce-WS-Global-Humidity",
       "inputIDs": [
-	"WS-ACA-Humidity",
-	"WS-TP-Humidity",
-	"WS-Inner-Humidity",
-	"WS-W-Humidity",
-	"WS-P-Humidity",
-	"WS-S-Humidity"
+	       "WS-Inner-Humidity",
+         "WS-W-Humidity",
+         "WS-P-Humidity",
+         "WS-S-Humidity"
       ],
       "outputID": "WS-Humidity",
       "transferFunctionID":"org.eso.ias.asce.transfer.impls.MultiplicityTF",

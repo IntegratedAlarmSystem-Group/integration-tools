@@ -3,8 +3,8 @@ import json
 
 BASE_PATH = os.path.dirname(os.path.realpath(__file__))
 
-IAS_PATH = os.path.join(BASE_PATH, 'CDB/ias.json')
-OUTPUT_FIXTURE__PATH = os.path.join(BASE_PATH, 'CDB/cdb.ias.json')
+IAS_PATH = os.path.join(BASE_PATH, '../CDB/ias.json')
+OUTPUT_FIXTURE__PATH = os.path.join(BASE_PATH, '../CDB/cdb.ias.json')
 
 
 def create_ias_fixture(json_input):
@@ -32,7 +32,7 @@ def create_ias_fixture(json_input):
         ias_dict['fields']['properties'].append(prop_id)
         prop_id += 1
 
-    fixtures.append(prop_dict)
+        fixtures.append(prop_dict)
     fixtures.append(ias_dict)
     ias_id += 1
 
@@ -49,7 +49,7 @@ def main():
         fixture = create_ias_fixture(ias_input)
 
         with open(OUTPUT_FIXTURE__PATH, 'w') as f:
-            json.dump(fixture, f)
+            json.dump(fixture, f, indent=2)
 
     else:
         print("File 'ias.json' does not exist.")

@@ -1,0 +1,16 @@
+{
+      "dasuID": "Dasu-WS--Alarmdummy-2",
+      "id": "Asce-WS--Alarmdummy-2",
+      "inputIDs": [
+        "Alarmdummy-21",
+        "Alarmdummy-22"
+      ],
+      "outputID": "Alarmdummy-2",
+      "transferFunctionID":"org.eso.ias.asce.transfer.impls.MultiplicityTF",
+       "props": [
+         {
+           "name": "org.eso.ias.tf.mutliplicity.threshold",
+           "value": "1"
+         }
+      ]
+    }

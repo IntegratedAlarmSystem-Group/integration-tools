@@ -52,6 +52,7 @@ coverage.xml
 
 # Django stuff:
 *.log
+*.log.*
 local_settings.py
 
 # Flask stuff:
@@ -112,4 +113,17 @@ build/
 
 docker/develop/node_modules/
 docker/production/logs/**
-!docker/production/logs/.include_me
+!docker/production/logs/.gitinclude
+
+# Private files
+private_files/**
+!private_files/.gitinclude
+
+# Shared files
+**/shared/*.json
+!**/shared/.gitinclude
+
+# IAS_ROOT
+**/IAS_ROOT/**
+!**/IAS_ROOT/.gitinclude
+!**/IAS_ROOT/logs/.gitinclude

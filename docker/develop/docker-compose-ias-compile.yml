@@ -1,0 +1,97 @@
+version: "2"
+
+services:
+
+  ias-compile:
+    container_name: ias-compile
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    networks:
+      - compile
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./compile_component.sh"
+
+  converter-compile:
+    container_name: ias-compile-converter
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    networks:
+      - compile
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./compile_component.sh Converter"
+
+  supervisor-compile:
+    container_name: ias-compile-supervisor
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    networks:
+      - compile
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./compile_component.sh Supervisor"
+
+  dasu-compile:
+    container_name: ias-compile-dasu
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    networks:
+      - compile
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./compile_component.sh DistributedUnit"
+
+  asce-compile:
+    container_name: ias-compile-asce
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    networks:
+      - compile
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./compile_component.sh CompElement"
+
+  sender-compile:
+    container_name: ias-compile-sender
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    networks:
+      - compile
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./compile_component.sh WebServerSender"
+
+  tf-compile:
+    container_name: ias-compile-tf
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    networks:
+      - compile
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./compile_component.sh TransferFunctions"
+
+networks:
+  compile:

@@ -38,7 +38,10 @@ if [ ! -d $IAS_DIR ]; then
 fi
 
 IAS_ROOT="$(pwd)/../../ias/$IAS_DIR"
+IAS_LOGS_FOLDER="$IAS_ROOT/logs"
 export IAS_ROOT
+export IAS_LOGS_FOLDER
 echo "IAS_ROOT: $IAS_ROOT, set successfully"
+echo "IAS_LOGS_FOLDER: $IAS_LOGS_FOLDER, set successfully"
 
 source ../../ias/Tools/config/ias-bash-profile.sh

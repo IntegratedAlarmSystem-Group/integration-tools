@@ -1,0 +1,17 @@
+{
+      "dasuID": "Dasu-WS-Inner-WindSpeed",
+      "id": "Asce-WS-Inner-WindSpeed",
+      "inputIDs": [
+      	"WS-Inner-WindSpeed15",
+      	"WS-Inner-WindSpeed20",
+      	"WS-Inner-WindSpeed30"
+      ],
+      "outputID": "WS-Inner-WindSpeed",
+      "transferFunctionID":"org.eso.ias.asce.transfer.impls.MultiplicityTF",
+       "props": [
+        {
+          "name": "org.eso.ias.tf.mutliplicity.threshold",
+          "value": "1"
+        }
+      ]
+    }

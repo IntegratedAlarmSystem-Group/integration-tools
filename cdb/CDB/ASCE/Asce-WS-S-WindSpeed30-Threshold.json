@@ -1,0 +1,24 @@
+{
+      "dasuID": "Dasu-WS-S-WindSpeed30",
+      "id": "Asce-WS-S-WindSpeed30-Threshold",
+      "inputIDs": [
+        "WS-Meteo309-WindSpeed-Value",
+        "WS-Meteo131-WindSpeed-Value"
+      ],
+      "outputID": "WS-S-WindSpeed30-Threshold",
+      "transferFunctionID":"org.eso.ias.tranfer.ThresholdWithBackupsAndDelay",
+       "props": [
+        {
+          "name": "org.eso.ias.thresholdbackup.minmaxthreshold.highOn",
+          "value": "30"
+        },
+        {
+          "name": "org.eso.ias.thresholdbackup.minmaxthreshold.highOff",
+          "value": "29"
+        },
+        {
+          "name": "org.eso.ias.thresholdbackup.selector.mainInputId",
+          "value": "WS-Meteo309-WindSpeed-Value"
+        }
+      ]
+    }

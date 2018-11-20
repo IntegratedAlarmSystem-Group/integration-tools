@@ -1,13 +1,7 @@
 {
         "id": "Dasu-WS-W-WindSpeed",
         "asceIDs": [
-            "Asce-WS-W-Selector-WindSpeed",
-            "Asce-WS-W-Threshold20-WindSpeed",
-            "Asce-WS-W-Threshold15-WindSpeed",
-            "Asce-WS-W-Delay20-WindSpeed",
-            "Asce-WS-W-Delay15-WindSpeed",
-            "Asce-WS-W-Multi-WindSpeed"
+            "Asce-WS-W-WindSpeed"
         ],
-        "outputId": "WS-W-WindSpeed",
-        "logLevel": "FATAL"
+        "outputId": "WS-W-WindSpeed"
     }

@@ -1,0 +1,14 @@
+{
+	"dasuID":"Dasu-Array-UpsFail-Ant",
+	"outputID":"Array-UpsFail-Ant",
+	"id":"Asce-Array-UpsFail-Ant",
+	"transferFunctionID":"org.eso.ias.tranfer.utlitymodule.UMAlarmByBit",
+	"props": [
+		{
+			"name": "org.eso.ias.transfer.utilitymodule.bitnumber",
+			"value": "3"
+		}
+	],
+	"inputIDs":["Array-UMStatus-Ant"],
+	"templateId":"template-antennas"
+}

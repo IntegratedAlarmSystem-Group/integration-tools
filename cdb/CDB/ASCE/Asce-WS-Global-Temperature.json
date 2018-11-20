@@ -2,12 +2,10 @@
       "dasuID": "Dasu-WS-Global-Temperature",
       "id": "Asce-WS-Global-Temperature",
       "inputIDs": [
-        "WS-ACA-Temperature",
-        "WS-TP-Temperature",
-        "WS-Inner-Temperature",
-        "WS-W-Temperature",
-        "WS-P-Temperature",
-        "WS-S-Temperature"
+	       "WS-Inner-Temperature",
+         "WS-W-Temperature",
+         "WS-P-Temperature",
+         "WS-S-Temperature"
       ],
       "outputID": "WS-Temperature",
       "transferFunctionID":"org.eso.ias.asce.transfer.impls.MultiplicityTF",
