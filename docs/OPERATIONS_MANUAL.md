@@ -83,28 +83,42 @@ Usually, a set of buttons for each action will be displayed aside the status of 
 
 The operators are requested to use the *ack* action each time an alarm is active.
 
-To acknowledge an alarm, the operator can click on the *ack* button to open an *acknowledgement form* to be submitted, in order to keep a log.
+![Actions](./images/selected/alarm_ack_action.png)
+
+To acknowledge an alarm, the operator can click on the *ack* button to open an *acknowledgement form* to be submitted, in order to keep a log. Cleared alarms will not show the acknowledgement as an available action.
 
 ![Ack Form](./images/selected/ack_form.png)
 
-This form must contain: the decision taken in response to the problem and also an identifier for the member of the team of operators which acknowledge the alarm.
-After completing the form, the *Acknowledge* button will be available to perform the *ack* action.
-
-If it applies, the operator can also select a list of dependencies to do the acknowledgment for an alarm, in order to avoid the acknowledgment action without noticing the root cause of the activation.
+This form must contain: the decision taken in response to the problem, an identifier for the member of the team of operators which acknowledge the alarm, and a selection of alarms to be acknowledged. This selection is related to the case of the existence of dependencies for the selected alarm, and is intended to avoid the acknowledgment action without noticing a root cause of the activation.
 
 ![Ack Tree View](./images/selected/ack_tree_view.png)
 
-We should notice that an active alarm will retain its active status even if it is acknowledged, until the problem is solved.
+After completing the form, the *Acknowledge* button will be available to perform the *ack* action.
 
-[Add photo of ack state]
+![Ack Form](./images/selected/form_ack_enabled.png)
 
-When an alarm changes its status to a new one with a *set* value, it can be acknowledged just one time. Once an alarm is acknowledged, the related action button will be disabled.
+After perform the acknowledgment of an alarm, the user will receive a message with the acknowledged alarms in the system.
 
-[Disabled button case?]
+![Ack Form](./images/selected/form_ack_success.png)
 
 Users with no acknowledgment permissions will receive a message after trying to perform this action. Only operators can acknowledge an alarm.
 
-[Add photo of the ack message for not allowed users]
+When an alarm changes its status to a new one with a *set* value, it can only be acknowledged once. After an alarm is acknowledged, the related action button will be disabled.
+
+![Ack Form](./images/selected/alarm_after_ack.png)
+
+We should notice that an active alarm will retain its active status even if it is acknowledged, until the problem is solved.
+
+**Ack status and the *pending acknowledgment* mark**
+
+Some components in the views will show a little mark for alarms with a pending acknowledgment, placed at the top right corner.
+
+![Ack](./images/selected/alarm_unack_mark_2.png)
+
+After the acknowledgment of an alarm, this mark will not be highlighted as a confirmation of the *ack* state of the alarm.
+
+![Ack](./images/selected/alarm_ack_mark_2.png)
+
 
 ## Shelving
 
@@ -112,25 +126,43 @@ An operator can use the Shelve option when they need to temporarily silence an a
 
 ![Shelve Form](./images/selected/shelve_form.png)
 
-The shelve action requires a description and it also requires setting up a shelving time, that ranges from 15 minutes to 12 hours top. After that, the alarm goes back to its original state.
+The shelve action requires a description of the reason of shelving and it also requires setting up a shelving time, that ranges from 15 minutes to 12 hours top. Once the information is provided the shelve button will be available.
 
-[Example of shelved alarm]
+![Shelve Form](./images/selected/shelve_01.png)
 
-Once an alarm was shelved, the *shelve* button will be replaced by an *unshelve* button to perform the inverse action, if necessary.
+A summary of the action will be provided after shelve an alarm.
 
-[Image with the unshelve button]
+![Shelve Form](./images/selected/shelve_02.png)
+
+After the selected time, the alarm goes back to its original state.
+
+Once an alarm was shelved, the *shelve* button will be replaced by an *unshelve* button to reverse this action, if necessary.
+
+![Shelve Form](./images/selected/actions_unshelve.png)
 
 Users with no shelving permissions will receive a message after trying to perform this action. Only operators can shelve an alarm.
 
-[Add photo of the shelving message for not allowed users]
+If required, some alarms could not allow the shelve action, condition which should be established in the configuration of the IAS.
+
+**Ack status and the *shelved* mark**
+
+Some components in the views will show a little mark for shelved alarms placed at the bottom right corner.
+
+![Shelve](./images/selected/action_shelved_alarm.png)
+
+Notice that the status is displayed as a *clear* status, to prevent distractions for the operators.
+
+After perform an *unshelve* action on an alarm, this mark will not be highlighted, as a confirmation of the *not shelved* state of the alarm, and the status will go back to the original state.
+
+![Shelve](./images/selected/action_not_shelved_alarm.png)
 
 ## Other actions
 
-Finally,  an operator can use the *go to documentation* option, which allows the user to look for additional information so they can make an informed decision.
+Finally, an operator can use the *go to documentation* option, which allows the user to look for additional information so they can make an informed decision.
 
 This option could be found at the end of the actions available for each alarm.
 
-[Add image of go to documentation option]
+![Actions](./images/selected/alarm_goto_action.png)
 
 
 # Views
@@ -185,12 +217,21 @@ Notice that the information shown about the alarms is related to its current sta
 
 *Filtering and sorting*
 
-Currently, the operators can use the text filter to look for particular alarms, and they also can activate predefined filters according to specific properties for the alarms.
+Currently, the operators can use the text filter to look for particular alarms. Also, they can activate predefined filters according to specific properties for the alarms:
+
+- alarms with a *set* value;
+- alarms with a pending acknowledgment; and
+- shelved alarms.
 
 ![Overview](./images/selected/filters.png)
 
-The operator can also use the sorting options for the different columns in the table.
+The operator can also use the sorting options for the different columns in the table, such as:
 
+- status,
+- alarm name,
+- alarm mode,
+- last change time, and
+- description.
 
 ## Specialized Views
 
@@ -211,7 +252,7 @@ Also it provides a list of nearby antennas that could be affected by the monitor
 
 These antennas are shown both in the map and the list view.
 
-*Map*
+*Weather Stations Map*
 
 Additionally, the Weather Station section uses a map of the summit to show in a more visual way the information mentioned before. The map shows:
 
@@ -220,6 +261,8 @@ Additionally, the Weather Station section uses a map of the summit to show in a 
 - the main Weather Stations with information about its sub-alarms.
 
 When selecting one of these weather stations, the associated pads and associated antennas are highlighted.
+
+An special mark for the location of the AOS, after the transformation of the geographical coordinates, is displayed in the map as a reference point.
 
 **Antennas View**
 ![Antennas](./images/selected/antennas.png)
@@ -240,12 +283,13 @@ When we access each antenna we can see a list of the related alarms. Currently, 
 - HVAC Failure
 - Power Cut
 
-*Map*
+*Antennas Map*
 
 Unlike the map used in the Weather Station view, in this section only the antennas (and pads) are shown in the map.
 
 The user can click on any antenna to open the sidebar with the details described before.
 
+An special mark for the location of the AOS, after the transformation of the geographical coordinates, is displayed in the map as a reference point.
 
 # Authentication and Permissions
 
