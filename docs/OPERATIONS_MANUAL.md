@@ -36,7 +36,7 @@ The alarms organized in the displays of the system, are displayed using combinat
 The representation for the alarms can be illustrated by the following cases.
 
 | Status  | Value | Validity |  Priority |
-|---|---|---|
+|---|---|---|---|
 | ![Clear-Valid](./images/selected/clear-valid.png) ![Priority](./images/selected/priority-0.png) | clear | valid | |
 | ![Clear-Invalid](./images/selected/clear-invalid.png) ![Priority](./images/selected/priority-0.png)  | clear | invalid | |
 | ![Set-Valid-Low](./images/selected/set-valid-low.resized.png) ![Priority](./images/selected/priority-1.png)  | set | valid | low |
@@ -57,7 +57,7 @@ Each alarm is validated by receiving regular messages from the system, according
 Finally, each alarm has a related *operational mode*, which can be used to get contextual information related to the monitoring point. Some selected modes are highlighted in the displays for the operators, such as the *maintenance* mode and the *unknown* mode.
 
 | Status  | Validity | Mode |
-|---|---|---|---|
+|---|---|---|
 | ![Alarm](./images/selected/maintenance-valid.png) ![Priority](./images/selected/priority-0.png) | valid |  maintenance |
 | ![Alarm](./images/selected/maintenance-invalid.png) ![Priority](./images/selected/priority-0.png) | invalid  | maintenance |
 | ![Alarm](./images/selected/unknown-valid.png) ![Priority](./images/selected/priority-0.png) | valid | unknown |
