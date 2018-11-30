@@ -67,7 +67,9 @@ According to the IAS configuration, an alarm can also have dependencies related 
 
 The system has 4 available sounds, one for each priority level.
 
-Each alarm should be configured to trigger these sounds, when its value change from *clear* to *set*.
+Each alarm should be configured to trigger these sounds, when its value change from *clear* to *set*. The related sound will stop automatically after few moments.
+
+Only for the top most priority alarms (*critical*) the sound persists until the user *acknowledge* the alarm. The *acknowledgment* action is described in the next section.
 
 
 ## Actions
