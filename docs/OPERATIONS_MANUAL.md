@@ -330,8 +330,8 @@ A Login page is available when a user access the application. Some predefined ac
 
 The predefined accounts are:
 
-- operator_on_duty: main account allowed to ack and shelve alarms, it is intended to be used in the operators’ control room; and
-- admin: superuser account.
+- **operator_on_duty** : main account allowed to ack and shelve alarms, it is intended to be used in the operators’ control room; and
+- **admin** : superuser account.
 
 Any other account created for the application, will be able to see the different views, but the ack and shelve actions will not be allowed.
 
