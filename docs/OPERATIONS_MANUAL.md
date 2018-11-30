@@ -324,7 +324,7 @@ An special mark for the location of the AOS, after the transformation of the geo
 
 The current version of the IAS has an authentication and authorization system, according to selected user permissions.
 
-A Login page is available when a user access the application. Some predefined accounts are available for operators to allow different actions.
+A *Login* page is available when a user access the application. Some predefined accounts are available for operators to allow different actions.
 
 ![Antennas Selected](./images/selected/login.png)
 
