@@ -17,27 +17,27 @@ services:
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
     command: "./docker_run_kafka.sh"
 
-  # database:
-  #   container_name: ias-database
-  #   image: centos/mysql-56-centos7
-  #   environment:
-  #     - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASS}
-  #     - MYSQL_DATABASE=${DB_NAME}
-  #     - MYSQL_USER=${DB_USER}
-  #     - MYSQL_PASSWORD=${DB_PASS}
-  #   ports:
-  #     - "${DB_PORT}:3306"
-  #   volumes:
-  #     - ${DB_PATH}:/var/lib/mysql/data
-
   database:
     container_name: ias-database
-    image: oracle-xe:18c
+    image: centos/mysql-56-centos7
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASS}
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASS}
     ports:
-      - "${DB_PORT}:1521"
-      - "5500:5500"
+      - "${DB_PORT}:3306"
     volumes:
-      - ${DB_PATH}:/opt/oracle/oradata
+      - ${MYSQL_DB_PATH}:/var/lib/mysql/data
+
+  # database:
+  #   container_name: ias-database
+  #   image: oracle-xe:18c
+  #   ports:
+  #     - "${DB_PORT}:1521"
+  #     - "5500:5500"
+  #   volumes:
+  #     - ${ORACLE_DB_PATH}:/opt/oracle/oradata
 
   alma-weather-plugin:
     container_name: ias-build-alma-weather-plugin

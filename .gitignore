@@ -129,5 +129,7 @@ private_files/**
 !**/IAS_ROOT/logs/.gitinclude
 
 # Database
-database/**
-!database/.gitinclude
+mysql-database/**
+!mysql-database/.gitinclude
+oracle-database/**
+!oracle-database/.gitinclude
