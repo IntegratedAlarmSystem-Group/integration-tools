@@ -94,7 +94,7 @@ The operators are requested to use the *ack* action each time an alarm is active
 
 ![Actions](./images/selected/alarm_ack_action.png)
 
-To acknowledge an alarm, the operator can click on the *ack* button to open an *acknowledgement form* to be submitted, in order to keep a log. Cleared alarms will not show the acknowledgement as an available action.
+To acknowledge an alarm, the operator can click on the *ack* button to open an *acknowledgement form* to be submitted, in order to keep a log. Cleared alarms will not show the acknowledgement as an available action, unless there was a change from a *set* value to a *clear* value, which was not previously acknowledged by the operator.
 
 ![Ack Form](./images/selected/ack_form.png)
 
