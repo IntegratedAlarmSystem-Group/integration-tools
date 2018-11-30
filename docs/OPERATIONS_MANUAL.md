@@ -2,13 +2,13 @@
 
 ## Introduction
 
-The ALMA Observatory consists of many hardware and software systems which are continuously generating data. The related operations, depends on the availability of high-level and easy-to-understand information, about the status for these multiple systems.
+The ALMA Observatory consists of many hardware and software systems which are continuously generating data. The operations performed in the observatory, depends on the availability of high-level and easy-to-understand information, about the status for these multiple systems.
 
 The Integrated Alarm System (IAS) is a tool developed to improve the situation awareness of the ALMA operators.
 
-The IAS generates alarms related to multiple monitor points and provides, among other software components, a set of displays with global and specialized views for the status of the different systems. The information is presented in an integrated and homogeneous way, in order to help the operators to interpret this information, and to get more details, in order to make informed decisions. Also, operators can perform actions as the *acknowledgement* or *shelving* of alarms.
+The IAS generates alarms related to multiple monitor points and provides, among other software components, a set of displays with global and specialized views for the status of the different systems. The information is presented in an integrated and homogeneous way, in order to help the operators to interpret this information, and to get more details, in order to make informed decisions. Also, operators working in the control room can perform actions as the *acknowledgement* or *shelving* of alarms.
 
-Other user groups can access the displays after authentication, but some actions could be restricted according to specific permissions. The description of the authentication and authorization for the IAS can be found at the end of this document.
+Other users can access the displays after authentication, but some actions could be restricted according to specific permissions. The description of the authentication and authorization for the IAS can be found at the end of this document.
 
 ## Technical Overview
 
@@ -50,7 +50,7 @@ First, we have the *clear* and *set* value, used when an alarm is resolved or if
 
 The usage of the colors red and yellow depends on the priority level of the alarm: low, medium, high and critical, from lowest to highest.
 
-Each alarm is validated by receiving regular messages from the system, according to a tolerance range of time. If these messages are received within this tolerance, then the status of the alarm is also declared as *valid;* if not, it is declared as *invalid*. We can tell the difference between a *valid* alarm and a *invalid* alarm because a valid alarm will be shown with a filled mark, whereas an invalid alarm will be shown with an unfilled mark.
+Each alarm is validated by receiving regular messages from the system, according to a tolerance range of time. If these messages has a delay greater than this tolerance, then an alarm it is declared as *invalid*. We can notice the difference between a *valid* alarm and a *invalid* alarm because a valid alarm will be shown with a filled mark, whereas an invalid alarm will be shown with an unfilled mark.
 
 Finally, each alarm has a related *operational mode*, which can be used to get contextual information related to the monitoring point. Some selected modes are highlighted in the displays for the operators, such as the *maintenance* mode and the *unknown* mode.
 
@@ -86,6 +86,8 @@ These actions are available through the different pages of the web application, 
 
 Usually, a set of buttons for each action will be displayed aside the status of an alarm.
 
+Only operators working in the control room can perform the *ack* and *shelve* actions using a special *operator_on_duty* account, described in the authentication and authorization section, at then end of this document. In the following sections, the operators working in the control room will be named as *operators*.
+
 ![Actions](./images/selected/alarm_actions.png)
 
 ### Acknowledgment
@@ -94,7 +96,7 @@ The operators are requested to use the *ack* action each time an alarm is active
 
 ![Actions](./images/selected/alarm_ack_action.png)
 
-To acknowledge an alarm, the operator can click on the *ack* button to open an *acknowledgement form* to be submitted, in order to keep a log. Cleared alarms will not show the acknowledgement as an available action, unless there was a change from a *set* value to a *clear* value, which was not previously acknowledged by the operator.
+To acknowledge an alarm, the operator can click on the *ack* button to open an *acknowledgement form* to be submitted, in order to keep a log. Cleared alarms could show the acknowledgement as an available action if there was a change from a *set* value to a *clear* value, which was not previously acknowledged by the operator.
 
 ![Ack Form](./images/selected/ack_form.png)
 
@@ -180,7 +182,7 @@ This option could be found at the end of the actions available for each alarm.
 
 The IAS offers a view with panels that summarize the alarms per system, as well as specialized views for these systems.
 
-Currently, the views availables in the IAS are: Overview, Weather Station, Antennas and a Tabular view.
+Currently, the available views in the IAS are: Overview, Weather Station, Antennas and a Tabular view.
 
 These views share a set of main components which are described below.
 
@@ -242,9 +244,9 @@ In this view all the alarms generated by the IAS are organized in a table. Each 
 
 Notice that the information shown about the alarms is related to its current state.
 
-*Filtering and sorting*
+***Filtering and sorting***
 
-Currently, the operators can use the text filter to look for particular alarms. Also, they can activate predefined filters according to specific properties for the alarms:
+Currently, the operators can use the text filter to look for particular alarms. Also, they can activate predefined filters according to specific properties for:
 
 - alarms with a *set* value;
 - alarms with a pending acknowledgment; and
@@ -271,7 +273,7 @@ This section displays the alarms information both using a list view and a graphi
 
 ![Weather Selected](./images/selected/weather_selected.png)
 
-*Sidebar*
+***Sidebar***
 
 The sidebar lists the alarms for the weather stations. Each weather station has three sub-alarms (wind speed, humidity and temperature), with the *ack*, *shelve*, and *go to documentation* options available for each alarm.
 
@@ -279,7 +281,7 @@ Also it provides a list of nearby antennas that could be affected by the monitor
 
 These antennas are shown both in the map and the list view.
 
-*Weather Stations Map*
+***Weather Stations Map***
 
 Additionally, the Weather Station section uses a map of the summit to show in a more visual way the information mentioned before. The map shows:
 
@@ -300,7 +302,7 @@ This view, uses a similar structure that the one is used for the weather station
 
 ![Antennas Selected](./images/selected/antennas_selected.png)
 
-*Sidebar*
+***Sidebar***
 
 When we access each antenna we can see a list of the related alarms. Currently, we can find the alarms from the *Utility Module*, listed below:
 
@@ -310,7 +312,7 @@ When we access each antenna we can see a list of the related alarms. Currently, 
 - HVAC Failure
 - Power Cut
 
-*Antennas Map*
+***Antennas Map***
 
 Unlike the map used in the Weather Station view, in this section only the antennas (and pads) are shown in the map.
 
