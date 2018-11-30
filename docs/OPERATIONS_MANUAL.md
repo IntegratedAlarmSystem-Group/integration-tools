@@ -1,6 +1,6 @@
 # Operations Manual
 
-# Introduction
+## Introduction
 
 The ALMA Observatory consists of many hardware and software systems which are continuously generating data. The related operations, depends on the availability of high-level and easy-to-understand information, about the status for these multiple systems.
 
@@ -10,7 +10,7 @@ The IAS generates alarms related to multiple monitor points and provides, among 
 
 Other user groups can access the displays after authentication, but some actions could be restricted according to specific permissions. The description of the authentication and authorization for the IAS can be found at the end of this document.
 
-# Technical Overview
+## Technical Overview
 
 Broadly, the IAS consists on three groups of components:
 
@@ -25,7 +25,7 @@ Broadly, the IAS consists on three groups of components:
 
 Detailed information about the system can be found in the documentation about its design and architecture, available in the [docs](https://github.com/IntegratedAlarmSystem-Group/IntegratedAlarmSystem-Group.github.io/tree/master/docs) folder in the  [IntegratedAlarmSystem-Group.github.io](https://github.com/IntegratedAlarmSystem-Group/IntegratedAlarmSystem-Group.github.io) repository.
 
-# Alarms
+## Alarms
 
 The alarms organized in the displays of the system, are displayed using combinations of the marks exposed in the following legend, according to different properties.
 
@@ -63,7 +63,14 @@ Finally, each alarm has a related *operational mode*, which can be used to get c
 
 According to the IAS configuration, an alarm can also have dependencies related to other alarms according to a hierarchy, for example, when monitoring points are related to a selected device and its subcomponents.
 
-# Actions
+**Sounds**
+
+The system has 4 available sounds, one for each priority level.
+
+Each alarm should be configured to trigger these sounds, when its value change from *clear* to *set*.
+
+
+## Actions
 
 Three type of actions can be triggered per alarm (depending on its status): *acknowledgement* (ack), *shelving* (shelve), and a *go to documentation* option.
 These actions are available through the different pages of the web application, according to the following icons.
@@ -79,7 +86,7 @@ Usually, a set of buttons for each action will be displayed aside the status of 
 
 ![Actions](./images/selected/alarm_actions.png)
 
-## Acknowledgment
+### Acknowledgment
 
 The operators are requested to use the *ack* action each time an alarm is active.
 
@@ -120,9 +127,11 @@ After the acknowledgment of an alarm, this mark will not be highlighted as a con
 ![Ack](./images/selected/alarm_ack_mark_2.png)
 
 
-## Shelving
+### Shelving
 
 An operator can use the Shelve option when they need to temporarily silence an alarm so this alarm does not distract them while the problem with this alarm is being solved.
+
+The alarms that could allow the shelving action, should be configured in the IAS configuration database.
 
 ![Shelve Form](./images/selected/shelve_form.png)
 
@@ -156,7 +165,7 @@ After perform an *unshelve* action on an alarm, this mark will not be highlighte
 
 ![Shelve](./images/selected/action_not_shelved_alarm.png)
 
-## Other actions
+### Other actions
 
 Finally, an operator can use the *go to documentation* option, which allows the user to look for additional information so they can make an informed decision.
 
@@ -165,7 +174,7 @@ This option could be found at the end of the actions available for each alarm.
 ![Actions](./images/selected/alarm_goto_action.png)
 
 
-# Views
+## Views
 
 The IAS offers a view with panels that summarize the alarms per system, as well as specialized views for these systems.
 
@@ -175,20 +184,36 @@ These views share a set of main components which are described below.
 
 **Toolbar**
 
-Component placed at the top of the application. Here the user can find, at the right, a user's menu, with the name of the currently used account for authentication.
+Component placed at the top of the application. Here the user can find, at the right, a user's menu, with the name of the currently used account for authentication and the logout option.
+
+![Actions](./images/selected/toolbar.png)
 
 **Navigation Sidenav**
+
 A navigation bar placed at the left of the screen can be used to explore the available views.
 
 The *collapse menu button* available at the right of the toolbar, can be used to expand this component, to display the names of the views.
 
+![Actions](./images/selected/nav_1.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+![Actions](./images/selected/nav_2.png)
+
 **Content**
+
 Container for the main content for each view.
 
+![Content](./images/selected/fullcontent.png)
+
+
 **Action Sidenav**
+
 Views that allows the *ack* and *shelve* actions on the alarms, share an additional sidenav component with the related forms.
 
-## Global Views
+![Content](./images/selected/preaction.png)
+
+![Content](./images/selected/action.png)
+
+### Global Views
 
 **Overview**
 ![Overview](./images/selected/overview.png)
@@ -233,7 +258,7 @@ The operator can also use the sorting options for the different columns in the t
 - last change time, and
 - description.
 
-## Specialized Views
+### Specialized Views
 
 **Weather View**
 ![Weather](./images/selected/weather.png)
@@ -291,6 +316,21 @@ The user can click on any antenna to open the sidebar with the details described
 
 An special mark for the location of the AOS, after the transformation of the geographical coordinates, is displayed in the map as a reference point.
 
-# Authentication and Permissions
+## Authentication and Permissions
 
 The current version of the IAS has an authentication and authorization system, according to selected user permissions.
+
+A Login page is available when a user access the application. Some predefined accounts are available for operators to allow different actions.
+
+![Antennas Selected](./images/selected/login.png)
+
+The predefined accounts are:
+
+- operator_on_duty: main account allowed to ack and shelve alarms, it is intended to be used in the operators’ control room; and
+- admin: superuser account.
+
+Any other account created for the application, will be able to see the different views, but the ack and shelve actions will not be allowed.
+
+Additionally, the users can be added to an operators group. Users in this group are listed in the acknowledgment and shelve forms. A user in this group should be selected in order to endorse these actions.
+
+Notice that the account operator_on_duty is not included in the operators group, and at least, one additional user account should be included in this group to perform ack and shelve actions.
