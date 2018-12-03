@@ -641,35 +641,40 @@
     "shortDesc": "Fire alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
-    "templateId": "template-antennas"
+    "templateId": "template-antennas",
+    "sound":"TYPE2"
   },
   {
     "id": "Array-FireMalfunction-Ant",
     "shortDesc": "Fire malfunctioning alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
-    "templateId": "template-antennas"
+    "templateId": "template-antennas",
+    "sound":"TYPE2"
   },
   {
     "id": "Array-UpsFail-Ant",
     "shortDesc": "UPS failure alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
-    "templateId": "template-antennas"
+    "templateId": "template-antennas",
+    "sound":"TYPE2"
   },
   {
     "id": "Array-HvacFail-Ant",
     "shortDesc": "HVAC failure alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
-    "templateId": "template-antennas"
+    "templateId": "template-antennas",
+    "sound":"TYPE2"
   },
   {
     "id": "Array-PowerCut-Ant",
     "shortDesc": "Power cut alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
-    "templateId": "template-antennas"
+    "templateId": "template-antennas",
+    "sound":"TYPE2"
   },
   {
     "id": "Array-Laser-Locked",
