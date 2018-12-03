@@ -678,13 +678,6 @@
     "docUrl": "http://www.alma.cl"
   },
   {
-    "id": "Array-PowerCut-Ant",
-    "shortDesc": "Power cut alarm of the antenna",
-    "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl",
-    "templateId": "template-antennas"
-  },
-  {
     "id": "Array-CRIO-TEMP0-DV",
     "shortDesc": "Cryo temperature sensor 0",
     "iasType": "DOUBLE",
