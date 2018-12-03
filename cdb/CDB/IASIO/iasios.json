@@ -650,7 +650,8 @@
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
     "templateId": "template-antennas",
-    "sound":"TYPE2"
+    "sound":"TYPE2",
+    "canShelve":"true"
   },
   {
     "id": "Array-UpsFail-Ant",
@@ -658,7 +659,8 @@
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
     "templateId": "template-antennas",
-    "sound":"TYPE2"
+    "sound":"TYPE2",
+    "canShelve":"true"
   },
   {
     "id": "Array-HvacFail-Ant",
@@ -666,7 +668,8 @@
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
     "templateId": "template-antennas",
-    "sound":"TYPE2"
+    "sound":"TYPE2",
+    "canShelve":"true"
   },
   {
     "id": "Array-PowerCut-Ant",
@@ -674,7 +677,8 @@
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
     "templateId": "template-antennas",
-    "sound":"TYPE2"
+    "sound":"TYPE2",
+    "canShelve":"true"
   },
   {
     "id": "Array-Laser-Locked",
