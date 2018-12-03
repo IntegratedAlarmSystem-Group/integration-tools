@@ -173,11 +173,18 @@ services:
     container_name: ias-build-webserver
     build: ${DOCKERFILE_PATH_WEBSERVER}
     image: ias-build-webserver-image
-    command: ./runserver.sh
+    environment:
+      - DB_ENGINE=${DB_ENGINE}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
     volumes:
       - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
       - ${CDB_PATH}/CDB:/usr/src/ias-webserver/CDB
       - ${LOGS_PATH}:/usr/src/ias-webserver/logs
+    command: ./runserver.sh
 
   visual-inspection-webserver:
     container_name: ias-build-visual-inspection-webserver
