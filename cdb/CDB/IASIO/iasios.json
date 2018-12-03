@@ -247,7 +247,8 @@
         "id": "WS-Inner-Humidity",
         "shortDesc": "Humidity alarm of the Inner WS",
         "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+	"sound":"TYPE1"
    },
 {
         "id": " WS-Inner-Humidity-Threshold",
@@ -259,7 +260,8 @@
         "id": "WS-Inner-Temperature",
         "shortDesc": "Temperature alarm of the Inner WS",
         "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+	"sound":"TYPE1"
   },
 {
         "id": " WS-Inner-Temperature-Threshold",
@@ -272,7 +274,8 @@
          "id": "WS-Inner-WindSpeed",
          "shortDesc": "Inner Wind speed Alarm",
          "iasType": "ALARM",
-         "docUrl": "http://www.alma.cl"
+         "docUrl": "http://www.alma.cl",
+	"sound":"TYPE1"
     },
   {
      "id": "WS-Inner-WindSpeed15",
@@ -322,7 +325,8 @@
         "id": "WS-W-Humidity",
         "shortDesc": "Humidity alarm of the W WS",
         "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+	"sound":"TYPE1"
    },
  {
          "id": " WS-W-Humidity-Threshold",
@@ -334,7 +338,8 @@
          "id": "WS-W-Temperature",
          "shortDesc": "Temperature alarm of the W WS",
          "iasType": "ALARM",
-         "docUrl": "http://www.alma.cl"
+         "docUrl": "http://www.alma.cl",
+	"sound":"TYPE1"
     },
 {
         "id": " WS-W-Temperature-Threshold",
@@ -347,7 +352,8 @@
        "id": "WS-W-WindSpeed",
        "shortDesc": "Wind speed over 20m/s of the W WS",
        "iasType": "ALARM",
-       "docUrl": "http://www.alma.cl"
+       "docUrl": "http://www.alma.cl",
+	"sound":"TYPE1"
   },
   {
      "id": "WS-W-WindSpeed15",
@@ -397,7 +403,8 @@
         "id": "WS-P-Humidity",
         "shortDesc": "Humidity alarm of the P WS",
         "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+	"sound":"TYPE1"
    },
 {
        "id": " WS-P-Humidity-Threshold",
@@ -410,7 +417,8 @@
        "id": "WS-P-Temperature",
        "shortDesc": "Temperature alarm of the P WS",
        "iasType": "ALARM",
-       "docUrl": "http://www.alma.cl"
+       "docUrl": "http://www.alma.cl",
+       "sound":"TYPE1"
   },
 {
         "id": " WS-P-Temperature-Threshold",
@@ -420,10 +428,11 @@
    },
 
    {
-          "id": "WS-P-WindSpeed",
-          "shortDesc": "P Wind speed Alarm",
-          "iasType": "ALARM",
-          "docUrl": "http://www.alma.cl"
+        "id": "WS-P-WindSpeed",
+        "shortDesc": "P Wind speed Alarm",
+        "iasType": "ALARM",
+        "docUrl": "http://www.alma.cl",
+   	"sound":"TYPE1"
      },
    {
       "id": "WS-P-WindSpeed15",
@@ -473,7 +482,8 @@
         "id": "WS-S-Humidity",
         "shortDesc": "Humidity alarm of the S WS",
         "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+	"sound":"TYPE1"
    },
 {
        "id": " WS-S-Humidity-Threshold",
@@ -486,7 +496,8 @@
         "id": "WS-S-Temperature",
         "shortDesc": "Temperature alarm of the S WS",
         "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+	"sound":"TYPE1"
    },
  {
          "id": " WS-S-Temperature-Threshold",
@@ -498,7 +509,8 @@
     "id": "WS-S-WindSpeed",
     "shortDesc": "Wind speed over 20m/s of the ACA WS",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "sound":"TYPE1"
 },
 {
   "id": "WS-S-WindSpeed15",
