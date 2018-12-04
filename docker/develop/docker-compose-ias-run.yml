@@ -186,15 +186,6 @@ services:
     volumes:
       - ${MYSQL_DB_PATH}:/var/lib/mysql/data
 
-  # database:
-  #   container_name: ias-database
-  #   image: oracle-xe:18c
-  #   ports:
-  #     - "1521:1521"
-  #     - "5500:5500"
-  #   volumes:
-  #     - ${ORACLE_DB_PATH}:/opt/oracle/oradata
-
   webserver:
     container_name: ias-build-webserver
     build: ${DOCKERFILE_PATH_WEBSERVER}

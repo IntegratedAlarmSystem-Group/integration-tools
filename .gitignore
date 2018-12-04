@@ -132,4 +132,3 @@ private_files/**
 mysql-database/**
 !mysql-database/.gitinclude
 oracle-database/**
-!oracle-database/.gitinclude
