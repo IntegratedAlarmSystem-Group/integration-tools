@@ -175,15 +175,37 @@ services:
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
     command: "./docker_run_ias.sh iasWebServerSender WebServerSenderID -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8000/core/ -jcdb /usr/src/cdb/ -t ALARM -i Array-AntennasToPads"
 
+  database:
+    container_name: ias-database
+    image: centos/mysql-56-centos7
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASS}
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASS}
+    volumes:
+      - ${MYSQL_DB_PATH}:/var/lib/mysql/data
+
   webserver:
     container_name: ias-build-webserver
     build: ${DOCKERFILE_PATH_WEBSERVER}
     image: ias-build-webserver-image
-    command: ./runserver.sh
+    links:
+      - database
+    depends_on:
+      - database
+    environment:
+      - DB_ENGINE=${DB_ENGINE}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
     volumes:
       - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
       - ${CDB_PATH}/CDB:/usr/src/ias-webserver/CDB
       - ${LOGS_PATH}:/usr/src/ias-webserver/logs
+    command: ./runserver.sh
 
   visual-inspection-webserver:
     container_name: ias-build-visual-inspection-webserver
