@@ -68,7 +68,7 @@ This will build the docker-images from local clones of the repositories. It requ
   * `docker-compose-ias-compile.yml`: contains services used to compile the IAS-Core and create a local IAS_ROOT in the `IAS_ROOT` directory.
   * `docker-compose-ias-run.yml`: contains services used to run the different components of the IAS. For the components of the IAS-Core, the `IAS_ROOT` folder is mounted in the docker container.
 
-**Important**: Use this deployment option if you are using oracle database connection and follow the extra steps listed in 1.2.3 section.
+**Important**: Use this deployment option if you are using oracle database connection and follow the extra steps listed in 1.2.3 section before building.
 
 #### 2.1.1 Deployment:
 In order to proceed with this follow these steps:
@@ -202,5 +202,5 @@ This will pull the "develop" docker-images for the components of the IAS from a 
 
   docker-compose -f docker-compose-develop.yml up -d
   ```
-  
+
 **Important**: This deployment option does not allow an oracle database connection. Read 1.2.3 section for more details.
