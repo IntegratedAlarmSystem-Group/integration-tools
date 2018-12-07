@@ -175,16 +175,16 @@ services:
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
     command: "./docker_run_ias.sh iasWebServerSender WebServerSenderID -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8000/core/ -jcdb /usr/src/cdb/ -t ALARM -i Array-AntennasToPads"
 
-  database:
-    container_name: ias-database
-    image: centos/mysql-56-centos7
-    environment:
-      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASS}
-      - MYSQL_DATABASE=${DB_NAME}
-      - MYSQL_USER=${DB_USER}
-      - MYSQL_PASSWORD=${DB_PASS}
-    volumes:
-      - ${MYSQL_DB_PATH}:/var/lib/mysql/data
+  # database:
+  #   container_name: ias-database
+  #   image: centos/mysql-56-centos7
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASS}
+  #     - MYSQL_DATABASE=${DB_NAME}
+  #     - MYSQL_USER=${DB_USER}
+  #     - MYSQL_PASSWORD=${DB_PASS}
+  #   volumes:
+  #     - ${MYSQL_DB_PATH}:/var/lib/mysql/data
 
   webserver:
     container_name: ias-build-webserver
@@ -201,6 +201,8 @@ services:
       - DB_PASS=${DB_PASS}
       - DB_HOST=${DB_HOST}
       - DB_PORT=${DB_PORT}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - OP_DUTY_PASSWORD=${OP_DUTY_PASSWORD}
     volumes:
       - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
       - ${CDB_PATH}/CDB:/usr/src/ias-webserver/CDB

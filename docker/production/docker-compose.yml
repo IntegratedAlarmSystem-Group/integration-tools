@@ -123,6 +123,8 @@ services:
       - DB_PASS=${DB_PASS}
       - DB_HOST=${DB_HOST}
       - DB_PORT=${DB_PORT}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - OP_DUTY_PASSWORD=${OP_DUTY_PASSWORD}
     volumes:
       - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
       - ${CDB_PATH}/CDB:/usr/src/ias-webserver/CDB
