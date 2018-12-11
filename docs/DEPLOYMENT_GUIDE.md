@@ -13,6 +13,48 @@ In order to allow external processes to consume from and/or produce from the kaf
   * External processes can connect to kafka by using the `<IP>:9092`, where `<IP>`, is the IP obtained in the previous step
   * If this does not work, there may be an issue regarding the firewall configuration in the host system.
 
+### 1.2 Set up database for users accounts and display configuration
+
+There are three possibilities of database supported by the webserver: sqlite3, mysql and oracle xe. **Warning**: The sqlite3 option is not recommended to be used in production.
+
+#### 1.2.1 Sqlite3 Database
+The following environment variables should be set up to allow sqlite database connection:
+
+- DB_ENGINE=sqlite
+
+#### 1.2.2 Mysql Database
+The following environment variables should be set up to allow mysql database connection:
+
+- DB_ENGINE=mysql
+- DB_NAME=database_name
+- DB_USER=user_name
+- DB_PASS=user_password
+- DB_HOST=database_host
+- DB_PORT=3306
+
+#### 1.2.3 Oracle XE 18c Database
+The following environment variables should be set up to allow oracle xe database connection:
+
+- DB_ENGINE=oracle
+- DB_NAME=database_name
+- DB_USER=user_name
+- DB_PASS=user_password
+- DB_HOST=database_host
+- DB_PORT=1522
+
+**Extra Steps:**
+To use the oracle database option the webserver image must be built locally after download oracle instant client packages.
+
+The oracle instant client packages must be downloaded from oracle website (
+https://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html)
+
+The needed packages are:
+  - oracle-instantclient18.3-basic-18.3.0.0.0-1.x86_64
+  - oracle-instantclient18.3-devel-18.3.0.0.0-1.x86_64
+  - oracle-instantclient18.3-sqlplus-18.3.0.0.0-1.x86_64
+
+The webserver docker image must be built locally after locate those packages in the folder private_files in the ias-webserver directory.
+
 ---
 
 ## 2. Deployment
@@ -25,6 +67,8 @@ This will build the docker-images from local clones of the repositories. It requ
 
   * `docker-compose-ias-compile.yml`: contains services used to compile the IAS-Core and create a local IAS_ROOT in the `IAS_ROOT` directory.
   * `docker-compose-ias-run.yml`: contains services used to run the different components of the IAS. For the components of the IAS-Core, the `IAS_ROOT` folder is mounted in the docker container.
+
+**Important**: Use this deployment option if you are using oracle database connection and follow the extra steps listed in 1.2.3 section before building.
 
 #### 2.1.1 Deployment:
 In order to proceed with this follow these steps:
@@ -52,12 +96,12 @@ In order to proceed with this follow these steps:
   ```
   cd integration-tools/docker/production
 
-  docker-compose -f docker-compose-ias-compile.yml build ias
+  docker-compose -f docker-compose-ias-compile.yml build ias-compile
   ```
 
   3. Compile the IAS-Core into the IAS_ROOT directory with `docker-compose-ias-compile.yml`:
   ```
-  docker-compose -f docker-compose-ias-compile.yml up ias
+  docker-compose -f docker-compose-ias-compile.yml up ias-compile
 
   docker-compose -f docker-compose-ias-compile.yml down
   ```
@@ -89,12 +133,12 @@ Let's say we want to recompile a Supervisor. For this, it is not necessary to re
 
   1. Re-build the IAS-Core docker image: this will copy the updated source code into the docker-image for compilation.
   ```
-  docker-compose -f docker-compose-ias-compile.yml build ias
+  docker-compose -f docker-compose-ias-compile.yml build ias-compile
   ```
 
   2. Re-compile the Converter:
   ```
-  docker-compose -f docker-compose-ias-compile.yml up converter
+  docker-compose -f docker-compose-ias-compile.yml up converter-compile
   docker-compose -f docker-compose-ias-compile.yml down
   ```
 
@@ -131,6 +175,8 @@ This will pull the "master" docker-images for the components of the IAS from a d
   docker-compose up -d
   ```
 
+**Important**: This deployment option does not allow an oracle database connection. Read 1.2.3 section for more details.
+
 ### 2.3 Development versions pulling images (develop branches):
 This will pull the "develop" docker-images for the components of the IAS from a docker-repository
 
@@ -156,3 +202,5 @@ This will pull the "develop" docker-images for the components of the IAS from a 
 
   docker-compose -f docker-compose-develop.yml up -d
   ```
+
+**Important**: This deployment option does not allow an oracle database connection. Read 1.2.3 section for more details.

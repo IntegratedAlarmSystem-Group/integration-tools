@@ -1,7 +1,7 @@
 {
   "logLevel": "INFO",
   "refreshRate": "4",
-  "tolerance": "1",
+  "validityThreshold": "10",
   "hbFrequency":"5",
   "bsdbUrl":"10.195.60.180:9092",
   "props":[
