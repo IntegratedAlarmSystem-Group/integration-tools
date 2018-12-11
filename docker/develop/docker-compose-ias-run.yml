@@ -190,10 +190,10 @@ services:
     container_name: ias-build-webserver
     build: ${DOCKERFILE_PATH_WEBSERVER}
     image: ias-build-webserver-image
-    links:
-      - database
-    depends_on:
-      - database
+    # links:
+    #   - database
+    # depends_on:
+    #   - database
     environment:
       - DB_ENGINE=${DB_ENGINE}
       - DB_NAME=${DB_NAME}
