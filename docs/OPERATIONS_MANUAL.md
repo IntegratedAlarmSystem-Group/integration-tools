@@ -356,3 +356,12 @@ Any other account created for the application, will be able to see the different
 Additionally, the users can be added to an operators group. Users in this group are listed in the acknowledgment and shelve forms. A user in this group should be selected in order to endorse these actions.
 
 Notice that the account operator_on_duty is not included in the operators group, and at least, one additional user account should be included in this group to perform ack and shelve actions.
+
+## Admin Panel
+
+The url /admin must be used to access to the admin panel.
+The admin panel requires a special login. The admin user has permissions to manage users accounts, groups, ack and sheve tickets and other display configurations.
+
+![Admin Login](./images/selected/admin_login.png)
+
+![Admin Panel](./images/selected/admin_panel.png)
