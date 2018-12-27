@@ -198,6 +198,12 @@ A navigation bar placed at the left of the screen can be used to explore the ava
 
 The *collapse menu button* available at the right of the toolbar, can be used to expand this component, to display the names of the views.
 
+Notifications labels are shown in each view's icon. They represent the number of
+set alarms that have not been acknowledged yet. The label disapears if all the alarms of that view are acknowledged.
+
+If the web application lost the connection with the server, the notifications
+appear in all the views, in blue color and with a question mark.
+
 ![Actions](./images/selected/nav_1.png)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ![Actions](./images/selected/nav_2.png)
@@ -300,6 +306,12 @@ The antennas view shows the information about the alarms related to each antenna
 
 This view, uses a similar structure that the one is used for the weather stations.
 
+At the bottom of the antennas grid, there are three general alarms also related with the array. They are:
+
+- Master Laser Alarm
+- Correlator Alarm
+- Central Local Oscilator Alarm (CLO)
+
 ![Antennas Selected](./images/selected/antennas_selected.png)
 
 ***Sidebar***
@@ -311,6 +323,12 @@ When we access each antenna we can see a list of the related alarms. Currently, 
 - UPS Failure
 - HVAC Failure
 - Power Cut
+- Cryo temperature sensor 0
+- Cryo temperature sensor 5
+- Cryo temperature sensor 9
+- Cryo pressure sensor 0
+- Cryo pressure sensor 1
+- Compressor Driver OFF
 
 ***Antennas Map***
 
@@ -338,3 +356,12 @@ Any other account created for the application, will be able to see the different
 Additionally, the users can be added to an operators group. Users in this group are listed in the acknowledgment and shelve forms. A user in this group should be selected in order to endorse these actions.
 
 Notice that the account operator_on_duty is not included in the operators group, and at least, one additional user account should be included in this group to perform ack and shelve actions.
+
+## Admin Panel
+
+The url /admin must be used to access to the admin panel.
+The admin panel requires a special login. The admin user has permissions to manage users accounts, groups, ack and sheve tickets and other display configurations.
+
+![Admin Login](./images/selected/admin_login.png)
+
+![Admin Panel](./images/selected/admin_panel.png)
