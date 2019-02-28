@@ -76,6 +76,8 @@ services:
   sender:
     container_name: ias-prod-sender
     image: registry.inria.cl:5000/ias-core:prod
+    environment:
+      - WS_CONNECTION_PASS=${WS_CONNECTION_PASS}
     links:
       - kafka
     depends_on:
@@ -125,6 +127,7 @@ services:
       - DB_PORT=${DB_PORT}
       - ADMIN_PASSWORD=${ADMIN_PASSWORD}
       - OP_DUTY_PASSWORD=${OP_DUTY_PASSWORD}
+      - PROCESS_CONNECTION_PASS=${WS_CONNECTION_PASS}
     volumes:
       - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
       - ${CDB_PATH}/CDB:/usr/src/ias-webserver/CDB

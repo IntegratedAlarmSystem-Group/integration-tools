@@ -165,6 +165,8 @@ services:
     build:
       context: ${DOCKERFILE_PATH_CORE}
       dockerfile: Dockerfile-no-build
+    environment:
+      - WS_CONNECTION_PASS=${WS_CONNECTION_PASS}
     image: ias-build-core-image
     links:
       - kafka
@@ -190,6 +192,7 @@ services:
       - DB_PORT=${DB_PORT}
       - ADMIN_PASSWORD=${ADMIN_PASSWORD}
       - OP_DUTY_PASSWORD=${OP_DUTY_PASSWORD}
+      - PROCESS_CONNECTION_PASS=${WS_CONNECTION_PASS}
     volumes:
       - ${DOCKERFILE_PATH_WEBSERVER}:/usr/src/ias-webserver
       - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
