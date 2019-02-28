@@ -742,6 +742,15 @@
     "canShelve":"true"
   },
   {
+    "id": "Array-PowerCut-DA",
+    "shortDesc": "Power cut alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
     "id": "Array-UMStatus-CM",
     "shortDesc": "UMStatus used as input value for alarms of the antenna",
     "iasType": "STRING",
