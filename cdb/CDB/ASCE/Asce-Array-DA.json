@@ -1,0 +1,20 @@
+{
+	"dasuID":"Dasu-Array-DA",
+	"outputID":"Array-DA",
+	"id":"Asce-Array-DA",
+	"inputIDs":[
+		"Array-Fire-DA",
+		"Array-FireMalfunction-DA",
+		"Array-UpsFail-DA",
+		"Array-HvacFail-DA",
+		"Array-PowerCut-DA"
+	],
+	"transferFunctionID":"org.eso.ias.asce.transfer.impls.MultiplicityTF",
+	"props": [
+		{
+			"name": "org.eso.ias.tf.mutliplicity.threshold",
+			"value": "1"
+		}
+	],
+	"templateId":"DA"
+}

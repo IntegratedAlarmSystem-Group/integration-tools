@@ -1,0 +1,8 @@
+{
+	"dasuID":"Dasu-Array-Fire-PM",
+	"outputID":"Array-Fire-PM",
+	"id":"Asce-Array-Fire-PM",
+	"transferFunctionID":"org.eso.ias.tranfer.utlitymodule.UMFireTF",
+	"inputIDs":["Array-UMStatus-PM"],
+	"templateId":"PM"
+}

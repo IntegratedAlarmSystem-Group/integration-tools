@@ -1,7 +1,7 @@
 {
-	"dasuID":"Dasu-Array-HvacFail-Ant",
-	"outputID":"Array-HvacFail-Ant",
-	"id":"Asce-Array-HvacFail-Ant",
+	"dasuID":"Dasu-Array-HvacFail-PM",
+	"outputID":"Array-HvacFail-PM",
+	"id":"Asce-Array-HvacFail-PM",
 	"transferFunctionID":"org.eso.ias.tranfer.utlitymodule.UMAlarmByBit",
 	"props": [
 		{
@@ -9,6 +9,6 @@
 			"value": "6"
 		}
 	],
-	"inputIDs":["Array-UMStatus-Ant"],
-	"templateId":"template-antennas"
+	"inputIDs":["Array-UMStatus-PM"],
+	"templateId":"PM"
 }

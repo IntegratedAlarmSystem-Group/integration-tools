@@ -635,60 +635,225 @@
     "docUrl": "http://www.alma.cl"
   },
   {
-    "id": "Array-UMStatus-Ant",
+    "id": "Array-UMStatus-DV",
     "shortDesc": "UMStatus used as input value for alarms of the antenna",
     "iasType": "STRING",
     "docUrl": "http://www.alma.cl",
-    "templateId": "template-antennas"
+    "templateId": "DV"
   },
   {
-    "id": "Array-Ant",
+    "id": "Array-DV",
     "shortDesc": "General alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
-    "templateId": "template-antennas"
+    "templateId": "DV"
   },
   {
-    "id": "Array-Fire-Ant",
+    "id": "Array-Fire-DV",
     "shortDesc": "Fire alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
-    "templateId": "template-antennas",
+    "templateId": "DV",
     "sound":"TYPE2"
   },
   {
-    "id": "Array-FireMalfunction-Ant",
+    "id": "Array-FireMalfunction-DV",
     "shortDesc": "Fire malfunctioning alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
-    "templateId": "template-antennas",
+    "templateId": "DV",
     "sound":"TYPE2",
     "canShelve":"true"
   },
   {
-    "id": "Array-UpsFail-Ant",
+    "id": "Array-UpsFail-DV",
     "shortDesc": "UPS failure alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
-    "templateId": "template-antennas",
+    "templateId": "DV",
     "sound":"TYPE2",
     "canShelve":"true"
   },
   {
-    "id": "Array-HvacFail-Ant",
+    "id": "Array-HvacFail-DV",
     "shortDesc": "HVAC failure alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
-    "templateId": "template-antennas",
+    "templateId": "DV",
     "sound":"TYPE2",
     "canShelve":"true"
   },
   {
-    "id": "Array-PowerCut-Ant",
+    "id": "Array-PowerCut-DV",
     "shortDesc": "Power cut alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
-    "templateId": "template-antennas",
+    "templateId": "DV",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-UMStatus-DA",
+    "shortDesc": "UMStatus used as input value for alarms of the antenna",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA"
+  },
+  {
+    "id": "Array-DA",
+    "shortDesc": "General alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA"
+  },
+  {
+    "id": "Array-Fire-DA",
+    "shortDesc": "Fire alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA",
+    "sound":"TYPE2"
+  },
+  {
+    "id": "Array-FireMalfunction-DA",
+    "shortDesc": "Fire malfunctioning alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-UpsFail-DA",
+    "shortDesc": "UPS failure alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-HvacFail-DA",
+    "shortDesc": "HVAC failure alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-UMStatus-CM",
+    "shortDesc": "UMStatus used as input value for alarms of the antenna",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM"
+  },
+  {
+    "id": "Array-CM",
+    "shortDesc": "General alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM"
+  },
+  {
+    "id": "Array-Fire-CM",
+    "shortDesc": "Fire alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM",
+    "sound":"TYPE2"
+  },
+  {
+    "id": "Array-FireMalfunction-CM",
+    "shortDesc": "Fire malfunctioning alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-UpsFail-CM",
+    "shortDesc": "UPS failure alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-HvacFail-CM",
+    "shortDesc": "HVAC failure alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-PowerCut-CM",
+    "shortDesc": "Power cut alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-UMStatus-PM",
+    "shortDesc": "UMStatus used as input value for alarms of the antenna",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM"
+  },
+  {
+    "id": "Array-PM",
+    "shortDesc": "General alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM"
+  },
+  {
+    "id": "Array-Fire-PM",
+    "shortDesc": "Fire alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM",
+    "sound":"TYPE2"
+  },
+  {
+    "id": "Array-FireMalfunction-PM",
+    "shortDesc": "Fire malfunctioning alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-UpsFail-PM",
+    "shortDesc": "UPS failure alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-HvacFail-PM",
+    "shortDesc": "HVAC failure alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-PowerCut-PM",
+    "shortDesc": "Power cut alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM",
     "sound":"TYPE2",
     "canShelve":"true"
   },
@@ -755,7 +920,7 @@
     "docUrl": "http://www.alma.cl",
     "templateId": "PM"
   },
-  
+
   {
     "id": "Array-CRIO-TEMP9-DV",
     "shortDesc": "Cryo temperature sensor 9",

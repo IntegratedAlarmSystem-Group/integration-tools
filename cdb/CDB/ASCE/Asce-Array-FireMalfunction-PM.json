@@ -1,0 +1,14 @@
+{
+	"dasuID":"Dasu-Array-FireMalfunction-PM",
+	"outputID":"Array-FireMalfunction-PM",
+	"id":"Asce-Array-FireMalfunction-PM",
+	"transferFunctionID":"org.eso.ias.tranfer.utlitymodule.UMAlarmByBit",
+	"props": [
+		{
+			"name": "org.eso.ias.transfer.utilitymodule.bitnumber",
+			"value": "0"
+		}
+	],
+	"inputIDs":["Array-UMStatus-PM"],
+	"templateId":"PM"
+}

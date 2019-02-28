@@ -1,0 +1,14 @@
+{
+	"dasuID":"Dasu-Array-PowerCut-DV",
+	"outputID":"Array-PowerCut-DV",
+	"id":"Asce-Array-PowerCut-DV",
+	"transferFunctionID":"org.eso.ias.tranfer.utlitymodule.UMAlarmByBit",
+	"props": [
+		{
+			"name": "org.eso.ias.transfer.utilitymodule.bitnumber",
+			"value": "2"
+		}
+	],
+	"inputIDs":["Array-UMStatus-DV"],
+	"templateId":"DV"
+}
