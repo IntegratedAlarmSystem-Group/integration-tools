@@ -171,6 +171,21 @@ services:
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
     command: "./docker_run_ias.sh iasMailSender MailSenderID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
+  monitor:
+    container_name: ias-build-monitor
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./docker_run_ias.sh iasMonitor MonitorID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+
   webserver:
     container_name: ias-build-webserver
     build: ${DOCKERFILE_PATH_WEBSERVER}
@@ -190,21 +205,6 @@ services:
       - ${CDB_PATH}/CDB:/usr/src/ias-webserver/CDB
       - ${LOGS_PATH}:/usr/src/ias-webserver/logs
     command: ./runserver.sh
-
-  monitor:
-    container_name: ias-build-monitor
-    build:
-      context: ${DOCKERFILE_PATH_CORE}
-      dockerfile: Dockerfile-no-build
-    image: ias-build-core-image
-    links:
-      - kafka
-    depends_on:
-      - kafka
-    volumes:
-      - ${CDB_PATH}:/usr/src/cdb
-      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
-    command: "./docker_run_ias.sh iasMonitor MonitorID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   visual-inspection-webserver:
     container_name: ias-build-visual-inspection-webserver
