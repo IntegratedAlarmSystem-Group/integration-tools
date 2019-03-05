@@ -81,11 +81,15 @@ Listening to the kafka queues can be useful for debugging. Kafka is shipped with
 #### PluginsKTopic
 This queue receives the messages written by the plugins. You can listen to them by running the following command:
 ```
-/usr/local/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic PluginsKTopic
+docker exec -it ias-kafka bash
+source Tools/config/ias-bash-profile.sh
+iasDumpKafkaTopic -t plugin
 ```
 
 #### BsdbCoreKTopic
 This queue receives the messages written by the Converter adn the Supervisors. You can listen to them by running the following command:
 ```
-/usr/local/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic BsdbCoreKTopic
+docker exec -it ias-kafka bash
+source Tools/config/ias-bash-profile.sh
+iasDumpKafkaTopic -t core
 ```
