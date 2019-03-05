@@ -1,0 +1,20 @@
+{
+  "dasuID": "Dasu-Array-CRIO-VACUUM-PRES1-DV",
+  "id": "Asce-Array-CRIO-VACUUM-PRES1-DV",
+  "inputIDs": [
+    "dummy"
+  ],
+  "outputID": "Array-CRIO-VACUUM-PRES1-DV",
+  "transferFunctionID":"org.eso.ias.asce.transfer.impls.MinMaxThresholdTF",
+   "props": [
+    {
+      "name": "org.eso.ias.tf.minmaxthreshold.highOn",
+      "value": "40"
+    },
+    {
+      "name": "org.eso.ias.tf.minmaxthreshold.highOff",
+      "value": "39"
+    }
+  ],
+  "templateId":"DV"
+}
