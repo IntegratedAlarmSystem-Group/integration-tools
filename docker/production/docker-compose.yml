@@ -115,6 +115,18 @@ services:
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
     command: "./docker_run_ias.sh iasMailSender MailSenderID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
+  monitor:
+    container_name: ias-prod-monitor
+    image: registry.inria.cl:5000/ias-core:prod
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./docker_run_ias.sh iasMonitor MonitorID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+
   webserver:
     container_name: ias-prod-webserver
     image: registry.inria.cl:5000/ias-webserver:prod

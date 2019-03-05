@@ -106,5 +106,18 @@ services:
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
     command: "./compile_component.sh SinkClient"
 
+  monitor-compile:
+    container_name: ias-compile-monitor
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    networks:
+      - compile
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./compile_component.sh Monitor"
+
 networks:
   compile:
