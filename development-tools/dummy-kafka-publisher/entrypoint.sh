@@ -5,4 +5,5 @@
 #     echo 'Waiting for queue...'
 #     sleep 1
 # done
-python mock-kafka-publisher.py "${1}"
+echo "Starting to send messages to " ${@}
+python -u mock-kafka-publisher.py ${@}

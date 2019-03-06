@@ -347,16 +347,30 @@ core_values = [
     "\"value\":\"CLEARED\",\"readFromMonSysTStamp\":\"{}\",\"productionTStamp\":\"{}\",\"sentToConverterTStamp\":\"{}\",\"receivedFromPluginTStamp\":\"{}\",\"convertedProductionTStamp\":\"{}\",\"sentToBsdbTStamp\":\"{}\",\"mode\":\"OPERATIONAL\",\"iasValidity\":\"UNRELIABLE\",\"fullRunningId\":\"(RedisMP:MONITORED_SOFTWARE_SYSTEM)@(MPointsFromRedis:PLUGIN)@(ConverterID:CONVERTER)@(Array-Laser-Locked:IASIO)\",\"valueType\":\"ALARM\"",
 ]
 
-producer = KafkaProducer(bootstrap_servers=sys.argv[1])
 
+plugin_messages = [
+    {'topic': 'PluginsKTopic', 'msg': message} for message in plugin_values
+]
+core_messages = [
+    {'topic': 'BsdbCoreKTopic', 'msg': message} for message in core_values
+]
+messages = plugin_messages + core_messages
+print('Sending ', len(messages), ' messages every second')
+
+connection_pending = True
+while connection_pending:
+    try:
+        producer = KafkaProducer(bootstrap_servers=sys.argv[1])
+        connection_pending = False
+    except:
+        print('Error connecting to kafka, trying again in 1 second')
+        time.sleep(1)
+
+print('Connection established')
+counter = 1
 while True:
-    plugin_messages = [
-        {'topic': 'PluginsKTopic', 'msg': message} for message in plugin_values
-    ]
-    core_messages = [
-        {'topic': 'BsdbCoreKTopic', 'msg': message} for message in core_values
-    ]
-    messages = plugin_messages + core_messages
+    print('Sending batch number ', counter)
+    counter = counter + 1
     for message in messages:
         time_now = datetime.utcnow()
         time_now_formatted = time_now.strftime('%Y-%m-%dT%H:%M:%S.') + str(int(time_now.microsecond/1000)).zfill(3)
@@ -364,6 +378,6 @@ while True:
             data = "{" + message['msg'].format(time_now_formatted, time_now_formatted, time_now_formatted, time_now_formatted, time_now_formatted, time_now_formatted) + "}"
         else:
             data = "{" + message['msg'].format(time_now_formatted, time_now_formatted, time_now_formatted, time_now_formatted) + "}"
-        print('\nSending to: ', message['topic'], ': ', data.encode())
+        # print('\nSending to: ', message['topic'], ': ', data.encode())
         producer.send(message['topic'], data.encode())
     time.sleep(1)
