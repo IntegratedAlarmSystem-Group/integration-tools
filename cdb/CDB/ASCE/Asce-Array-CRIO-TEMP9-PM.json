@@ -2,7 +2,7 @@
   "dasuID": "Dasu-Array-CRIO-TEMP9-PM",
   "id": "Asce-Array-CRIO-TEMP9-PM",
   "inputIDs": [
-    "Array-CRIO-TEMP9-PM"
+    "Array-CRIO-TEMP9-VALUE-PM"
   ],
   "outputID": "Array-CRIO-TEMP9-PM",
   "transferFunctionID":"org.eso.ias.asce.transfer.impls.MinMaxThresholdTF",
