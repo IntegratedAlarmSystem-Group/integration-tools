@@ -1,0 +1,24 @@
+{
+	"dasuID":"Dasu-Array-PM",
+	"outputID":"Array-PM",
+	"id":"Asce-Array-PM",
+	"inputIDs":[
+		"Array-Fire-PM",
+		"Array-FireMalfunction-PM",
+		"Array-UpsFail-PM",
+		"Array-HvacFail-PM",
+		"Array-PowerCut-PM",
+		"Array-CRIO-TEMP0-PM",
+		"Array-CRIO-TEMP5-PM",
+		"Array-CRIO-TEMP9-PM",
+		"Array-CMPR-DRIVE-PM"
+	],
+	"transferFunctionID":"org.eso.ias.asce.transfer.impls.MultiplicityTF",
+	"props": [
+		{
+			"name": "org.eso.ias.tf.mutliplicity.threshold",
+			"value": "1"
+		}
+	],
+	"templateId":"PM"
+}

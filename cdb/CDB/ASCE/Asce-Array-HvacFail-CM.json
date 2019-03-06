@@ -1,0 +1,14 @@
+{
+	"dasuID":"Dasu-Array-HvacFail-CM",
+	"outputID":"Array-HvacFail-CM",
+	"id":"Asce-Array-HvacFail-CM",
+	"transferFunctionID":"org.eso.ias.tranfer.utlitymodule.UMAlarmByBit",
+	"props": [
+		{
+			"name": "org.eso.ias.transfer.utilitymodule.bitnumber",
+			"value": "6"
+		}
+	],
+	"inputIDs":["Array-UMStatus-CM"],
+	"templateId":"CM"
+}

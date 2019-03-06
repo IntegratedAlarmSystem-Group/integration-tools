@@ -1,7 +1,7 @@
 {
-	"dasuID":"Dasu-Array-PowerCut-Ant",
-	"outputID":"Array-PowerCut-Ant",
-	"id":"Asce-Array-PowerCut-Ant",
+	"dasuID":"Dasu-Array-PowerCut-PM",
+	"outputID":"Array-PowerCut-PM",
+	"id":"Asce-Array-PowerCut-PM",
 	"transferFunctionID":"org.eso.ias.tranfer.utlitymodule.UMAlarmByBit",
 	"props": [
 		{
@@ -9,6 +9,6 @@
 			"value": "2"
 		}
 	],
-	"inputIDs":["Array-UMStatus-Ant"],
-	"templateId":"template-antennas"
+	"inputIDs":["Array-UMStatus-PM"],
+	"templateId":"PM"
 }

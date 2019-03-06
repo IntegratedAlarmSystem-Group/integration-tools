@@ -1,0 +1,24 @@
+{
+	"dasuID":"Dasu-Array-DV",
+	"outputID":"Array-DV",
+	"id":"Asce-Array-DV",
+	"inputIDs":[
+		"Array-Fire-DV",
+		"Array-FireMalfunction-DV",
+		"Array-UpsFail-DV",
+		"Array-HvacFail-DV",
+		"Array-PowerCut-DV",
+		"Array-CRIO-TEMP0-DV",
+		"Array-CRIO-TEMP5-DV",
+		"Array-CRIO-TEMP9-DV",
+		"Array-CMPR-DRIVE-DV"
+	],
+	"transferFunctionID":"org.eso.ias.asce.transfer.impls.MultiplicityTF",
+	"props": [
+		{
+			"name": "org.eso.ias.tf.mutliplicity.threshold",
+			"value": "1"
+		}
+	],
+	"templateId":"DV"
+}

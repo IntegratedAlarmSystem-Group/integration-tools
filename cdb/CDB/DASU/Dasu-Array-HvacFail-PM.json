@@ -1,0 +1,9 @@
+{
+	"asceIDs":[
+		"Asce-Array-HvacFail-PM"
+	],
+	"outputId":"Array-HvacFail-PM",
+	"logLevel":"WARN",
+	"id":"Dasu-Array-HvacFail-PM",
+	"templateId":"PM"
+}

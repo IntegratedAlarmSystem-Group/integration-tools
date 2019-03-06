@@ -635,60 +635,234 @@
     "docUrl": "http://www.alma.cl"
   },
   {
-    "id": "Array-UMStatus-Ant",
+    "id": "Array-UMStatus-DV",
     "shortDesc": "UMStatus used as input value for alarms of the antenna",
     "iasType": "STRING",
     "docUrl": "http://www.alma.cl",
-    "templateId": "template-antennas"
+    "templateId": "DV"
   },
   {
-    "id": "Array-Ant",
+    "id": "Array-DV",
     "shortDesc": "General alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
-    "templateId": "template-antennas"
+    "templateId": "DV"
   },
   {
-    "id": "Array-Fire-Ant",
+    "id": "Array-Fire-DV",
     "shortDesc": "Fire alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
-    "templateId": "template-antennas",
+    "templateId": "DV",
     "sound":"TYPE2"
   },
   {
-    "id": "Array-FireMalfunction-Ant",
+    "id": "Array-FireMalfunction-DV",
     "shortDesc": "Fire malfunctioning alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
-    "templateId": "template-antennas",
+    "templateId": "DV",
     "sound":"TYPE2",
     "canShelve":"true"
   },
   {
-    "id": "Array-UpsFail-Ant",
+    "id": "Array-UpsFail-DV",
     "shortDesc": "UPS failure alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
-    "templateId": "template-antennas",
+    "templateId": "DV",
     "sound":"TYPE2",
     "canShelve":"true"
   },
   {
-    "id": "Array-HvacFail-Ant",
+    "id": "Array-HvacFail-DV",
     "shortDesc": "HVAC failure alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
-    "templateId": "template-antennas",
+    "templateId": "DV",
     "sound":"TYPE2",
     "canShelve":"true"
   },
   {
-    "id": "Array-PowerCut-Ant",
+    "id": "Array-PowerCut-DV",
     "shortDesc": "Power cut alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
-    "templateId": "template-antennas",
+    "templateId": "DV",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-UMStatus-DA",
+    "shortDesc": "UMStatus used as input value for alarms of the antenna",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA"
+  },
+  {
+    "id": "Array-DA",
+    "shortDesc": "General alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA"
+  },
+  {
+    "id": "Array-Fire-DA",
+    "shortDesc": "Fire alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA",
+    "sound":"TYPE2"
+  },
+  {
+    "id": "Array-FireMalfunction-DA",
+    "shortDesc": "Fire malfunctioning alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-UpsFail-DA",
+    "shortDesc": "UPS failure alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-HvacFail-DA",
+    "shortDesc": "HVAC failure alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-PowerCut-DA",
+    "shortDesc": "Power cut alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-UMStatus-CM",
+    "shortDesc": "UMStatus used as input value for alarms of the antenna",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM"
+  },
+  {
+    "id": "Array-CM",
+    "shortDesc": "General alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM"
+  },
+  {
+    "id": "Array-Fire-CM",
+    "shortDesc": "Fire alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM",
+    "sound":"TYPE2"
+  },
+  {
+    "id": "Array-FireMalfunction-CM",
+    "shortDesc": "Fire malfunctioning alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-UpsFail-CM",
+    "shortDesc": "UPS failure alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-HvacFail-CM",
+    "shortDesc": "HVAC failure alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-PowerCut-CM",
+    "shortDesc": "Power cut alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-UMStatus-PM",
+    "shortDesc": "UMStatus used as input value for alarms of the antenna",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM"
+  },
+  {
+    "id": "Array-PM",
+    "shortDesc": "General alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM"
+  },
+  {
+    "id": "Array-Fire-PM",
+    "shortDesc": "Fire alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM",
+    "sound":"TYPE2"
+  },
+  {
+    "id": "Array-FireMalfunction-PM",
+    "shortDesc": "Fire malfunctioning alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-UpsFail-PM",
+    "shortDesc": "UPS failure alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-HvacFail-PM",
+    "shortDesc": "HVAC failure alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM",
+    "sound":"TYPE2",
+    "canShelve":"true"
+  },
+  {
+    "id": "Array-PowerCut-PM",
+    "shortDesc": "Power cut alarm of the antenna",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM",
     "sound":"TYPE2",
     "canShelve":"true"
   },
@@ -700,172 +874,259 @@
   },
   {
     "id": "Array-CRIO-TEMP0-DV",
-    "shortDesc": "Cryo temperature sensor 0",
-    "iasType": "DOUBLE",
+    "shortDesc": "4K Cryo Cooler temperature alarm. Set if higher than 5[K]",
+    "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
     "templateId": "DV"
   },
   {
     "id": "Array-CRIO-TEMP0-DA",
-    "shortDesc": "Cryo temperature sensor 0",
-    "iasType": "DOUBLE",
+    "shortDesc": "4K Cryo Cooler temperature alarm. Set if higher than 5[K]",
+    "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
     "templateId": "DA"
   },
   {
     "id": "Array-CRIO-TEMP0-CM",
-    "shortDesc": "Cryo temperature sensor 0",
-    "iasType": "DOUBLE",
+    "shortDesc": "4K Cryo Cooler temperature alarm. Set if higher than 5[K]",
+    "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
     "templateId": "CM"
   },
   {
     "id": "Array-CRIO-TEMP0-PM",
-    "shortDesc": "Cryo temperature sensor 0",
-    "iasType": "DOUBLE",
+    "shortDesc": "4K Cryo Cooler temperature alarm. Set if higher than 5[K]",
+    "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
     "templateId": "PM"
   },
 
   {
     "id": "Array-CRIO-TEMP5-DV",
-    "shortDesc": "Cryo temperature sensor 5",
-    "iasType": "DOUBLE",
+    "shortDesc": "15K Cryo Cooler temperature alarm. Set if higher than 21[K]",
+    "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
     "templateId": "DV"
   },
   {
     "id": "Array-CRIO-TEMP5-DA",
-    "shortDesc": "Cryo temperature sensor 5",
-    "iasType": "DOUBLE",
+    "shortDesc": "15K Cryo Cooler temperature alarm. Set if higher than 21[K]",
+    "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
     "templateId": "DA"
   },
   {
     "id": "Array-CRIO-TEMP5-CM",
-    "shortDesc": "Cryo temperature sensor 5",
-    "iasType": "DOUBLE",
+    "shortDesc": "15K Cryo Cooler temperature alarm. Set if higher than 21[K]",
+    "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
     "templateId": "CM"
   },
   {
     "id": "Array-CRIO-TEMP5-PM",
-    "shortDesc": "Cryo temperature sensor 5",
-    "iasType": "DOUBLE",
-    "docUrl": "http://www.alma.cl",
-    "templateId": "PM"
-  },
-  
-  {
-    "id": "Array-CRIO-TEMP9-DV",
-    "shortDesc": "Cryo temperature sensor 9",
-    "iasType": "DOUBLE",
-    "docUrl": "http://www.alma.cl",
-    "templateId": "DV"
-  },
-  {
-    "id": "Array-CRIO-TEMP9-DA",
-    "shortDesc": "Cryo temperature sensor 9",
-    "iasType": "DOUBLE",
-    "docUrl": "http://www.alma.cl",
-    "templateId": "DA"
-  },
-  {
-    "id": "Array-CRIO-TEMP9-CM",
-    "shortDesc": "Cryo temperature sensor 9",
-    "iasType": "DOUBLE",
-    "docUrl": "http://www.alma.cl",
-    "templateId": "CM"
-  },
-  {
-    "id": "Array-CRIO-TEMP9-PM",
-    "shortDesc": "Cryo temperature sensor 9",
-    "iasType": "DOUBLE",
+    "shortDesc": "15K Cryo Cooler temperature alarm. Set if higher than 21[K]",
+    "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
     "templateId": "PM"
   },
 
   {
-    "id": "Array-CRIO-VACUUM-PRES0-DV",
-    "shortDesc": "Cryo pressure sensor 0",
-    "iasType": "DOUBLE",
+    "id": "Array-CRIO-TEMP9-DV",
+    "shortDesc": "11K Cryo Cooler temperature alarm. Set if higher than 120[K]",
+    "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
     "templateId": "DV"
   },
   {
-    "id": "Array-CRIO-VACUUM-PRES0-DA",
-    "shortDesc": "Cryo pressure sensor 0",
-    "iasType": "DOUBLE",
+    "id": "Array-CRIO-TEMP9-DA",
+    "shortDesc": "11K Cryo Cooler temperature alarm. Set if higher than 120[K]",
+    "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
     "templateId": "DA"
   },
   {
-    "id": "Array-CRIO-VACUUM-PRES0-PM",
-    "shortDesc": "Cryo pressure sensor 0",
-    "iasType": "DOUBLE",
-    "docUrl": "http://www.alma.cl",
-    "templateId": "PM"
-  },
-  {
-    "id": "Array-CRIO-VACUUM-PRES0-CM",
-    "shortDesc": "Cryo pressure sensor 0",
-    "iasType": "DOUBLE",
+    "id": "Array-CRIO-TEMP9-CM",
+    "shortDesc": "11K Cryo Cooler temperature alarm. Set if higher than 120[K]",
+    "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
     "templateId": "CM"
   },
   {
-    "id": "Array-CRIO-VACUUM-PRES1-DV",
-    "shortDesc": "Cryo pressure sensor 1",
-    "iasType": "DOUBLE",
-    "docUrl": "http://www.alma.cl",
-    "templateId": "DV"
-  },
-  {
-    "id": "Array-CRIO-VACUUM-PRES1-DA",
-    "shortDesc": "Cryo pressure sensor 1",
-    "iasType": "DOUBLE",
-    "docUrl": "http://www.alma.cl",
-    "templateId": "DA"
-  },
-  {
-    "id": "Array-CRIO-VACUUM-PRES1-PM",
-    "shortDesc": "Cryo pressure sensor 1",
-    "iasType": "DOUBLE",
+    "id": "Array-CRIO-TEMP9-PM",
+    "shortDesc": "11K Cryo Cooler temperature alarm. Set if higher than 120[K]",
+    "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
     "templateId": "PM"
   },
-  {
-    "id": "Array-CRIO-VACUUM-PRES1-CM",
-    "shortDesc": "Cryo pressure sensor 1",
-    "iasType": "DOUBLE",
-    "docUrl": "http://www.alma.cl",
-    "templateId": "CM"
-  },
+
   {
     "id": "Array-CMPR-DRIVE-DV",
-    "shortDesc": "Compressor drive OFF",
+    "shortDesc": "Compressor drive OFF alarm",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
     "templateId": "DV"
   },
   {
     "id": "Array-CMPR-DRIVE-DA",
-    "shortDesc": "Compressor drive OFF",
+    "shortDesc": "Compressor drive OFF alarm",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
     "templateId": "DA"
   },
   {
     "id": "Array-CMPR-DRIVE-PM",
-    "shortDesc": "Compressor drive OFF",
+    "shortDesc": "Compressor drive OFF alarm",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
     "templateId": "PM"
   },
   {
     "id": "Array-CMPR-DRIVE-CM",
-    "shortDesc": "Compressor drive OFF",
+    "shortDesc": "Compressor drive OFF alarm",
     "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM"
+  },
+  {
+    "id": "Array-CRIO-TEMP0-VALUE-DV",
+    "shortDesc": "4K Cryo Cooler temperature value",
+    "iasType": "DOUBLE",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DV"
+  },
+  {
+    "id": "Array-CRIO-TEMP0-VALUE-DA",
+    "shortDesc": "4K Cryo Cooler temperature value",
+    "iasType": "DOUBLE",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA"
+  },
+  {
+    "id": "Array-CRIO-TEMP0-VALUE-CM",
+    "shortDesc": "4K Cryo Cooler temperature value",
+    "iasType": "DOUBLE",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM"
+  },
+  {
+    "id": "Array-CRIO-TEMP0-VALUE-PM",
+    "shortDesc": "4K Cryo Cooler temperature value",
+    "iasType": "DOUBLE",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM"
+  },
+
+  {
+    "id": "Array-CRIO-TEMP5-VALUE-DV",
+    "shortDesc": "15K Cryo Cooler temperature value",
+    "iasType": "DOUBLE",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DV"
+  },
+  {
+    "id": "Array-CRIO-TEMP5-VALUE-DA",
+    "shortDesc": "15K Cryo Cooler temperature value",
+    "iasType": "DOUBLE",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA"
+  },
+  {
+    "id": "Array-CRIO-TEMP5-VALUE-CM",
+    "shortDesc": "15K Cryo Cooler temperature value",
+    "iasType": "DOUBLE",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM"
+  },
+  {
+    "id": "Array-CRIO-TEMP5-VALUE-PM",
+    "shortDesc": "15K Cryo Cooler temperature value",
+    "iasType": "DOUBLE",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM"
+  },
+
+  {
+    "id": "Array-CRIO-TEMP9-VALUE-DV",
+    "shortDesc": "11K Cryo Cooler temperature value",
+    "iasType": "DOUBLE",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DV"
+  },
+  {
+    "id": "Array-CRIO-TEMP9-VALUE-DA",
+    "shortDesc": "11K Cryo Cooler temperature value",
+    "iasType": "DOUBLE",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA"
+  },
+  {
+    "id": "Array-CRIO-TEMP9-VALUE-CM",
+    "shortDesc": "11K Cryo Cooler temperature value",
+    "iasType": "DOUBLE",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM"
+  },
+  {
+    "id": "Array-CRIO-TEMP9-VALUE-PM",
+    "shortDesc": "11K Cryo Cooler temperature value",
+    "iasType": "DOUBLE",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM"
+  },
+
+  {
+    "id": "Array-CRIO-VACUUM-PRES0-VALUE-DV",
+    "shortDesc": "Cryo pressure sensor 0 value",
+    "iasType": "DOUBLE",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DV"
+  },
+  {
+    "id": "Array-CRIO-VACUUM-PRES0-VALUE-DA",
+    "shortDesc": "Cryo pressure sensor 0 value",
+    "iasType": "DOUBLE",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA"
+  },
+  {
+    "id": "Array-CRIO-VACUUM-PRES0-VALUE-PM",
+    "shortDesc": "Cryo pressure sensor 0 value",
+    "iasType": "DOUBLE",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM"
+  },
+  {
+    "id": "Array-CRIO-VACUUM-PRES0-VALUE-CM",
+    "shortDesc": "Cryo pressure sensor 0 value",
+    "iasType": "DOUBLE",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM"
+  },
+  {
+    "id": "Array-CRIO-VACUUM-PRES1-VALUE-DV",
+    "shortDesc": "Cryo pressure sensor 1 value",
+    "iasType": "DOUBLE",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DV"
+  },
+  {
+    "id": "Array-CRIO-VACUUM-PRES1-VALUE-DA",
+    "shortDesc": "Cryo pressure sensor 1 value",
+    "iasType": "DOUBLE",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA"
+  },
+  {
+    "id": "Array-CRIO-VACUUM-PRES1-VALUE-PM",
+    "shortDesc": "Cryo pressure sensor 1 value",
+    "iasType": "DOUBLE",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM"
+  },
+  {
+    "id": "Array-CRIO-VACUUM-PRES1-VALUE-CM",
+    "shortDesc": "Cryo pressure sensor 1 value",
+    "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
     "templateId": "CM"
   }
