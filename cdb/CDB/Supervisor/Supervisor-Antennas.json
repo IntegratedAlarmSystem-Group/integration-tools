@@ -14,8 +14,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"1"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"1"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"1"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"1"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"1"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"2"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"2"},
@@ -26,8 +24,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"2"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"2"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"2"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"2"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"2"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"3"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"3"},
@@ -38,8 +34,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"3"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"3"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"3"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"3"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"3"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"4"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"4"},
@@ -50,8 +44,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"4"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"4"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"4"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"4"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"4"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"5"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"5"},
@@ -62,8 +54,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"5"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"5"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"5"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"5"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"5"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"6"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"6"},
@@ -74,8 +64,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"6"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"6"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"6"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"6"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"6"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"7"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"7"},
@@ -86,8 +74,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"7"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"7"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"7"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"7"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"7"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"8"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"8"},
@@ -98,8 +84,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"8"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"8"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"8"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"8"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"8"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"9"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"9"},
@@ -110,8 +94,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"9"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"9"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"9"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"9"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"9"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"10"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"10"},
@@ -122,8 +104,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"10"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"10"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"10"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"10"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"10"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"11"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"11"},
@@ -134,8 +114,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"11"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"11"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"11"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"11"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"11"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"12"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"12"},
@@ -146,8 +124,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"12"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"12"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"12"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"12"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"12"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"13"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"13"},
@@ -158,8 +134,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"13"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"13"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"13"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"13"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"13"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"14"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"14"},
@@ -170,8 +144,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"14"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"14"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"14"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"14"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"14"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"15"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"15"},
@@ -182,8 +154,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"15"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"15"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"15"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"15"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"15"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"16"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"16"},
@@ -194,8 +164,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"16"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"16"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"16"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"16"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"16"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"17"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"17"},
@@ -206,8 +174,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"17"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"17"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"17"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"17"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"17"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"18"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"18"},
@@ -218,8 +184,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"18"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"18"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"18"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"18"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"18"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"19"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"19"},
@@ -230,8 +194,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"19"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"19"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"19"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"19"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"19"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"20"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"20"},
@@ -242,8 +204,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"20"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"20"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"20"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"20"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"20"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"21"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"21"},
@@ -254,8 +214,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"21"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"21"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"21"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"21"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"21"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"22"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"22"},
@@ -266,8 +224,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"22"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"22"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"22"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"22"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"22"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"23"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"23"},
@@ -278,8 +234,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"23"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"23"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"23"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"23"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"23"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"24"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"24"},
@@ -290,8 +244,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"24"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"24"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"24"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"24"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"24"},
 
 		{"dasuId":"Dasu-Array-DV","templateId":"DV","instance":"25"},
 		{"dasuId":"Dasu-Array-Fire-DV","templateId":"DV","instance":"25"},
@@ -302,8 +254,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DV","templateId":"DV","instance":"25"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DV","templateId":"DV","instance":"25"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DV","templateId":"DV","instance":"25"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DV","templateId":"DV","instance":"25"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DV","templateId":"DV","instance":"25"},
 
 
 
@@ -316,8 +266,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"41"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"41"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"41"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"41"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"41"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"42"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"42"},
@@ -328,8 +276,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"42"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"42"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"42"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"42"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"42"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"43"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"43"},
@@ -340,8 +286,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"43"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"43"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"43"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"43"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"43"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"44"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"44"},
@@ -352,8 +296,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"44"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"44"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"44"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"44"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"44"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"45"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"45"},
@@ -364,8 +306,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"45"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"45"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"45"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"45"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"45"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"46"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"46"},
@@ -376,8 +316,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"46"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"46"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"46"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"46"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"46"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"47"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"47"},
@@ -388,8 +326,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"47"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"47"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"47"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"47"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"47"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"48"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"48"},
@@ -400,8 +336,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"48"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"48"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"48"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"48"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"48"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"49"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"49"},
@@ -412,8 +346,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"49"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"49"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"49"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"49"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"49"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"50"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"50"},
@@ -424,8 +356,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"50"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"50"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"50"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"50"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"50"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"51"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"51"},
@@ -436,8 +366,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"51"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"51"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"51"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"51"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"51"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"52"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"52"},
@@ -448,8 +376,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"52"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"52"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"52"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"52"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"52"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"53"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"53"},
@@ -460,8 +386,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"53"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"53"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"53"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"53"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"53"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"54"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"54"},
@@ -472,8 +396,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"54"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"54"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"54"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"54"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"54"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"55"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"55"},
@@ -484,8 +406,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"55"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"55"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"55"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"55"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"55"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"56"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"56"},
@@ -496,8 +416,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"56"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"56"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"56"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"56"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"56"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"57"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"57"},
@@ -508,8 +426,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"57"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"57"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"57"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"57"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"57"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"58"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"58"},
@@ -520,8 +436,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"58"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"58"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"58"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"58"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"58"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"59"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"59"},
@@ -532,8 +446,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"59"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"59"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"59"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"59"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"59"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"60"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"60"},
@@ -544,8 +456,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"60"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"60"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"60"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"60"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"60"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"61"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"61"},
@@ -556,8 +466,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"61"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"61"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"61"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"61"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"61"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"62"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"62"},
@@ -568,8 +476,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"62"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"62"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"62"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"62"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"62"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"63"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"63"},
@@ -580,8 +486,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"63"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"63"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"63"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"63"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"63"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"64"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"64"},
@@ -592,8 +496,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"64"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"64"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"64"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"64"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"64"},
 
 		{"dasuId":"Dasu-Array-DA","templateId":"DA","instance":"65"},
 		{"dasuId":"Dasu-Array-Fire-DA","templateId":"DA","instance":"65"},
@@ -604,8 +506,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-DA","templateId":"DA","instance":"65"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-DA","templateId":"DA","instance":"65"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-DA","templateId":"DA","instance":"65"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-DA","templateId":"DA","instance":"65"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-DA","templateId":"DA","instance":"65"},
 
 
 
@@ -618,8 +518,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-CM","templateId":"CM","instance":"1"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-CM","templateId":"CM","instance":"1"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-CM","templateId":"CM","instance":"1"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-CM","templateId":"CM","instance":"1"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-CM","templateId":"CM","instance":"1"},
 
 		{"dasuId":"Dasu-Array-CM","templateId":"CM","instance":"2"},
 		{"dasuId":"Dasu-Array-Fire-CM","templateId":"CM","instance":"2"},
@@ -630,8 +528,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-CM","templateId":"CM","instance":"2"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-CM","templateId":"CM","instance":"2"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-CM","templateId":"CM","instance":"2"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-CM","templateId":"CM","instance":"2"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-CM","templateId":"CM","instance":"2"},
 
 		{"dasuId":"Dasu-Array-CM","templateId":"CM","instance":"3"},
 		{"dasuId":"Dasu-Array-Fire-CM","templateId":"CM","instance":"3"},
@@ -642,8 +538,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-CM","templateId":"CM","instance":"3"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-CM","templateId":"CM","instance":"3"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-CM","templateId":"CM","instance":"3"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-CM","templateId":"CM","instance":"3"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-CM","templateId":"CM","instance":"3"},
 
 		{"dasuId":"Dasu-Array-CM","templateId":"CM","instance":"4"},
 		{"dasuId":"Dasu-Array-Fire-CM","templateId":"CM","instance":"4"},
@@ -654,8 +548,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-CM","templateId":"CM","instance":"4"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-CM","templateId":"CM","instance":"4"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-CM","templateId":"CM","instance":"4"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-CM","templateId":"CM","instance":"4"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-CM","templateId":"CM","instance":"4"},
 
 		{"dasuId":"Dasu-Array-CM","templateId":"CM","instance":"5"},
 		{"dasuId":"Dasu-Array-Fire-CM","templateId":"CM","instance":"5"},
@@ -666,8 +558,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-CM","templateId":"CM","instance":"5"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-CM","templateId":"CM","instance":"5"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-CM","templateId":"CM","instance":"5"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-CM","templateId":"CM","instance":"5"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-CM","templateId":"CM","instance":"5"},
 
 		{"dasuId":"Dasu-Array-CM","templateId":"CM","instance":"6"},
 		{"dasuId":"Dasu-Array-Fire-CM","templateId":"CM","instance":"6"},
@@ -678,8 +568,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-CM","templateId":"CM","instance":"6"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-CM","templateId":"CM","instance":"6"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-CM","templateId":"CM","instance":"6"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-CM","templateId":"CM","instance":"6"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-CM","templateId":"CM","instance":"6"},
 
 		{"dasuId":"Dasu-Array-CM","templateId":"CM","instance":"7"},
 		{"dasuId":"Dasu-Array-Fire-CM","templateId":"CM","instance":"7"},
@@ -690,8 +578,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-CM","templateId":"CM","instance":"7"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-CM","templateId":"CM","instance":"7"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-CM","templateId":"CM","instance":"7"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-CM","templateId":"CM","instance":"7"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-CM","templateId":"CM","instance":"7"},
 
 		{"dasuId":"Dasu-Array-CM","templateId":"CM","instance":"8"},
 		{"dasuId":"Dasu-Array-Fire-CM","templateId":"CM","instance":"8"},
@@ -702,8 +588,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-CM","templateId":"CM","instance":"8"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-CM","templateId":"CM","instance":"8"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-CM","templateId":"CM","instance":"8"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-CM","templateId":"CM","instance":"8"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-CM","templateId":"CM","instance":"8"},
 
 		{"dasuId":"Dasu-Array-CM","templateId":"CM","instance":"9"},
 		{"dasuId":"Dasu-Array-Fire-CM","templateId":"CM","instance":"9"},
@@ -714,8 +598,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-CM","templateId":"CM","instance":"9"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-CM","templateId":"CM","instance":"9"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-CM","templateId":"CM","instance":"9"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-CM","templateId":"CM","instance":"9"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-CM","templateId":"CM","instance":"9"},
 
 		{"dasuId":"Dasu-Array-CM","templateId":"CM","instance":"10"},
 		{"dasuId":"Dasu-Array-Fire-CM","templateId":"CM","instance":"10"},
@@ -726,8 +608,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-CM","templateId":"CM","instance":"10"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-CM","templateId":"CM","instance":"10"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-CM","templateId":"CM","instance":"10"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-CM","templateId":"CM","instance":"10"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-CM","templateId":"CM","instance":"10"},
 
 		{"dasuId":"Dasu-Array-CM","templateId":"CM","instance":"11"},
 		{"dasuId":"Dasu-Array-Fire-CM","templateId":"CM","instance":"11"},
@@ -738,8 +618,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-CM","templateId":"CM","instance":"11"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-CM","templateId":"CM","instance":"11"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-CM","templateId":"CM","instance":"11"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-CM","templateId":"CM","instance":"11"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-CM","templateId":"CM","instance":"11"},
 
 		{"dasuId":"Dasu-Array-CM","templateId":"CM","instance":"12"},
 		{"dasuId":"Dasu-Array-Fire-CM","templateId":"CM","instance":"12"},
@@ -750,8 +628,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-CM","templateId":"CM","instance":"12"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-CM","templateId":"CM","instance":"12"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-CM","templateId":"CM","instance":"12"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-CM","templateId":"CM","instance":"12"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-CM","templateId":"CM","instance":"12"},
 
 
 
@@ -764,8 +640,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-PM","templateId":"PM","instance":"1"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-PM","templateId":"PM","instance":"1"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-PM","templateId":"PM","instance":"1"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-PM","templateId":"PM","instance":"1"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-PM","templateId":"PM","instance":"1"},
 
 		{"dasuId":"Dasu-Array-PM","templateId":"PM","instance":"2"},
 		{"dasuId":"Dasu-Array-Fire-PM","templateId":"PM","instance":"2"},
@@ -776,8 +650,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-PM","templateId":"PM","instance":"2"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-PM","templateId":"PM","instance":"2"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-PM","templateId":"PM","instance":"2"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-PM","templateId":"PM","instance":"2"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-PM","templateId":"PM","instance":"2"},
 
 		{"dasuId":"Dasu-Array-PM","templateId":"PM","instance":"3"},
 		{"dasuId":"Dasu-Array-Fire-PM","templateId":"PM","instance":"3"},
@@ -788,8 +660,6 @@
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-PM","templateId":"PM","instance":"3"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-PM","templateId":"PM","instance":"3"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP9-PM","templateId":"PM","instance":"3"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-PM","templateId":"PM","instance":"3"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-PM","templateId":"PM","instance":"3"},
 
 		{"dasuId":"Dasu-Array-PM","templateId":"PM","instance":"4"},
 		{"dasuId":"Dasu-Array-Fire-PM","templateId":"PM","instance":"4"},
@@ -799,8 +669,6 @@
 		{"dasuId":"Dasu-Array-PowerCut-PM","templateId":"PM","instance":"4"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP0-PM","templateId":"PM","instance":"4"},
 		{"dasuId":"Dasu-Array-CRIO-TEMP5-PM","templateId":"PM","instance":"4"},
-		{"dasuId":"Dasu-Array-CRIO-TEMP9-PM","templateId":"PM","instance":"4"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES0-PM","templateId":"PM","instance":"4"},
-		{"dasuId":"Dasu-Array-CRIO-VACUUM-PRES1-PM","templateId":"PM","instance":"4"}
+		{"dasuId":"Dasu-Array-CRIO-TEMP9-PM","templateId":"PM","instance":"4"}
 	]
 }

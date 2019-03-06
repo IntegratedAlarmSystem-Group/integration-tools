@@ -11,8 +11,6 @@
 		"Array-CRIO-TEMP0-PM",
 		"Array-CRIO-TEMP5-PM",
 		"Array-CRIO-TEMP9-PM",
-		"Array-CRIO-VACUUM-PRES0-PM",
-		"Array-CRIO-VACUUM-PRES1-PM",
 		"Array-CMPR-DRIVE-PM"
 	],
 	"transferFunctionID":"org.eso.ias.asce.transfer.impls.MultiplicityTF",

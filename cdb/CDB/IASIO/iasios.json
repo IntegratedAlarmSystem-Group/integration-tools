@@ -960,62 +960,6 @@
   },
 
   {
-    "id": "Array-CRIO-VACUUM-PRES0-DV",
-    "shortDesc": "Cryo pressure sensor 0",
-    "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl",
-    "templateId": "DV"
-  },
-  {
-    "id": "Array-CRIO-VACUUM-PRES0-DA",
-    "shortDesc": "Cryo pressure sensor 0",
-    "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl",
-    "templateId": "DA"
-  },
-  {
-    "id": "Array-CRIO-VACUUM-PRES0-PM",
-    "shortDesc": "Cryo pressure sensor 0",
-    "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl",
-    "templateId": "PM"
-  },
-  {
-    "id": "Array-CRIO-VACUUM-PRES0-CM",
-    "shortDesc": "Cryo pressure sensor 0",
-    "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl",
-    "templateId": "CM"
-  },
-  {
-    "id": "Array-CRIO-VACUUM-PRES1-DV",
-    "shortDesc": "Cryo pressure sensor 1",
-    "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl",
-    "templateId": "DV"
-  },
-  {
-    "id": "Array-CRIO-VACUUM-PRES1-DA",
-    "shortDesc": "Cryo pressure sensor 1",
-    "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl",
-    "templateId": "DA"
-  },
-  {
-    "id": "Array-CRIO-VACUUM-PRES1-PM",
-    "shortDesc": "Cryo pressure sensor 1",
-    "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl",
-    "templateId": "PM"
-  },
-  {
-    "id": "Array-CRIO-VACUUM-PRES1-CM",
-    "shortDesc": "Cryo pressure sensor 1",
-    "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl",
-    "templateId": "CM"
-  },
-  {
     "id": "Array-CMPR-DRIVE-DV",
     "shortDesc": "Compressor drive OFF alarm",
     "iasType": "ALARM",
