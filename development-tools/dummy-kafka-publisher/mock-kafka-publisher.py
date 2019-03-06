@@ -344,6 +344,7 @@ core_values = [
     "\"value\":\"CLEARED\",\"readFromMonSysTStamp\":\"{}\",\"productionTStamp\":\"{}\",\"sentToConverterTStamp\":\"{}\",\"receivedFromPluginTStamp\":\"{}\",\"convertedProductionTStamp\":\"{}\",\"sentToBsdbTStamp\":\"{}\",\"mode\":\"OPERATIONAL\",\"iasValidity\":\"RELIABLE\",\"fullRunningId\":\"(RedisMP:MONITORED_SOFTWARE_SYSTEM)@(MPointsFromRedis:PLUGIN)@(ConverterID:CONVERTER)@(Array-CMPR-DRIVE-PM[!#3!]:IASIO)\",\"valueType\":\"ALARM\"",
     "\"value\":\"CLEARED\",\"readFromMonSysTStamp\":\"{}\",\"productionTStamp\":\"{}\",\"sentToConverterTStamp\":\"{}\",\"receivedFromPluginTStamp\":\"{}\",\"convertedProductionTStamp\":\"{}\",\"sentToBsdbTStamp\":\"{}\",\"mode\":\"OPERATIONAL\",\"iasValidity\":\"RELIABLE\",\"fullRunningId\":\"(RedisMP:MONITORED_SOFTWARE_SYSTEM)@(MPointsFromRedis:PLUGIN)@(ConverterID:CONVERTER)@(Array-CMPR-DRIVE-PM[!#4!]:IASIO)\",\"valueType\":\"ALARM\"",
 
+    "\"value\":\"CLEARED\",\"readFromMonSysTStamp\":\"{}\",\"productionTStamp\":\"{}\",\"sentToConverterTStamp\":\"{}\",\"receivedFromPluginTStamp\":\"{}\",\"convertedProductionTStamp\":\"{}\",\"sentToBsdbTStamp\":\"{}\",\"mode\":\"OPERATIONAL\",\"iasValidity\":\"UNRELIABLE\",\"fullRunningId\":\"(RedisMP:MONITORED_SOFTWARE_SYSTEM)@(MPointsFromRedis:PLUGIN)@(ConverterID:CONVERTER)@(Array-Laser-Locked:IASIO)\",\"valueType\":\"ALARM\"",
 ]
 
 producer = KafkaProducer(bootstrap_servers=sys.argv[1])

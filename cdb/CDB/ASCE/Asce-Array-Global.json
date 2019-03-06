@@ -2,7 +2,9 @@
 	"dasuID":"Dasu-Array-Global",
 	"outputID":"Array-Global-Alarm",
 	"id":"Asce-Array-Global",
-	"inputIDs":[],
+	"inputIDs":[
+		"Array-Laser-Locked"
+	],
 	"transferFunctionID":"org.eso.ias.asce.transfer.impls.MultiplicityTF",
 	"props": [
 		{
