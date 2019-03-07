@@ -176,7 +176,7 @@ services:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
     command: "./docker_run_ias.sh iasWebServerSender WebServerSenderID -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8000/core/ -jcdb /usr/src/cdb/ -t ALARM -i Array-AntennasToPads"
-  
+
   monitor:
     container_name: ias-build-monitor
     build:
@@ -208,6 +208,7 @@ services:
       - ADMIN_PASSWORD=${ADMIN_PASSWORD}
       - OP_DUTY_PASSWORD=${OP_DUTY_PASSWORD}
       - PROCESS_CONNECTION_PASS=${WS_CONNECTION_PASS}
+      - SECRET_KEY=${DJANGO_SECRET_KEY}
     volumes:
       - ${DOCKERFILE_PATH_WEBSERVER}:/usr/src/ias-webserver
       - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
