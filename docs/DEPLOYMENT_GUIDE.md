@@ -55,6 +55,17 @@ The needed packages are:
 
 The webserver docker image must be built locally after locate those packages in the folder private_files in the ias-webserver directory.
 
+### 1.3 Change sensitive data
+Some sensitive data is defined in the .env files. Unless in the future these files are encrypted using something like gitcrypt, that data should be changed in production. In particular, what must be changed is the following:
+
+- `WS_CONNECTION_PASS`: this is the password that the WebServerSender uses to authenticate and connect to the Webserver. It must be changed to a private, hidden and hopefully random string
+
+- `DJANGO_SECRET_KEY`: this is an internal key that is used by the Webserver for internal encryption (this is part of Django). It must be changed to a private, hidden and hopefully random string
+
+- `ADMIN_PASSWORD`: this is the password for the ADMIN account. It must be changed to a private string
+
+- `OP_DUTY_PASSWORD`: this is the password for the OPERATOR_ON_DUTY account. It must be changed to a private string
+
 ---
 
 ## 2. Deployment
