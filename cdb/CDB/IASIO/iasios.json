@@ -1129,5 +1129,43 @@
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
     "templateId": "CM"
+  },
+  {
+    "id": "IASMON-PLUGIN_DEAD",
+    "shortDesc": "At least one plugin is not responding",
+    "iasType": "ALARM",
+    "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring"
+  },
+
+ {
+    "id": "IASMON-CONVERTER_DEAD",
+    "shortDesc": "At least one converter is not responding",
+    "iasType": "ALARM",
+    "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring"
+  },
+  {
+    "id": "IASMON-SUPERVISOR_DEAD",
+    "shortDesc": "At least one Supervisor is not responding",
+    "iasType": "ALARM",
+    "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring"
+  },
+  {
+    "id": "IASMON-SINK_DEAD",
+    "shortDesc": "At least one IAS sink processor is not responding",
+    "iasType": "ALARM",
+    "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring"
+  },
+  {
+    "id": "IASMON-CLIENT_DEAD",
+    "shortDesc": "At least one IAS client is not responding",
+    "iasType": "ALARM",
+    "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring"
+  },
+  {
+    "id": "IASMON-GLOBAL",
+    "shortDesc": "IAS malfunction",
+    "iasType": "ALARM",
+    "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring"
   }
+
 ]
