@@ -58,7 +58,7 @@ services:
       - kafka
     depends_on:
       - kafka
-    command: ["-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092", "weather-config.json"]
+    command: ["-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092", "config_files/weather-config.json"]
 
 
   # dummy-plugin:
