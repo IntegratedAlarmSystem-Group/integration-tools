@@ -60,7 +60,8 @@ services:
       - kafka
     volumes:
       - ${DUMMY_CONFIGS_LOCATION}:/usr/src/multi_dummy_plugin/config_files
-    command: ["-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092", "config_files/weather-config.json"]
+    command: ["config_files/weather-config.json", "${KAFKA_SERVER}", "9092"]
+    # command: ["${KAFKA_SERVER} 9092 config_files/weather-config.json"]
 
 
   # dummy-plugin:
