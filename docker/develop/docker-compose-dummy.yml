@@ -35,7 +35,7 @@ services:
     container_name: ias-build-visual-inspection
     build:
       context: ${DOCKERFILE_PATH_VISUAL_INSPECTION}
-      dockerfile: Dockerfile-build
+      dockerfile: Dockerfile-mount
     image: ias-build-visual-inspection-plugin-image
     links:
       - kafka
@@ -58,6 +58,8 @@ services:
       - kafka
     depends_on:
       - kafka
+    volumes:
+      - ${DUMMY_CONFIGS_LOCATION}:/usr/src/multi_dummy_plugin/config_files
     command: ["-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092", "config_files/weather-config.json"]
 
 
