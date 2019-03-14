@@ -17,19 +17,19 @@ services:
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
     command: "./docker_run_kafka.sh"
 
-  alma-weather-plugin:
-    container_name: ias-build-alma-weather-plugin
-    build:
-      context: ${DOCKERFILE_PATH_ALMA_WEATHER}
-      dockerfile: Dockerfile-build
-    image: ias-build-alma-weather-plugin-image
-    links:
-      - kafka
-    depends_on:
-      - kafka
-    volumes:
-      - ${LOGS_PATH}:/usr/src/alma_weather_plugin/logs/
-    command: "-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092"
+  # alma-weather-plugin:
+  #   container_name: ias-build-alma-weather-plugin
+  #   build:
+  #     context: ${DOCKERFILE_PATH_ALMA_WEATHER}
+  #     dockerfile: Dockerfile-build
+  #   image: ias-build-alma-weather-plugin-image
+  #   links:
+  #     - kafka
+  #   depends_on:
+  #     - kafka
+  #   volumes:
+  #     - ${LOGS_PATH}:/usr/src/alma_weather_plugin/logs/
+  #   command: "-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092"
 
   visual-inspection-plugin:
     container_name: ias-build-visual-inspection
