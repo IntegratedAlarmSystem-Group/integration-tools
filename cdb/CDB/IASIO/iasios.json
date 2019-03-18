@@ -1166,6 +1166,151 @@
     "shortDesc": "IAS malfunction",
     "iasType": "ALARM",
     "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring"
+  },
+
+  {
+    "id": "Room-135-Ceiling-Smoke-L1-007",
+    "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, L1-007",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Ceiling-Smoke-L1-008",
+    "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-008",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Ceiling-Smoke-L1-009",
+    "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-009",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Ceiling-Smoke-L1-010",
+    "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-010",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Ceiling-Smoke-L1-011",
+    "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-011",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Ceiling-Smoke-L1-012",
+    "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-012",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Ceiling-Smoke-L1-013",
+    "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-013",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Ceiling-Smoke-L1-014",
+    "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-014",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Ceiling-Smoke-L1-015",
+    "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-015",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Ceiling-Smoke-L1-016",
+    "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-016",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Ceiling-Smoke-L1-017",
+    "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-017",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Ceiling-Smoke-L1-018",
+    "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-018",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Subfloor-Smoke-L1-027",
+    "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-027",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Subfloor-Smoke-L1-028",
+    "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-028",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Subfloor-Smoke-L1-029",
+    "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-029",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Subfloor-Smoke-L1-030",
+    "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-030",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Subfloor-Smoke-L1-031",
+    "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-031",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Subfloor-Smoke-L1-032",
+    "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-032",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Subfloor-Smoke-L1-033",
+    "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-033",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Subfloor-Smoke-L1-034",
+    "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-034",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Subfloor-Smoke-L1-035",
+    "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-035",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Subfloor-Smoke-L1-036",
+    "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-036",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Subfloor-Smoke-L1-037",
+    "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-037",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Room-135-Subfloor-Smoke-L1-038",
+    "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-038",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
   }
 
 ]
