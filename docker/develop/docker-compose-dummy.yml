@@ -17,20 +17,6 @@ services:
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
     command: "./docker_run_kafka.sh"
 
-  # alma-weather-plugin:
-  #   container_name: ias-build-alma-weather-plugin
-  #   build:
-  #     context: ${DOCKERFILE_PATH_ALMA_WEATHER}
-  #     dockerfile: Dockerfile-build
-  #   image: ias-build-alma-weather-plugin-image
-  #   links:
-  #     - kafka
-  #   depends_on:
-  #     - kafka
-  #   volumes:
-  #     - ${LOGS_PATH}:/usr/src/alma_weather_plugin/logs/
-  #   command: "-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092"
-
   visual-inspection-plugin:
     container_name: ias-build-visual-inspection
     build:
@@ -50,7 +36,7 @@ services:
     container_name: ias-build-multi-dummy-plugin
     build:
       context: ${DOCKERFILE_PATH_MULTI_DUMMY_PLUGIN}
-      dockerfile: Dockerfile-build
+      dockerfile: Dockerfile-mount
     image: ias-build-multi-dummy-plugin-image
     stdin_open: true
     tty: true
@@ -61,50 +47,6 @@ services:
     volumes:
       - ${DUMMY_CONFIGS_LOCATION}:/usr/src/multi_dummy_plugin/config_files
     command: ["config_files/weather-config.json", "${KAFKA_SERVER}", "9092"]
-    # command: ["${KAFKA_SERVER} 9092 config_files/weather-config.json"]
-
-
-  # dummy-plugin:
-  #   container_name: ias-build-dummy-plugin
-  #   build:
-  #     context: ${DOCKERFILE_PATH_DUMMY_PLUGIN}
-  #     dockerfile: Dockerfile-build
-  #   image: ias-build-dummy-plugin-image
-  #   stdin_open: true
-  #   tty: true
-  #   links:
-  #     - kafka
-  #   depends_on:
-  #     - kafka
-  #   command: "dummy ${KAFKA_SERVER} 9092"
-  #
-  # dummy-plugin-21:
-  #   container_name: ias-build-dummy-plugin-21
-  #   build:
-  #     context: ${DOCKERFILE_PATH_DUMMY_PLUGIN}
-  #     dockerfile: Dockerfile-build
-  #   image: ias-build-dummy-plugin-image
-  #   stdin_open: true
-  #   tty: true
-  #   links:
-  #     - kafka
-  #   depends_on:
-  #     - kafka
-  #   command: "dummy-21 ${KAFKA_SERVER} 9092"
-  #
-  # dummy-plugin-22:
-  #   container_name: ias-build-dummy-plugin-22
-  #   build:
-  #     context: ${DOCKERFILE_PATH_DUMMY_PLUGIN}
-  #     dockerfile: Dockerfile-build
-  #   image: ias-build-dummy-plugin-image
-  #   stdin_open: true
-  #   tty: true
-  #   links:
-  #     - kafka
-  #   depends_on:
-  #     - kafka
-  #   command: "dummy-22 ${KAFKA_SERVER} 9092"
 
   mock-kafka-publisher:
     container_name: ias-build-mock-kafka-publisher
