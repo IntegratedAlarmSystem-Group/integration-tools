@@ -1,0 +1,32 @@
+{
+  "id":"Plugin-ID",
+  "monitoredSystemId":"Dummy",
+  "sinkServer":"kafka",
+  "sinkPort":"9092",
+  "autoSendTimeInterval":"3",
+  "hbFrequency":"10",
+  "properties": [
+    {
+      "key":"a-key",
+      "value":"itsValue"
+    },
+    {
+      "key":"Anotherkey",
+      "value":"AnotherValue"
+      }
+  ],
+  "values":[
+    {
+      "id": "dummy",
+      "refreshTime":"2000"
+    },
+    {
+      "id": "dummy-21",
+      "refreshTime":"2000"
+    },
+    {
+      "id": "dummy-22",
+      "refreshTime":"2000"
+    }
+  ]
+}

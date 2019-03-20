@@ -32,8 +32,8 @@ services:
       - ${VISUAL_INSPECTION_FILE_PATH}:/usr/src/weather_visual_inspection_plugin/input
     command: ["-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092", "-f input/inspections.json"]
 
-  multi-dummy:
-    container_name: ias-build-multi-dummy-plugin
+  weather-dummy:
+    container_name: ias-build-dummy-weather-plugin
     build:
       context: ${DOCKERFILE_PATH_MULTI_DUMMY_PLUGIN}
       dockerfile: Dockerfile-mount
@@ -47,6 +47,22 @@ services:
     volumes:
       - ${DUMMY_CONFIGS_LOCATION}:/usr/src/multi_dummy_plugin/config_files
     command: ["config_files/weather-config.json", "${KAFKA_SERVER}", "9092"]
+
+  dummy:
+    container_name: ias-build-dummy-plugin
+    build:
+      context: ${DOCKERFILE_PATH_MULTI_DUMMY_PLUGIN}
+      dockerfile: Dockerfile-mount
+    image: ias-build-multi-dummy-plugin-image
+    stdin_open: true
+    tty: true
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${DUMMY_CONFIGS_LOCATION}:/usr/src/multi_dummy_plugin/config_files
+    command: ["config_files/dummy-config.json", "${KAFKA_SERVER}", "9092"]
 
   mock-kafka-publisher:
     container_name: ias-build-mock-kafka-publisher
