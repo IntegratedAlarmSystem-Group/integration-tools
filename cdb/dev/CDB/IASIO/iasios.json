@@ -3,271 +3,309 @@
         "id": "WS-MeteoTB1-Temperature-Value",
         "shortDesc": "Temperature reported by the weather station MeteoTB1",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-MeteoTB1-WindSpeed-Value",
         "shortDesc": "WindSpeed reported by the weather station MeteoTB1",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-MeteoTB1-Humidity-Value",
         "shortDesc": "Humidity reported by the weather station MeteoTB1",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-MeteoTB2-Temperature-Value",
         "shortDesc": "Temperature reported by the weather station MeteoTB2",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-MeteoTB2-WindSpeed-Value",
         "shortDesc": "WindSpeed reported by the weather station MeteoTB2",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-MeteoTB2-Humidity-Value",
         "shortDesc": "Humidity reported by the weather station MeteoTB2",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-MeteoOSF-Temperature-Value",
         "shortDesc": "Temperature reported by the weather station MeteoOSF",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-MeteoOSF-WindSpeed-Value",
         "shortDesc": "WindSpeed reported by the weather station MeteoOSF",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-MeteoOSF-Humidity-Value",
         "shortDesc": "Humidity reported by the weather station MeteoOSF",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-MeteoItinerant-WindSpeed-Value",
         "shortDesc": "WindSpeed reported by the weather station MeteoItinerant",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-Meteo201-Temperature-Value",
         "shortDesc": "Temperature reported by the weather station Meteo201",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-Meteo201-WindSpeed-Value",
         "shortDesc": "WindSpeed reported by the weather station Meteo201",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-Meteo201-Humidity-Value",
         "shortDesc": "Humidity reported by the weather station Meteo201",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-MeteoCentral-Temperature-Value",
         "shortDesc": "Temperature reported by the weather station MeteoCentral",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-MeteoCentral-WindSpeed-Value",
         "shortDesc": "WindSpeed reported by the weather station MeteoCentral",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-MeteoCentral-Humidity-Value",
         "shortDesc": "Humidity reported by the weather station MeteoCentral",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-Meteo309-Temperature-Value",
         "shortDesc": "Temperature reported by the weather station Meteo309",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-Meteo309-WindSpeed-Value",
         "shortDesc": "WindSpeed reported by the weather station Meteo309",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-Meteo309-Humidity-Value",
         "shortDesc": "Humidity reported by the weather station Meteo309",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-Meteo410-Temperature-Value",
         "shortDesc": "Temperature reported by the weather station Meteo410",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-Meteo410-WindSpeed-Value",
         "shortDesc": "WindSpeed reported by the weather station Meteo410",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-Meteo410-Humidity-Value",
         "shortDesc": "Humidity reported by the weather station Meteo410",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-Meteo131-Temperature-Value",
         "shortDesc": "Temperature reported by the weather station Meteo131",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-Meteo131-WindSpeed-Value",
         "shortDesc": "WindSpeed reported by the weather station Meteo131",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-Meteo131-Humidity-Value",
         "shortDesc": "Humidity reported by the weather station Meteo131",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-Meteo129-Temperature-Value",
         "shortDesc": "Temperature reported by the weather station Meteo129",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-Meteo129-WindSpeed-Value",
         "shortDesc": "WindSpeed reported by the weather station Meteo129",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-Meteo129-Humidity-Value",
         "shortDesc": "Humidity reported by the weather station Meteo129",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-Meteo130-Temperature-Value",
         "shortDesc": "Temperature reported by the weather station Meteo130",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-Meteo130-Humidity-Value",
         "shortDesc": "Humidity reported by the weather station Meteo130",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "WS-Meteo130-WindSpeed-Value",
         "shortDesc": "Wind speed reported by the weather station Meteo130",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
         "id": "dummy",
         "shortDesc": "dummy reported by the weather station ",
         "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
     },
  {
        "id": "dummy-21",
        "shortDesc": "dummy reported by the weather station ",
        "iasType": "DOUBLE",
-       "docUrl": "http://www.alma.cl"
+       "docUrl": "http://www.alma.cl",
+       "canShelve": true
     },
  {
        "id": "dummy-22",
        "shortDesc": "dummy reported by the weather station ",
        "iasType": "DOUBLE",
-       "docUrl": "http://www.alma.cl"
+       "docUrl": "http://www.alma.cl",
+       "canShelve": true
     },
  {
         "id": "Alarmdummy",
         "shortDesc": "dummy reported by the weather station  out of range",
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
-        "sound": "TYPE1",
-        "canShelve": true
+        "canShelve": true,
+        "sound": "TYPE1"
     },
  {
         "id": "Alarmdummy-21",
         "shortDesc": "dummy reported by the weather station  out of range",
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
-        "sound": "TYPE2",
-        "canShelve": true
+        "canShelve": true,
+        "sound": "TYPE2"
     },
  {
         "id": "Alarmdummy-22",
         "shortDesc": "dummy reported by the weather station  out of range",
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
-        "sound": "TYPE3",
-        "canShelve": true
+        "canShelve": true,
+        "sound": "TYPE3"
     },
  {
         "id": "Alarmdummy-2",
         "shortDesc": "dummy reported by the weather station  out of range",
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
-        "sound": "TYPE4",
-        "canShelve": true
+        "canShelve": true,
+        "sound": "TYPE4"
     },
 {
          "id": "Alarmdummy-Global",
          "shortDesc": "dummy reported by the weather station  out of range",
          "iasType": "ALARM",
          "docUrl": "http://www.alma.cl",
-         "sound": "TYPE4",
-         "canShelve": true
+         "canShelve": true,
+         "sound": "TYPE4"
     },
 {
         "id": "WS-Inner-Humidity",
         "shortDesc": "Humidity alarm of the Inner WS",
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
-	"sound":"TYPE1"
+        "canShelve": true,
+        "sound":"TYPE1"
    },
 {
         "id": " WS-Inner-Humidity-Threshold",
         "shortDesc": "Inner Humidity Threshold",
         "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
    },
 {
         "id": "WS-Inner-Temperature",
         "shortDesc": "Temperature alarm of the Inner WS",
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
-	"sound":"TYPE1"
+        "canShelve": true,
+        "sound":"TYPE1"
   },
 {
         "id": " WS-Inner-Temperature-Threshold",
         "shortDesc": "Inner Temperature Threshold",
         "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
    },
 
   {
@@ -275,77 +313,89 @@
          "shortDesc": "Inner Wind speed Alarm",
          "iasType": "ALARM",
          "docUrl": "http://www.alma.cl",
-	"sound":"TYPE1"
+         "canShelve": true,
+         "sound":"TYPE1"
     },
   {
      "id": "WS-Inner-WindSpeed15",
      "shortDesc": "Wind speed over 15m/s of the Inner WS",
      "iasType": "ALARM",
-     "docUrl": "http://www.alma.cl"
+     "docUrl": "http://www.alma.cl",
+     "canShelve": true
   },
   {
      "id": "WS-Inner-WindSpeed20",
      "shortDesc": "Wind speed over 20m/s of the Inner WS",
      "iasType": "ALARM",
-     "docUrl": "http://www.alma.cl"
+     "docUrl": "http://www.alma.cl",
+     "canShelve": true
   },
   {
      "id": "WS-Inner-WindSpeed30",
      "shortDesc": "Wind speed over 30m/s of the Inner WS",
      "iasType": "ALARM",
-     "docUrl": "http://www.alma.cl"
+     "docUrl": "http://www.alma.cl",
+     "canShelve": true
   },
 {
         "id": " WS-Inner-WindSpeed15-Threshold",
         "shortDesc": "Inner WindSpeed15 Threshold",
         "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
    },
 
 {
        "id": " WS-Inner-WindSpeed20-Threshold",
        "shortDesc": "Inner WindSpeed20 Threshold",
        "iasType": "ALARM",
-       "docUrl": "http://www.alma.cl"
+       "docUrl": "http://www.alma.cl",
+       "canShelve": true
   },
 
 {
        "id": " WS-Inner-WindSpeed30-Threshold",
        "shortDesc": "Inner WindSpeed30 Threshold",
        "iasType": "ALARM",
-       "docUrl": "http://www.alma.cl"
+       "docUrl": "http://www.alma.cl",
+       "canShelve": true
   },
 {
        "id": "WS-Inner-WindSpeed30-VisualInspection",
        "shortDesc": "Visual inspection pending",
        "iasType": "ALARM",
-       "docUrl": "http://www.alma.cl"
+       "docUrl": "http://www.alma.cl",
+       "canShelve": true
   },
 {
         "id": "WS-W-Humidity",
         "shortDesc": "Humidity alarm of the W WS",
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
-	"sound":"TYPE1"
+        "canShelve": true,
+        "sound":"TYPE1"
    },
  {
          "id": " WS-W-Humidity-Threshold",
          "shortDesc": "W Humidity Threshold",
          "iasType": "ALARM",
-         "docUrl": "http://www.alma.cl"
+         "docUrl": "http://www.alma.cl",
+         "canShelve": true
     },
   {
          "id": "WS-W-Temperature",
          "shortDesc": "Temperature alarm of the W WS",
          "iasType": "ALARM",
          "docUrl": "http://www.alma.cl",
-	"sound":"TYPE1"
+         "canShelve": true,
+         "sound":"TYPE1"
     },
 {
         "id": " WS-W-Temperature-Threshold",
         "shortDesc": "W Temperature Threshold",
         "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
    },
 
 {
@@ -353,64 +403,74 @@
        "shortDesc": "Wind speed over 20m/s of the W WS",
        "iasType": "ALARM",
        "docUrl": "http://www.alma.cl",
-	"sound":"TYPE1"
+       "canShelve": true,
+       "sound":"TYPE1"
   },
   {
      "id": "WS-W-WindSpeed15",
      "shortDesc": "Wind speed over 15m/s of the W WS",
      "iasType": "ALARM",
-     "docUrl": "http://www.alma.cl"
+     "docUrl": "http://www.alma.cl",
+     "canShelve": true
   },
   {
      "id": "WS-W-WindSpeed20",
      "shortDesc": "Wind speed over 20m/s of the W WS",
      "iasType": "ALARM",
-     "docUrl": "http://www.alma.cl"
+     "docUrl": "http://www.alma.cl",
+     "canShelve": true
   },
   {
      "id": "WS-W-WindSpeed30",
      "shortDesc": "Wind speed over 30m/s of the W WS",
      "iasType": "ALARM",
-     "docUrl": "http://www.alma.cl"
+     "docUrl": "http://www.alma.cl",
+     "canShelve": true
   },
   {
         "id": " WS-W-WindSpeed15-Threshold",
         "shortDesc": "W WindSpeed15 Threshold",
         "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
    },
 
   {
        "id": " WS-W-WindSpeed20-Threshold",
        "shortDesc": "W WindSpeed20 Threshold",
        "iasType": "ALARM",
-       "docUrl": "http://www.alma.cl"
+       "docUrl": "http://www.alma.cl",
+       "canShelve": true
   },
 
   {
        "id": " WS-W-WindSpeed30-Threshold",
        "shortDesc": "W WindSpeed30 Threshold",
        "iasType": "ALARM",
-       "docUrl": "http://www.alma.cl"
+       "docUrl": "http://www.alma.cl",
+       "canShelve": true
   },
 {
        "id": "WS-W-WindSpeed30-VisualInspection",
        "shortDesc": "Visual inspection pending",
        "iasType": "ALARM",
-       "docUrl": "http://www.alma.cl"
+       "docUrl": "http://www.alma.cl",
+       "canShelve": true
   },
 {
         "id": "WS-P-Humidity",
         "shortDesc": "Humidity alarm of the P WS",
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
-	"sound":"TYPE1"
+        "canShelve": true,
+        "sound":"TYPE1"
    },
 {
        "id": " WS-P-Humidity-Threshold",
        "shortDesc": "P Humidity Threshold",
        "iasType": "ALARM",
-       "docUrl": "http://www.alma.cl"
+       "docUrl": "http://www.alma.cl",
+       "canShelve": true
   },
 
 {
@@ -418,13 +478,15 @@
        "shortDesc": "Temperature alarm of the P WS",
        "iasType": "ALARM",
        "docUrl": "http://www.alma.cl",
+       "canShelve": true,
        "sound":"TYPE1"
   },
 {
         "id": " WS-P-Temperature-Threshold",
         "shortDesc": "P Temperature Threshold",
         "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
    },
 
    {
@@ -432,64 +494,74 @@
         "shortDesc": "P Wind speed Alarm",
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
-   	"sound":"TYPE1"
+        "canShelve": true,
+        "sound":"TYPE1"
      },
    {
       "id": "WS-P-WindSpeed15",
       "shortDesc": "Wind speed over 15m/s of the P WS",
       "iasType": "ALARM",
-      "docUrl": "http://www.alma.cl"
+      "docUrl": "http://www.alma.cl",
+      "canShelve": true
    },
    {
       "id": "WS-P-WindSpeed20",
       "shortDesc": "Wind speed over 20m/s of the P WS",
       "iasType": "ALARM",
-      "docUrl": "http://www.alma.cl"
+      "docUrl": "http://www.alma.cl",
+      "canShelve": true
    },
    {
       "id": "WS-P-WindSpeed30",
       "shortDesc": "Wind speed over 30m/s of the ACA WS",
       "iasType": "ALARM",
-      "docUrl": "http://www.alma.cl"
+      "docUrl": "http://www.alma.cl",
+      "canShelve": true
    },
  {
          "id": " WS-P-WindSpeed15-Threshold",
          "shortDesc": "P WindSpeed15 Threshold",
          "iasType": "ALARM",
-         "docUrl": "http://www.alma.cl"
+         "docUrl": "http://www.alma.cl",
+         "canShelve": true
     },
 
  {
         "id": " WS-P-WindSpeed20-Threshold",
         "shortDesc": "P WindSpeed20 Threshold",
         "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
    },
 
  {
         "id": " WS-P-WindSpeed30-Threshold",
         "shortDesc": "P WindSpeed30 Threshold",
         "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
    },
 {
        "id": "WS-P-WindSpeed30-VisualInspection",
        "shortDesc": "Visual inspection pending",
        "iasType": "ALARM",
-       "docUrl": "http://www.alma.cl"
+       "docUrl": "http://www.alma.cl",
+       "canShelve": true
   },
 {
         "id": "WS-S-Humidity",
         "shortDesc": "Humidity alarm of the S WS",
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
-	"sound":"TYPE1"
+        "canShelve": true,
+        "sound":"TYPE1"
    },
 {
        "id": " WS-S-Humidity-Threshold",
        "shortDesc": "S Humidity Threshold",
        "iasType": "ALARM",
-       "docUrl": "http://www.alma.cl"
+       "docUrl": "http://www.alma.cl",
+       "canShelve": true
   },
 
 {
@@ -497,148 +569,172 @@
         "shortDesc": "Temperature alarm of the S WS",
         "iasType": "ALARM",
         "docUrl": "http://www.alma.cl",
-	"sound":"TYPE1"
+        "canShelve": true,
+        "sound":"TYPE1"
    },
  {
          "id": " WS-S-Temperature-Threshold",
          "shortDesc": "S Temperature Threshold",
          "iasType": "ALARM",
-         "docUrl": "http://www.alma.cl"
+         "docUrl": "http://www.alma.cl",
+         "canShelve": true
     },
 {
     "id": "WS-S-WindSpeed",
     "shortDesc": "Wind speed over 20m/s of the ACA WS",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "sound":"TYPE1"
 },
 {
   "id": "WS-S-WindSpeed15",
   "shortDesc": "Wind speed over 15m/s of the S WS",
   "iasType": "ALARM",
-  "docUrl": "http://www.alma.cl"
+  "docUrl": "http://www.alma.cl",
+  "canShelve": true
 },
 {
   "id": "WS-S-WindSpeed20",
   "shortDesc": "Wind speed over 20m/s of the S WS",
   "iasType": "ALARM",
-  "docUrl": "http://www.alma.cl"
+  "docUrl": "http://www.alma.cl",
+  "canShelve": true
 },
 {
   "id": "WS-S-WindSpeed30",
   "shortDesc": "Wind speed over 30m/s of the S WS",
   "iasType": "ALARM",
-  "docUrl": "http://www.alma.cl"
+  "docUrl": "http://www.alma.cl",
+  "canShelve": true
 },
 {
      "id": " WS-S-WindSpeed15-Threshold",
      "shortDesc": "S WindSpeed15 Threshold",
      "iasType": "ALARM",
-     "docUrl": "http://www.alma.cl"
+     "docUrl": "http://www.alma.cl",
+     "canShelve": true
 },
 
 {
     "id": " WS-S-WindSpeed20-Threshold",
     "shortDesc": "S WindSpeed20 Threshold",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
 },
 
 {
     "id": " WS-S-WindSpeed30-Threshold",
     "shortDesc": "S WindSpeed30 Threshold",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
 },
 {
        "id": "WS-S-WindSpeed30-VisualInspection",
        "shortDesc": "Visual inspection pending",
        "iasType": "ALARM",
-       "docUrl": "http://www.alma.cl"
+       "docUrl": "http://www.alma.cl",
+       "canShelve": true
   },
 {
        "id": "WS-Inner",
        "shortDesc": "Global alarm of the Inner WS",
        "iasType": "ALARM",
-       "docUrl": "http://www.alma.cl"
+       "docUrl": "http://www.alma.cl",
+       "canShelve": true
   },
  {
          "id": "WS-W",
          "shortDesc": "Global alarm of the W WS",
          "iasType": "ALARM",
-         "docUrl": "http://www.alma.cl"
+         "docUrl": "http://www.alma.cl",
+         "canShelve": true
     },
  {
          "id": "WS-P",
          "shortDesc": "Global alarm of the P WS",
          "iasType": "ALARM",
-         "docUrl": "http://www.alma.cl"
+         "docUrl": "http://www.alma.cl",
+         "canShelve": true
     },
  {
          "id": "WS-S",
          "shortDesc": "Global alarm of the S WS",
          "iasType": "ALARM",
-         "docUrl": "http://www.alma.cl"
+         "docUrl": "http://www.alma.cl",
+         "canShelve": true
     },
  {
         "id": "WS-Temperature",
         "shortDesc": "Temperature at the AOS too low",
         "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
    },
  {
         "id": "WS-Humidity",
         "shortDesc": "Humidity too at the AOS high",
         "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
    },
  {
         "id": "WS-WindSpeed",
         "shortDesc": "Wind spped too at the AOS high",
         "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl"
+        "docUrl": "http://www.alma.cl",
+        "canShelve": true
    },
   {
     "id": "WS-Inner-LastInspection",
     "shortDesc": "Timestamp of the last inspection of the Inner WS",
     "iasType": "STRING",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "WS-W-LastInspection",
     "shortDesc": "Timestamp of the last inspection of the W WS",
     "iasType": "STRING",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "WS-P-LastInspection",
     "shortDesc": "Timestamp of the last inspection of the P WS",
     "iasType": "STRING",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "WS-S-LastInspection",
     "shortDesc": "Timestamp of the last inspection of the S WS",
     "iasType": "STRING",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Array-AntennasToPads",
     "shortDesc": "Association of antennas to pads",
     "iasType": "STRING",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Array-Global-Alarm",
     "shortDesc": "Global Alarm for antennas",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Array-UMStatus-DV",
     "shortDesc": "UMStatus used as input value for alarms of the antenna",
     "iasType": "STRING",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DV"
   },
   {
@@ -646,6 +742,7 @@
     "shortDesc": "General alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DV"
   },
   {
@@ -653,6 +750,7 @@
     "shortDesc": "Fire alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DV",
     "sound":"TYPE2"
   },
@@ -663,7 +761,7 @@
     "docUrl": "http://www.alma.cl",
     "templateId": "DV",
     "sound":"TYPE2",
-    "canShelve":"true"
+    "canShelve": true
   },
   {
     "id": "Array-UpsFail-DV",
@@ -672,7 +770,7 @@
     "docUrl": "http://www.alma.cl",
     "templateId": "DV",
     "sound":"TYPE2",
-    "canShelve":"true"
+    "canShelve": true
   },
   {
     "id": "Array-HvacFail-DV",
@@ -681,7 +779,7 @@
     "docUrl": "http://www.alma.cl",
     "templateId": "DV",
     "sound":"TYPE2",
-    "canShelve":"true"
+    "canShelve": true
   },
   {
     "id": "Array-PowerCut-DV",
@@ -690,13 +788,14 @@
     "docUrl": "http://www.alma.cl",
     "templateId": "DV",
     "sound":"TYPE2",
-    "canShelve":"true"
+    "canShelve": true
   },
   {
     "id": "Array-UMStatus-DA",
     "shortDesc": "UMStatus used as input value for alarms of the antenna",
     "iasType": "STRING",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DA"
   },
   {
@@ -704,6 +803,7 @@
     "shortDesc": "General alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DA"
   },
   {
@@ -711,6 +811,7 @@
     "shortDesc": "Fire alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DA",
     "sound":"TYPE2"
   },
@@ -721,7 +822,7 @@
     "docUrl": "http://www.alma.cl",
     "templateId": "DA",
     "sound":"TYPE2",
-    "canShelve":"true"
+    "canShelve": true
   },
   {
     "id": "Array-UpsFail-DA",
@@ -730,7 +831,7 @@
     "docUrl": "http://www.alma.cl",
     "templateId": "DA",
     "sound":"TYPE2",
-    "canShelve":"true"
+    "canShelve": true
   },
   {
     "id": "Array-HvacFail-DA",
@@ -739,7 +840,7 @@
     "docUrl": "http://www.alma.cl",
     "templateId": "DA",
     "sound":"TYPE2",
-    "canShelve":"true"
+    "canShelve": true
   },
   {
     "id": "Array-PowerCut-DA",
@@ -748,13 +849,14 @@
     "docUrl": "http://www.alma.cl",
     "templateId": "DA",
     "sound":"TYPE2",
-    "canShelve":"true"
+    "canShelve": true
   },
   {
     "id": "Array-UMStatus-CM",
     "shortDesc": "UMStatus used as input value for alarms of the antenna",
     "iasType": "STRING",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "CM"
   },
   {
@@ -762,6 +864,7 @@
     "shortDesc": "General alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "CM"
   },
   {
@@ -769,6 +872,7 @@
     "shortDesc": "Fire alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "CM",
     "sound":"TYPE2"
   },
@@ -779,7 +883,7 @@
     "docUrl": "http://www.alma.cl",
     "templateId": "CM",
     "sound":"TYPE2",
-    "canShelve":"true"
+    "canShelve": true
   },
   {
     "id": "Array-UpsFail-CM",
@@ -788,7 +892,7 @@
     "docUrl": "http://www.alma.cl",
     "templateId": "CM",
     "sound":"TYPE2",
-    "canShelve":"true"
+    "canShelve": true
   },
   {
     "id": "Array-HvacFail-CM",
@@ -797,7 +901,7 @@
     "docUrl": "http://www.alma.cl",
     "templateId": "CM",
     "sound":"TYPE2",
-    "canShelve":"true"
+    "canShelve": true
   },
   {
     "id": "Array-PowerCut-CM",
@@ -806,13 +910,14 @@
     "docUrl": "http://www.alma.cl",
     "templateId": "CM",
     "sound":"TYPE2",
-    "canShelve":"true"
+    "canShelve": true
   },
   {
     "id": "Array-UMStatus-PM",
     "shortDesc": "UMStatus used as input value for alarms of the antenna",
     "iasType": "STRING",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "PM"
   },
   {
@@ -820,6 +925,7 @@
     "shortDesc": "General alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "PM"
   },
   {
@@ -827,6 +933,7 @@
     "shortDesc": "Fire alarm of the antenna",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "PM",
     "sound":"TYPE2"
   },
@@ -837,7 +944,7 @@
     "docUrl": "http://www.alma.cl",
     "templateId": "PM",
     "sound":"TYPE2",
-    "canShelve":"true"
+    "canShelve": true
   },
   {
     "id": "Array-UpsFail-PM",
@@ -846,7 +953,7 @@
     "docUrl": "http://www.alma.cl",
     "templateId": "PM",
     "sound":"TYPE2",
-    "canShelve":"true"
+    "canShelve": true
   },
   {
     "id": "Array-HvacFail-PM",
@@ -855,7 +962,7 @@
     "docUrl": "http://www.alma.cl",
     "templateId": "PM",
     "sound":"TYPE2",
-    "canShelve":"true"
+    "canShelve": true
   },
   {
     "id": "Array-PowerCut-PM",
@@ -864,19 +971,21 @@
     "docUrl": "http://www.alma.cl",
     "templateId": "PM",
     "sound":"TYPE2",
-    "canShelve":"true"
+    "canShelve": true
   },
   {
     "id": "Array-Laser-Locked",
     "shortDesc": "Master Laser failure",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Array-CRIO-TEMP0-DV",
     "shortDesc": "4K Cryo Cooler temperature alarm. Set if higher than 5[K]",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DV"
   },
   {
@@ -884,6 +993,7 @@
     "shortDesc": "4K Cryo Cooler temperature alarm. Set if higher than 5[K]",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DA"
   },
   {
@@ -891,6 +1001,7 @@
     "shortDesc": "4K Cryo Cooler temperature alarm. Set if higher than 5[K]",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "CM"
   },
   {
@@ -898,6 +1009,7 @@
     "shortDesc": "4K Cryo Cooler temperature alarm. Set if higher than 5[K]",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "PM"
   },
 
@@ -906,6 +1018,7 @@
     "shortDesc": "15K Cryo Cooler temperature alarm. Set if higher than 21[K]",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DV"
   },
   {
@@ -913,6 +1026,7 @@
     "shortDesc": "15K Cryo Cooler temperature alarm. Set if higher than 21[K]",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DA"
   },
   {
@@ -920,6 +1034,7 @@
     "shortDesc": "15K Cryo Cooler temperature alarm. Set if higher than 21[K]",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "CM"
   },
   {
@@ -927,6 +1042,7 @@
     "shortDesc": "15K Cryo Cooler temperature alarm. Set if higher than 21[K]",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "PM"
   },
 
@@ -935,6 +1051,7 @@
     "shortDesc": "11K Cryo Cooler temperature alarm. Set if higher than 120[K]",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DV"
   },
   {
@@ -942,6 +1059,7 @@
     "shortDesc": "11K Cryo Cooler temperature alarm. Set if higher than 120[K]",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DA"
   },
   {
@@ -949,6 +1067,7 @@
     "shortDesc": "11K Cryo Cooler temperature alarm. Set if higher than 120[K]",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "CM"
   },
   {
@@ -956,6 +1075,7 @@
     "shortDesc": "11K Cryo Cooler temperature alarm. Set if higher than 120[K]",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "PM"
   },
 
@@ -964,6 +1084,7 @@
     "shortDesc": "Compressor drive OFF alarm",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DV"
   },
   {
@@ -971,6 +1092,7 @@
     "shortDesc": "Compressor drive OFF alarm",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DA"
   },
   {
@@ -978,6 +1100,7 @@
     "shortDesc": "Compressor drive OFF alarm",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "PM"
   },
   {
@@ -985,6 +1108,7 @@
     "shortDesc": "Compressor drive OFF alarm",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "CM"
   },
   {
@@ -992,6 +1116,7 @@
     "shortDesc": "4K Cryo Cooler temperature value",
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DV"
   },
   {
@@ -999,6 +1124,7 @@
     "shortDesc": "4K Cryo Cooler temperature value",
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DA"
   },
   {
@@ -1006,6 +1132,7 @@
     "shortDesc": "4K Cryo Cooler temperature value",
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "CM"
   },
   {
@@ -1013,6 +1140,7 @@
     "shortDesc": "4K Cryo Cooler temperature value",
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "PM"
   },
 
@@ -1021,6 +1149,7 @@
     "shortDesc": "15K Cryo Cooler temperature value",
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DV"
   },
   {
@@ -1028,6 +1157,7 @@
     "shortDesc": "15K Cryo Cooler temperature value",
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DA"
   },
   {
@@ -1035,6 +1165,7 @@
     "shortDesc": "15K Cryo Cooler temperature value",
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "CM"
   },
   {
@@ -1042,6 +1173,7 @@
     "shortDesc": "15K Cryo Cooler temperature value",
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "PM"
   },
 
@@ -1050,6 +1182,7 @@
     "shortDesc": "11K Cryo Cooler temperature value",
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DV"
   },
   {
@@ -1057,6 +1190,7 @@
     "shortDesc": "11K Cryo Cooler temperature value",
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DA"
   },
   {
@@ -1064,6 +1198,7 @@
     "shortDesc": "11K Cryo Cooler temperature value",
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "CM"
   },
   {
@@ -1071,6 +1206,7 @@
     "shortDesc": "11K Cryo Cooler temperature value",
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "PM"
   },
 
@@ -1079,6 +1215,7 @@
     "shortDesc": "Cryo pressure sensor 0 value",
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DV"
   },
   {
@@ -1086,6 +1223,7 @@
     "shortDesc": "Cryo pressure sensor 0 value",
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DA"
   },
   {
@@ -1093,6 +1231,7 @@
     "shortDesc": "Cryo pressure sensor 0 value",
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "PM"
   },
   {
@@ -1100,6 +1239,7 @@
     "shortDesc": "Cryo pressure sensor 0 value",
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "CM"
   },
   {
@@ -1107,6 +1247,7 @@
     "shortDesc": "Cryo pressure sensor 1 value",
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DV"
   },
   {
@@ -1114,6 +1255,7 @@
     "shortDesc": "Cryo pressure sensor 1 value",
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "DA"
   },
   {
@@ -1121,6 +1263,7 @@
     "shortDesc": "Cryo pressure sensor 1 value",
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "PM"
   },
   {
@@ -1128,189 +1271,220 @@
     "shortDesc": "Cryo pressure sensor 1 value",
     "iasType": "DOUBLE",
     "docUrl": "http://www.alma.cl",
+    "canShelve": true,
     "templateId": "CM"
   },
   {
     "id": "IASMON-PLUGIN_DEAD",
     "shortDesc": "At least one plugin is not responding",
     "iasType": "ALARM",
-    "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring"
+    "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring",
+    "canShelve": true
   },
 
  {
     "id": "IASMON-CONVERTER_DEAD",
     "shortDesc": "At least one converter is not responding",
     "iasType": "ALARM",
-    "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring"
+    "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring",
+    "canShelve": true
   },
   {
     "id": "IASMON-SUPERVISOR_DEAD",
     "shortDesc": "At least one Supervisor is not responding",
     "iasType": "ALARM",
-    "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring"
+    "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring",
+    "canShelve": true
   },
   {
     "id": "IASMON-SINK_DEAD",
     "shortDesc": "At least one IAS sink processor is not responding",
     "iasType": "ALARM",
-    "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring"
+    "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring",
+    "canShelve": true
   },
   {
     "id": "IASMON-CLIENT_DEAD",
     "shortDesc": "At least one IAS client is not responding",
     "iasType": "ALARM",
-    "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring"
+    "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring",
+    "canShelve": true
   },
   {
     "id": "IASMON-GLOBAL",
     "shortDesc": "IAS malfunction",
     "iasType": "ALARM",
-    "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring"
+    "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring",
+    "canShelve": true
   },
 
   {
     "id": "Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-007",
     "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, L1-007",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-008",
     "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-008",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-009",
     "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-009",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-010",
     "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-010",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-011",
     "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-011",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-012",
     "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-012",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-013",
     "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-013",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-014",
     "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-014",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-015",
     "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-015",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-016",
     "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-016",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-017",
     "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-017",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-018",
     "shortDesc": "Ceiling Photoelectric Smoke Sensor, Room 135, P1-018",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-027",
     "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-027",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-028",
     "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-028",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-029",
     "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-029",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-030",
     "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-030",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-031",
     "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-031",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-032",
     "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-032",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-033",
     "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-033",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-034",
     "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-034",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-035",
     "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-035",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-036",
     "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-036",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-037",
     "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-037",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   },
   {
     "id": "Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-038",
     "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-038",
     "iasType": "ALARM",
-    "docUrl": "http://www.alma.cl"
+    "docUrl": "http://www.alma.cl",
+    "canShelve": true
   }
 
 ]
