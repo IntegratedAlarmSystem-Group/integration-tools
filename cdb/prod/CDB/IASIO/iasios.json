@@ -185,64 +185,6 @@
         "iasType": "DOUBLE",
         "docUrl": "http://www.alma.cl"
     },
- {
-        "id": "dummy",
-        "shortDesc": "dummy reported by the weather station ",
-        "iasType": "DOUBLE",
-        "docUrl": "http://www.alma.cl"
-    },
- {
-       "id": "dummy-21",
-       "shortDesc": "dummy reported by the weather station ",
-       "iasType": "DOUBLE",
-       "docUrl": "http://www.alma.cl"
-    },
- {
-       "id": "dummy-22",
-       "shortDesc": "dummy reported by the weather station ",
-       "iasType": "DOUBLE",
-       "docUrl": "http://www.alma.cl"
-    },
- {
-        "id": "Alarmdummy",
-        "shortDesc": "dummy reported by the weather station  out of range",
-        "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl",
-        "sound": "TYPE1",
-        "canShelve": true
-    },
- {
-        "id": "Alarmdummy-21",
-        "shortDesc": "dummy reported by the weather station  out of range",
-        "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl",
-        "sound": "TYPE2",
-        "canShelve": true
-    },
- {
-        "id": "Alarmdummy-22",
-        "shortDesc": "dummy reported by the weather station  out of range",
-        "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl",
-        "sound": "TYPE3",
-        "canShelve": true
-    },
- {
-        "id": "Alarmdummy-2",
-        "shortDesc": "dummy reported by the weather station  out of range",
-        "iasType": "ALARM",
-        "docUrl": "http://www.alma.cl",
-        "sound": "TYPE4",
-        "canShelve": true
-    },
-{
-         "id": "Alarmdummy-Global",
-         "shortDesc": "dummy reported by the weather station  out of range",
-         "iasType": "ALARM",
-         "docUrl": "http://www.alma.cl",
-         "sound": "TYPE4",
-         "canShelve": true
-    },
 {
         "id": "WS-Inner-Humidity",
         "shortDesc": "Humidity alarm of the Inner WS",
