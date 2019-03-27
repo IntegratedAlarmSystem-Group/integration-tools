@@ -1,0 +1,8 @@
+{
+        "id": "Dasu-WS-S-Humidity",
+        "asceIDs": [
+            "Asce-WS-S-Humidity-Inhibitor",
+            "Asce-WS-S-Humidity-Threshold"
+        ],
+        "outputId": "WS-S-Humidity"
+    }

@@ -1,0 +1,17 @@
+{
+      "dasuID": "Dasu-WS-S",
+      "id": "Asce-WS-S",
+      "inputIDs": [
+      	"WS-S-Humidity",
+      	"WS-S-Temperature",
+      	"WS-S-WindSpeed"
+      ],
+      "outputID": "WS-S",
+      "transferFunctionID":"org.eso.ias.asce.transfer.impls.MultiplicityTF",
+       "props": [
+        {
+          "name": "org.eso.ias.tf.mutliplicity.threshold",
+          "value": "1"
+        }
+      ]
+    }

@@ -1,0 +1,18 @@
+{
+      "dasuID": "Dasu-WS-Global-Temperature",
+      "id": "Asce-WS-Global-Temperature",
+      "inputIDs": [
+	       "WS-Inner-Temperature",
+         "WS-W-Temperature",
+         "WS-P-Temperature",
+         "WS-S-Temperature"
+      ],
+      "outputID": "WS-Temperature",
+      "transferFunctionID":"org.eso.ias.asce.transfer.impls.MultiplicityTF",
+       "props": [
+        {
+          "name": "org.eso.ias.tf.mutliplicity.threshold",
+          "value": "1"
+        }
+      ]
+    }

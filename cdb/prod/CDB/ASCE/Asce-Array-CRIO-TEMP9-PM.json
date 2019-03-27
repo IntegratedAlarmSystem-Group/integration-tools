@@ -1,0 +1,20 @@
+{
+  "dasuID": "Dasu-Array-CRIO-TEMP9-PM",
+  "id": "Asce-Array-CRIO-TEMP9-PM",
+  "inputIDs": [
+    "Array-CRIO-TEMP9-VALUE-PM"
+  ],
+  "outputID": "Array-CRIO-TEMP9-PM",
+  "transferFunctionID":"org.eso.ias.asce.transfer.impls.MinMaxThresholdTF",
+   "props": [
+    {
+      "name": "org.eso.ias.tf.minmaxthreshold.highOn",
+      "value": "120"
+    },
+    {
+      "name": "org.eso.ias.tf.minmaxthreshold.highOff",
+      "value": "119.8"
+    }
+  ],
+  "templateId":"PM"
+}

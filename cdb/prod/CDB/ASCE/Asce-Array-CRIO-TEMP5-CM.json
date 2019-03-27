@@ -1,0 +1,20 @@
+{
+  "dasuID": "Dasu-Array-CRIO-TEMP5-CM",
+  "id": "Asce-Array-CRIO-TEMP5-CM",
+  "inputIDs": [
+    "Array-CRIO-TEMP5-VALUE-CM"
+  ],
+  "outputID": "Array-CRIO-TEMP5-CM",
+  "transferFunctionID":"org.eso.ias.asce.transfer.impls.MinMaxThresholdTF",
+   "props": [
+    {
+      "name": "org.eso.ias.tf.minmaxthreshold.highOn",
+      "value": "21"
+    },
+    {
+      "name": "org.eso.ias.tf.minmaxthreshold.highOff",
+      "value": "20.8"
+    }
+  ],
+  "templateId":"CM"
+}

@@ -1,0 +1,32 @@
+{
+      "dasuID": "Dasu-WS-P-Temperature",
+      "id": "Asce-WS-P-Temperature-Threshold",
+      "inputIDs": [
+        "WS-Meteo410-Temperature-Value",
+        "WS-Meteo129-Temperature-Value"
+      ],
+      "outputID": "WS-P-Temperature-Threshold",
+      "transferFunctionID":"org.eso.ias.tranfer.ThresholdWithBackupsAndDelay",
+       "props": [
+        {
+          "name": "org.eso.ias.thresholdbackup.minmaxthreshold.lowOn",
+          "value": "-20"
+        },
+        {
+          "name": "org.eso.ias.thresholdbackup.minmaxthreshold.lowOff",
+          "value": "-19"
+        },
+        {
+          "name": "org.eso.ias.thresholdbackup.delaiedthreshold.settime",
+          "value": "60"
+        },
+        {
+          "name": "org.eso.ias.thresholdbackup.delaiedthreshold.cleartime",
+          "value": "1800"
+        },
+        {
+          "name": "org.eso.ias.thresholdbackup.selector.mainInputId",
+          "value": "WS-Meteo410-Temperature-Value"
+        }
+      ]
+    }

@@ -1,0 +1,9 @@
+{
+        "id": "Dasu-WS-P-WindSpeed30",
+        "asceIDs": [
+            "Asce-WS-P-WindSpeed30-Inhibitor",
+            "Asce-WS-P-WindSpeed30-Threshold",
+            "Asce-WS-P-WindSpeed30-VisualInspection"
+        ],
+        "outputId": "WS-P-WindSpeed30"
+    }

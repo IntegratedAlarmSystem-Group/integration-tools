@@ -1,0 +1,11 @@
+{
+      "dasuID": "Dasu-WS-W-WindSpeed30",
+      "id": " Asce-WS-W-WindSpeed30-VisualInspection",
+      "inputIDs": [
+        "WS-W-WindSpeed30-Threshold",
+        "WS-W-LastInspection"
+      ],
+      "outputID": "WS-W-WindSpeed30-VisualInspection",
+      "transferFunctionID":"org.eso.ias.tranfer.VisualInspectionAlarm",
+       "props": []
+    }
