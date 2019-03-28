@@ -14,6 +14,12 @@ services:
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
     command: "./docker_run_kafka.sh"
 
+  redis:
+    container_name: redis
+    image: redis:latest
+    ports:
+      - "6379:6379"
+
   alma-weather-plugin:
     container_name: ias-dev-alma-weather-plugin
     image: registry.inria.cl:5000/alma-weather-plugin:dev
@@ -176,6 +182,10 @@ services:
     container_name: ias-dev-webserver
     image: registry.inria.cl:5000/ias-webserver:dev
     command: ./runserver.sh
+    links:
+      - redis
+    depends_on:
+      - redis
     environment:
       - DB_ENGINE=${DB_ENGINE}
       - DB_NAME=${DB_NAME}
@@ -187,6 +197,7 @@ services:
       - OP_DUTY_PASSWORD=${OP_DUTY_PASSWORD}
       - PROCESS_CONNECTION_PASS=${WS_CONNECTION_PASS}
       - SECRET_KEY=${DJANGO_SECRET_KEY}
+      - REDIS_HOST=${REDIS_HOST}
     volumes:
       - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
       - ${CDB_PATH}/CDB:/usr/src/ias-webserver/CDB

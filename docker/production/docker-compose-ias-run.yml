@@ -17,6 +17,12 @@ services:
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
     command: "./docker_run_kafka.sh"
 
+  redis:
+    container_name: redis
+    image: redis:latest
+    ports:
+      - "6379:6379"
+
   alma-weather-plugin:
     container_name: ias-build-alma-weather-plugin
     build:
@@ -45,20 +51,6 @@ services:
       - ${LOGS_PATH}:/usr/src/weather_visual_inspection_plugin/logs/
       - ${VISUAL_INSPECTION_FILE_PATH}:/usr/src/weather_visual_inspection_plugin/input
     command: ["-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092", "-f input/inspections.json"]
-  #
-  # dummy-plugin:
-  #   container_name: ias-build-dummy-plugin
-  #   build:
-  #     context: ${DOCKERFILE_PATH_DUMMY_PLUGIN}
-  #     dockerfile: Dockerfile-build
-  #   image: ias-build-dummy-plugin-image
-  #   stdin_open: true
-  #   tty: true
-  #   links:
-  #     - kafka
-  #   depends_on:
-  #     - kafka
-  #   command: "dummy ${KAFKA_SERVER} 9092"
 
   converter:
     container_name: ias-build-converter
@@ -104,21 +96,6 @@ services:
       - ${CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
     command: "./docker_run_ias.sh iasSupervisor Supervisor-Antennas -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
-  # 
-  # dummy-supervisor:
-  #   container_name: ias-build-dummy-supervisor
-  #   build:
-  #     context: ${DOCKERFILE_PATH_CORE}
-  #     dockerfile: Dockerfile-no-build
-  #   image: ias-build-core-image
-  #   links:
-  #     - kafka
-  #   depends_on:
-  #     - kafka
-  #   volumes:
-  #     - ${CDB_PATH}:/usr/src/cdb
-  #     - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
-  #   command: "./docker_run_ias.sh iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   sender:
     container_name: ias-build-sender
@@ -190,6 +167,10 @@ services:
     container_name: ias-build-webserver
     build: ${DOCKERFILE_PATH_WEBSERVER}
     image: ias-build-webserver-image
+    links:
+      - redis
+    depends_on:
+      - redis
     environment:
       - DB_ENGINE=${DB_ENGINE}
       - DB_NAME=${DB_NAME}
@@ -201,6 +182,7 @@ services:
       - OP_DUTY_PASSWORD=${OP_DUTY_PASSWORD}
       - PROCESS_CONNECTION_PASS=${WS_CONNECTION_PASS}
       - SECRET_KEY=${DJANGO_SECRET_KEY}
+      - REDIS_HOST=${REDIS_HOST}
     volumes:
       - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
       - ${CDB_PATH}/CDB:/usr/src/ias-webserver/CDB
