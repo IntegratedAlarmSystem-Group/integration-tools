@@ -35,8 +35,8 @@ The representation for the alarms can be illustrated by the following cases.
 
 | Status  | Value | Validity |  Priority |
 |---|---|---|---|
-| ![Clear-Valid](./images/selected/clear-valid.png) ![Priority](./images/selected/priority-0.png) | clear | valid | |
-| ![Clear-Invalid](./images/selected/clear-invalid.png) ![Priority](./images/selected/priority-0.png)  | clear | invalid | |
+| ![Clear-Valid](./images/selected/clear-valid.png) | clear | valid | |
+| ![Clear-Invalid](./images/selected/clear-invalid.png)  | clear | invalid | |
 | ![Set-Valid-Low](./images/selected/set-valid-low.resized.png) ![Priority](./images/selected/low.png)  | set | valid | low |
 | ![Set-Invalid-Low](./images/selected/set-invalid-low.resized.png) ![Priority](./images/selected/low.png) | set | invalid | low |
 | ![Set-Valid-Medium](./images/selected/set-valid-low.resized.png) ![Priority](./images/selected/medium.png)  | set | valid  | medium |
@@ -56,10 +56,10 @@ Finally, each alarm has a related *operational mode*, which can be used to get c
 
 | Status  | Validity | Mode |
 |---|---|---|
-| ![Alarm](./images/selected/maintenance-valid.png) ![Priority](./images/selected/priority-0.png) | valid |  maintenance |
-| ![Alarm](./images/selected/maintenance-invalid.png) ![Priority](./images/selected/priority-0.png) | invalid  | maintenance |
-| ![Alarm](./images/selected/unknown-valid.png) ![Priority](./images/selected/priority-0.png) | valid | unknown |
-| ![Alarm](./images/selected/unknown-invalid.png) ![Priority](./images/selected/priority-0.png)  | invalid | unknown |
+| ![Alarm](./images/selected/maintenance-valid.png) | valid |  maintenance |
+| ![Alarm](./images/selected/maintenance-invalid.png) | invalid  | maintenance |
+| ![Alarm](./images/selected/unknown-valid.png) | valid | unknown |
+| ![Alarm](./images/selected/unknown-invalid.png) | invalid | unknown |
 
 According to the IAS configuration, an alarm can also have dependencies related to other alarms according to a hierarchy, for example, when monitoring points are related to a selected device and its subcomponents.
 
