@@ -1,0 +1,38 @@
+{
+	"dasuID":"Dasu-Building-AOS",
+	"outputID":"Building-AOS",
+	"id":"Asce-Building-AOS",
+	"inputIDs":[
+		"Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-007",
+		"Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-008",
+		"Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-009",
+		"Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-010",
+		"Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-011",
+		"Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-012",
+		"Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-013",
+		"Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-014",
+		"Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-015",
+		"Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-016",
+		"Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-017",
+		"Building-AOS-Correlator-Room-135-Ceiling-Smoke-L1-018",
+		"Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-027",
+		"Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-028",
+		"Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-029",
+		"Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-030",
+		"Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-031",
+		"Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-032",
+		"Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-033",
+		"Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-034",
+		"Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-035",
+		"Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-036",
+		"Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-037",
+		"Building-AOS-Correlator-Room-135-Subfloor-Smoke-L1-038"
+	],
+	"transferFunctionID":"org.eso.ias.asce.transfer.impls.MultiplicityTF",
+	"props": [
+		{
+			"name": "org.eso.ias.tf.mutliplicity.threshold",
+			"value": "1"
+		}
+	]
+}
