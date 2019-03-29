@@ -48,7 +48,7 @@ The representation for the alarms can be illustrated by the following cases.
 
 First, we have the *clear* and *set* value, used when an alarm is resolved or if a condition configured in the system for the related device is not satisfied, respectively. The mark related to each status is shown in green, for the *clear* value, and red or yellow, for the *set* value.
 
-The usage of the colors red and yellow depends on the priority level of the alarm: low, medium, high and critical, from lowest to highest.
+The usage of the colors red and yellow depends on the priority level of the alarm: low, medium, high and critical, from lowest to highest. A line or a text, with the related color as background, could be at the right (or below) of the mark for the alarms, to highlight its priority level.
 
 Each alarm is validated by receiving regular messages from the system, according to a tolerance range of time. If these messages has a delay greater than this tolerance, then an alarm it is declared as *invalid*. We can notice the difference between a *valid* alarm and a *invalid* alarm because a valid alarm will be shown with a filled mark, whereas an invalid alarm will be shown with an unfilled mark.
 
@@ -258,7 +258,7 @@ Currently, the operators can use the text filter to look for particular alarms. 
 - alarms with a pending acknowledgment; and
 - shelved alarms.
 
-![Overview](./images/selected/filters.png)
+![Overview](./images/selected/filters-2.png)
 
 The operator can also use the sorting options for the different columns in the table, such as:
 
@@ -271,13 +271,17 @@ The operator can also use the sorting options for the different columns in the t
 ### Specialized Views
 
 **Weather View**
-![Weather](./images/selected/weather.png)
+![Weather](./images/selected/weather-2.png)
 
 The weather view shows a set of alarms related to weather conditions that can affect the functioning of the antennas.
 
 This section displays the alarms information both using a list view and a graphical support in the form of a map. This map was build using a transformation on the geographic coordinates in order to have a better representation, because of the different distances between the pads where the antennas are located.
 
-![Weather Selected](./images/selected/weather_selected.png)
+![Weather Selected](./images/selected/weather_selected-2.png)
+
+If an antenna is affected by an active alarm, its pad will be highlighted in the map.
+
+![Weather Affected Antennas](./images/selected/weather_affected_antennas.png)
 
 ***Sidebar***
 
@@ -300,9 +304,9 @@ When selecting one of these weather stations, the associated pads and associated
 An special mark for the location of the AOS, after the transformation of the geographical coordinates, is displayed in the map as a reference point.
 
 **Antennas View**
-![Antennas](./images/selected/antennas.png)
+![Antennas](./images/selected/antennas-2.png)
 
-The antennas view shows the information about the alarms related to each antenna (currently, those related to the *Utility Module*).
+The antennas view shows the information about the alarms related to each antenna.
 
 This view, uses a similar structure that the one is used for the weather stations.
 
@@ -312,11 +316,11 @@ At the bottom of the antennas grid, there are three general alarms also related 
 - Correlator Alarm
 - Central Local Oscilator Alarm (CLO)
 
-![Antennas Selected](./images/selected/antennas_selected.png)
+![Antennas Selected](./images/selected/antennas_selected-2.png)
 
 ***Sidebar***
 
-When we access each antenna we can see a list of the related alarms. Currently, we can find the alarms from the *Utility Module*, listed below:
+When we access each antenna we can see a table of the related alarms. Currently, we can find the alarms from the *Utility Module*, listed below:
 
 - Fire
 - Fire Malfunction
@@ -362,6 +366,6 @@ Notice that the account operator_on_duty is not included in the operators group,
 The url /admin must be used to access to the admin panel.
 The admin panel requires a special login. The admin user has permissions to manage users accounts, groups, ack and sheve tickets and other display configurations.
 
-![Admin Login](./images/selected/admin_login.png)
+![Admin Login](./images/selected/admin_login-2.png)
 
-![Admin Panel](./images/selected/admin_panel.png)
+![Admin Panel](./images/selected/admin_panel-2.png)
