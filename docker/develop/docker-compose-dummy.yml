@@ -27,7 +27,7 @@ services:
     container_name: ias-build-visual-inspection
     build:
       context: ${DOCKERFILE_PATH_VISUAL_INSPECTION}
-      dockerfile: Dockerfile-mount
+      dockerfile: Dockerfile-build
     image: ias-build-visual-inspection-plugin-image
     links:
       - kafka
