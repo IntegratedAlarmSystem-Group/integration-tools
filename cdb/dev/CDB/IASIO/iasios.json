@@ -1684,6 +1684,12 @@
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl",
     "canShelve": true
+  },
+  {
+    "id": "Building-AOS",
+    "shortDesc": "Global Alarm of the AOS building",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
   }
 
 ]

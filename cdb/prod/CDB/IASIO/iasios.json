@@ -1452,6 +1452,12 @@
     "shortDesc": "Subfloor Photoelectric Smoke Sensor, Room 135, P1-038",
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl"
+  },
+  {
+    "id": "Building-AOS",
+    "shortDesc": "Global Alarm of the AOS building",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl"
   }
 
 ]
