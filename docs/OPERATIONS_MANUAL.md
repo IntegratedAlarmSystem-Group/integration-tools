@@ -29,7 +29,7 @@ Detailed information about the system can be found in the documentation about it
 
 The alarms organized in the displays of the system, are displayed using combinations of the marks exposed in the following legend, according to different properties.
 
-![Alarms Legend](./images/selected/legend.png)
+![Alarms Legend](./images/selected/legend-2.png)
 
 The representation for the alarms can be illustrated by the following cases.
 
@@ -37,14 +37,14 @@ The representation for the alarms can be illustrated by the following cases.
 |---|---|---|---|
 | ![Clear-Valid](./images/selected/clear-valid.png) ![Priority](./images/selected/priority-0.png) | clear | valid | |
 | ![Clear-Invalid](./images/selected/clear-invalid.png) ![Priority](./images/selected/priority-0.png)  | clear | invalid | |
-| ![Set-Valid-Low](./images/selected/set-valid-low.resized.png) ![Priority](./images/selected/priority-1.png)  | set | valid | low |
-| ![Set-Invalid-Low](./images/selected/set-invalid-low.resized.png) ![Priority](./images/selected/priority-1.png) | set | invalid | low |
-| ![Set-Valid-Medium](./images/selected/set-valid-low.resized.png) ![Priority](./images/selected/priority-2.png)  | set | valid  | medium |
-| ![Set-Invalid-Medium](./images/selected/set-invalid-low.resized.png) ![Priority](./images/selected/priority-2.png) | set | invalid  | medium |
-| ![Set-Valid-High](./images/selected/set-valid.png) ![Priority](./images/selected/priority-3.png)  | set | valid | high |
-| ![Set-Invalid-High](./images/selected/set-invalid.png) ![Priority](./images/selected/priority-3.png) | set |  invalid | high |
-| ![Set-Valid-High](./images/selected/set-valid.png) ![Priority](./images/selected/priority-4.png) | set | valid | critical |
-| ![Set-Invalid-High](./images/selected/set-invalid.png) ![Priority](./images/selected/priority-4.png) | set |  invalid | critical |
+| ![Set-Valid-Low](./images/selected/set-valid-low.resized.png) ![Priority](./images/selected/low.png)  | set | valid | low |
+| ![Set-Invalid-Low](./images/selected/set-invalid-low.resized.png) ![Priority](./images/selected/low.png) | set | invalid | low |
+| ![Set-Valid-Medium](./images/selected/set-valid-low.resized.png) ![Priority](./images/selected/medium.png)  | set | valid  | medium |
+| ![Set-Invalid-Medium](./images/selected/set-invalid-low.resized.png) ![Priority](./images/selected/medium.png) | set | invalid  | medium |
+| ![Set-Valid-High](./images/selected/set-valid.png) ![Priority](./images/selected/high.png)  | set | valid | high |
+| ![Set-Invalid-High](./images/selected/set-invalid.png) ![Priority](./images/selected/high.png) | set |  invalid | high |
+| ![Set-Valid-High](./images/selected/set-valid.png) ![Priority](./images/selected/critical.png) | set | valid | critical |
+| ![Set-Invalid-High](./images/selected/set-invalid.png) ![Priority](./images/selected/critical.png) | set |  invalid | critical |
 
 First, we have the *clear* and *set* value, used when an alarm is resolved or if a condition configured in the system for the related device is not satisfied, respectively. The mark related to each status is shown in green, for the *clear* value, and red or yellow, for the *set* value.
 
@@ -88,35 +88,35 @@ Usually, a set of buttons for each action will be displayed aside the status of 
 
 Only operators working in the control room can perform the *ack* and *shelve* actions using a special *operator_on_duty* account, described in the authentication and authorization section, at then end of this document. In the following sections, the operators working in the control room will be named as *operators*.
 
-![Actions](./images/selected/alarm_actions.png)
+![Actions](./images/selected/alarm_actions-2.png)
 
 ### Acknowledgment
 
 The operators are requested to use the *ack* action each time an alarm is active.
 
-![Actions](./images/selected/alarm_ack_action.png)
+![Actions](./images/selected/alarm_ack_action-2.png)
 
 To acknowledge an alarm, the operator can click on the *ack* button to open an *acknowledgement form* to be submitted, in order to keep a log. Cleared alarms could show the acknowledgement as an available action if there was a change from a *set* value to a *clear* value, which was not previously acknowledged by the operator.
 
-![Ack Form](./images/selected/ack_form.png)
+![Ack Form](./images/selected/ack_form-2.png)
 
 This form must contain: the decision taken in response to the problem, an identifier for the member of the team of operators which acknowledge the alarm, and a selection of alarms to be acknowledged. This selection is related to the case of the existence of dependencies for the selected alarm, and is intended to avoid the acknowledgment action without noticing a root cause of the activation.
 
-![Ack Tree View](./images/selected/ack_tree_view.png)
+![Ack Tree View](./images/selected/ack_tree_view-2.png)
 
 After completing the form, the *Acknowledge* button will be available to perform the *ack* action.
 
-![Ack Form](./images/selected/form_ack_enabled.png)
+![Ack Form](./images/selected/form_ack_enabled-2.png)
 
 After perform the acknowledgment of an alarm, the user will receive a message with the acknowledged alarms in the system.
 
-![Ack Form](./images/selected/form_ack_success.png)
+![Ack Form](./images/selected/form_ack_success-2.png)
 
 Users with no acknowledgment permissions will receive a message after trying to perform this action. Only operators can acknowledge an alarm.
 
 When an alarm changes its status to a new one with a *set* value, it can only be acknowledged once. After an alarm is acknowledged, the related action button will be disabled.
 
-![Ack Form](./images/selected/alarm_after_ack.png)
+![Ack Form](./images/selected/alarm_after_ack-2.png)
 
 We should notice that an active alarm will retain its active status even if it is acknowledged, until the problem is solved.
 
@@ -124,11 +124,11 @@ We should notice that an active alarm will retain its active status even if it i
 
 Some components in the views will show a little mark for alarms with a pending acknowledgment, placed at the top right corner.
 
-![Ack](./images/selected/alarm_unack_mark_2.png)
+![Ack](./images/selected/alarm_unack_mark_2-2.png)
 
 After the acknowledgment of an alarm, this mark will not be highlighted as a confirmation of the *ack* state of the alarm.
 
-![Ack](./images/selected/alarm_ack_mark_2.png)
+![Ack](./images/selected/alarm_ack_mark_2-2.png)
 
 
 ### Shelving
@@ -137,21 +137,21 @@ An operator can use the Shelve option when they need to temporarily silence an a
 
 The alarms that could allow the shelving action, should be configured in the IAS configuration database.
 
-![Shelve Form](./images/selected/shelve_form.png)
+![Shelve Form](./images/selected/shelve_form-2.png)
 
 The shelve action requires a description of the reason of shelving and it also requires setting up a shelving time, that ranges from 15 minutes to 12 hours top. Once the information is provided the shelve button will be available.
 
-![Shelve Form](./images/selected/shelve_01.png)
+![Shelve Form](./images/selected/shelve_01-2.png)
 
 A summary of the action will be provided after shelve an alarm.
 
-![Shelve Form](./images/selected/shelve_02.png)
+![Shelve Form](./images/selected/shelve_02-2.png)
 
 After the selected time, the alarm goes back to its original state.
 
 Once an alarm was shelved, the *shelve* button will be replaced by an *unshelve* button to reverse this action, if necessary.
 
-![Shelve Form](./images/selected/actions_unshelve.png)
+![Shelve Form](./images/selected/actions_unshelve-2.png)
 
 Users with no shelving permissions will receive a message after trying to perform this action. Only operators can shelve an alarm.
 
