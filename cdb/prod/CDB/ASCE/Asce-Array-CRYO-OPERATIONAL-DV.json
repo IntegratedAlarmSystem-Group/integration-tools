@@ -1,0 +1,16 @@
+{
+	"dasuID":"Dasu-Array-CRYO-OPERATIONAL-DV",
+	"outputID":"Array-CRYO-OPERATIONAL-DV",
+	"id":"Asce-Array-CRYO-OPERATIONAL-DV",
+	"inputIDs":[
+		"Array-CRYO-OPERATIONAL-Value-DV"
+	],
+	"transferFunctionID":"org.eso.ias.tranfer.RegExpToAlarm",
+	"props": [
+		{
+			"name": "org.eso.ias.tf.regextoalarm.value",
+			"value": "^(?!Operational$)"
+		}
+	],
+	"templateId":"DV"
+}

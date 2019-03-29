@@ -1,0 +1,16 @@
+{
+	"dasuID":"Dasu-Array-CMPR-OPERATIONAL-DV",
+	"outputID":"Array-CMPR-OPERATIONAL-DV",
+	"id":"Asce-Array-CMPR-OPERATIONAL-DV",
+	"inputIDs":[
+		"Array-CMPR-OPERATIONAL-Value-DV"
+	],
+	"transferFunctionID":"org.eso.ias.tranfer.RegExpToAlarm",
+	"props": [
+		{
+			"name": "org.eso.ias.tf.regextoalarm.value",
+			"value": "^(?!Operational$)"
+		}
+	],
+	"templateId":"DV"
+}

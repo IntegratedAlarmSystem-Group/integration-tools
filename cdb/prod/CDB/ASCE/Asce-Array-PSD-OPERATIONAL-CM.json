@@ -1,0 +1,16 @@
+{
+	"dasuID":"Dasu-Array-PSD-OPERATIONAL-CM",
+	"outputID":"Array-PSD-OPERATIONAL-CM",
+	"id":"Asce-Array-PSD-OPERATIONAL-CM",
+	"inputIDs":[
+		"Array-PSD-OPERATIONAL-Value-CM"
+	],
+	"transferFunctionID":"org.eso.ias.tranfer.RegExpToAlarm",
+	"props": [
+		{
+			"name": "org.eso.ias.tf.regextoalarm.value",
+			"value": "^(?!Operational$)"
+		}
+	],
+	"templateId":"CM"
+}

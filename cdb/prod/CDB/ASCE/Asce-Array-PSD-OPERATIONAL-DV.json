@@ -1,0 +1,16 @@
+{
+	"dasuID":"Dasu-Array-PSD-OPERATIONAL-DV",
+	"outputID":"Array-PSD-OPERATIONAL-DV",
+	"id":"Asce-Array-PSD-OPERATIONAL-DV",
+	"inputIDs":[
+		"Array-PSD-OPERATIONAL-Value-DV"
+	],
+	"transferFunctionID":"org.eso.ias.tranfer.RegExpToAlarm",
+	"props": [
+		{
+			"name": "org.eso.ias.tf.regextoalarm.value",
+			"value": "^(?!Operational$)"
+		}
+	],
+	"templateId":"DV"
+}

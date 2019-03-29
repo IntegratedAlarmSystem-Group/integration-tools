@@ -1,0 +1,10 @@
+{
+	"dasuID":"Dasu-Array-PSD-SHUTDOWN-DV",
+	"outputID":"Array-PSD-SHUTDOWN-DV",
+	"id":"Asce-Array-PSD-SHUTDOWN-DV",
+	"inputIDs":[
+		"Array-PSD-SHUTDOWN-Value-DV"
+	],
+	"transferFunctionID":"org.eso.ias.tranfer.BoolToAlarm",
+	"templateId":"DV"
+}

@@ -1,0 +1,16 @@
+{
+	"dasuID":"Dasu-Array-CRYO-OPERATIONAL-PM",
+	"outputID":"Array-CRYO-OPERATIONAL-PM",
+	"id":"Asce-Array-CRYO-OPERATIONAL-PM",
+	"inputIDs":[
+		"Array-CRYO-OPERATIONAL-Value-PM"
+	],
+	"transferFunctionID":"org.eso.ias.tranfer.RegExpToAlarm",
+	"props": [
+		{
+			"name": "org.eso.ias.tf.regextoalarm.value",
+			"value": "^(?!Operational$)"
+		}
+	],
+	"templateId":"PM"
+}

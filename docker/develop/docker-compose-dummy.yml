@@ -127,6 +127,21 @@ services:
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
     command: "./docker_run_ias.sh iasSupervisor Supervisor-Antennas -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
+  building-supervisor:
+    container_name: ias-build-building-supervisor
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./docker_run_ias.sh iasSupervisor Supervisor-Building -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+
   dummy-supervisor:
     container_name: ias-build-dummy-supervisor
     build:

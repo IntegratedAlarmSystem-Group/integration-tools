@@ -1,0 +1,8 @@
+{
+  "id": "Supervisor-Building",
+  "dasusToDeploy": [
+    {"dasuId":"Dasu-Building-AOS","templateId":null,"instance":null}
+  ],
+  "hostName": "almaias.eso.org",
+  "logLevel": "INFO"
+}
