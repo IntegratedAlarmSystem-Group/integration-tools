@@ -161,13 +161,13 @@ If required, some alarms could not allow the shelve action, condition which shou
 
 Some components in the views will show a little mark for shelved alarms placed at the bottom right corner.
 
-![Shelve](./images/selected/action_shelved_alarm.png)
+![Shelve](./images/selected/action_shelved_alarm-2.png)
 
 Notice that the status is displayed as a *clear* status, to prevent distractions for the operators.
 
 After perform an *unshelve* action on an alarm, this mark will not be highlighted, as a confirmation of the *not shelved* state of the alarm, and the status will go back to the original state.
 
-![Shelve](./images/selected/action_not_shelved_alarm.png)
+![Shelve](./images/selected/action_not_shelved_alarm-2.png)
 
 ### Other actions
 
@@ -175,7 +175,7 @@ Finally, an operator can use the *go to documentation* option, which allows the 
 
 This option could be found at the end of the actions available for each alarm.
 
-![Actions](./images/selected/alarm_goto_action.png)
+![Actions](./images/selected/alarm_goto_action-2.png)
 
 
 ## Views
