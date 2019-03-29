@@ -1,0 +1,16 @@
+{
+	"dasuID":"Dasu-Array-PSA-OPERATIONAL-DA",
+	"outputID":"Array-PSA-OPERATIONAL-DA",
+	"id":"Asce-Array-PSA-OPERATIONAL-DA",
+	"inputIDs":[
+		"Array-PSA-OPERATIONAL-Value-DA"
+	],
+	"transferFunctionID":"org.eso.ias.transfer.RegExpToAlarm",
+	"props": [
+		{
+			"name": "org.eso.ias.tf.regextoalarm.value",
+			"value": "Operational"
+		}
+	],
+	"templateId":"DA"
+}

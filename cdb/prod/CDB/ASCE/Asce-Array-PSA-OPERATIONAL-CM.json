@@ -1,0 +1,16 @@
+{
+	"dasuID":"Dasu-Array-PSA-OPERATIONAL-CM",
+	"outputID":"Array-PSA-OPERATIONAL-CM",
+	"id":"Asce-Array-PSA-OPERATIONAL-CM",
+	"inputIDs":[
+		"Array-PSA-OPERATIONAL-Value-CM"
+	],
+	"transferFunctionID":"org.eso.ias.transfer.RegExpToAlarm",
+	"props": [
+		{
+			"name": "org.eso.ias.tf.regextoalarm.value",
+			"value": "Operational"
+		}
+	],
+	"templateId":"CM"
+}

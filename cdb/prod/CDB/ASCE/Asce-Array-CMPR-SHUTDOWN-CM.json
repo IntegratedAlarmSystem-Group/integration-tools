@@ -1,0 +1,10 @@
+{
+	"dasuID":"Dasu-Array-CMPR-SHUTDOWN-CM",
+	"outputID":"Array-CMPR-SHUTDOWN-CM",
+	"id":"Asce-Array-CMPR-SHUTDOWN-CM",
+	"inputIDs":[
+		"Array-CMPR-SHUTDOWN-Value-CM"
+	],
+	"transferFunctionID":"org.eso.ias.transfer.BoolToAlarm",
+	"templateId":"CM"
+}

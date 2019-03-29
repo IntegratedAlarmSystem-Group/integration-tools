@@ -1,0 +1,16 @@
+{
+	"dasuID":"Dasu-Array-CMPR-OPERATIONAL-DA",
+	"outputID":"Array-CMPR-OPERATIONAL-DA",
+	"id":"Asce-Array-CMPR-OPERATIONAL-DA",
+	"inputIDs":[
+		"Array-CMPR-OPERATIONAL-Value-DA"
+	],
+	"transferFunctionID":"org.eso.ias.transfer.RegExpToAlarm",
+	"props": [
+		{
+			"name": "org.eso.ias.tf.regextoalarm.value",
+			"value": "Operational"
+		}
+	],
+	"templateId":"DA"
+}

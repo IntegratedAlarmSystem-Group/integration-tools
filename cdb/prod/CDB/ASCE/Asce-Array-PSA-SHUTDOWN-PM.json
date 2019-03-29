@@ -1,0 +1,10 @@
+{
+	"dasuID":"Dasu-Array-PSA-SHUTDOWN-PM",
+	"outputID":"Array-PSA-SHUTDOWN-PM",
+	"id":"Asce-Array-PSA-SHUTDOWN-PM",
+	"inputIDs":[
+		"Array-PSA-SHUTDOWN-Value-PM"
+	],
+	"transferFunctionID":"org.eso.ias.transfer.BoolToAlarm",
+	"templateId":"PM"
+}

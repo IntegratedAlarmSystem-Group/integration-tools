@@ -1,0 +1,16 @@
+{
+	"dasuID":"Dasu-Array-PSD-OPERATIONAL-PM",
+	"outputID":"Array-PSD-OPERATIONAL-PM",
+	"id":"Asce-Array-PSD-OPERATIONAL-PM",
+	"inputIDs":[
+		"Array-PSD-OPERATIONAL-Value-PM"
+	],
+	"transferFunctionID":"org.eso.ias.transfer.RegExpToAlarm",
+	"props": [
+		{
+			"name": "org.eso.ias.tf.regextoalarm.value",
+			"value": "Operational"
+		}
+	],
+	"templateId":"PM"
+}
