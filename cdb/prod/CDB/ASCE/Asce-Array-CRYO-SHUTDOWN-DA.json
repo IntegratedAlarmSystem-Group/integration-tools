@@ -1,0 +1,10 @@
+{
+	"dasuID":"Dasu-Array-CRYO-SHUTDOWN-DA",
+	"outputID":"Array-CRYO-SHUTDOWN-DA",
+	"id":"Asce-Array-CRYO-SHUTDOWN-DA",
+	"inputIDs":[
+		"Array-CRYO-SHUTDOWN-Value-DA"
+	],
+	"transferFunctionID":"org.eso.ias.transfer.BoolToAlarm",
+	"templateId":"DA"
+}

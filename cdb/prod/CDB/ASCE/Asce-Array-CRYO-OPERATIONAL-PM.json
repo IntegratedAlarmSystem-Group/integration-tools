@@ -1,9 +1,9 @@
 {
-	"dasuID":"Dasu-Array-CRIO-OPERATIONAL-CM",
-	"outputID":"Array-CRIO-OPERATIONAL-CM",
-	"id":"Asce-Array-CRIO-OPERATIONAL-CM",
+	"dasuID":"Dasu-Array-CRYO-OPERATIONAL-PM",
+	"outputID":"Array-CRYO-OPERATIONAL-PM",
+	"id":"Asce-Array-CRYO-OPERATIONAL-PM",
 	"inputIDs":[
-		"Array-CRIO-OPERATIONAL-Value-CM"
+		"Array-CRYO-OPERATIONAL-Value-PM"
 	],
 	"transferFunctionID":"org.eso.ias.transfer.RegExpToAlarm",
 	"props": [
@@ -12,5 +12,5 @@
 			"value": "Operational"
 		}
 	],
-	"templateId":"CM"
+	"templateId":"PM"
 }

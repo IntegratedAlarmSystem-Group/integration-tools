@@ -1,9 +1,9 @@
 {
-	"dasuID":"Dasu-Array-CRIO-OPERATIONAL-DV",
-	"outputID":"Array-CRIO-OPERATIONAL-DV",
-	"id":"Asce-Array-CRIO-OPERATIONAL-DV",
+	"dasuID":"Dasu-Array-CRYO-OPERATIONAL-DV",
+	"outputID":"Array-CRYO-OPERATIONAL-DV",
+	"id":"Asce-Array-CRYO-OPERATIONAL-DV",
 	"inputIDs":[
-		"Array-CRIO-OPERATIONAL-Value-DV"
+		"Array-CRYO-OPERATIONAL-Value-DV"
 	],
 	"transferFunctionID":"org.eso.ias.transfer.RegExpToAlarm",
 	"props": [
