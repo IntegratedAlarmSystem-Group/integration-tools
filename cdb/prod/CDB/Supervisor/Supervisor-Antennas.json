@@ -1197,6 +1197,6 @@
 		{"dasuId":"Dasu-Array-PSA-OPERATIONAL-PM","templateId":"PM","instance":"4"},
 		{"dasuId":"Dasu-Array-PSA-SHUTDOWN-PM","templateId":"PM","instance":"4"},
 		{"dasuId":"Dasu-Array-PSD-OPERATIONAL-PM","templateId":"PM","instance":"4"},
-		{"dasuId":"Dasu-Array-PSD-SHUTDOWN-PM","templateId":"PM","instance":"4"},
+		{"dasuId":"Dasu-Array-PSD-SHUTDOWN-PM","templateId":"PM","instance":"4"}
 	]
 }
