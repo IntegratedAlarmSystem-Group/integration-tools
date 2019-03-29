@@ -29,26 +29,26 @@ Detailed information about the system can be found in the documentation about it
 
 The alarms organized in the displays of the system, are displayed using combinations of the marks exposed in the following legend, according to different properties.
 
-![Alarms Legend](./images/selected/legend.png)
+![Alarms Legend](./images/selected/legend-2.png)
 
 The representation for the alarms can be illustrated by the following cases.
 
 | Status  | Value | Validity |  Priority |
 |---|---|---|---|
-| ![Clear-Valid](./images/selected/clear-valid.png) ![Priority](./images/selected/priority-0.png) | clear | valid | |
-| ![Clear-Invalid](./images/selected/clear-invalid.png) ![Priority](./images/selected/priority-0.png)  | clear | invalid | |
-| ![Set-Valid-Low](./images/selected/set-valid-low.resized.png) ![Priority](./images/selected/priority-1.png)  | set | valid | low |
-| ![Set-Invalid-Low](./images/selected/set-invalid-low.resized.png) ![Priority](./images/selected/priority-1.png) | set | invalid | low |
-| ![Set-Valid-Medium](./images/selected/set-valid-low.resized.png) ![Priority](./images/selected/priority-2.png)  | set | valid  | medium |
-| ![Set-Invalid-Medium](./images/selected/set-invalid-low.resized.png) ![Priority](./images/selected/priority-2.png) | set | invalid  | medium |
-| ![Set-Valid-High](./images/selected/set-valid.png) ![Priority](./images/selected/priority-3.png)  | set | valid | high |
-| ![Set-Invalid-High](./images/selected/set-invalid.png) ![Priority](./images/selected/priority-3.png) | set |  invalid | high |
-| ![Set-Valid-High](./images/selected/set-valid.png) ![Priority](./images/selected/priority-4.png) | set | valid | critical |
-| ![Set-Invalid-High](./images/selected/set-invalid.png) ![Priority](./images/selected/priority-4.png) | set |  invalid | critical |
+| ![Clear-Valid](./images/selected/clear-valid.png) | clear | valid | |
+| ![Clear-Invalid](./images/selected/clear-invalid.png)  | clear | invalid | |
+| ![Set-Valid-Low](./images/selected/set-valid-low.resized.png) ![Priority](./images/selected/low.png)  | set | valid | low |
+| ![Set-Invalid-Low](./images/selected/set-invalid-low.resized.png) ![Priority](./images/selected/low.png) | set | invalid | low |
+| ![Set-Valid-Medium](./images/selected/set-valid-low.resized.png) ![Priority](./images/selected/medium.png)  | set | valid  | medium |
+| ![Set-Invalid-Medium](./images/selected/set-invalid-low.resized.png) ![Priority](./images/selected/medium.png) | set | invalid  | medium |
+| ![Set-Valid-High](./images/selected/set-valid.png) ![Priority](./images/selected/high.png)  | set | valid | high |
+| ![Set-Invalid-High](./images/selected/set-invalid.png) ![Priority](./images/selected/high.png) | set |  invalid | high |
+| ![Set-Valid-High](./images/selected/set-valid.png) ![Priority](./images/selected/critical.png) | set | valid | critical |
+| ![Set-Invalid-High](./images/selected/set-invalid.png) ![Priority](./images/selected/critical.png) | set |  invalid | critical |
 
 First, we have the *clear* and *set* value, used when an alarm is resolved or if a condition configured in the system for the related device is not satisfied, respectively. The mark related to each status is shown in green, for the *clear* value, and red or yellow, for the *set* value.
 
-The usage of the colors red and yellow depends on the priority level of the alarm: low, medium, high and critical, from lowest to highest.
+The usage of the colors red and yellow depends on the priority level of the alarm: low, medium, high and critical, from lowest to highest. A line or a text, with the related color as background, could be at the right (or below) of the mark for the alarms, to highlight its priority level.
 
 Each alarm is validated by receiving regular messages from the system, according to a tolerance range of time. If these messages has a delay greater than this tolerance, then an alarm it is declared as *invalid*. We can notice the difference between a *valid* alarm and a *invalid* alarm because a valid alarm will be shown with a filled mark, whereas an invalid alarm will be shown with an unfilled mark.
 
@@ -56,10 +56,10 @@ Finally, each alarm has a related *operational mode*, which can be used to get c
 
 | Status  | Validity | Mode |
 |---|---|---|
-| ![Alarm](./images/selected/maintenance-valid.png) ![Priority](./images/selected/priority-0.png) | valid |  maintenance |
-| ![Alarm](./images/selected/maintenance-invalid.png) ![Priority](./images/selected/priority-0.png) | invalid  | maintenance |
-| ![Alarm](./images/selected/unknown-valid.png) ![Priority](./images/selected/priority-0.png) | valid | unknown |
-| ![Alarm](./images/selected/unknown-invalid.png) ![Priority](./images/selected/priority-0.png)  | invalid | unknown |
+| ![Alarm](./images/selected/maintenance-valid.png) | valid |  maintenance |
+| ![Alarm](./images/selected/maintenance-invalid.png) | invalid  | maintenance |
+| ![Alarm](./images/selected/unknown-valid.png) | valid | unknown |
+| ![Alarm](./images/selected/unknown-invalid.png) | invalid | unknown |
 
 According to the IAS configuration, an alarm can also have dependencies related to other alarms according to a hierarchy, for example, when monitoring points are related to a selected device and its subcomponents.
 
@@ -88,35 +88,35 @@ Usually, a set of buttons for each action will be displayed aside the status of 
 
 Only operators working in the control room can perform the *ack* and *shelve* actions using a special *operator_on_duty* account, described in the authentication and authorization section, at then end of this document. In the following sections, the operators working in the control room will be named as *operators*.
 
-![Actions](./images/selected/alarm_actions.png)
+![Actions](./images/selected/alarm_actions-2.png)
 
 ### Acknowledgment
 
 The operators are requested to use the *ack* action each time an alarm is active.
 
-![Actions](./images/selected/alarm_ack_action.png)
+![Actions](./images/selected/alarm_ack_action-2.png)
 
 To acknowledge an alarm, the operator can click on the *ack* button to open an *acknowledgement form* to be submitted, in order to keep a log. Cleared alarms could show the acknowledgement as an available action if there was a change from a *set* value to a *clear* value, which was not previously acknowledged by the operator.
 
-![Ack Form](./images/selected/ack_form.png)
+![Ack Form](./images/selected/ack_form-2.png)
 
 This form must contain: the decision taken in response to the problem, an identifier for the member of the team of operators which acknowledge the alarm, and a selection of alarms to be acknowledged. This selection is related to the case of the existence of dependencies for the selected alarm, and is intended to avoid the acknowledgment action without noticing a root cause of the activation.
 
-![Ack Tree View](./images/selected/ack_tree_view.png)
+![Ack Tree View](./images/selected/ack_tree_view-2.png)
 
 After completing the form, the *Acknowledge* button will be available to perform the *ack* action.
 
-![Ack Form](./images/selected/form_ack_enabled.png)
+![Ack Form](./images/selected/form_ack_enabled-2.png)
 
 After perform the acknowledgment of an alarm, the user will receive a message with the acknowledged alarms in the system.
 
-![Ack Form](./images/selected/form_ack_success.png)
+![Ack Form](./images/selected/form_ack_success-2.png)
 
 Users with no acknowledgment permissions will receive a message after trying to perform this action. Only operators can acknowledge an alarm.
 
 When an alarm changes its status to a new one with a *set* value, it can only be acknowledged once. After an alarm is acknowledged, the related action button will be disabled.
 
-![Ack Form](./images/selected/alarm_after_ack.png)
+![Ack Form](./images/selected/alarm_after_ack-2.png)
 
 We should notice that an active alarm will retain its active status even if it is acknowledged, until the problem is solved.
 
@@ -124,11 +124,11 @@ We should notice that an active alarm will retain its active status even if it i
 
 Some components in the views will show a little mark for alarms with a pending acknowledgment, placed at the top right corner.
 
-![Ack](./images/selected/alarm_unack_mark_2.png)
+![Ack](./images/selected/alarm_unack_mark_2-2.png)
 
 After the acknowledgment of an alarm, this mark will not be highlighted as a confirmation of the *ack* state of the alarm.
 
-![Ack](./images/selected/alarm_ack_mark_2.png)
+![Ack](./images/selected/alarm_ack_mark_2-2.png)
 
 
 ### Shelving
@@ -137,21 +137,21 @@ An operator can use the Shelve option when they need to temporarily silence an a
 
 The alarms that could allow the shelving action, should be configured in the IAS configuration database.
 
-![Shelve Form](./images/selected/shelve_form.png)
+![Shelve Form](./images/selected/shelve_form-2.png)
 
 The shelve action requires a description of the reason of shelving and it also requires setting up a shelving time, that ranges from 15 minutes to 12 hours top. Once the information is provided the shelve button will be available.
 
-![Shelve Form](./images/selected/shelve_01.png)
+![Shelve Form](./images/selected/shelve_01-2.png)
 
 A summary of the action will be provided after shelve an alarm.
 
-![Shelve Form](./images/selected/shelve_02.png)
+![Shelve Form](./images/selected/shelve_02-2.png)
 
 After the selected time, the alarm goes back to its original state.
 
 Once an alarm was shelved, the *shelve* button will be replaced by an *unshelve* button to reverse this action, if necessary.
 
-![Shelve Form](./images/selected/actions_unshelve.png)
+![Shelve Form](./images/selected/actions_unshelve-2.png)
 
 Users with no shelving permissions will receive a message after trying to perform this action. Only operators can shelve an alarm.
 
@@ -161,13 +161,13 @@ If required, some alarms could not allow the shelve action, condition which shou
 
 Some components in the views will show a little mark for shelved alarms placed at the bottom right corner.
 
-![Shelve](./images/selected/action_shelved_alarm.png)
+![Shelve](./images/selected/action_shelved_alarm-2.png)
 
 Notice that the status is displayed as a *clear* status, to prevent distractions for the operators.
 
 After perform an *unshelve* action on an alarm, this mark will not be highlighted, as a confirmation of the *not shelved* state of the alarm, and the status will go back to the original state.
 
-![Shelve](./images/selected/action_not_shelved_alarm.png)
+![Shelve](./images/selected/action_not_shelved_alarm-2.png)
 
 ### Other actions
 
@@ -175,7 +175,7 @@ Finally, an operator can use the *go to documentation* option, which allows the 
 
 This option could be found at the end of the actions available for each alarm.
 
-![Actions](./images/selected/alarm_goto_action.png)
+![Actions](./images/selected/alarm_goto_action-2.png)
 
 
 ## Views
@@ -212,21 +212,21 @@ appear in all the views, in blue color and with a question mark.
 
 Container for the main content for each view.
 
-![Content](./images/selected/fullcontent.png)
+![Content](./images/selected/fullcontent-2.png)
 
 
 **Action Sidenav**
 
 Views that allows the *ack* and *shelve* actions on the alarms, share an additional sidenav component with the related forms.
 
-![Content](./images/selected/preaction.png)
+![Content](./images/selected/preaction-2.png)
 
-![Content](./images/selected/action.png)
+![Content](./images/selected/action-2.png)
 
 ### Global Views
 
 **Overview**
-![Overview](./images/selected/overview.png)
+![Overview](./images/selected/overview-2.png)
 
 In the current Overview the users will find 3 small panels with global information about the alarms related to the:
 
@@ -237,7 +237,7 @@ In the current Overview the users will find 3 small panels with global informati
 It is important to notice that the overview GUI can contain several panels, in order to show the information of other systems contained in the IAS.
 
 **Tabular View**
-![Overview](./images/selected/tabular.png)
+![Overview](./images/selected/tabular-2.png)
 
 In this view all the alarms generated by the IAS are organized in a table. Each row contains the following information:
 
@@ -258,7 +258,7 @@ Currently, the operators can use the text filter to look for particular alarms. 
 - alarms with a pending acknowledgment; and
 - shelved alarms.
 
-![Overview](./images/selected/filters.png)
+![Overview](./images/selected/filters-2.png)
 
 The operator can also use the sorting options for the different columns in the table, such as:
 
@@ -271,13 +271,17 @@ The operator can also use the sorting options for the different columns in the t
 ### Specialized Views
 
 **Weather View**
-![Weather](./images/selected/weather.png)
+![Weather](./images/selected/weather-2.png)
 
 The weather view shows a set of alarms related to weather conditions that can affect the functioning of the antennas.
 
 This section displays the alarms information both using a list view and a graphical support in the form of a map. This map was build using a transformation on the geographic coordinates in order to have a better representation, because of the different distances between the pads where the antennas are located.
 
-![Weather Selected](./images/selected/weather_selected.png)
+![Weather Selected](./images/selected/weather_selected-2.png)
+
+If an antenna is affected by an active alarm, its pad will be highlighted in the map.
+
+![Weather Affected Antennas](./images/selected/weather_affected_antennas.png)
 
 ***Sidebar***
 
@@ -300,9 +304,9 @@ When selecting one of these weather stations, the associated pads and associated
 An special mark for the location of the AOS, after the transformation of the geographical coordinates, is displayed in the map as a reference point.
 
 **Antennas View**
-![Antennas](./images/selected/antennas.png)
+![Antennas](./images/selected/antennas-2.png)
 
-The antennas view shows the information about the alarms related to each antenna (currently, those related to the *Utility Module*).
+The antennas view shows the information about the alarms related to each antenna.
 
 This view, uses a similar structure that the one is used for the weather stations.
 
@@ -312,11 +316,11 @@ At the bottom of the antennas grid, there are three general alarms also related 
 - Correlator Alarm
 - Central Local Oscilator Alarm (CLO)
 
-![Antennas Selected](./images/selected/antennas_selected.png)
+![Antennas Selected](./images/selected/antennas_selected-2.png)
 
 ***Sidebar***
 
-When we access each antenna we can see a list of the related alarms. Currently, we can find the alarms from the *Utility Module*, listed below:
+When we access each antenna we can see a table of the related alarms. Currently, we can find the alarms from the *Utility Module*, listed below:
 
 - Fire
 - Fire Malfunction
@@ -362,6 +366,6 @@ Notice that the account operator_on_duty is not included in the operators group,
 The url /admin must be used to access to the admin panel.
 The admin panel requires a special login. The admin user has permissions to manage users accounts, groups, ack and sheve tickets and other display configurations.
 
-![Admin Login](./images/selected/admin_login.png)
+![Admin Login](./images/selected/admin_login-2.png)
 
-![Admin Panel](./images/selected/admin_panel.png)
+![Admin Panel](./images/selected/admin_panel-2.png)
