@@ -5,6 +5,6 @@
 	"inputIDs":[
 		"Array-PSD-SHUTDOWN-Value-CM"
 	],
-	"transferFunctionID":"org.eso.ias.transfer.BoolToAlarm",
+	"transferFunctionID":"org.eso.ias.tranfer.BoolToAlarm",
 	"templateId":"CM"
 }

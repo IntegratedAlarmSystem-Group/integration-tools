@@ -5,7 +5,7 @@
 	"inputIDs":[
 		"Array-CMPR-OPERATIONAL-Value-DV"
 	],
-	"transferFunctionID":"org.eso.ias.transfer.RegExpToAlarm",
+	"transferFunctionID":"org.eso.ias.tranfer.RegExpToAlarm",
 	"props": [
 		{
 			"name": "org.eso.ias.tf.regextoalarm.value",
