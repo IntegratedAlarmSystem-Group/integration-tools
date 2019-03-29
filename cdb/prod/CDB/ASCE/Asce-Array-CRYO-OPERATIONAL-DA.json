@@ -9,7 +9,7 @@
 	"props": [
 		{
 			"name": "org.eso.ias.tf.regextoalarm.value",
-			"value": "Operational"
+			"value": "^(?!Operational$)"
 		}
 	],
 	"templateId":"DA"
