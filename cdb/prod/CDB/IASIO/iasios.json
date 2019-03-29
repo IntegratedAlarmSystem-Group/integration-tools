@@ -1271,6 +1271,205 @@
     "docUrl": "http://www.alma.cl",
     "templateId": "CM"
   },
+  {
+    "id": "Array-PSA-SHUTDOWN-Value-DV",
+    "shortDesc": "PSA device is shutdown",
+    "iasType": "BOOLEAN",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DV"
+  },
+  {
+    "id": "Array-PSA-OPERATIONAL-Value-DV",
+    "shortDesc": "PSA operational state",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DV"
+  },
+  {
+    "id": "Array-PSD-SHUTDOWN-Value-DV",
+    "shortDesc": "PSD device is shutdown",
+    "iasType": "BOOLEAN",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DV"
+  },
+  {
+    "id": "Array-PSD-OPERATIONAL-Value-DV",
+    "shortDesc": "PSD operational state",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DV"
+  },
+  {
+    "id": "Array-CMPR-OPERATIONAL-Value-DV",
+    "shortDesc": "CMPR operational state",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DV"
+  },
+  {
+    "id": "Array-CRYO-OPERATIONAL-Value-DV",
+    "shortDesc": "CRYO operational state",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DV"
+  },
+  {
+    "id": "Array-FEPS-OPERATIONAL-Value-DV",
+    "shortDesc": "FEPS operational state",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DV"
+  },
+
+  {
+    "id": "Array-PSA-SHUTDOWN-Value-DA",
+    "shortDesc": "PSA device is shutdown",
+    "iasType": "BOOLEAN",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA"
+  },
+  {
+    "id": "Array-PSA-OPERATIONAL-Value-DA",
+    "shortDesc": "PSA operational state",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA"
+  },
+  {
+    "id": "Array-PSD-SHUTDOWN-Value-DA",
+    "shortDesc": "PSD device is shutdown",
+    "iasType": "BOOLEAN",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA"
+  },
+  {
+    "id": "Array-PSD-OPERATIONAL-Value-DA",
+    "shortDesc": "PSD operational state",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA"
+  },
+  {
+    "id": "Array-CMPR-OPERATIONAL-Value-DA",
+    "shortDesc": "CMPR operational state",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA"
+  },
+  {
+    "id": "Array-CRYO-OPERATIONAL-Value-DA",
+    "shortDesc": "CRYO operational state",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA"
+  },
+  {
+    "id": "Array-FEPS-OPERATIONAL-Value-DA",
+    "shortDesc": "FEPS operational state",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "DA"
+  },
+
+ {
+    "id": "Array-PSA-SHUTDOWN-Value-PM",
+    "shortDesc": "PSA device is shutdown",
+    "iasType": "BOOLEAN",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM"
+  },
+  {
+    "id": "Array-PSA-OPERATIONAL-Value-PM",
+    "shortDesc": "PSA operational state",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM"
+  },
+  {
+    "id": "Array-PSD-SHUTDOWN-Value-PM",
+    "shortDesc": "PSD device is shutdown",
+    "iasType": "BOOLEAN",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM"
+  },
+  {
+    "id": "Array-PSD-OPERATIONAL-Value-PM",
+    "shortDesc": "PSD operational state",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM"
+  },
+  {
+    "id": "Array-CMPR-OPERATIONAL-Value-PM",
+    "shortDesc": "CMPR operational state",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM"
+  },
+  {
+    "id": "Array-CRYO-OPERATIONAL-Value-PM",
+    "shortDesc": "CRYO operational state",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM"
+  },
+  {
+    "id": "Array-FEPS-OPERATIONAL-Value-PM",
+    "shortDesc": "FEPS operational state",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "PM"
+  },
+
+  {
+    "id": "Array-PSA-SHUTDOWN-Value-CM",
+    "shortDesc": "PSA device is shutdown",
+    "iasType": "BOOLEAN",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM"
+  },
+  {
+    "id": "Array-PSA-OPERATIONAL-Value-CM",
+    "shortDesc": "PSA operational state",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM"
+  },
+  {
+    "id": "Array-PSD-SHUTDOWN-Value-CM",
+    "shortDesc": "PSD device is shutdown",
+    "iasType": "BOOLEAN",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM"
+  },
+  {
+    "id": "Array-PSD-OPERATIONAL-Value-CM",
+    "shortDesc": "PSD operational state",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM"
+  },
+  {
+    "id": "Array-CMPR-OPERATIONAL-Value-CM",
+    "shortDesc": "CMPR operational state",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM"
+  },
+  {
+    "id": "Array-CRYO-OPERATIONAL-Value-CM",
+    "shortDesc": "CRYO operational state",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM"
+  },
+  {
+    "id": "Array-FEPS-OPERATIONAL-Value-CM",
+    "shortDesc": "FEPS operational state",
+    "iasType": "STRING",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "CM"
+  },
 
   {
     "id": "IASMON-PLUGIN_DEAD",
