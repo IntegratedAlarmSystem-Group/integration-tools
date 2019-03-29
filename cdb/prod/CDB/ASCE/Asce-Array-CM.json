@@ -17,8 +17,7 @@
 		"Array-PSD-SHUTDOWN-CM",
 		"Array-PSD-OPERATIONAL-CM",
 		"Array-CMPR-OPERATIONAL-CM",
-		"Array-CRYO-OPERATIONAL-CM",
-		"Array-FEPS-OPERATIONAL-CM"
+		"Array-CRYO-OPERATIONAL-CM"
 	],
 	"transferFunctionID":"org.eso.ias.asce.transfer.impls.MultiplicityTF",
 	"props": [
