@@ -40,7 +40,7 @@ class CdbReader:
                 )
                 for i in template_range:
                     aux_iasio = iasio.copy()
-                    aux_iasio['id'] = aux_iasio['id'] + ' instance ' + str(i)
+                    aux_iasio['id'] = aux_iasio['id'] + '[!#' + str(i) + '!]'
                     valid_iasios.append(aux_iasio)
 
         return valid_iasios

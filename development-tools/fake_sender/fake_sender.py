@@ -1,14 +1,18 @@
 import os
+import random
 import sys
 import tornado
 import pprint
 from clients import WSClient
 from readers import CdbReader
+from datetime import datetime
 
 DEFAULT_HOST = 'localhost:8000'
 DEFAULT_PASS = 'dev_pass'
 DEFAULT_SEND_RATE = 1000
 DEFAULT_RECONNECTION_RATE = 1000  # One second to evaluate reconnection
+VALUES = ['CLEARED', 'SET_LOW', 'SET_MEDIUM', 'SET_HIGH', 'SET_CRITICAL']
+VALIDITIES = ['UNRELIABLE', 'RELIABLE']
 
 
 def get_websocket_url(kwargs):
@@ -29,9 +33,36 @@ def get_websocket_url(kwargs):
         password = kwargs['password']
 
     if password and password != '':
-        return 'ws://{}/stream/?password={}'.format(host, password)
+        return 'ws://{}/core/?password={}'.format(host, password)
     else:
-        return 'ws://{}/stream/'.format(host)
+        return 'ws://{}/core/'.format(host)
+
+
+def get_alarm_msg(id):
+    time_now = datetime.utcnow()
+    time_now_formatted = time_now.strftime('%Y-%m-%dT%H:%M:%S.') + \
+        str(int(time_now.microsecond/1000)).zfill(3)
+
+    value_num = random.randint(0, 4)
+    validity_num = random.randint(0, 1)
+
+    value = VALUES[value_num]
+    validity = VALIDITIES[validity_num]
+
+    msg = {
+        "value": value,
+        "readFromMonSysTStamp": time_now_formatted,
+        "productionTStamp": time_now_formatted,
+        "sentToConverterTStamp": time_now_formatted,
+        "receivedFromPluginTStamp": time_now_formatted,
+        "convertedProductionTStamp": time_now_formatted,
+        "sentToBsdbTStamp": time_now_formatted,
+        "mode": "OPERATIONAL",
+        "iasValidity": validity,
+        "fullRunningId": "(ConverterID:CONVERTER)@({}:IASIO)".format(id),
+        "valueType": "ALARM"
+    }
+    return msg
 
 
 def main(**kwargs):
@@ -51,12 +82,11 @@ def main(**kwargs):
     def send_alarm():
         """ Send an alarm, to be used in a tornado task """
         if ws_client.is_connected():
-            msg = {
-                'stream': 'alarms',
-                'payload': {
-                    'action': 'list'
-                }
-            }
+            # msg = {
+            #     'stream': 'stream',
+            #     'payload': get_alarm_msg(alarm_ids[0])
+            # }
+            msg = get_alarm_msg(alarm_ids[0])
             print('Sending message: ', msg)
             ws_client.send_message(msg)
 
