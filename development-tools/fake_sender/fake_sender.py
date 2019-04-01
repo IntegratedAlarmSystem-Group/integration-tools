@@ -1,7 +1,9 @@
 import os
 import sys
 import tornado
+import pprint
 from clients import WSClient
+from readers import CdbReader
 
 DEFAULT_HOST = 'localhost:8000'
 DEFAULT_PASS = 'dev_pass'
@@ -33,15 +35,24 @@ def get_websocket_url(kwargs):
 
 
 def main(**kwargs):
+    """
+    Sends alarms wiht random values for every Alarm ID in the CDB
+    """
     url = get_websocket_url(kwargs)
     print('Going to send messages to: ', url)
 
+    alarm_ids = CdbReader.get_alarm_ids()
+    print('--- Alarm IDs ---')
+    pprint.pprint(alarm_ids)
+
+    # Open WS Connection
     ws_client = WSClient(url, kwargs)
 
     def send_alarm():
+        """ Send an alarm, to be used in a tornado task """
         if ws_client.is_connected():
             msg = {
-                'stream': 'broadcast',
+                'stream': 'alarms',
                 'payload': {
                     'action': 'list'
                 }
@@ -53,6 +64,7 @@ def main(**kwargs):
     reconnection_rate = DEFAULT_RECONNECTION_RATE
 
     def ws_reconnection():
+        """ Reconnects if not connected, to be used in a tornado task """
         if not ws_client.is_connected():
             ws_client.reconnect()
 
