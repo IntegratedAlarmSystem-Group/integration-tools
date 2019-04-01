@@ -12,7 +12,7 @@ DEFAULT_PASS = 'dev_pass'
 DEFAULT_SEND_RATE = 500
 DEFAULT_RECONNECTION_RATE = 1000  # One second to evaluate reconnection
 VALUES = ['CLEARED', 'SET_LOW', 'SET_MEDIUM', 'SET_HIGH', 'SET_CRITICAL']
-VALIDITIES = ['UNRELIABLE', 'RELIABLE']
+counter = 0
 
 
 def get_websocket_url(kwargs):
@@ -44,7 +44,6 @@ def get_alarm_msg(id):
         str(int(time_now.microsecond/1000)).zfill(3)
 
     value_num = random.randint(0, 4)
-    # validity_num = random.randint(0, 1)
 
     value = VALUES[value_num]
     validity = 'RELIABLE'
@@ -72,26 +71,32 @@ def main(**kwargs):
     url = get_websocket_url(kwargs)
     print('Going to send messages to: ', url)
 
+    send_rate = int(kwargs['rate'])
+    print('With rate: ', send_rate)
+    reconnection_rate = DEFAULT_RECONNECTION_RATE
+
     alarm_ids = CdbReader.get_alarm_ids()
-    print('\n Alarm IDs:')
-    pprint.pprint(alarm_ids)
+    # print('\n Alarm IDs:')
+    # pprint.pprint(alarm_ids)
 
     # Open WS Connection
     ws_client = WSClient(url, kwargs)
 
     def send_alarm():
         """ Send an alarm, to be used in a tornado task """
+        global counter
+
         if not ws_client.is_connected():
             return
+
+        counter = counter + 1
+        print('Sending batch ', counter)
 
         for id in alarm_ids:
             msg = get_alarm_msg(id)
             # print('\n Sending message:')
             # pprint.pprint(msg)
             ws_client.send_message(msg)
-
-    send_rate = kwargs['rate']
-    reconnection_rate = DEFAULT_RECONNECTION_RATE
 
     def ws_reconnection():
         """ Reconnects if not connected, to be used in a tornado task """
@@ -122,8 +127,8 @@ if __name__ == '__main__':
         host = DEFAULT_HOST
 
     if len(sys.argv) > 2:
-        host = sys.argv[2]
+        rate = sys.argv[2]
     else:
         rate = DEFAULT_SEND_RATE
     password = os.getenv('WEBSOCKET_PASS', DEFAULT_PASS)
-    main(host=host, password=password, rate=rate verbosity=1)
+    main(host=host, password=password, rate=rate, verbosity=1)
