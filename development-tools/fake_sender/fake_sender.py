@@ -9,7 +9,7 @@ from datetime import datetime
 
 DEFAULT_HOST = 'localhost:8000'
 DEFAULT_PASS = 'dev_pass'
-DEFAULT_SEND_RATE = 1000
+DEFAULT_SEND_RATE = 500
 DEFAULT_RECONNECTION_RATE = 1000  # One second to evaluate reconnection
 VALUES = ['CLEARED', 'SET_LOW', 'SET_MEDIUM', 'SET_HIGH', 'SET_CRITICAL']
 VALIDITIES = ['UNRELIABLE', 'RELIABLE']
@@ -44,10 +44,10 @@ def get_alarm_msg(id):
         str(int(time_now.microsecond/1000)).zfill(3)
 
     value_num = random.randint(0, 4)
-    validity_num = random.randint(0, 1)
+    # validity_num = random.randint(0, 1)
 
     value = VALUES[value_num]
-    validity = VALIDITIES[validity_num]
+    validity = 'RELIABLE'
 
     msg = {
         "value": value,
@@ -73,7 +73,7 @@ def main(**kwargs):
     print('Going to send messages to: ', url)
 
     alarm_ids = CdbReader.get_alarm_ids()
-    print('--- Alarm IDs ---')
+    print('\n Alarm IDs:')
     pprint.pprint(alarm_ids)
 
     # Open WS Connection
@@ -81,16 +81,16 @@ def main(**kwargs):
 
     def send_alarm():
         """ Send an alarm, to be used in a tornado task """
-        if ws_client.is_connected():
-            # msg = {
-            #     'stream': 'stream',
-            #     'payload': get_alarm_msg(alarm_ids[0])
-            # }
-            msg = get_alarm_msg(alarm_ids[0])
-            print('Sending message: ', msg)
+        if not ws_client.is_connected():
+            return
+
+        for id in alarm_ids:
+            msg = get_alarm_msg(id)
+            # print('\n Sending message:')
+            # pprint.pprint(msg)
             ws_client.send_message(msg)
 
-    send_rate = DEFAULT_SEND_RATE
+    send_rate = kwargs['rate']
     reconnection_rate = DEFAULT_RECONNECTION_RATE
 
     def ws_reconnection():
@@ -120,5 +120,10 @@ if __name__ == '__main__':
         host = sys.argv[1]
     else:
         host = DEFAULT_HOST
+
+    if len(sys.argv) > 2:
+        host = sys.argv[2]
+    else:
+        rate = DEFAULT_SEND_RATE
     password = os.getenv('WEBSOCKET_PASS', DEFAULT_PASS)
-    main(host=host, password=password, verbosity=1)
+    main(host=host, password=password, rate=rate verbosity=1)
