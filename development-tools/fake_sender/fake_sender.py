@@ -130,5 +130,5 @@ if __name__ == '__main__':
         rate = sys.argv[2]
     else:
         rate = DEFAULT_SEND_RATE
-    password = os.getenv('WEBSOCKET_PASS', DEFAULT_PASS)
+    password = os.getenv('WS_CONNECTION_PASS', DEFAULT_PASS)
     main(host=host, password=password, rate=rate, verbosity=1)

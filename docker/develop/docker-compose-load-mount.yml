@@ -1,0 +1,77 @@
+version: "2"
+
+services:
+
+  fake-sender:
+    container_name: ias-build-fake-sender
+    build:
+      context: ${DOCKERFILE_PATH_FAKE_SENDER}
+      dockerfile: Dockerfile
+    image: ias-build-fake-sender-image
+    environment:
+      - WS_CONNECTION_PASS=${WS_CONNECTION_PASS}
+    command: "webserver:8000 1000"
+
+  redis:
+    container_name: redis
+    image: redis:latest
+    ports:
+      - "6379:6379"
+
+  webserver:
+    tty: true
+    container_name: ias-mount-webserver
+    build:
+      context: ${DOCKERFILE_PATH_WEBSERVER}
+      dockerfile: Dockerfile-dev
+    links:
+      - redis
+    depends_on:
+      - redis
+    environment:
+      - DB_ENGINE=${DB_ENGINE}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - OP_DUTY_PASSWORD=${OP_DUTY_PASSWORD}
+      - PROCESS_CONNECTION_PASS=${WS_CONNECTION_PASS}
+      - REDIS_HOST=${REDIS_HOST}
+    volumes:
+      - ${DOCKERFILE_PATH_WEBSERVER}:/usr/src/ias-webserver
+      - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
+      - ${CDB_PATH}/CDB:/usr/src/ias-webserver/CDB
+      - ${LOGS_PATH}:/usr/src/ias-webserver/logs
+    command: "./runserver-dev.sh"
+
+  visual-inspection-webserver:
+    tty: true
+    container_name: ias-mount-visual-inspection-webserver
+    build:
+      context: ${DOCKERFILE_PATH_VISUAL_INSPECTION_WEBSERVER}
+      dockerfile: Dockerfile-dev
+    image: ias-mount-visual-inspection-webserver-image
+    command: "./runserver-dev.sh"
+    volumes:
+      - ${DOCKERFILE_PATH_VISUAL_INSPECTION_WEBSERVER}:/usr/src/visual-inspection
+      - ${VISUAL_INSPECTION_FILE_PATH}:/usr/src/visual-inspection/output
+
+  nginx:
+    container_name: ias-nginx-local-disp
+    build:
+      context: ${DOCKERFILE_PATH_NGINX}
+      dockerfile: Dockerfile-local-display
+    volumes_from:
+      - webserver
+      - visual-inspection-webserver
+    links:
+      - webserver
+      - visual-inspection-webserver
+    depends_on:
+      - webserver
+      - visual-inspection-webserver
+    ports:
+      - "80:80"
+      - "8000:8000"
