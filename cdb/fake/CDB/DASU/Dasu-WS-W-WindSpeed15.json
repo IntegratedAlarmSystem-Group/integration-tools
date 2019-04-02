@@ -1,0 +1,8 @@
+{
+        "id": "Dasu-WS-W-WindSpeed15",
+        "asceIDs": [
+            "Asce-WS-W-WindSpeed15-Inhibitor",
+            "Asce-WS-W-WindSpeed15-Threshold"
+        ],
+        "outputId": "WS-W-WindSpeed15"
+    }
