@@ -1,4 +1,13 @@
 [
+  {
+    "id": "Fake-Alarm",
+    "shortDesc": "Fake Alarm for load tests",
+    "iasType": "ALARM",
+    "docUrl": "http://www.alma.cl",
+    "templateId": "Fake",
+    "sound":"TYPE2",
+    "canShelve": true
+  },
  {
         "id": "WS-MeteoTB1-Temperature-Value",
         "shortDesc": "Temperature reported by the weather station MeteoTB1",
@@ -1891,5 +1900,4 @@
     "iasType": "ALARM",
     "docUrl": "http://www.alma.cl"
   }
-
 ]

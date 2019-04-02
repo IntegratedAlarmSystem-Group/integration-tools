@@ -1,7 +1,7 @@
 import json
 
-IASIOS_FILE = 'CDB/IASIO/iasios.json'
-TEMPLATES_FILE = 'CDB/TEMPLATE/templates.json'
+IASIOS_FILE = 'cdb/CDB/IASIO/iasios.json'
+TEMPLATES_FILE = 'cdb/CDB/TEMPLATE/templates.json'
 
 
 class CdbReader:

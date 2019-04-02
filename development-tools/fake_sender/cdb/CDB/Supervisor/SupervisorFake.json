@@ -1,0 +1,8 @@
+{
+        "id": "SupervisorFake",
+        "dasusToDeploy": [
+            { "dasuId":"Dasu-Fake","templateId":"Fake","instance":null}
+        ],
+        "hostName": "almaias.eso.org",
+        "logLevel": "INFO"
+    }
