@@ -75,7 +75,10 @@ def main(**kwargs):
     print('With rate: ', send_rate)
     reconnection_rate = DEFAULT_RECONNECTION_RATE
 
+    print('\n Reading from cdb:', CdbReader.get_cdb_location())
     alarm_ids = CdbReader.get_alarm_ids()
+    print('\n Number of alarms to send:', len(alarm_ids))
+
     # print('\n Alarm IDs:')
     # pprint.pprint(alarm_ids)
 

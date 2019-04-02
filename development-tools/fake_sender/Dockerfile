@@ -12,9 +12,6 @@ WORKDIR /usr/src/fake_sender
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-# Expose port
-EXPOSE 8001
-
 COPY entrypoint.sh .
 COPY . .
 ENTRYPOINT ["./entrypoint.sh"]

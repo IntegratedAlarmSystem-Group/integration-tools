@@ -1,11 +1,27 @@
 import json
+import os
 
-IASIOS_FILE = 'cdb/CDB/IASIO/iasios.json'
-TEMPLATES_FILE = 'cdb/CDB/TEMPLATE/templates.json'
+IASIOS_FILE = 'CDB/IASIO/iasios.json'
+TEMPLATES_FILE = 'CDB/TEMPLATE/templates.json'
+DEFAULT_CDB_PATH = '../../cdb/fake/'
+MOUNTED_CDB_PATH = 'cdb/'
 
 
 class CdbReader:
     """ Defines a reader for the CDB """
+
+    @classmethod
+    def get_cdb_location(self):
+        """
+        Returns the location of the CDB
+
+        Returns:
+            string: the location of the CDB
+        """
+        if os.environ.get('MOUNTED_CDB', False):
+            return MOUNTED_CDB_PATH
+        else:
+            return DEFAULT_CDB_PATH
 
     @classmethod
     def get_alarm_ids(self):
@@ -53,7 +69,7 @@ class CdbReader:
         Returns:
             dict: A list of IASIOs data
         """
-        filepath = IASIOS_FILE
+        filepath = self.get_cdb_location() + IASIOS_FILE
         try:
             with open(filepath) as file:
                 iasios = json.load(file)
@@ -70,7 +86,7 @@ class CdbReader:
         Returns:
             dict: A list of templates data
         """
-        filepath = TEMPLATES_FILE
+        filepath = self.get_cdb_location() + TEMPLATES_FILE
         try:
             with open(filepath) as file:
                 templates = json.load(file)
