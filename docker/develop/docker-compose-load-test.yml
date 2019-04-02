@@ -13,7 +13,7 @@ services:
       - MOUNTED_CDB=True
     volumes:
       - ${FAKE_CDB_PATH}:/usr/src/fake_sender/cdb
-    command: "webserver:8000 10000"
+    command: "webserver:8000 1000"
 
   redis:
     container_name: redis
