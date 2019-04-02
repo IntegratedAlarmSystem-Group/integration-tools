@@ -11,14 +11,7 @@
 		"Array-CRIO-TEMP0-PM",
 		"Array-CRIO-TEMP5-PM",
 		"Array-CRIO-TEMP9-PM",
-		"Array-CMPR-DRIVE-PM",
-		"Array-PSA-SHUTDOWN-PM",
-		"Array-PSA-OPERATIONAL-PM",
-		"Array-PSD-SHUTDOWN-PM",
-		"Array-PSD-OPERATIONAL-PM",
-		"Array-CMPR-OPERATIONAL-PM",
-		"Array-CRYO-OPERATIONAL-PM",
-		"Array-FEPS-OPERATIONAL-PM"
+		"Array-CMPR-DRIVE-PM"
 	],
 	"transferFunctionID":"org.eso.ias.asce.transfer.impls.MultiplicityTF",
 	"props": [

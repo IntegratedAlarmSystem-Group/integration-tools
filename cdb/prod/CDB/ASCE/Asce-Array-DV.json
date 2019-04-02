@@ -11,14 +11,7 @@
 		"Array-CRIO-TEMP0-DV",
 		"Array-CRIO-TEMP5-DV",
 		"Array-CRIO-TEMP9-DV",
-		"Array-CMPR-DRIVE-DV",
-		"Array-PSA-SHUTDOWN-DV",
-		"Array-PSA-OPERATIONAL-DV",
-		"Array-PSD-SHUTDOWN-DV",
-		"Array-PSD-OPERATIONAL-DV",
-		"Array-CMPR-OPERATIONAL-DV",
-		"Array-CRYO-OPERATIONAL-DV",
-		"Array-FEPS-OPERATIONAL-DV"
+		"Array-CMPR-DRIVE-DV"
 	],
 	"transferFunctionID":"org.eso.ias.asce.transfer.impls.MultiplicityTF",
 	"props": [
