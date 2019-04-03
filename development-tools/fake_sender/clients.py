@@ -1,5 +1,6 @@
 import json
 import logging
+import time
 from tornado.websocket import websocket_connect
 
 logger = logging.getLogger(__name__)
@@ -39,6 +40,8 @@ class WSClient():
             logger.error('Problem with the connection. Connection closed.')
             self.connection = None
             self.websocket_connect = None
+        # else:
+        #     print('Response,{},{}'.format(message, time.time()))
 
     def reconnect(self):
         """ Reconnection method
@@ -56,4 +59,5 @@ class WSClient():
 
     def send_message(self, message):
         """ Sends a message """
+        # print('Sent,{},{}'.format(message['fullRunningId'], time.time()))
         self.connection.write_message(json.dumps(message))
