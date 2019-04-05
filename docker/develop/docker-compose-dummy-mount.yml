@@ -192,6 +192,7 @@ services:
   webserver:
     tty: true
     container_name: ias-mount-webserver
+    image: ias-mount-webserver-image
     build:
       context: ${DOCKERFILE_PATH_WEBSERVER}
       dockerfile: Dockerfile-dev

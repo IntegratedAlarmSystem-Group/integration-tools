@@ -23,7 +23,7 @@ services:
 
   webserver:
     tty: true
-    container_name: ias-mount-webserver
+    container_name: ias-build-webserver
     build: ${DOCKERFILE_PATH_WEBSERVER}
     links:
       - redis
@@ -49,7 +49,7 @@ services:
 
   visual-inspection-webserver:
     tty: true
-    container_name: ias-mount-visual-inspection-webserver
+    container_name: ias-build-visual-inspection-webserver
     build:
       context: ${DOCKERFILE_PATH_VISUAL_INSPECTION_WEBSERVER}
       dockerfile: Dockerfile-dev
