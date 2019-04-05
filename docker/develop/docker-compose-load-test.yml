@@ -4,6 +4,7 @@ services:
 
   fake-sender:
     container_name: ias-build-fake-sender
+    image: ias-build-fake-sender-image
     build:
       context: ${DOCKERFILE_PATH_FAKE_SENDER}
       dockerfile: Dockerfile
@@ -25,6 +26,7 @@ services:
     tty: true
     container_name: ias-build-webserver
     build: ${DOCKERFILE_PATH_WEBSERVER}
+    image: ias-build-webserver-image
     links:
       - redis
     depends_on:
