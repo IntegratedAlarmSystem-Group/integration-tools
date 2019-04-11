@@ -24,6 +24,8 @@ MODES = [
     'MALFUNCTIONING',
 ]
 
+counter = 0
+
 def get_websocket_url(kwargs):
     """
     Returns the url to send websocket messages
