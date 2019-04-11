@@ -12,8 +12,17 @@ DEFAULT_PASS = 'dev_pass'
 DEFAULT_SEND_RATE = 500
 DEFAULT_RECONNECTION_RATE = 1000  # One second to evaluate reconnection
 VALUES = ['CLEARED', 'SET_LOW', 'SET_MEDIUM', 'SET_HIGH', 'SET_CRITICAL']
-counter = 0
-
+MODES = [
+    'STARTUP',
+    'INITIALIZATION',
+    'CLOSING',
+    'SHUTTEDDOWN',
+    'MAINTENANCE',
+    'OPERATIONAL',
+    'DEGRADED',
+    'UNKNOWN',
+    'MALFUNCTIONING',
+]
 
 def get_websocket_url(kwargs):
     """
@@ -43,9 +52,14 @@ def get_alarm_msg(id):
     time_now_formatted = time_now.strftime('%Y-%m-%dT%H:%M:%S.') + \
         str(int(time_now.microsecond/1000)).zfill(3)
 
-    value_num = random.randint(0, 4)
-
+    # value_num = random.randint(0, 4)
+    value_num = 0
     value = VALUES[value_num]
+
+    mode_num = random.randint(0, 8)
+    # mode_num = 5
+    mode = MODES[mode_num]
+
     validity = 'RELIABLE'
 
     msg = {
@@ -56,7 +70,7 @@ def get_alarm_msg(id):
         "receivedFromPluginTStamp": time_now_formatted,
         "convertedProductionTStamp": time_now_formatted,
         "sentToBsdbTStamp": time_now_formatted,
-        "mode": "OPERATIONAL",
+        "mode": mode,
         "iasValidity": validity,
         "fullRunningId": "(ConverterID:CONVERTER)@({}:IASIO)".format(id),
         "valueType": "ALARM"
@@ -95,11 +109,12 @@ def main(**kwargs):
         counter = counter + 1
         print('Sending batch ', counter)
 
+        msg = []
         for id in alarm_ids:
-            msg = get_alarm_msg(id)
+            msg.append(get_alarm_msg(id))
             # print('\n Sending message:')
             # pprint.pprint(msg)
-            ws_client.send_message(msg)
+        ws_client.send_message(msg)
 
     def ws_reconnection():
         """ Reconnects if not connected, to be used in a tornado task """
