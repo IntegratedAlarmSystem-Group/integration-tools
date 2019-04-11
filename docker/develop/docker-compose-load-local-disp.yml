@@ -14,7 +14,7 @@ services:
       - MOUNTED_CDB=True
     volumes:
       - ${FAKE_CDB_PATH}:/usr/src/fake_sender/cdb
-    command: "webserver:8000 10000"
+    command: "webserver:8000 500"
 
   redis:
     container_name: redis
@@ -24,11 +24,11 @@ services:
 
   webserver:
     tty: true
-    container_name: ias-mount-webserver
-    image: ias-mount-webserver-image
+    container_name: ias-build-webserver
+    image: ias-build-webserver-image
     build:
       context: ${DOCKERFILE_PATH_WEBSERVER}
-      dockerfile: Dockerfile-dev
+      dockerfile: Dockerfile-36
     links:
       - redis
     depends_on:
@@ -44,12 +44,13 @@ services:
       - OP_DUTY_PASSWORD=${OP_DUTY_PASSWORD}
       - PROCESS_CONNECTION_PASS=${WS_CONNECTION_PASS}
       - REDIS_HOST=${REDIS_HOST}
+      - DD_AGENT_HOST=datadog
     volumes:
       - ${DOCKERFILE_PATH_WEBSERVER}:/usr/src/ias-webserver
       - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
       - ${FAKE_CDB_PATH}/CDB:/usr/src/ias-webserver/CDB
       - ${LOGS_PATH}:/usr/src/ias-webserver/logs
-    command: "./runserver-dev.sh"
+    command: "./runserver.sh"
 
   visual-inspection-webserver:
     tty: true
@@ -80,3 +81,13 @@ services:
     ports:
       - "80:80"
       - "8000:8000"
+
+  datadog:
+    image: datadog/agent:latest
+    environment:
+      - DD_API_KEY=160974ee200bc46af3ea198eaf385f27
+      - DD_APM_ENABLED=true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /proc/:/host/proc/:ro
+      - /sys/fs/cgroup/:/sys/fs/cgroup:ro
