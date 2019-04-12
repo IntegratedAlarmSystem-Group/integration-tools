@@ -54,12 +54,12 @@ def get_alarm_msg(id):
     time_now_formatted = time_now.strftime('%Y-%m-%dT%H:%M:%S.') + \
         str(int(time_now.microsecond/1000)).zfill(3)
 
-    # value_num = random.randint(0, 4)
-    value_num = 0
+    value_num = random.randint(0, 3)
+    # value_num = 0
     value = VALUES[value_num]
 
-    mode_num = random.randint(0, 8)
-    # mode_num = 5
+    # mode_num = random.randint(0, 8)
+    mode_num = 5
     mode = MODES[mode_num]
 
     validity = 'RELIABLE'

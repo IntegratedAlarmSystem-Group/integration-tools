@@ -14,7 +14,7 @@ services:
       - MOUNTED_CDB=True
     volumes:
       - ${FAKE_CDB_PATH}:/usr/src/fake_sender/cdb
-    command: "webserver:8000 1000"
+    command: "webserver:8000 500"
 
   redis:
     container_name: redis
@@ -28,7 +28,7 @@ services:
     image: ias-build-webserver-image
     build:
       context: ${DOCKERFILE_PATH_WEBSERVER}
-      dockerfile: Dockerfile-36
+      dockerfile: Dockerfile
     links:
       - redis
     depends_on:
