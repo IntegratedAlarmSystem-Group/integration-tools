@@ -1,0 +1,8 @@
+{
+        "id": "Dasu-WS-P-Temperature",
+        "asceIDs": [
+            "Asce-WS-P-Temperature-Inhibitor",
+            "Asce-WS-P-Temperature-Threshold"
+        ],
+        "outputId": "WS-P-Temperature"
+    }

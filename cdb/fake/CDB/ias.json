@@ -1,0 +1,12 @@
+{
+  "logLevel": "INFO",
+  "refreshRate": "4",
+  "validityThreshold": "20",
+  "hbFrequency":"5",
+  "bsdbUrl":"10.195.60.180:9092",
+  "smtp":":@smtp-internal.osf.alma.cl",
+  "props":[
+    {"name":"Prop1-Name","value":"The value of P1"},
+    {"name":"Prop2-Name","value":"The value of P2"}
+  ]
+}

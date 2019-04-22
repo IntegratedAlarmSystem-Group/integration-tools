@@ -23,20 +23,6 @@ services:
     ports:
       - "6379:6379"
 
-  alma-weather-plugin:
-    container_name: ias-build-alma-weather-plugin
-    build:
-      context: ${DOCKERFILE_PATH_ALMA_WEATHER}
-      dockerfile: Dockerfile-build
-    image: ias-build-alma-weather-plugin-image
-    links:
-      - kafka
-    depends_on:
-      - kafka
-    volumes:
-      - ${LOGS_PATH}:/usr/src/alma_weather_plugin/logs/
-    command: "-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092"
-
   visual-inspection-plugin:
     container_name: ias-build-visual-inspection
     build:
@@ -51,6 +37,22 @@ services:
       - ${LOGS_PATH}:/usr/src/weather_visual_inspection_plugin/logs/
       - ${VISUAL_INSPECTION_FILE_PATH}:/usr/src/weather_visual_inspection_plugin/input
     command: ["-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092", "-f input/inspections.json"]
+
+  weather-dummy:
+    container_name: ias-build-dummy-weather-plugin
+    build:
+      context: ${DOCKERFILE_PATH_MULTI_DUMMY_PLUGIN}
+      dockerfile: Dockerfile-mount
+    image: ias-build-multi-dummy-plugin-image
+    stdin_open: true
+    tty: true
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${DUMMY_CONFIGS_LOCATION}:/usr/src/multi_dummy_plugin/config_files
+    command: ["config_files/weather-config.json", "${KAFKA_SERVER}", "9092"]
 
   dummy:
     container_name: ias-build-dummy-plugin
@@ -78,7 +80,7 @@ services:
       - kafka
     depends_on:
       - kafka
-    command: "${KAFKA_SERVER}:9092"
+    command: "${KAFKA_SERVER}:9092 RANDOM RELIABLE"
 
   converter:
     container_name: ias-build-converter
@@ -188,9 +190,12 @@ services:
     command: "./docker_run_ias.sh iasMonitor MonitorID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   webserver:
-    container_name: ias-build-webserver
-    build: ${DOCKERFILE_PATH_WEBSERVER}
-    image: ias-build-webserver-image
+    tty: true
+    container_name: ias-mount-webserver
+    image: ias-mount-webserver-image
+    build:
+      context: ${DOCKERFILE_PATH_WEBSERVER}
+      dockerfile: Dockerfile-dev
     links:
       - redis
     depends_on:
@@ -205,42 +210,40 @@ services:
       - ADMIN_PASSWORD=${ADMIN_PASSWORD}
       - OP_DUTY_PASSWORD=${OP_DUTY_PASSWORD}
       - PROCESS_CONNECTION_PASS=${WS_CONNECTION_PASS}
-      - SECRET_KEY=${DJANGO_SECRET_KEY}
       - REDIS_HOST=${REDIS_HOST}
     volumes:
+      - ${DOCKERFILE_PATH_WEBSERVER}:/usr/src/ias-webserver
       - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
       - ${CDB_PATH}/CDB:/usr/src/ias-webserver/CDB
       - ${LOGS_PATH}:/usr/src/ias-webserver/logs
-    command: ./runserver.sh
+    command: "./runserver-dev.sh"
 
   visual-inspection-webserver:
-    container_name: ias-build-visual-inspection-webserver
-    build: ${DOCKERFILE_PATH_VISUAL_INSPECTION_WEBSERVER}
-    image: ias-build-visual-inspection-webserver-image
-    command: ./runserver.sh
+    tty: true
+    container_name: ias-mount-visual-inspection-webserver
+    build:
+      context: ${DOCKERFILE_PATH_VISUAL_INSPECTION_WEBSERVER}
+      dockerfile: Dockerfile-dev
+    image: ias-mount-visual-inspection-webserver-image
+    command: "./runserver-dev.sh"
     volumes:
+      - ${DOCKERFILE_PATH_VISUAL_INSPECTION_WEBSERVER}:/usr/src/visual-inspection
       - ${VISUAL_INSPECTION_FILE_PATH}:/usr/src/visual-inspection/output
 
-  display:
-    container_name: ias-build-display
-    image: ias-build-display-image
-    build: ${DOCKERFILE_PATH_DISPLAY}
-
   nginx:
-    container_name: ias-nginx
-    build: ${DOCKERFILE_PATH_NGINX}
-    image: ias-nginx-image
+    container_name: ias-nginx-local-disp
+    build:
+      context: ${DOCKERFILE_PATH_NGINX}
+      dockerfile: Dockerfile-local-display
     volumes_from:
-      - display
       - webserver
       - visual-inspection-webserver
     links:
-      - display
       - webserver
       - visual-inspection-webserver
     depends_on:
-      - display
       - webserver
       - visual-inspection-webserver
     ports:
       - "80:80"
+      - "8000:8000"
