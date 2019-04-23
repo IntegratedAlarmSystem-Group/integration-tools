@@ -415,4 +415,4 @@ while True:
             data = "{" + message['msg'].format(time_now_formatted, time_now_formatted, _validity_plugin, time_now_formatted, time_now_formatted) + "}"
         # print('\nSending to: ', message['topic'], ': ', data.encode())
         producer.send(message['topic'], data.encode())
-    time.sleep(1)
+    time.sleep(3)

@@ -1,0 +1,268 @@
+version: "2"
+
+services:
+
+  kafka:
+    container_name: ias-kafka
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    ports:
+      - "9092:9092"
+      - "2181:2181"
+    environment:
+      - ADVERTISED_HOST=${EXPOSED_KAFKA_SERVER}
+      - ADVERTISED_PORT=9092
+    volumes:
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./docker_run_kafka.sh"
+
+  visual-inspection-plugin:
+    container_name: ias-build-visual-inspection
+    build:
+      context: ${DOCKERFILE_PATH_VISUAL_INSPECTION}
+      dockerfile: Dockerfile-build
+    image: ias-build-visual-inspection-plugin-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${LOGS_PATH}:/usr/src/weather_visual_inspection_plugin/logs/
+      - ${VISUAL_INSPECTION_FILE_PATH}:/usr/src/weather_visual_inspection_plugin/input
+    command: ["-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092", "-f input/inspections.json"]
+
+  weather-dummy:
+    container_name: ias-build-dummy-weather-plugin
+    build:
+      context: ${DOCKERFILE_PATH_MULTI_DUMMY_PLUGIN}
+      dockerfile: Dockerfile-mount
+    image: ias-build-multi-dummy-plugin-image
+    stdin_open: true
+    tty: true
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${DUMMY_CONFIGS_LOCATION}:/usr/src/multi_dummy_plugin/config_files
+    command: ["config_files/weather-config.json", "${KAFKA_SERVER}", "9092"]
+
+  dummy:
+    container_name: ias-build-dummy-plugin
+    build:
+      context: ${DOCKERFILE_PATH_MULTI_DUMMY_PLUGIN}
+      dockerfile: Dockerfile-mount
+    image: ias-build-multi-dummy-plugin-image
+    stdin_open: true
+    tty: true
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${DUMMY_CONFIGS_LOCATION}:/usr/src/multi_dummy_plugin/config_files
+    command: ["config_files/dummy-config.json", "${KAFKA_SERVER}", "9092"]
+
+  mock-kafka-publisher:
+    container_name: ias-build-mock-kafka-publisher
+    build:
+      context: ${DOCKERFILE_PATH_DUMMY_ANTENNAS_PAD}
+      dockerfile: Dockerfile
+    image: ias-build-mock-kafka-publisher-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    command: "${KAFKA_SERVER}:9092 RELIABLE RELIABLE"
+
+  converter:
+    container_name: ias-build-converter
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./docker_run_ias.sh iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
+
+  weather-supervisor:
+    container_name: ias-build-weather-supervisor
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./docker_run_ias.sh iasSupervisor Supervisor-Weather -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+
+  antennas-supervisor:
+    container_name: ias-build-antennas-supervisor
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./docker_run_ias.sh iasSupervisor Supervisor-Antennas -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+
+  building-supervisor:
+    container_name: ias-build-building-supervisor
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./docker_run_ias.sh iasSupervisor Supervisor-Building -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+
+  dummy-supervisor:
+    container_name: ias-build-dummy-supervisor
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./docker_run_ias.sh iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+
+  fake-producer:
+    # container_name: ias-build-fake-producer
+    image: ias-build-fake-producer-image
+    build:
+      context: ${DOCKERFILE_PATH_FAKE_PRODUCER}
+      dockerfile: Dockerfile
+    image: ias-build-fake-producer-image
+    environment:
+      - WS_CONNECTION_PASS=${WS_CONNECTION_PASS}
+      - MOUNTED_CDB=True
+    volumes:
+      - ${ONLY_FAKE_CDB_PATH}:/usr/src/fake_producer/cdb
+    command: "kafka 4000"
+
+  sender:
+    # container_name: ias-build-sender
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    environment:
+      - WS_CONNECTION_PASS=${WS_CONNECTION_PASS}
+    image: ias-build-core-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${FAKE_CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./docker_run_ias.sh iasWebServerSender WebServerSenderID -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8000/core/ -jcdb /usr/src/cdb/ -t ALARM -i Array-AntennasToPads"
+
+  monitor:
+    container_name: ias-build-monitor
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./docker_run_ias.sh iasMonitor MonitorID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+
+  redis:
+    container_name: redis
+    image: redis:latest
+    ports:
+      - "6379:6379"
+
+  webserver:
+    tty: true
+    container_name: ias-build-webserver
+    build: ${DOCKERFILE_PATH_WEBSERVER}
+    image: ias-build-webserver-image
+    links:
+      - redis
+    depends_on:
+      - redis
+    environment:
+      - DB_ENGINE=${DB_ENGINE}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - OP_DUTY_PASSWORD=${OP_DUTY_PASSWORD}
+      - PROCESS_CONNECTION_PASS=${WS_CONNECTION_PASS}
+      - REDIS_HOST=${REDIS_HOST}
+    volumes:
+      - ${DOCKERFILE_PATH_WEBSERVER}:/usr/src/ias-webserver
+      - ${DOCKERFILE_PATH_PRIVATE_FILES}:/usr/src/ias-webserver/private_files
+      - ${FAKE_CDB_PATH}/CDB:/usr/src/ias-webserver/CDB
+      - ${LOGS_PATH}:/usr/src/ias-webserver/logs
+    command: "./runserver.sh"
+
+  visual-inspection-webserver:
+    tty: true
+    container_name: ias-build-visual-inspection-webserver
+    build:
+      context: ${DOCKERFILE_PATH_VISUAL_INSPECTION_WEBSERVER}
+      dockerfile: Dockerfile-dev
+    image: ias-mount-visual-inspection-webserver-image
+    command: "./runserver-dev.sh"
+    volumes:
+      - ${DOCKERFILE_PATH_VISUAL_INSPECTION_WEBSERVER}:/usr/src/visual-inspection
+      - ${VISUAL_INSPECTION_FILE_PATH}:/usr/src/visual-inspection/output
+
+  display:
+    container_name: ias-build-display
+    image: ias-build-display-image
+    build: ${DOCKERFILE_PATH_DISPLAY}
+
+  nginx:
+    container_name: ias-nginx
+    build: ${DOCKERFILE_PATH_NGINX}
+    image: ias-nginx-image
+    volumes_from:
+      - display
+      - webserver
+      - visual-inspection-webserver
+    links:
+      - display
+      - webserver
+      - visual-inspection-webserver
+    depends_on:
+      - display
+      - webserver
+      - visual-inspection-webserver
+    ports:
+      - "80:80"
