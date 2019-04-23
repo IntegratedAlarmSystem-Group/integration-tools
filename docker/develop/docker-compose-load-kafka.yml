@@ -18,8 +18,142 @@ services:
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
     command: "./docker_run_kafka.sh"
 
+  visual-inspection-plugin:
+    container_name: ias-build-visual-inspection
+    build:
+      context: ${DOCKERFILE_PATH_VISUAL_INSPECTION}
+      dockerfile: Dockerfile-build
+    image: ias-build-visual-inspection-plugin-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${LOGS_PATH}:/usr/src/weather_visual_inspection_plugin/logs/
+      - ${VISUAL_INSPECTION_FILE_PATH}:/usr/src/weather_visual_inspection_plugin/input
+    command: ["-Dorg.eso.ias.plugins.kafka.server=${KAFKA_SERVER}:9092", "-f input/inspections.json"]
+
+  weather-dummy:
+    container_name: ias-build-dummy-weather-plugin
+    build:
+      context: ${DOCKERFILE_PATH_MULTI_DUMMY_PLUGIN}
+      dockerfile: Dockerfile-mount
+    image: ias-build-multi-dummy-plugin-image
+    stdin_open: true
+    tty: true
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${DUMMY_CONFIGS_LOCATION}:/usr/src/multi_dummy_plugin/config_files
+    command: ["config_files/weather-config.json", "${KAFKA_SERVER}", "9092"]
+
+  dummy:
+    container_name: ias-build-dummy-plugin
+    build:
+      context: ${DOCKERFILE_PATH_MULTI_DUMMY_PLUGIN}
+      dockerfile: Dockerfile-mount
+    image: ias-build-multi-dummy-plugin-image
+    stdin_open: true
+    tty: true
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${DUMMY_CONFIGS_LOCATION}:/usr/src/multi_dummy_plugin/config_files
+    command: ["config_files/dummy-config.json", "${KAFKA_SERVER}", "9092"]
+
+  mock-kafka-publisher:
+    container_name: ias-build-mock-kafka-publisher
+    build:
+      context: ${DOCKERFILE_PATH_DUMMY_ANTENNAS_PAD}
+      dockerfile: Dockerfile
+    image: ias-build-mock-kafka-publisher-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    command: "${KAFKA_SERVER}:9092 RELIABLE RELIABLE"
+
+  converter:
+    container_name: ias-build-converter
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./docker_run_ias.sh iasConverter ConverterID -jcdb /usr/src/cdb/ -Dorg.eso.ias.converter.kafka.servers=${KAFKA_SERVER}:9092"
+
+  weather-supervisor:
+    container_name: ias-build-weather-supervisor
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./docker_run_ias.sh iasSupervisor Supervisor-Weather -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+
+  antennas-supervisor:
+    container_name: ias-build-antennas-supervisor
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./docker_run_ias.sh iasSupervisor Supervisor-Antennas -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+
+  building-supervisor:
+    container_name: ias-build-building-supervisor
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./docker_run_ias.sh iasSupervisor Supervisor-Building -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+
+  dummy-supervisor:
+    container_name: ias-build-dummy-supervisor
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./docker_run_ias.sh iasSupervisor SupervisorDummy -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
+
   fake-producer:
-    container_name: ias-build-fake-producer
+    # container_name: ias-build-fake-producer
     image: ias-build-fake-producer-image
     build:
       context: ${DOCKERFILE_PATH_FAKE_PRODUCER}
@@ -29,11 +163,11 @@ services:
       - WS_CONNECTION_PASS=${WS_CONNECTION_PASS}
       - MOUNTED_CDB=True
     volumes:
-      - ${FAKE_CDB_PATH}:/usr/src/fake_producer/cdb
-    command: "kafka 500"
+      - ${ONLY_FAKE_CDB_PATH}:/usr/src/fake_producer/cdb
+    command: "kafka 4000"
 
   sender:
-    container_name: ias-build-sender
+    # container_name: ias-build-sender
     build:
       context: ${DOCKERFILE_PATH_CORE}
       dockerfile: Dockerfile-no-build
@@ -45,9 +179,24 @@ services:
     depends_on:
       - kafka
     volumes:
-      - ${CDB_PATH}:/usr/src/cdb
+      - ${FAKE_CDB_PATH}:/usr/src/cdb
       - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
     command: "./docker_run_ias.sh iasWebServerSender WebServerSenderID -Dorg.eso.ias.senders.kafka.servers=${KAFKA_SERVER}:9092 -Dorg.eso.ias.senders.webserver.uri=ws://webserver:8000/core/ -jcdb /usr/src/cdb/ -t ALARM -i Array-AntennasToPads"
+
+  monitor:
+    container_name: ias-build-monitor
+    build:
+      context: ${DOCKERFILE_PATH_CORE}
+      dockerfile: Dockerfile-no-build
+    image: ias-build-core-image
+    links:
+      - kafka
+    depends_on:
+      - kafka
+    volumes:
+      - ${CDB_PATH}:/usr/src/cdb
+      - ${IAS_ROOT_PATH}:/usr/src/IntegratedAlarmSystemRoot
+    command: "./docker_run_ias.sh iasMonitor MonitorID -jcdb /usr/src/cdb/ -Dorg.eso.ias.kafka.brokers=${KAFKA_SERVER}:9092"
 
   redis:
     container_name: redis

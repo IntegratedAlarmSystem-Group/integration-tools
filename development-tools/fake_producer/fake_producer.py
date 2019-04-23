@@ -1,7 +1,6 @@
 import random
 import time
 import sys
-import tornado
 import pprint
 from json import dumps
 from kafka import KafkaProducer
@@ -35,8 +34,8 @@ def get_alarm_msg(id):
     value_num = 0
     value = VALUES[value_num]
 
-    mode_num = random.randint(0, 8)
-    # mode_num = 5
+    # mode_num = random.randint(0, 8)
+    mode_num = 5
     mode = MODES[mode_num]
 
     validity = 'RELIABLE'
