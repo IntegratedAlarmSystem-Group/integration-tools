@@ -1,6 +1,6 @@
 # Deployment Guide
 
-These guide defines the steps that must be taken to deploy the application.
+This guide defines the steps that must be taken to deploy the application.
 
 ## 1. Configuration
 ### 1.1 Allow interaction between external processes and the kafka container
