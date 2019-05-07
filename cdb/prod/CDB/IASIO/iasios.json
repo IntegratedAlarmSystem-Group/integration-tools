@@ -1502,6 +1502,12 @@
     "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring"
   },
   {
+    "id": "IASMON-CORETOOL_DEAD",
+    "shortDesc": "At least one IAS core tool is not responding",
+    "iasType": "ALARM",
+    "docUrl": "https://github.com/IntegratedAlarmSystem-Group/ias/wiki/Self-monitoring"
+  },
+  {
     "id": "IASMON-GLOBAL",
     "shortDesc": "IAS malfunction",
     "iasType": "ALARM",
